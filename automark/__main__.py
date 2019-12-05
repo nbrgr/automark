@@ -1,5 +1,5 @@
 import argparse
-from automark import preprocess
+from automark.preprocess import preprocess
 
 def main():
     ap = argparse.ArgumentParser("AutoMark")
@@ -9,6 +9,9 @@ def main():
     ap.add_argument("config_path", type=str, help="path to YAML config file")
 
     args = ap.parse_args()
-
+    print(args)
     if args.mode == 'preprocess':
-        preprocess(config=args.config_path)
+        preprocess(args.config_path)
+
+if __name__ == "__main__":
+    main()

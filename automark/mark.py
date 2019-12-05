@@ -1,16 +1,16 @@
 import numpy as np
 import torch
 from torch.nn import functional as F
-from transfomers import BertModel, BertTokenizer
+from transformers import BertModel, BertTokenizer
 
 class MarkingHead(torch.nn.Module):
     def __init__(self, dimension):
         self.fc1 = torch.nn.Linear(dimension, dimension)
-        self.prediction = torch.nn.Linear(dimension, 1)
+        self.prediction = torch.nn.Linear(dimension, 2)
     
     def forward(self, embedding):
         x = F.relu(self.fc1(embedding))
-        x = F.sigmoid(self.prediction(x))
+        x = F.log_softmax(self.prediction(x), dim=-1)
         return x
 
 class AutoMark(torch.nn.Module):
