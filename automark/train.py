@@ -4,7 +4,7 @@ import shutil
 import os
 
 import torch
-from torch.nn import Functional as F
+from torch.nn import functional as F
 
 from automark.mark import AutoMark, build_model
 from automark.dataset import make_dataset, make_data_iter
@@ -13,6 +13,7 @@ from automark.loss import XentLoss
 from automark.builders import build_optimizer, build_scheduler, build_gradient_clipper
 from automark.batch import Batch
 from automark.test import test
+from automark.validate import validate_on_data
 
 class TrainManager:
     """ Manages training loop, validations, learning rate scheduling
@@ -25,7 +26,7 @@ class TrainManager:
         :param model: torch module defining the model
         :param config: dictionary containing the training configurations
         """
-        train_config = config["training"]
+        train_config = config["train"]
 
         # files for logging and storing
         self.model_dir = make_model_dir(train_config["model_dir"],
@@ -46,7 +47,7 @@ class TrainManager:
 
         # objective
         self.loss = XentLoss(ignore_id=self.pad_index)
-        self.normalization = train_config.get("normalization", "batch")
+        self.normalization = train_config.get("normalization", "tokens")
         if self.normalization not in ["batch", "tokens"]:
             raise ConfigurationError("Invalid normalization. "
                                      "Valid options: 'batch', 'tokens'.")
@@ -82,7 +83,7 @@ class TrainManager:
             config=train_config,
             scheduler_mode="min" if self.minimize_metric else "max",
             optimizer=self.optimizer,
-            hidden_size=config["model"]["encoder"]["hidden_size"])
+            hidden_size=model.bert.config.hidden_size)
 
         # data & batch handling
         self.shuffle = train_config.get("shuffle", True)
@@ -213,7 +214,6 @@ class TrainManager:
                 # reactivate training
                 self.model.train()
                 # create a Batch object from torchtext batch
-                batch = Batch(batch, self.pad_index, use_cuda=self.use_cuda)
 
                 # only update every batch_multiplier batches
                 # see https://medium.com/@davidlmorton/
@@ -249,32 +249,25 @@ class TrainManager:
                 if self.steps % self.validation_freq == 0 and update:
                     valid_start_time = time.time()
 
-                    valid_score, valid_loss, valid_ppl, valid_sources, \
-                        valid_sources_raw, valid_references, valid_hypotheses, \
-                        valid_hypotheses_raw, valid_attention_scores = \
+                    valid_score, valid_loss, valid_sources, \
+                        valid_references, valid_hypotheses, = \
                         validate_on_data(
                             batch_size=self.eval_batch_size,
                             data=valid_data,
                             eval_metric=self.eval_metric,
-                            level=self.level, model=self.model,
+                            model=self.model,
                             use_cuda=self.use_cuda,
-                            max_output_length=self.max_output_length,
                             loss_function=self.loss,
-                            beam_size=0,  # greedy validations
-                            batch_type=self.eval_batch_type
                         )
 
                     self.tb_writer.add_scalar("valid/valid_loss",
                                               valid_loss, self.steps)
                     self.tb_writer.add_scalar("valid/valid_score",
                                               valid_score, self.steps)
-                    self.tb_writer.add_scalar("valid/valid_ppl",
-                                              valid_ppl, self.steps)
+
 
                     if self.early_stopping_metric == "loss":
                         ckpt_score = valid_loss
-                    elif self.early_stopping_metric in ["ppl", "perplexity"]:
-                        ckpt_score = valid_ppl
                     else:
                         ckpt_score = valid_score
 
@@ -297,13 +290,11 @@ class TrainManager:
                     # append to validation report
                     self._add_report(
                         valid_score=valid_score, valid_loss=valid_loss,
-                        valid_ppl=valid_ppl, eval_metric=self.eval_metric,
+                        eval_metric=self.eval_metric,
                         new_best=new_best)
 
                     self._log_examples(
-                        sources_raw=valid_sources_raw,
                         sources=valid_sources,
-                        hypotheses_raw=valid_hypotheses_raw,
                         hypotheses=valid_hypotheses,
                         references=valid_references
                     )
@@ -312,9 +303,9 @@ class TrainManager:
                     total_valid_duration += valid_duration
                     self.logger.info(
                         'Validation result at epoch %3d, step %8d: %s: %6.2f, '
-                        'loss: %8.4f, ppl: %8.4f, duration: %.4fs',
+                        'loss: %8.4f, duration: %.4fs',
                         epoch_no+1, self.steps, self.eval_metric,
-                        valid_score, valid_loss, valid_ppl, valid_duration)
+                        valid_score, valid_loss, valid_duration)
 
                     # store validation set outputs
                     self._store_outputs(valid_hypotheses)
@@ -350,9 +341,9 @@ class TrainManager:
 
         # normalize batch loss
         if self.normalization == "batch":
-            normalizer = batch.nseqs
+            normalizer = batch.trg_src.shape[0]
         elif self.normalization == "tokens":
-            normalizer = batch.ntokens
+            normalizer = torch.sum(batch.trg_len)
         else:
             raise NotImplementedError("Only normalize by 'batch' or 'tokens'")
 
@@ -376,11 +367,11 @@ class TrainManager:
             self.steps += 1
 
         # increment token counter
-        self.total_tokens += batch.ntokens
+        self.total_tokens += torch.sum(batch.trg_len).item()
 
         return norm_batch_loss
 
-    def _add_report(self, valid_score: float, valid_ppl: float,
+    def _add_report(self, valid_score: float, 
                     valid_loss: float, eval_metric: str,
                     new_best: bool = False) -> None:
         """
@@ -402,9 +393,9 @@ class TrainManager:
 
         with open(self.valid_report_file, 'a') as opened_file:
             opened_file.write(
-                "Steps: {}\tLoss: {:.5f}\tPPL: {:.5f}\t{}: {:.5f}\t"
+                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\t"
                 "LR: {:.8f}\t{}\n".format(
-                    self.steps, valid_loss, valid_ppl, eval_metric,
+                    self.steps, valid_loss, eval_metric,
                     valid_score, current_lr, "*" if new_best else ""))
 
     def _log_parameters_list(self) -> None:
@@ -474,14 +465,13 @@ def train(cfg_file):
     cfg = load_config(cfg_file)
 
     # set the random seed
-    set_seed(seed=cfg["training"].get("random_seed", 42))
+    set_seed(seed=cfg["train"].get("seed", 42))
 
     # load the data
-    train_data, dev_data, test_data = load_data(
-        data_cfg=cfg["data"])
+    train_data, dev_data, test_data = make_dataset(cfg)
 
     # build an encoder-decoder model
-    model = build_model(cfg["model"])
+    model = build_model(cfg)
 
     # for training management, e.g. early stopping and model selection
     trainer = TrainManager(model=model, config=cfg)

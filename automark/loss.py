@@ -6,15 +6,18 @@ class XentLoss(nn.Module):
     def __init__(self, ignore_id):
         super(XentLoss, self).__init__()
         self.ignore_id = ignore_id
-        self.criterion = torch.nn.NLLLoss(ignore_index=self.ignore_id, reduction='sum')
+        self.criterion = torch.nn.NLLLoss(ignore_index=self.ignore_id, reduction='none')
 
     def forward(self, predictions, labels, mask):
-        predictions = predictions.view(predictions.shape[0], -1)
-        labels = labels.view(labels.shape[0], -1)
-        mask = mask.view(labels.shape[0], -1)
+        flat_predictions = predictions.view(-1, predictions.shape[-1])
+        print(flat_predictions.shape)
+        flat_labels = labels.view(-1)
+        print("Flat labels shape",flat_labels.shape)
+        flat_mask = mask.view(-1)
+        print(flat_mask.shape)
 
-        masked_predictions = predictions * mask
+        loss = self.criterion(flat_predictions, flat_labels)
+        print(loss)
+        masked_loss = loss * flat_mask
 
-        loss = self.criterion(masked_predictions, labels)
-
-        return loss
+        return masked_loss

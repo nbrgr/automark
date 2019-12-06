@@ -2,11 +2,18 @@ import os
 
 from collections import defaultdict
 
+import torch
+
 from torchtext.datasets import TranslationDataset
 from torchtext import data
 from torchtext.data import Dataset, Iterator, Field
 
 from transformers import BertTokenizer
+
+def tensorify(fun, dtype):
+    def tensorified_fun(batch):
+        return torch.tensor(fun(batch), dtype=dtype)
+    return tensorified_fun
 
 def batch_fun(batch):
     max_len = max([len(x) for x in batch])
@@ -16,11 +23,13 @@ def batch_fun(batch):
 
     return batch
 
-def make_dataset(config, bert_path):
+def identity_fun(batch):
+    return batch
 
+def make_dataset(config):
+    bert_path = config['bert']['path']
     tokenizer = BertTokenizer.from_pretrained(bert_path)
     unk_id = tokenizer.vocab['[UNK]']
-    init_id = tokenizer.vocab['[CLS]']
     pad_id = tokenizer.vocab['[PAD]']
     unk_fun = lambda: unk_id
 
@@ -43,11 +52,11 @@ def make_dataset(config, bert_path):
                            sequential=True,
                            use_vocab=False)
 
-    ann_field = data.RawField(postprocessing=batch_fun)
+    ann_field = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
 
-    mask_field = data.RawField(postprocessing=batch_fun)
+    mask_field = data.RawField(postprocessing=tensorify(batch_fun, torch.float32))
 
-    attention_mask = data.RawField(postprocessing=batch_fun)
+    attention_mask = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
 
     train_data = MergeDataset(path=train_path,
                                     exts=(src_ext, trg_ext, ma_ext),
@@ -111,8 +120,8 @@ def make_data_iter(dataset: Dataset,
 class MergeDataset(Dataset):
     def __init__(self, path, exts, fields, bos_token = '[CLS]', sep_token = '[SEP]', vocab=None, **kwargs):
 
-        src_len = data.RawField()
-        trg_len = data.RawField()
+        src_len = data.RawField(postprocessing=tensorify(identity_fun, torch.long))
+        trg_len = data.RawField(postprocessing=tensorify(identity_fun, torch.long))
         
         if not isinstance(fields[0], (tuple, list)):
             fields = [('src_trg', fields[0]), ('weights', fields[1]), ('label_mask', fields[2]), ('attention_mask', fields[3]), ('src_len', src_len), ('trg_len', trg_len)]
