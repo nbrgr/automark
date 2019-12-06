@@ -64,7 +64,7 @@ def make_logger(model_dir: str, log_file: str = "train.log") -> Logger:
     fh.setFormatter(formatter)
     sh.setFormatter(formatter)
     logging.getLogger("").addHandler(sh)
-    logger.info("Hello! This is Joey-NMT.")
+    logger.info("Hello! This is AutoMark. For all your Automatic Marking needs.")
     return logger
 
 
