@@ -7,9 +7,12 @@ data:
   marking: '.ann'
   raw: 'data/dummy'
   train: 'data/dummy.tok'
+  dev: 'data/dummy.tok'
 
 train:
   lr: 0.003
   optimizer: Adam
   batch_size: 32
   epochs: 10
+
+

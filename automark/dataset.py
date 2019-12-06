@@ -8,6 +8,14 @@ from torchtext.data import Dataset, Iterator, Field
 
 from transformers import BertTokenizer
 
+def batch_fun(batch):
+    max_len = max([len(x) for x in batch])
+
+    for example in batch:
+        example += [0.0] * (max_len - len(example))
+
+    return batch
+
 def make_dataset(config, bert_path):
 
     tokenizer = BertTokenizer.from_pretrained(bert_path)
@@ -25,41 +33,32 @@ def make_dataset(config, bert_path):
     src_ext = config['data']['source']
     trg_ext = config['data']['target']
     ma_ext = config['data']['marking']
-    train_path = config["train"]
-    dev_path = config["dev"]
-    max_sent_length = config["max_sent_length"]
+    train_path = config['data']['train']
+    dev_path = config['data']['dev']
 
-
-    src_trg_field = data.Field(init_token=init_id, eos_token=None,
+    src_trg_field = data.Field(eos_token=None,
                            pad_token=pad_id, 
                            batch_first=True,
                            include_lengths=True,
                            sequential=True,
                            use_vocab=False)
 
-    def batch_fun(batch):
-        max_len = max([len(x) for x in batch])
-
-        for example in batch:
-            example += [0.0] * (max_len - len(example))
-
-        return batch
-
     ann_field = data.RawField(postprocessing=batch_fun)
+
+    mask_field = data.RawField(postprocessing=batch_fun)
+
+    attention_mask = data.RawField(postprocessing=batch_fun)
 
     train_data = MergeDataset(path=train_path,
                                     exts=(src_ext, trg_ext, ma_ext),
-                                    fields=(src_trg_field, ann_field),
-                                    filter_pred=
-                                    lambda x: len(vars(x)['src'])
-                                    <= max_sent_length
-                                    and len(vars(x)['trg'])
-                                    <= max_sent_length,
-                                    sep_token='[SEP]')
+                                    fields=(src_trg_field, ann_field, mask_field, attention_mask),
+                                    bos_token='[CLS]',
+                                    sep_token='[SEP]', vocab=vocab)
 
     dev_data = MergeDataset(path=dev_path,
                                   exts=(src_ext, trg_ext, ma_ext),
-                                  fields=(src_trg_field, ann_field))
+                                  fields=(src_trg_field, ann_field, mask_field, attention_mask), vocab=vocab,
+                                  bos_token='[CLS]', sep_token='[SEP]')
     test_data = None
     """
     if test_path is not None:
@@ -76,11 +75,47 @@ def make_dataset(config, bert_path):
     return train_data, dev_data, test_data, 
 
 
+def make_data_iter(dataset: Dataset,
+                   batch_size: int,
+                   train: bool = False,
+                   shuffle: bool = False) -> Iterator:
+    """
+    Returns a torchtext iterator for a torchtext dataset.
+
+    :param dataset: torchtext dataset containing src and optionally trg
+    :param batch_size: size of the batches the iterator prepares
+    :param batch_type: measure batch size by sentence count or by token count
+    :param train: whether it's training time, when turned off,
+        bucketing, sorting within batches and shuffling is disabled
+    :param shuffle: whether to shuffle the data before each epoch
+        (no effect if set to True for testing)
+    :return: torchtext iterator
+    """
+
+    if train:
+        # optionally shuffle and sort during training
+        data_iter = data.BucketIterator(
+            repeat=False, sort=False, dataset=dataset,
+            batch_size=batch_size,
+            train=True, sort_within_batch=True,
+            sort_key=lambda x: len(x.src_trg), shuffle=shuffle)
+    else:
+        # don't sort/shuffle for validation/inference
+        data_iter = data.BucketIterator(
+            repeat=False, dataset=dataset,
+            batch_size=batch_size,
+            train=False, sort=False)
+
+    return data_iter
+
 class MergeDataset(Dataset):
-    def __init__(self, path, exts, fields, sep_token = '[SEP]', vocab=None, **kwargs):
+    def __init__(self, path, exts, fields, bos_token = '[CLS]', sep_token = '[SEP]', vocab=None, **kwargs):
+
+        src_len = data.RawField()
+        trg_len = data.RawField()
         
         if not isinstance(fields[0], (tuple, list)):
-            fields = [('src_trg', fields[0]), ('weights', fields[1])]
+            fields = [('src_trg', fields[0]), ('weights', fields[1]), ('label_mask', fields[2]), ('attention_mask', fields[3]), ('src_len', src_len), ('trg_len', trg_len)]
 
         src_path, trg_path, weights_path = tuple(os.path.expanduser(path + x) for x in exts)
 
@@ -91,14 +126,15 @@ class MergeDataset(Dataset):
                 zip(src_file, trg_file, weight_file):
                 src_line, trg_line = src_line.strip().split(" "), trg_line.strip().split(" ")
                 
-                src_line = [vocab[x] for x in src_line]
+                src_line = [vocab[bos_token]] + [vocab[x] for x in src_line] + [vocab[sep_token]]
                 trg_line = [vocab[x] for x in trg_line]
-
-                weights = [float(weight) for weight in weights_line.strip().split(" ")]
-                weights = [0.0] * (len(src_line) + 1) + weights
+                mask = [0.0] * len(src_line) + [1.0] * len(trg_line)
+                weights = [int(weight) for weight in weights_line.strip().split(" ")]
+                weights = [0] * (len(src_line)) + weights
                 
                 if src_line != '' and trg_line != '':
-                    merged_line = src_line + [vocab[sep_token]] + trg_line
-                    examples.append(data.Example.fromlist([merged_line, weights], fields))
+                    merged_line = src_line + trg_line
+                    att_mask = [1] * len(merged_line)
+                    examples.append(data.Example.fromlist([merged_line, weights, mask, att_mask, len(src_line), len(trg_line)], fields))
 
         super(MergeDataset, self).__init__(examples, fields, **kwargs)

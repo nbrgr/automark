@@ -1,5 +1,6 @@
 import argparse
 from automark.preprocess import preprocess
+from automark.train import train
 
 def main():
     ap = argparse.ArgumentParser("AutoMark")
@@ -12,6 +13,9 @@ def main():
     print(args)
     if args.mode == 'preprocess':
         preprocess(args.config_path)
+    elif args.mode == 'train':
+        train(args.config_path)
+
 
 if __name__ == "__main__":
     main()
