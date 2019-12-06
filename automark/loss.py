@@ -10,14 +10,10 @@ class XentLoss(nn.Module):
 
     def forward(self, predictions, labels, mask):
         flat_predictions = predictions.view(-1, predictions.shape[-1])
-        print(flat_predictions.shape)
         flat_labels = labels.view(-1)
-        print("Flat labels shape",flat_labels.shape)
         flat_mask = mask.view(-1)
-        print(flat_mask.shape)
 
         loss = self.criterion(flat_predictions, flat_labels)
-        print(loss)
         masked_loss = loss * flat_mask
 
         return masked_loss

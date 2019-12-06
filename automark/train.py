@@ -33,7 +33,7 @@ class TrainManager:
                                         overwrite=train_config.get(
                                             "overwrite", False))
         self.logger = make_logger(model_dir=self.model_dir)
-        self.logging_freq = train_config.get("logging_freq", 100)
+        self.logging_freq = train_config.get("logging_freq", 10)
         self.valid_report_file = "{}/validations.txt".format(self.model_dir)
         self.tb_writer = SummaryWriter(log_dir=self.model_dir+"/tensorboard/")
 
@@ -343,11 +343,13 @@ class TrainManager:
         if self.normalization == "batch":
             normalizer = batch.trg_src.shape[0]
         elif self.normalization == "tokens":
+            print(batch.trg_len)
             normalizer = torch.sum(batch.trg_len)
         else:
             raise NotImplementedError("Only normalize by 'batch' or 'tokens'")
-
+        print(batch_loss)
         norm_batch_loss = batch_loss / normalizer
+        print(norm_batch_loss, normalizer)
         # division needed since loss.backward sums the gradients until updated
         norm_batch_multiply = norm_batch_loss / self.batch_multiplier
 

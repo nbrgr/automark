@@ -9,7 +9,7 @@ class MarkingHead(torch.nn.Module):
 
         self.fc1 = torch.nn.Linear(dimension, dimension)
         #Output 0 = not marked, Output 1 = marked, Output 2 = ignore
-        self.prediction = torch.nn.Linear(dimension, 3)
+        self.prediction = torch.nn.Linear(dimension, 2)
     
     def forward(self, embedding):
         x = F.relu(self.fc1(embedding))
@@ -32,14 +32,12 @@ class AutoMark(torch.nn.Module):
         
         src_trg, lens = sentence
         mask = torch.tensor(mask)
-        print(src_trg, mask)
         embeddings = self.bert(src_trg, token_type_ids=mask)[0]
         #embeddings should be (Batch, Len, Emb_Dim)
         shape = embeddings.shape
         embeddings = embeddings.view(-1, self.bert_hidden_size)
         flat_markings = self.marking_head(embeddings)
         markings = flat_markings.view(shape[0], shape[1], -1)
-        print(markings.shape)
         return markings
 
     def get_loss_for_batch(self, batch, loss_function):

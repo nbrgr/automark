@@ -5,14 +5,14 @@ data:
   source: '.en'
   target: '.hyp'
   marking: '.ann'
-  raw: 'data/dummy'
-  train: 'data/dummy.tok'
-  dev: 'data/dummy.tok'
+  raw: 'data/markings'
+  train: 'data/markings.tok'
+  dev: 'data/markings.tok'
 
 train:
-  lr: 0.003
+  lr: 0.03
   optimizer: Adam
-  batch_size: 32
+  batch_size: 8
   epochs: 10
   seed: 42
   model_dir: humanmt
@@ -21,5 +21,3 @@ train:
   early_stopping_metric: loss
   overwrite: True
   normalization: tokens
-
-
