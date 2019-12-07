@@ -30,15 +30,15 @@ class TrainManager:
         train_config = config["train"]
 
         # files for logging and storing
-        self.model_dir = make_model_dir(train_config["model_dir"],
-                                        overwrite=train_config.get(
-                                            "overwrite", False))
+        self.model_dir = make_model_dir(
+            train_config["model_dir"], overwrite=train_config.get("overwrite", False)
+        )
         self.logger = make_logger(model_dir=self.model_dir)
         self.logging_freq = train_config.get("logging_freq", 10)
         self.valid_report_file = "{}/validations.txt".format(self.model_dir)
-        self.tb_writer = SummaryWriter(log_dir=self.model_dir+"/tensorboard/")
+        self.tb_writer = SummaryWriter(log_dir=self.model_dir + "/tensorboard/")
 
-        self.eval_metric = 'loss'
+        self.eval_metric = "loss"
 
         # model
         self.model = model
@@ -51,26 +51,28 @@ class TrainManager:
         self.loss = XentLoss()  # ignore_id=self.pad_index)
         self.normalization = train_config.get("normalization", "tokens")
         if self.normalization not in ["batch", "tokens"]:
-            raise ConfigurationError("Invalid normalization. "
-                                     "Valid options: 'batch', 'tokens'.")
+            raise ConfigurationError(
+                "Invalid normalization. " "Valid options: 'batch', 'tokens'."
+            )
 
-        self.weighting = train_config['weighting']
+        self.weighting = train_config["weighting"]
 
         # optimization
         self.learning_rate_min = train_config.get("learning_rate_min", 1.0e-8)
 
         self.clip_grad_fun = build_gradient_clipper(config=train_config)
-        self.optimizer = build_optimizer(config=train_config,
-                                         parameters=model.parameters())
+        self.optimizer = build_optimizer(
+            config=train_config, parameters=model.parameters()
+        )
 
         # validation & early stopping
         self.validation_freq = train_config.get("validation_freq", 1000)
         self.log_valid_sents = train_config.get("print_valid_sents", [0, 1, 2])
-        self.ckpt_queue = queue.Queue(
-            maxsize=train_config.get("keep_last_ckpts", 5))
+        self.ckpt_queue = queue.Queue(maxsize=train_config.get("keep_last_ckpts", 5))
 
-        self.early_stopping_metric = train_config.get("early_stopping_metric",
-                                                      "eval_metric")
+        self.early_stopping_metric = train_config.get(
+            "early_stopping_metric", "eval_metric"
+        )
 
         # if we schedule after BLEU/chrf, we want to maximize it, else minimize
         # early_stopping_metric decides on how to find the early stopping point:
@@ -80,21 +82,22 @@ class TrainManager:
         else:
             raise ConfigurationError(
                 "Invalid setting for 'early_stopping_metric', "
-                "valid options: 'loss', 'ppl', 'eval_metric'.")
+                "valid options: 'loss', 'ppl', 'eval_metric'."
+            )
 
         # learning rate scheduling
         self.scheduler, self.scheduler_step_at = build_scheduler(
             config=train_config,
             scheduler_mode="min" if self.minimize_metric else "max",
             optimizer=self.optimizer,
-            hidden_size=model.bert.config.hidden_size)
+            hidden_size=model.bert.config.hidden_size,
+        )
 
         # data & batch handling
         self.shuffle = train_config.get("shuffle", True)
         self.epochs = train_config["epochs"]
         self.batch_size = train_config["batch_size"]
-        self.eval_batch_size = train_config.get("eval_batch_size",
-                                                self.batch_size)
+        self.eval_batch_size = train_config.get("eval_batch_size", self.batch_size)
 
         self.batch_multiplier = train_config.get("batch_multiplier", 1)
 
@@ -113,8 +116,11 @@ class TrainManager:
         # initial values for best scores
         self.best_ckpt_score = np.inf if self.minimize_metric else -np.inf
         # comparison function for scores
-        self.is_best = lambda score: score < self.best_ckpt_score \
-            if self.minimize_metric else score > self.best_ckpt_score
+        self.is_best = (
+            lambda score: score < self.best_ckpt_score
+            if self.minimize_metric
+            else score > self.best_ckpt_score
+        )
 
         # model parameters
         if "load_model" in train_config.keys():
@@ -141,8 +147,9 @@ class TrainManager:
             "best_ckpt_iteration": self.best_ckpt_iteration,
             "model_state": self.model.state_dict(),
             "optimizer_state": self.optimizer.state_dict(),
-            "scheduler_state": self.scheduler.state_dict() if
-            self.scheduler is not None else None,
+            "scheduler_state": self.scheduler.state_dict()
+            if self.scheduler is not None
+            else None,
         }
         torch.save(state, model_path)
         if self.ckpt_queue.full():
@@ -150,14 +157,17 @@ class TrainManager:
             try:
                 os.remove(to_delete)
             except FileNotFoundError:
-                self.logger.warning("Wanted to delete old checkpoint %s but "
-                                    "file does not exist.", to_delete)
+                self.logger.warning(
+                    "Wanted to delete old checkpoint %s but " "file does not exist.",
+                    to_delete,
+                )
 
         self.ckpt_queue.put(model_path)
 
         # create/modify symbolic link for best checkpoint
-        symlink_update("{}.ckpt".format(self.steps),
-                       "{}/best.ckpt".format(self.model_dir))
+        symlink_update(
+            "{}.ckpt".format(self.steps), "{}/best.ckpt".format(self.model_dir)
+        )
 
     def init_from_checkpoint(self, path: str) -> None:
         """
@@ -175,8 +185,10 @@ class TrainManager:
 
         self.optimizer.load_state_dict(model_checkpoint["optimizer_state"])
 
-        if model_checkpoint["scheduler_state"] is not None and \
-                self.scheduler is not None:
+        if (
+            model_checkpoint["scheduler_state"] is not None
+            and self.scheduler is not None
+        ):
             self.scheduler.load_state_dict(model_checkpoint["scheduler_state"])
 
         # restore counts
@@ -189,17 +201,16 @@ class TrainManager:
         if self.use_cuda:
             self.model.cuda()
 
-    def train_and_validate(self, train_data: Dataset, valid_data: Dataset) \
-            -> None:
+    def train_and_validate(self, train_data: Dataset, valid_data: Dataset) -> None:
         """
         Train the model and validate it from time to time on the validation set.
 
         :param train_data: training data
         :param valid_data: validation data
         """
-        train_iter = make_data_iter(train_data,
-                                    batch_size=self.batch_size,
-                                    train=True, shuffle=self.shuffle)
+        train_iter = make_data_iter(
+            train_data, batch_size=self.batch_size, train=True, shuffle=self.shuffle
+        )
         for epoch_no in range(self.epochs):
             self.logger.info("EPOCH %d", epoch_no + 1)
 
@@ -226,18 +237,20 @@ class TrainManager:
                 update = count == 0
                 # print(count, update, self.steps)
                 batch_loss, ones, acc = self._train_batch(batch, update=update)
-                self.tb_writer.add_scalar("train/train_batch_loss", batch_loss,
-                                          self.steps)
-                self.tb_writer.add_scalar("train/train_batch_ones", ones,
-                                          self.steps)
-                self.tb_writer.add_scalar("train/train_batch_acc", acc,
-                                          self.steps)
+                self.tb_writer.add_scalar(
+                    "train/train_batch_loss", batch_loss, self.steps
+                )
+                self.tb_writer.add_scalar("train/train_batch_ones", ones, self.steps)
+                self.tb_writer.add_scalar("train/train_batch_acc", acc, self.steps)
                 count = self.batch_multiplier if update else count
                 count -= 1
                 epoch_loss += batch_loss.detach().cpu().numpy()
 
-                if self.scheduler is not None and \
-                        self.scheduler_step_at == "step" and update:
+                if (
+                    self.scheduler is not None
+                    and self.scheduler_step_at == "step"
+                    and update
+                ):
                     self.scheduler.step()
 
                 # log learning progress
@@ -247,9 +260,14 @@ class TrainManager:
                     self.logger.info(
                         "Epoch %3d Step: %8d Batch Loss: %12.6f Ones: %.2f "
                         "Accuracy: %.2f Tokens per Sec: %8.0f, Lr: %.6f",
-                        epoch_no + 1, self.steps, batch_loss, ones, acc,
+                        epoch_no + 1,
+                        self.steps,
+                        batch_loss,
+                        ones,
+                        acc,
                         elapsed_tokens / elapsed,
-                        self.optimizer.param_groups[0]["lr"])
+                        self.optimizer.param_groups[0]["lr"],
+                    )
                     start = time.time()
                     total_valid_duration = 0
 
@@ -258,22 +276,26 @@ class TrainManager:
                     print("Validating")
                     valid_start_time = time.time()
 
-                    valid_score, valid_loss, valid_ones, = \
-                        validate_on_data(
-                            batch_size=self.eval_batch_size,
-                            data=valid_data,
-                            eval_metric=self.eval_metric,
-                            model=self.model,
-                            use_cuda=self.use_cuda,
-                            loss_function=self.loss,
-                        )
+                    valid_score, valid_loss, valid_ones, f1 = validate_on_data(
+                        batch_size=self.eval_batch_size,
+                        data=valid_data,
+                        eval_metric=self.eval_metric,
+                        model=self.model,
+                        use_cuda=self.use_cuda,
+                        loss_function=self.loss,
+                    )
 
-                    self.tb_writer.add_scalar("valid/valid_loss",
-                                              valid_loss, self.steps)
-                    self.tb_writer.add_scalar("valid/valid_score",
-                                              valid_score, self.steps)
-                    self.tb_writer.add_scalar("valid/valid_ones",
-                                                valid_ones, self.steps)
+                    self.tb_writer.add_scalar(
+                        "valid/valid_loss", valid_loss, self.steps
+                    )
+                    self.tb_writer.add_scalar(
+                        "valid/valid_score", valid_score, self.steps
+                    )
+                    self.tb_writer.add_scalar(
+                        "valid/valid_ones", valid_ones, self.steps
+                    )
+
+                    self.tb_writer.add_scalar("valid/valid_f1", f1, self.steps)
 
                     if self.early_stopping_metric == "loss":
                         ckpt_score = valid_loss
@@ -285,31 +307,44 @@ class TrainManager:
                         self.best_ckpt_score = ckpt_score
                         self.best_ckpt_iteration = self.steps
                         self.logger.info(
-                            'Hooray! New best validation result [%s]!',
-                            self.early_stopping_metric)
+                            "Hooray! New best validation result [%s]!",
+                            self.early_stopping_metric,
+                        )
                         if self.ckpt_queue.maxsize > 0:
                             self.logger.info("Saving new checkpoint.")
                             new_best = True
                             self._save_checkpoint()
 
-                    if self.scheduler is not None \
-                            and self.scheduler_step_at == "validation":
+                    if (
+                        self.scheduler is not None
+                        and self.scheduler_step_at == "validation"
+                    ):
                         self.scheduler.step(ckpt_score)
 
                     # append to validation report
                     self._add_report(
-                        valid_score=valid_score, valid_loss=valid_loss,
+                        valid_score=valid_score,
+                        valid_loss=valid_loss,
                         valid_ones=valid_ones,
+                        valid_f1=f1,
                         eval_metric=self.eval_metric,
-                        new_best=new_best)
+                        new_best=new_best,
+                    )
 
                     valid_duration = time.time() - valid_start_time
                     total_valid_duration += valid_duration
                     self.logger.info(
-                        'Validation result at epoch %3d, step %8d: %s: %6.2f, '
-                        'loss: %8.4f, duration: %.4fs',
-                        epoch_no+1, self.steps, self.eval_metric,
-                        valid_score, valid_loss, valid_duration)
+                        "Validation result at epoch %3d, step %8d: %s: %6.2f, "
+                        "loss: %8.4f, ones: %8.4f, f1: %8.4f, duration: %.4fs",
+                        epoch_no + 1,
+                        self.steps,
+                        self.eval_metric,
+                        valid_score,
+                        valid_loss,
+                        valid_ones,
+                        f1,
+                        valid_duration,
+                    )
 
                     # store validation set outputs
 
@@ -317,22 +352,26 @@ class TrainManager:
                     break
             if self.stop:
                 self.logger.info(
-                    'Training ended since minimum lr %f was reached.',
-                    self.learning_rate_min)
+                    "Training ended since minimum lr %f was reached.",
+                    self.learning_rate_min,
+                )
                 break
 
-            self.logger.info('Epoch %3d: total training loss %.2f', epoch_no+1,
-                             epoch_loss)
+            self.logger.info(
+                "Epoch %3d: total training loss %.2f", epoch_no + 1, epoch_loss
+            )
         else:
-            self.logger.info('Training ended after %3d epochs.', epoch_no+1)
-        self.logger.info('Best validation result at step %8d: %6.2f %s.',
-                         self.best_ckpt_iteration, self.best_ckpt_score,
-                         self.early_stopping_metric)
+            self.logger.info("Training ended after %3d epochs.", epoch_no + 1)
+        self.logger.info(
+            "Best validation result at step %8d: %6.2f %s.",
+            self.best_ckpt_iteration,
+            self.best_ckpt_score,
+            self.early_stopping_metric,
+        )
 
         self.tb_writer.close()  # close Tensorboard writer
 
-    def _train_batch(self, batch: Batch, update: bool = True) \
-            -> (Tensor, float):
+    def _train_batch(self, batch: Batch, update: bool = True) -> (Tensor, float):
         """
         Train the model on one batch: Compute the loss, make a gradient step.
 
@@ -340,20 +379,22 @@ class TrainManager:
         :param update: if False, only store gradient. if True also make update
         :return: loss for batch (sum)
         """
-        batch_loss, ones, acc = self.model.get_loss_for_batch(batch, self.loss, self.weighting)
+        batch_loss, ones, acc, _ = self.model.get_loss_for_batch(
+            batch, self.loss, self.weighting
+        )
 
         # normalize batch loss
         if self.normalization == "batch":
             normalizer = batch.src_trg[0].shape[0]
         elif self.normalization == "tokens":
-            #print("trg len {}".format(batch.trg_len))
+            # print("trg len {}".format(batch.trg_len))
             normalizer = torch.sum(batch.trg_len)
         else:
             raise NotImplementedError("Only normalize by 'batch' or 'tokens'")
-        #print("Batch loss {}".format(batch_loss))
+        # print("Batch loss {}".format(batch_loss))
         norm_batch_loss = batch_loss / normalizer
-        #print("Normalized loss {} ({})".format(norm_batch_loss, normalizer))
-        #print("Proportion of predicted 1s: {:.2f}".format(ones))
+        # print("Normalized loss {} ({})".format(norm_batch_loss, normalizer))
+        # print("Proportion of predicted 1s: {:.2f}".format(ones))
         # division needed since loss.backward sums the gradients until updated
         norm_batch_multiply = norm_batch_loss / self.batch_multiplier
 
@@ -377,9 +418,15 @@ class TrainManager:
 
         return norm_batch_loss, ones, acc
 
-    def _add_report(self, valid_score: float, 
-                    valid_loss: float, valid_ones: float, eval_metric: str,
-                    new_best: bool = False) -> None:
+    def _add_report(
+        self,
+        valid_score: float,
+        valid_loss: float,
+        valid_ones: float,
+        valid_f1: float,
+        eval_metric: str,
+        new_best: bool = False,
+    ) -> None:
         """
         Append a one-line report to validation logging file.
 
@@ -392,30 +439,39 @@ class TrainManager:
         current_lr = -1
         # ignores other param groups for now
         for param_group in self.optimizer.param_groups:
-            current_lr = param_group['lr']
+            current_lr = param_group["lr"]
 
         if current_lr < self.learning_rate_min:
             self.stop = True
 
-        with open(self.valid_report_file, 'a') as opened_file:
+        with open(self.valid_report_file, "a") as opened_file:
             opened_file.write(
-                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\tOnes: {:.5f}\t"
+                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\tOnes: {:.5f}\tF1: {:.5f}"
                 "LR: {:.8f}\t{}\n".format(
-                    self.steps, valid_loss, eval_metric,
-                    valid_score, valid_ones, current_lr, "*" if new_best else ""))
+                    self.steps,
+                    valid_loss,
+                    eval_metric,
+                    valid_score,
+                    valid_ones,
+                    valid_f1,
+                    current_lr,
+                    "*" if new_best else "",
+                )
+            )
 
     def _log_parameters_list(self) -> None:
         """
         Write all model parameters (name, shape) to the log.
         """
-        model_parameters = filter(lambda p: p.requires_grad,
-                                  self.model.parameters())
+        model_parameters = filter(lambda p: p.requires_grad, self.model.parameters())
         n_params = sum([np.prod(p.size()) for p in model_parameters])
         self.logger.info("Total params: %d", n_params)
-        trainable_params = [n for (n, p) in self.model.named_parameters()
-                            if p.requires_grad]
+        trainable_params = [
+            n for (n, p) in self.model.named_parameters() if p.requires_grad
+        ]
         self.logger.info("Trainable parameters: %s", sorted(trainable_params))
         assert trainable_params
+
 
 """
     def _log_examples(self, sources: List[str], hypotheses: List[str],
@@ -464,6 +520,7 @@ class TrainManager:
                 opened_file.write("{}\n".format(hyp))
 """
 
+
 def train(cfg_file):
     """
     Main training function. After training, also test on test data if given.
@@ -485,7 +542,7 @@ def train(cfg_file):
     trainer = TrainManager(model=model, config=cfg)
 
     # store copy of original training config in model dir
-    shutil.copy2(cfg_file, trainer.model_dir+"/config.yaml")
+    shutil.copy2(cfg_file, trainer.model_dir + "/config.yaml")
 
     # log all entries of config
     log_cfg(cfg, trainer.logger)
