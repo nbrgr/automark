@@ -12,12 +12,13 @@ data:
 model:
   hidden_dimension: 50
   activation: "tanh"
-  freeze_bert: True
+  freeze_bert: False
   head_bias: False
 
 train:
-  lr: 0.0002
-  optimizer: sgd
+  bert_lr: 0.000003
+  lr: 0.0003
+  optimizer: adam
   batch_size: 32
   epochs: 10
   seed: 42
@@ -28,7 +29,7 @@ train:
   overwrite: True
   normalization: tokens
   bad_weight: 5.0
-  validation_freq: 20
+  validation_freq: 100
   logging_freq: 10
   weighting: 'wrong'
   eval_batch_size: 128

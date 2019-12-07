@@ -1,34 +1,35 @@
-2019-12-07 20:42:11,653 Hello! This is AutoMark. For all your Automatic Marking needs.
-2019-12-07 20:42:11,663 Total params: 38550
-2019-12-07 20:42:11,665 Trainable parameters: ['marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.prediction.weight']
-2019-12-07 20:42:11,668 cfg.bert.path                      : bert-base-multilingual-cased
-2019-12-07 20:42:11,668 cfg.data.source                    : .en
-2019-12-07 20:42:11,668 cfg.data.target                    : .hyp
-2019-12-07 20:42:11,669 cfg.data.marking                   : .ann
-2019-12-07 20:42:11,669 cfg.data.raw                       : data/markings
-2019-12-07 20:42:11,669 cfg.data.train                     : data/markings.tok
-2019-12-07 20:42:11,669 cfg.data.dev                       : data/markings.tok
-2019-12-07 20:42:11,669 cfg.model.hidden_dimension         : 50
-2019-12-07 20:42:11,670 cfg.model.activation               : tanh
-2019-12-07 20:42:11,670 cfg.model.freeze_bert              : True
-2019-12-07 20:42:11,670 cfg.model.head_bias                : False
-2019-12-07 20:42:11,670 cfg.train.lr                       : 0.0002
-2019-12-07 20:42:11,670 cfg.train.optimizer                : sgd
-2019-12-07 20:42:11,671 cfg.train.batch_size               : 32
-2019-12-07 20:42:11,671 cfg.train.epochs                   : 10
-2019-12-07 20:42:11,671 cfg.train.seed                     : 42
-2019-12-07 20:42:11,671 cfg.train.model_dir                : humanmt
-2019-12-07 20:42:11,671 cfg.train.shuffle                  : True
-2019-12-07 20:42:11,671 cfg.train.cuda                     : False
-2019-12-07 20:42:11,672 cfg.train.early_stopping_metric    : loss
-2019-12-07 20:42:11,672 cfg.train.overwrite                : True
-2019-12-07 20:42:11,672 cfg.train.normalization            : tokens
-2019-12-07 20:42:11,672 cfg.train.bad_weight               : 5.0
-2019-12-07 20:42:11,672 cfg.train.validation_freq          : 20
-2019-12-07 20:42:11,672 cfg.train.logging_freq             : 10
-2019-12-07 20:42:11,673 cfg.train.weighting                : wrong
-2019-12-07 20:42:11,673 cfg.train.eval_batch_size          : 128
-2019-12-07 20:42:11,675 AutoMark(
+2019-12-07 21:37:32,037 Hello! This is AutoMark. For all your Automatic Marking needs.
+2019-12-07 21:37:32,044 Total params: 177891990
+2019-12-07 21:37:32,045 Trainable parameters: ['bert.embeddings.LayerNorm.bias', 'bert.embeddings.LayerNorm.weight', 'bert.embeddings.position_embeddings.weight', 'bert.embeddings.token_type_embeddings.weight', 'bert.embeddings.word_embeddings.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.dense.bias', 'bert.encoder.layer.0.attention.output.dense.weight', 'bert.encoder.layer.0.attention.self.key.bias', 'bert.encoder.layer.0.attention.self.key.weight', 'bert.encoder.layer.0.attention.self.query.bias', 'bert.encoder.layer.0.attention.self.query.weight', 'bert.encoder.layer.0.attention.self.value.bias', 'bert.encoder.layer.0.attention.self.value.weight', 'bert.encoder.layer.0.intermediate.dense.bias', 'bert.encoder.layer.0.intermediate.dense.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.dense.bias', 'bert.encoder.layer.0.output.dense.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.dense.bias', 'bert.encoder.layer.1.attention.output.dense.weight', 'bert.encoder.layer.1.attention.self.key.bias', 'bert.encoder.layer.1.attention.self.key.weight', 'bert.encoder.layer.1.attention.self.query.bias', 'bert.encoder.layer.1.attention.self.query.weight', 'bert.encoder.layer.1.attention.self.value.bias', 'bert.encoder.layer.1.attention.self.value.weight', 'bert.encoder.layer.1.intermediate.dense.bias', 'bert.encoder.layer.1.intermediate.dense.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.dense.bias', 'bert.encoder.layer.1.output.dense.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.dense.bias', 'bert.encoder.layer.10.attention.output.dense.weight', 'bert.encoder.layer.10.attention.self.key.bias', 'bert.encoder.layer.10.attention.self.key.weight', 'bert.encoder.layer.10.attention.self.query.bias', 'bert.encoder.layer.10.attention.self.query.weight', 'bert.encoder.layer.10.attention.self.value.bias', 'bert.encoder.layer.10.attention.self.value.weight', 'bert.encoder.layer.10.intermediate.dense.bias', 'bert.encoder.layer.10.intermediate.dense.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.dense.bias', 'bert.encoder.layer.10.output.dense.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.dense.bias', 'bert.encoder.layer.11.attention.output.dense.weight', 'bert.encoder.layer.11.attention.self.key.bias', 'bert.encoder.layer.11.attention.self.key.weight', 'bert.encoder.layer.11.attention.self.query.bias', 'bert.encoder.layer.11.attention.self.query.weight', 'bert.encoder.layer.11.attention.self.value.bias', 'bert.encoder.layer.11.attention.self.value.weight', 'bert.encoder.layer.11.intermediate.dense.bias', 'bert.encoder.layer.11.intermediate.dense.weight', 'bert.encoder.layer.11.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.dense.bias', 'bert.encoder.layer.11.output.dense.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.dense.bias', 'bert.encoder.layer.2.attention.output.dense.weight', 'bert.encoder.layer.2.attention.self.key.bias', 'bert.encoder.layer.2.attention.self.key.weight', 'bert.encoder.layer.2.attention.self.query.bias', 'bert.encoder.layer.2.attention.self.query.weight', 'bert.encoder.layer.2.attention.self.value.bias', 'bert.encoder.layer.2.attention.self.value.weight', 'bert.encoder.layer.2.intermediate.dense.bias', 'bert.encoder.layer.2.intermediate.dense.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.dense.bias', 'bert.encoder.layer.2.output.dense.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.dense.bias', 'bert.encoder.layer.3.attention.output.dense.weight', 'bert.encoder.layer.3.attention.self.key.bias', 'bert.encoder.layer.3.attention.self.key.weight', 'bert.encoder.layer.3.attention.self.query.bias', 'bert.encoder.layer.3.attention.self.query.weight', 'bert.encoder.layer.3.attention.self.value.bias', 'bert.encoder.layer.3.attention.self.value.weight', 'bert.encoder.layer.3.intermediate.dense.bias', 'bert.encoder.layer.3.intermediate.dense.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.dense.bias', 'bert.encoder.layer.3.output.dense.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.dense.bias', 'bert.encoder.layer.4.attention.output.dense.weight', 'bert.encoder.layer.4.attention.self.key.bias', 'bert.encoder.layer.4.attention.self.key.weight', 'bert.encoder.layer.4.attention.self.query.bias', 'bert.encoder.layer.4.attention.self.query.weight', 'bert.encoder.layer.4.attention.self.value.bias', 'bert.encoder.layer.4.attention.self.value.weight', 'bert.encoder.layer.4.intermediate.dense.bias', 'bert.encoder.layer.4.intermediate.dense.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.dense.bias', 'bert.encoder.layer.4.output.dense.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.dense.bias', 'bert.encoder.layer.5.attention.output.dense.weight', 'bert.encoder.layer.5.attention.self.key.bias', 'bert.encoder.layer.5.attention.self.key.weight', 'bert.encoder.layer.5.attention.self.query.bias', 'bert.encoder.layer.5.attention.self.query.weight', 'bert.encoder.layer.5.attention.self.value.bias', 'bert.encoder.layer.5.attention.self.value.weight', 'bert.encoder.layer.5.intermediate.dense.bias', 'bert.encoder.layer.5.intermediate.dense.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.dense.bias', 'bert.encoder.layer.5.output.dense.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.dense.bias', 'bert.encoder.layer.6.attention.output.dense.weight', 'bert.encoder.layer.6.attention.self.key.bias', 'bert.encoder.layer.6.attention.self.key.weight', 'bert.encoder.layer.6.attention.self.query.bias', 'bert.encoder.layer.6.attention.self.query.weight', 'bert.encoder.layer.6.attention.self.value.bias', 'bert.encoder.layer.6.attention.self.value.weight', 'bert.encoder.layer.6.intermediate.dense.bias', 'bert.encoder.layer.6.intermediate.dense.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.dense.bias', 'bert.encoder.layer.6.output.dense.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.dense.bias', 'bert.encoder.layer.7.attention.output.dense.weight', 'bert.encoder.layer.7.attention.self.key.bias', 'bert.encoder.layer.7.attention.self.key.weight', 'bert.encoder.layer.7.attention.self.query.bias', 'bert.encoder.layer.7.attention.self.query.weight', 'bert.encoder.layer.7.attention.self.value.bias', 'bert.encoder.layer.7.attention.self.value.weight', 'bert.encoder.layer.7.intermediate.dense.bias', 'bert.encoder.layer.7.intermediate.dense.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.dense.bias', 'bert.encoder.layer.7.output.dense.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.dense.bias', 'bert.encoder.layer.8.attention.output.dense.weight', 'bert.encoder.layer.8.attention.self.key.bias', 'bert.encoder.layer.8.attention.self.key.weight', 'bert.encoder.layer.8.attention.self.query.bias', 'bert.encoder.layer.8.attention.self.query.weight', 'bert.encoder.layer.8.attention.self.value.bias', 'bert.encoder.layer.8.attention.self.value.weight', 'bert.encoder.layer.8.intermediate.dense.bias', 'bert.encoder.layer.8.intermediate.dense.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.dense.bias', 'bert.encoder.layer.8.output.dense.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.dense.bias', 'bert.encoder.layer.9.attention.output.dense.weight', 'bert.encoder.layer.9.attention.self.key.bias', 'bert.encoder.layer.9.attention.self.key.weight', 'bert.encoder.layer.9.attention.self.query.bias', 'bert.encoder.layer.9.attention.self.query.weight', 'bert.encoder.layer.9.attention.self.value.bias', 'bert.encoder.layer.9.attention.self.value.weight', 'bert.encoder.layer.9.intermediate.dense.bias', 'bert.encoder.layer.9.intermediate.dense.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.dense.bias', 'bert.encoder.layer.9.output.dense.weight', 'bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.prediction.weight']
+2019-12-07 21:37:32,048 cfg.bert.path                      : bert-base-multilingual-cased
+2019-12-07 21:37:32,048 cfg.data.source                    : .en
+2019-12-07 21:37:32,048 cfg.data.target                    : .hyp
+2019-12-07 21:37:32,048 cfg.data.marking                   : .ann
+2019-12-07 21:37:32,048 cfg.data.raw                       : data/markings
+2019-12-07 21:37:32,048 cfg.data.train                     : data/markings.tok
+2019-12-07 21:37:32,048 cfg.data.dev                       : data/markings.tok
+2019-12-07 21:37:32,048 cfg.model.hidden_dimension         : 50
+2019-12-07 21:37:32,049 cfg.model.activation               : tanh
+2019-12-07 21:37:32,049 cfg.model.freeze_bert              : False
+2019-12-07 21:37:32,049 cfg.model.head_bias                : False
+2019-12-07 21:37:32,049 cfg.train.bert_lr                  : 3e-06
+2019-12-07 21:37:32,049 cfg.train.lr                       : 0.0003
+2019-12-07 21:37:32,049 cfg.train.optimizer                : adam
+2019-12-07 21:37:32,049 cfg.train.batch_size               : 32
+2019-12-07 21:37:32,049 cfg.train.epochs                   : 10
+2019-12-07 21:37:32,049 cfg.train.seed                     : 42
+2019-12-07 21:37:32,049 cfg.train.model_dir                : humanmt
+2019-12-07 21:37:32,049 cfg.train.shuffle                  : True
+2019-12-07 21:37:32,049 cfg.train.cuda                     : False
+2019-12-07 21:37:32,050 cfg.train.early_stopping_metric    : loss
+2019-12-07 21:37:32,050 cfg.train.overwrite                : True
+2019-12-07 21:37:32,050 cfg.train.normalization            : tokens
+2019-12-07 21:37:32,050 cfg.train.bad_weight               : 5.0
+2019-12-07 21:37:32,050 cfg.train.validation_freq          : 100
+2019-12-07 21:37:32,050 cfg.train.logging_freq             : 10
+2019-12-07 21:37:32,050 cfg.train.weighting                : wrong
+2019-12-07 21:37:32,050 cfg.train.eval_batch_size          : 128
+2019-12-07 21:37:32,052 AutoMark(
   (bert): BertModel(
     (embeddings): BertEmbeddings(
       (word_embeddings): Embedding(119547, 768, padding_idx=0)
@@ -327,6 +328,15 @@
     (prediction): Linear(in_features=50, out_features=2, bias=False)
   )
 )
-2019-12-07 20:42:11,679 EPOCH 1
-2019-12-07 20:44:57,422 Epoch   1 Step:       10 Batch Loss:     0.793773 Ones: 0.53 Accuracy: 0.51 Tokens per Sec:       50, Lr: 0.000200
-2019-12-07 20:47:59,507 Epoch   1 Step:       20 Batch Loss:     0.670670 Ones: 0.65 Accuracy: 0.60 Tokens per Sec:       93, Lr: 0.000200
+2019-12-07 21:37:32,053 EPOCH 1
+2019-12-07 21:38:25,951 Epoch   1 Step:       10 Batch Loss:     1.565970 Ones: 0.59 Accuracy: 0.60 Tokens per Sec:      154, Lr: 0.000300
+2019-12-07 21:39:19,355 Epoch   1 Step:       20 Batch Loss:     0.993839 Ones: 0.82 Accuracy: 0.75 Tokens per Sec:      317, Lr: 0.000300
+2019-12-07 21:40:13,231 Epoch   1 Step:       30 Batch Loss:     0.950243 Ones: 0.83 Accuracy: 0.76 Tokens per Sec:      469, Lr: 0.000300
+2019-12-07 21:40:27,614 Epoch   1: total training loss 33.23
+2019-12-07 21:40:27,615 EPOCH 2
+2019-12-07 21:41:04,050 Epoch   2 Step:       40 Batch Loss:     1.011433 Ones: 0.78 Accuracy: 0.73 Tokens per Sec:      157, Lr: 0.000300
+2019-12-07 21:41:57,654 Epoch   2 Step:       50 Batch Loss:     0.928337 Ones: 0.85 Accuracy: 0.76 Tokens per Sec:      267, Lr: 0.000300
+2019-12-07 21:42:49,865 Epoch   2 Step:       60 Batch Loss:     0.901742 Ones: 0.81 Accuracy: 0.76 Tokens per Sec:      432, Lr: 0.000300
+2019-12-07 21:43:19,523 Epoch   2: total training loss 28.84
+2019-12-07 21:43:19,524 EPOCH 3
+2019-12-07 21:43:39,781 Epoch   3 Step:       70 Batch Loss:     0.970828 Ones: 0.82 Accuracy: 0.74 Tokens per Sec:      165, Lr: 0.000300

@@ -45,7 +45,7 @@ def build_gradient_clipper(config: dict) -> Optional[Callable]:
     return clip_grad_fun
 
 
-def build_optimizer(config: dict, parameters: Generator) -> Optimizer:
+def build_optimizer(config: dict, parameters) -> Optimizer:
     """
     Create an optimizer for the given parameters as specified in config.
 
