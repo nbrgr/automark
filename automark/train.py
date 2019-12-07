@@ -349,7 +349,7 @@ class TrainManager:
 
         # normalize batch loss
         if self.normalization == "batch":
-            normalizer = batch.trg_src.shape[0]
+            normalizer = batch.src_trg[0].shape[0]
         elif self.normalization == "tokens":
             #print("trg len {}".format(batch.trg_len))
             normalizer = torch.sum(batch.trg_len)

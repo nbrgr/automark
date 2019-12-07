@@ -10,15 +10,15 @@ data:
   dev: 'data/markings.tok'
 
 model:
-  hidden_dimension: 100
-  activation: "relu"
+  hidden_dimension: 50
+  activation: "tanh"
   freeze_bert: True
   head_bias: False
 
 train:
-  lr: 0.03
-  optimizer: SGD
-  batch_size: 20
+  lr: 0.00002
+  optimizer: Adam
+  batch_size: 32
   epochs: 10
   seed: 42
   model_dir: humanmt
@@ -26,8 +26,8 @@ train:
   cuda: False
   early_stopping_metric: loss
   overwrite: True
-  normalization: tokens
+  normalization: batch
   bad_weight: 5.0
   validation_freq: 500
-  logging_freq: 10
+  logging_freq: 1
   weighing: 'percentage'

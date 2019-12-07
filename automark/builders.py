@@ -72,7 +72,8 @@ def build_optimizer(config: dict, parameters: Generator) -> Optimizer:
     :return: optimizer
     """
     optimizer_name = config.get("optimizer", "sgd").lower()
-    learning_rate = config.get("learning_rate", 3.0e-4)
+    learning_rate = config.get("lr", 3.0e-4)
+    print(learning_rate)
     weight_decay = config.get("weight_decay", 0)
 
     if optimizer_name == "adam":

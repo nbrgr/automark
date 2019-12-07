@@ -71,6 +71,7 @@ class AutoMark(torch.nn.Module):
         mask = batch.label_mask
 
         if weighing == 'percentage':
+            print('percentage')
             weights = torch.ones_like(batch.loss_weight)
             total_ones = torch.sum(labels, dim=1).float()
             total_trgs = batch.trg_len.float()
@@ -83,10 +84,12 @@ class AutoMark(torch.nn.Module):
             zero_weight_matrix = batch.id_mask.float() * ((-1 * labels.float()) + 1) * zero_weights.view(-1, 1)
 
             weight_matrix = ones_weight_matrix + zero_weight_matrix
-            weights=weight_matrix
-        elif weighing = 'constant':
+            weights=weight_matrix + 1e-6
+        elif weighing == 'constant':
+            print('constant')
             weights=batch.loss_weight
         else: 
+            print('none')
             weights=torch.ones_like(batch.loss_weight)
 
         loss = loss_function(predictions, labels, mask, weights)
