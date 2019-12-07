@@ -54,7 +54,7 @@ class TrainManager:
             raise ConfigurationError("Invalid normalization. "
                                      "Valid options: 'batch', 'tokens'.")
 
-        self.weighing = train_config['weighing']
+        self.weighting = train_config['weighting']
 
         # optimization
         self.learning_rate_min = train_config.get("learning_rate_min", 1.0e-8)
@@ -255,10 +255,10 @@ class TrainManager:
 
                 # validate on the entire dev set
                 if self.steps % self.validation_freq == 0 and update:
+                    print("Validating")
                     valid_start_time = time.time()
 
-                    valid_score, valid_loss, valid_sources, \
-                        valid_references, valid_hypotheses, = \
+                    valid_score, valid_loss, valid_ones, = \
                         validate_on_data(
                             batch_size=self.eval_batch_size,
                             data=valid_data,
@@ -272,7 +272,8 @@ class TrainManager:
                                               valid_loss, self.steps)
                     self.tb_writer.add_scalar("valid/valid_score",
                                               valid_score, self.steps)
-
+                    self.tb_writer.add_scalar("valid/valid_ones",
+                                                valid_ones, self.steps)
 
                     if self.early_stopping_metric == "loss":
                         ckpt_score = valid_loss
@@ -298,14 +299,9 @@ class TrainManager:
                     # append to validation report
                     self._add_report(
                         valid_score=valid_score, valid_loss=valid_loss,
+                        valid_ones=valid_ones,
                         eval_metric=self.eval_metric,
                         new_best=new_best)
-
-                    self._log_examples(
-                        sources=valid_sources,
-                        hypotheses=valid_hypotheses,
-                        references=valid_references
-                    )
 
                     valid_duration = time.time() - valid_start_time
                     total_valid_duration += valid_duration
@@ -316,7 +312,6 @@ class TrainManager:
                         valid_score, valid_loss, valid_duration)
 
                     # store validation set outputs
-                    self._store_outputs(valid_hypotheses)
 
                 if self.stop:
                     break
@@ -345,7 +340,7 @@ class TrainManager:
         :param update: if False, only store gradient. if True also make update
         :return: loss for batch (sum)
         """
-        batch_loss, ones, acc = self.model.get_loss_for_batch(batch, self.loss, self.weighing)
+        batch_loss, ones, acc = self.model.get_loss_for_batch(batch, self.loss, self.weighting)
 
         # normalize batch loss
         if self.normalization == "batch":
@@ -383,7 +378,7 @@ class TrainManager:
         return norm_batch_loss, ones, acc
 
     def _add_report(self, valid_score: float, 
-                    valid_loss: float, eval_metric: str,
+                    valid_loss: float, valid_ones: float, eval_metric: str,
                     new_best: bool = False) -> None:
         """
         Append a one-line report to validation logging file.
@@ -404,10 +399,10 @@ class TrainManager:
 
         with open(self.valid_report_file, 'a') as opened_file:
             opened_file.write(
-                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\t"
+                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\tOnes: {:.5f}\t"
                 "LR: {:.8f}\t{}\n".format(
                     self.steps, valid_loss, eval_metric,
-                    valid_score, current_lr, "*" if new_best else ""))
+                    valid_score, valid_ones, current_lr, "*" if new_best else ""))
 
     def _log_parameters_list(self) -> None:
         """
@@ -422,12 +417,13 @@ class TrainManager:
         self.logger.info("Trainable parameters: %s", sorted(trainable_params))
         assert trainable_params
 
+"""
     def _log_examples(self, sources: List[str], hypotheses: List[str],
                       references: List[str],
                       sources_raw: List[List[str]] = None,
                       hypotheses_raw: List[List[str]] = None,
                       references_raw: List[List[str]] = None) -> None:
-        """
+        
         Log a the first `self.log_valid_sents` sentences from given examples.
 
         :param sources: decoded sources (list of strings)
@@ -436,7 +432,7 @@ class TrainManager:
         :param sources_raw: raw sources (list of list of tokens)
         :param hypotheses_raw: raw hypotheses (list of list of tokens)
         :param references_raw: raw references (list of list of tokens)
-        """
+        
         for p in self.log_valid_sents:
 
             if p >= len(sources):
@@ -456,17 +452,17 @@ class TrainManager:
             self.logger.info("\tHypothesis: %s", hypotheses[p])
 
     def _store_outputs(self, hypotheses: List[str]) -> None:
-        """
+        
         Write current validation outputs to file in `self.model_dir.`
 
         :param hypotheses: list of strings
-        """
+        
         current_valid_output_file = "{}/{}.hyps".format(self.model_dir,
                                                         self.steps)
         with open(current_valid_output_file, 'w') as opened_file:
             for hyp in hypotheses:
                 opened_file.write("{}\n".format(hyp))
-
+"""
 
 def train(cfg_file):
     """

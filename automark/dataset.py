@@ -29,6 +29,17 @@ def batch_fun(batch):
 def identity_fun(batch):
     return batch
 
+def batch_to(batch, loc):
+    batch.src_trg = batch.src_trg.to(loc)
+    batch.weights = batch.weights.to(loc)
+    batch.label_mask = batch.label_mask.to(loc)
+    batch.id_mask = batch.id_mask.to(loc)
+    batch.loss_weight = batch.loss_weight.to(loc)
+    batch.src_len = batch.src_len.to(loc)
+    batch.trg_len = batch.trg_len.to(loc)
+    batch.attention_mask = batch.attention_mask.to(loc)
+    return batch
+    
 
 def make_dataset(config):
     bert_path = config['bert']['path']
