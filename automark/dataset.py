@@ -19,11 +19,11 @@ def tensorify(fun, dtype):
 
 def batch_fun(batch):
     max_len = max([len(x) for x in batch])
-
+    batch_copy = []
     for example in batch:
-        example += [0.0] * (max_len - len(example))
+        batch_copy.append(example[:] + [0.0] * (max_len - len(example)))
 
-    return batch
+    return batch_copy
 
 
 def identity_fun(batch):
