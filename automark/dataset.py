@@ -114,14 +114,14 @@ def make_data_iter(dataset: Dataset,
 
     if train:
         # optionally shuffle and sort during training
-        data_iter = data.BucketIterator(
+        data_iter = data.Iterator(
             repeat=False, sort=False, dataset=dataset,
             batch_size=batch_size,
             train=True, sort_within_batch=True,
             sort_key=lambda x: len(x.src_trg), shuffle=shuffle)
     else:
         # don't sort/shuffle for validation/inference
-        data_iter = data.BucketIterator(
+        data_iter = data.Iterator(
             repeat=False, dataset=dataset,
             batch_size=batch_size,
             train=False, sort=False)
@@ -138,12 +138,14 @@ class MergeDataset(Dataset):
             postprocessing=tensorify(identity_fun, torch.long))
         trg_len = data.RawField(
             postprocessing=tensorify(identity_fun, torch.long))
+        attention_mask = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
         
         if not isinstance(fields[0], (tuple, list)):
             fields = [('src_trg', fields[0]), ('weights', fields[1]),
                       ('label_mask', fields[2]), ('id_mask', fields[3]),
                       ('loss_weight', fields[4]),
-                      ('src_len', src_len), ('trg_len', trg_len)]
+                      ('src_len', src_len), ('trg_len', trg_len),
+                      ('attention_mask', attention_mask)]
 
         src_path, trg_path, weights_path = tuple(
             os.path.expanduser(path + x) for x in exts)
@@ -169,7 +171,7 @@ class MergeDataset(Dataset):
 
                 if src_line != '' and trg_line != '':
                     merged_line = src_line + trg_line
-                    #attention_mask = [1] * len(merged_line)
+                    att_mask = [1] * len(merged_line)
                     id_mask = [0] * len(src_line) + [1] * len(trg_line)
                     assert len(merged_line) == len(id_mask)
                     assert len(label_mask) == len(merged_line)
@@ -177,6 +179,6 @@ class MergeDataset(Dataset):
                     assert len(loss_weights) == len(merged_line)
                     examples.append(data.Example.fromlist(
                         [merged_line, weights, label_mask, id_mask,
-                         loss_weights, len(src_line), len(trg_line)], fields))
+                         loss_weights, len(src_line), len(trg_line), att_mask], fields))
 
         super(MergeDataset, self).__init__(examples, fields, **kwargs)

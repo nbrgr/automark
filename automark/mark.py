@@ -52,10 +52,9 @@ class AutoMark(torch.nn.Module):
         if freeze_bert:
             self.freeze_bert()
 
-    def forward(self, sentence, mask):
+    def forward(self, sentence, label_mask, attention_mask):
         src_trg, lens = sentence
-        mask = torch.tensor(mask)
-        embeddings = self.bert(src_trg, token_type_ids=mask)[0]
+        embeddings = self.bert(src_trg, token_type_ids=label_mask, attention_mask=attention_mask)[0]
         #embeddings should be (Batch, Len, Emb_Dim)
         shape = embeddings.shape
         #print("shape embeddings {}".format(embeddings.shape))
@@ -67,7 +66,7 @@ class AutoMark(torch.nn.Module):
 
     def get_loss_for_batch(self, batch, loss_function):
         assert(batch.src_trg[0].shape == batch.id_mask.shape)
-        predictions = self.forward(batch.src_trg, batch.id_mask)
+        predictions = self.forward(batch.src_trg, batch.id_mask, batch.attention_mask)
         labels = batch.weights
         mask = batch.label_mask
         weights = batch.loss_weight
