@@ -110,10 +110,10 @@ class AutoMark(torch.nn.Module):
 
             weights = torch.ones_like(batch.loss_weight)
 
-            weights = torch.where(wrong_predictions, weights * 2, weights * 0.1)
-        else:
-            print("none")
-            weights = torch.ones_like(batch.loss_weight)
+            weights = torch.where(wrong_predictions, weights * 5, weights * 0.1)
+        else: 
+            print('none')
+            weights=torch.ones_like(batch.loss_weight)
 
         loss = loss_function(predictions, labels, mask, weights)
 

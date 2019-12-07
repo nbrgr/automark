@@ -61,9 +61,10 @@ class TrainManager:
         self.learning_rate_min = train_config.get("learning_rate_min", 1.0e-8)
 
         self.clip_grad_fun = build_gradient_clipper(config=train_config)
-        self.optimizer = build_optimizer(
-            config=train_config, parameters=model.parameters()
-        )
+
+        opt_params = [{'params': self.model.marking_head.parameters(), 'lr': train_config['lr']}, {'params': self.model.bert.parameters(), 'lr': train_config.get('bert_lr', train_config['lr'])}]
+        self.optimizer = build_optimizer(config=train_config,
+                                         parameters=opt_params)
 
         # validation & early stopping
         self.validation_freq = train_config.get("validation_freq", 1000)
