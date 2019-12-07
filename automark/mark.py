@@ -66,6 +66,7 @@ class AutoMark(torch.nn.Module):
         return markings
 
     def get_loss_for_batch(self, batch, loss_function):
+        assert(batch.src_trg[0].shape == batch.id_mask.shape)
         predictions = self.forward(batch.src_trg, batch.id_mask)
         labels = batch.weights
         mask = batch.label_mask
