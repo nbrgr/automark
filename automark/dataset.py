@@ -88,7 +88,7 @@ def make_dataset(config):
     dev_data = MergeDataset(path=dev_path,
                             exts=(src_ext, trg_ext, ma_ext),
                             fields=(src_trg_field, ann_field, mask_field,
-                                    id_mask, loss_weight_field), vocab=vocab,
+                                    id_mask, loss_weight_field), vocab=vocab, bad_weight=bad_weight,
                             bos_token='[CLS]', sep_token='[SEP]')
     test_data = None
     """
@@ -125,14 +125,14 @@ def make_data_iter(dataset: Dataset,
 
     if train:
         # optionally shuffle and sort during training
-        data_iter = data.Iterator(
+        data_iter = data.BucketIterator(
             repeat=False, sort=False, dataset=dataset,
             batch_size=batch_size,
             train=True, sort_within_batch=True,
             sort_key=lambda x: len(x.src_trg), shuffle=shuffle)
     else:
         # don't sort/shuffle for validation/inference
-        data_iter = data.Iterator(
+        data_iter = data.BucketIterator(
             repeat=False, dataset=dataset,
             batch_size=batch_size,
             train=False, sort=False)
