@@ -88,6 +88,14 @@ class AutoMark(torch.nn.Module):
         elif weighing == 'constant':
             print('constant')
             weights=batch.loss_weight
+        elif weighing == 'wrong':
+            argmax_predictions = predictions.argmax(dim=-1)
+
+            wrong_predictions = argmax_predictions != batch.labels
+
+            weights = torch.ones_like(batch.loss_weight)
+
+            weights = torch.where(wrong_predictions, weights * 2, weights * 0.1)
         else: 
             print('none')
             weights=torch.ones_like(batch.loss_weight)
