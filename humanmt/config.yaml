@@ -17,7 +17,7 @@ model:
 
 train:
   lr: 0.03
-  optimizer: Adam
+  optimizer: SGD
   batch_size: 20
   epochs: 10
   seed: 42
@@ -30,3 +30,4 @@ train:
   bad_weight: 5.0
   validation_freq: 500
   logging_freq: 10
+  weighing: 'percentage'

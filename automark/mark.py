@@ -64,14 +64,37 @@ class AutoMark(torch.nn.Module):
         #print("shape markings {}".format(markings.shape))
         return markings
 
-    def get_loss_for_batch(self, batch, loss_function):
+    def get_loss_for_batch(self, batch, loss_function, weighing):
         assert(batch.src_trg[0].shape == batch.id_mask.shape)
         predictions = self.forward(batch.src_trg, batch.id_mask, batch.attention_mask)
         labels = batch.weights
         mask = batch.label_mask
-        weights = batch.loss_weight
-        batch_loss = torch.sum(
-            loss_function(predictions, labels, mask, weights))
+
+        if weighing == 'percentage':
+            weights = torch.ones_like(batch.loss_weight)
+            total_ones = torch.sum(labels, dim=1).float()
+            total_trgs = batch.trg_len.float()
+
+            one_weights = 1 - (total_ones / total_trgs)
+            zero_weights = 1 - one_weights
+
+            ones_weight_matrix = batch.id_mask.float() * labels.float() * one_weights.view(-1, 1)
+
+            zero_weight_matrix = batch.id_mask.float() * ((-1 * labels.float()) + 1) * zero_weights.view(-1, 1)
+
+            weight_matrix = ones_weight_matrix + zero_weight_matrix
+            weights=weight_matrix
+        elif weighing = 'constant':
+            weights=batch.loss_weight
+        else: 
+            weights=torch.ones_like(batch.loss_weight)
+
+        loss = loss_function(predictions, labels, mask, weights)
+
+        loss = loss.view(batch.src_trg[0].shape[0], -1)
+
+        batch_loss = torch.sum(loss)
+
         # proportion of ones in the prdictions
         num_valid_tokens = batch.label_mask.sum().detach()
         pred_labels = predictions.argmax(-1)

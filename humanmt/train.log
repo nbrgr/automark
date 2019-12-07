@@ -1,32 +1,33 @@
-2019-12-07 09:18:30,996 Hello! This is AutoMark. For all your Automatic Marking needs.
-2019-12-07 09:18:31,010 Total params: 77100
-2019-12-07 09:18:31,014 Trainable parameters: ['marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.prediction.weight']
-2019-12-07 09:18:31,145 cfg.bert.path                      : bert-base-multilingual-cased
-2019-12-07 09:18:31,146 cfg.data.source                    : .en
-2019-12-07 09:18:31,146 cfg.data.target                    : .hyp
-2019-12-07 09:18:31,146 cfg.data.marking                   : .ann
-2019-12-07 09:18:31,146 cfg.data.raw                       : data/markings
-2019-12-07 09:18:31,147 cfg.data.train                     : data/markings.tok
-2019-12-07 09:18:31,147 cfg.data.dev                       : data/markings.tok
-2019-12-07 09:18:31,147 cfg.model.hidden_dimension         : 100
-2019-12-07 09:18:31,147 cfg.model.activation               : relu
-2019-12-07 09:18:31,147 cfg.model.freeze_bert              : True
-2019-12-07 09:18:31,148 cfg.model.head_bias                : False
-2019-12-07 09:18:31,148 cfg.train.lr                       : 0.03
-2019-12-07 09:18:31,148 cfg.train.optimizer                : Adam
-2019-12-07 09:18:31,148 cfg.train.batch_size               : 20
-2019-12-07 09:18:31,149 cfg.train.epochs                   : 10
-2019-12-07 09:18:31,149 cfg.train.seed                     : 42
-2019-12-07 09:18:31,149 cfg.train.model_dir                : humanmt
-2019-12-07 09:18:31,149 cfg.train.shuffle                  : True
-2019-12-07 09:18:31,150 cfg.train.cuda                     : False
-2019-12-07 09:18:31,150 cfg.train.early_stopping_metric    : loss
-2019-12-07 09:18:31,150 cfg.train.overwrite                : True
-2019-12-07 09:18:31,150 cfg.train.normalization            : tokens
-2019-12-07 09:18:31,151 cfg.train.bad_weight               : 5.0
-2019-12-07 09:18:31,151 cfg.train.validation_freq          : 500
-2019-12-07 09:18:31,151 cfg.train.logging_freq             : 10
-2019-12-07 09:18:31,154 AutoMark(
+2019-12-07 13:36:08,525 Hello! This is AutoMark. For all your Automatic Marking needs.
+2019-12-07 13:36:08,532 Total params: 77100
+2019-12-07 13:36:08,536 Trainable parameters: ['marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.prediction.weight']
+2019-12-07 13:36:08,559 cfg.bert.path                      : bert-base-multilingual-cased
+2019-12-07 13:36:08,559 cfg.data.source                    : .en
+2019-12-07 13:36:08,559 cfg.data.target                    : .hyp
+2019-12-07 13:36:08,560 cfg.data.marking                   : .ann
+2019-12-07 13:36:08,560 cfg.data.raw                       : data/markings
+2019-12-07 13:36:08,560 cfg.data.train                     : data/markings.tok
+2019-12-07 13:36:08,560 cfg.data.dev                       : data/markings.tok
+2019-12-07 13:36:08,561 cfg.model.hidden_dimension         : 100
+2019-12-07 13:36:08,561 cfg.model.activation               : relu
+2019-12-07 13:36:08,561 cfg.model.freeze_bert              : True
+2019-12-07 13:36:08,561 cfg.model.head_bias                : False
+2019-12-07 13:36:08,562 cfg.train.lr                       : 0.03
+2019-12-07 13:36:08,562 cfg.train.optimizer                : SGD
+2019-12-07 13:36:08,562 cfg.train.batch_size               : 20
+2019-12-07 13:36:08,562 cfg.train.epochs                   : 10
+2019-12-07 13:36:08,562 cfg.train.seed                     : 42
+2019-12-07 13:36:08,563 cfg.train.model_dir                : humanmt
+2019-12-07 13:36:08,563 cfg.train.shuffle                  : True
+2019-12-07 13:36:08,563 cfg.train.cuda                     : False
+2019-12-07 13:36:08,563 cfg.train.early_stopping_metric    : loss
+2019-12-07 13:36:08,563 cfg.train.overwrite                : True
+2019-12-07 13:36:08,564 cfg.train.normalization            : tokens
+2019-12-07 13:36:08,564 cfg.train.bad_weight               : 5.0
+2019-12-07 13:36:08,564 cfg.train.validation_freq          : 500
+2019-12-07 13:36:08,564 cfg.train.logging_freq             : 10
+2019-12-07 13:36:08,564 cfg.train.weighing                 : percentage
+2019-12-07 13:36:08,567 AutoMark(
   (bert): BertModel(
     (embeddings): BertEmbeddings(
       (word_embeddings): Embedding(119547, 768, padding_idx=0)
@@ -325,7 +326,5 @@
     (prediction): Linear(in_features=100, out_features=2, bias=False)
   )
 )
-2019-12-07 09:18:31,169 EPOCH 1
-2019-12-07 09:20:12,924 Epoch   1 Step:       10 Batch Loss:     1.010089 Ones: 0.92 Accuracy: 0.83 Tokens per Sec:       49, Lr: 0.000300
-2019-12-07 09:22:18,351 Epoch   1 Step:       20 Batch Loss:     1.009551 Ones: 0.84 Accuracy: 0.79 Tokens per Sec:       84, Lr: 0.000300
-2019-12-07 09:24:25,888 Epoch   1 Step:       30 Batch Loss:     0.952451 Ones: 0.67 Accuracy: 0.70 Tokens per Sec:      124, Lr: 0.000300
+2019-12-07 13:36:08,574 EPOCH 1
+2019-12-07 13:37:55,619 Epoch   1 Step:       10 Batch Loss:     0.138483 Ones: 0.15 Accuracy: 0.26 Tokens per Sec:       46, Lr: 0.000300

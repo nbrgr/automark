@@ -54,6 +54,8 @@ class TrainManager:
             raise ConfigurationError("Invalid normalization. "
                                      "Valid options: 'batch', 'tokens'.")
 
+        self.weighing = train_config['weighing']
+
         # optimization
         self.learning_rate_min = train_config.get("learning_rate_min", 1.0e-8)
 
@@ -343,8 +345,7 @@ class TrainManager:
         :param update: if False, only store gradient. if True also make update
         :return: loss for batch (sum)
         """
-        batch_loss, ones, acc = self.model.get_loss_for_batch(
-            batch=batch, loss_function=self.loss)
+        batch_loss, ones, acc = self.model.get_loss_for_batch(batch, self.loss, self.weighing)
 
         # normalize batch loss
         if self.normalization == "batch":
