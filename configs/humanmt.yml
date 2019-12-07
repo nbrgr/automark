@@ -9,10 +9,16 @@ data:
   train: 'data/markings.tok'
   dev: 'data/markings.tok'
 
+model:
+  hidden_dimension: 100
+  activation: "relu"
+  freeze_bert: True
+  head_bias: False
+
 train:
   lr: 0.03
   optimizer: Adam
-  batch_size: 8
+  batch_size: 20
   epochs: 10
   seed: 42
   model_dir: humanmt
@@ -21,3 +27,6 @@ train:
   early_stopping_metric: loss
   overwrite: True
   normalization: tokens
+  bad_weight: 5.0
+  validation_freq: 500
+  logging_freq: 10

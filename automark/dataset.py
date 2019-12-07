@@ -1,5 +1,5 @@
 import os
-
+import sys
 from collections import defaultdict
 
 import torch
@@ -10,10 +10,12 @@ from torchtext.data import Dataset, Iterator, Field
 
 from transformers import BertTokenizer
 
+
 def tensorify(fun, dtype):
     def tensorified_fun(batch):
         return torch.tensor(fun(batch), dtype=dtype)
     return tensorified_fun
+
 
 def batch_fun(batch):
     max_len = max([len(x) for x in batch])
@@ -23,8 +25,10 @@ def batch_fun(batch):
 
     return batch
 
+
 def identity_fun(batch):
     return batch
+
 
 def make_dataset(config):
     bert_path = config['bert']['path']
@@ -44,6 +48,7 @@ def make_dataset(config):
     ma_ext = config['data']['marking']
     train_path = config['data']['train']
     dev_path = config['data']['dev']
+    bad_weight = config['train'].get('bad_weight', 1.0)
 
     src_trg_field = data.Field(eos_token=None,
                            pad_token=pad_id, 
@@ -54,20 +59,26 @@ def make_dataset(config):
 
     ann_field = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
 
-    mask_field = data.RawField(postprocessing=tensorify(batch_fun, torch.float32))
+    mask_field = data.RawField(postprocessing=tensorify(batch_fun,
+                                                        torch.float32))
 
-    attention_mask = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
+    loss_weight_field = data.RawField(postprocessing=tensorify(batch_fun,
+                                                        torch.float32))
+
+    id_mask = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
 
     train_data = MergeDataset(path=train_path,
-                                    exts=(src_ext, trg_ext, ma_ext),
-                                    fields=(src_trg_field, ann_field, mask_field, attention_mask),
-                                    bos_token='[CLS]',
-                                    sep_token='[SEP]', vocab=vocab)
+                              exts=(src_ext, trg_ext, ma_ext),
+                              fields=(src_trg_field, ann_field,
+                                      mask_field, id_mask, loss_weight_field),
+                              bos_token='[CLS]', bad_weight=bad_weight,
+                              sep_token='[SEP]', vocab=vocab)
 
     dev_data = MergeDataset(path=dev_path,
-                                  exts=(src_ext, trg_ext, ma_ext),
-                                  fields=(src_trg_field, ann_field, mask_field, attention_mask), vocab=vocab,
-                                  bos_token='[CLS]', sep_token='[SEP]')
+                            exts=(src_ext, trg_ext, ma_ext),
+                            fields=(src_trg_field, ann_field, mask_field,
+                                    id_mask, loss_weight_field), vocab=vocab,
+                            bos_token='[CLS]', sep_token='[SEP]')
     test_data = None
     """
     if test_path is not None:
@@ -117,33 +128,55 @@ def make_data_iter(dataset: Dataset,
 
     return data_iter
 
-class MergeDataset(Dataset):
-    def __init__(self, path, exts, fields, bos_token = '[CLS]', sep_token = '[SEP]', vocab=None, **kwargs):
 
-        src_len = data.RawField(postprocessing=tensorify(identity_fun, torch.long))
-        trg_len = data.RawField(postprocessing=tensorify(identity_fun, torch.long))
+class MergeDataset(Dataset):
+
+    def __init__(self, path, exts, fields, bos_token = '[CLS]',
+                 sep_token = '[SEP]', vocab=None, bad_weight=1.0, **kwargs):
+
+        src_len = data.RawField(
+            postprocessing=tensorify(identity_fun, torch.long))
+        trg_len = data.RawField(
+            postprocessing=tensorify(identity_fun, torch.long))
         
         if not isinstance(fields[0], (tuple, list)):
-            fields = [('src_trg', fields[0]), ('weights', fields[1]), ('label_mask', fields[2]), ('attention_mask', fields[3]), ('src_len', src_len), ('trg_len', trg_len)]
+            fields = [('src_trg', fields[0]), ('weights', fields[1]),
+                      ('label_mask', fields[2]), ('id_mask', fields[3]),
+                      ('loss_weight', fields[4]),
+                      ('src_len', src_len), ('trg_len', trg_len)]
 
-        src_path, trg_path, weights_path = tuple(os.path.expanduser(path + x) for x in exts)
+        src_path, trg_path, weights_path = tuple(
+            os.path.expanduser(path + x) for x in exts)
 
         examples = []
         with open(src_path) as src_file, open(trg_path) as trg_file, \
-            open(weights_path) as weight_file:
+                open(weights_path) as weight_file:
             for src_line, trg_line, weights_line in \
-                zip(src_file, trg_file, weight_file):
-                src_line, trg_line = src_line.strip().split(" "), trg_line.strip().split(" ")
+                    zip(src_file, trg_file, weight_file):
+                src_line, trg_line = src_line.strip().split(" "), \
+                                     trg_line.strip().split(" ")
                 
-                src_line = [vocab[bos_token]] + [vocab[x] for x in src_line] + [vocab[sep_token]]
+                src_line = [vocab[bos_token]] + [vocab[x] for x in src_line] +\
+                           [vocab[sep_token]]
                 trg_line = [vocab[x] for x in trg_line]
-                mask = [0.0] * len(src_line) + [1.0] * len(trg_line)
-                weights = [int(weight) for weight in weights_line.strip().split(" ")]
-                weights = [0] * (len(src_line)) + weights
-                
+                label_mask = [0.0] * len(src_line) + [1.0] * len(trg_line)
+                trg_weights = [int(w) for w in weights_line.strip().split(" ")]
+                weights = [0] * (len(src_line)) + trg_weights
+                # give higher weight for 0 labels
+                loss_weights = [0.0] * (len(src_line)) + \
+                               [1.0 if w == 1 else bad_weight
+                                for w in trg_weights]
+
                 if src_line != '' and trg_line != '':
                     merged_line = src_line + trg_line
-                    att_mask = [1] * len(merged_line)
-                    examples.append(data.Example.fromlist([merged_line, weights, mask, att_mask, len(src_line), len(trg_line)], fields))
+                    #attention_mask = [1] * len(merged_line)
+                    id_mask = [0] * len(src_line) + [1] * len(trg_line)
+                    assert len(merged_line) == len(id_mask)
+                    assert len(label_mask) == len(merged_line)
+                    assert len(weights) == len(merged_line)
+                    assert len(loss_weights) == len(merged_line)
+                    examples.append(data.Example.fromlist(
+                        [merged_line, weights, label_mask, id_mask,
+                         loss_weights, len(src_line), len(trg_line)], fields))
 
         super(MergeDataset, self).__init__(examples, fields, **kwargs)
