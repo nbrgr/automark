@@ -15,6 +15,7 @@ from automark.batch import Batch
 from automark.test import test
 from automark.validate import validate_on_data
 
+
 class TrainManager:
     """ Manages training loop, validations, learning rate scheduling
     and early stopping."""
@@ -46,7 +47,8 @@ class TrainManager:
         self._log_parameters_list()
 
         # objective
-        self.loss = XentLoss(ignore_id=self.pad_index)
+        # print("ignore index {}".format(self.pad_index))
+        self.loss = XentLoss()  # ignore_id=self.pad_index)
         self.normalization = train_config.get("normalization", "tokens")
         if self.normalization not in ["batch", "tokens"]:
             raise ConfigurationError("Invalid normalization. "
@@ -221,8 +223,12 @@ class TrainManager:
                 # memory-6794e10db672
                 update = count == 0
                 # print(count, update, self.steps)
-                batch_loss = self._train_batch(batch, update=update)
+                batch_loss, ones, acc = self._train_batch(batch, update=update)
                 self.tb_writer.add_scalar("train/train_batch_loss", batch_loss,
+                                          self.steps)
+                self.tb_writer.add_scalar("train/train_batch_ones", ones,
+                                          self.steps)
+                self.tb_writer.add_scalar("train/train_batch_acc", acc,
                                           self.steps)
                 count = self.batch_multiplier if update else count
                 count -= 1
@@ -237,9 +243,9 @@ class TrainManager:
                     elapsed = time.time() - start - total_valid_duration
                     elapsed_tokens = self.total_tokens - processed_tokens
                     self.logger.info(
-                        "Epoch %3d Step: %8d Batch Loss: %12.6f "
-                        "Tokens per Sec: %8.0f, Lr: %.6f",
-                        epoch_no + 1, self.steps, batch_loss,
+                        "Epoch %3d Step: %8d Batch Loss: %12.6f Ones: %.2f "
+                        "Accuracy: %.2f Tokens per Sec: %8.0f, Lr: %.6f",
+                        epoch_no + 1, self.steps, batch_loss, ones, acc,
                         elapsed_tokens / elapsed,
                         self.optimizer.param_groups[0]["lr"])
                     start = time.time()
@@ -328,7 +334,8 @@ class TrainManager:
 
         self.tb_writer.close()  # close Tensorboard writer
 
-    def _train_batch(self, batch: Batch, update: bool = True) -> Tensor:
+    def _train_batch(self, batch: Batch, update: bool = True) \
+            -> (Tensor, float):
         """
         Train the model on one batch: Compute the loss, make a gradient step.
 
@@ -336,20 +343,21 @@ class TrainManager:
         :param update: if False, only store gradient. if True also make update
         :return: loss for batch (sum)
         """
-        batch_loss = self.model.get_loss_for_batch(
+        batch_loss, ones, acc = self.model.get_loss_for_batch(
             batch=batch, loss_function=self.loss)
 
         # normalize batch loss
         if self.normalization == "batch":
             normalizer = batch.trg_src.shape[0]
         elif self.normalization == "tokens":
-            print(batch.trg_len)
+            #print("trg len {}".format(batch.trg_len))
             normalizer = torch.sum(batch.trg_len)
         else:
             raise NotImplementedError("Only normalize by 'batch' or 'tokens'")
-        print(batch_loss)
+        #print("Batch loss {}".format(batch_loss))
         norm_batch_loss = batch_loss / normalizer
-        print(norm_batch_loss, normalizer)
+        #print("Normalized loss {} ({})".format(norm_batch_loss, normalizer))
+        #print("Proportion of predicted 1s: {:.2f}".format(ones))
         # division needed since loss.backward sums the gradients until updated
         norm_batch_multiply = norm_batch_loss / self.batch_multiplier
 
@@ -371,7 +379,7 @@ class TrainManager:
         # increment token counter
         self.total_tokens += torch.sum(batch.trg_len).item()
 
-        return norm_batch_loss
+        return norm_batch_loss, ones, acc
 
     def _add_report(self, valid_score: float, 
                     valid_loss: float, eval_metric: str,
@@ -457,6 +465,7 @@ class TrainManager:
         with open(current_valid_output_file, 'w') as opened_file:
             for hyp in hypotheses:
                 opened_file.write("{}\n".format(hyp))
+
 
 def train(cfg_file):
     """

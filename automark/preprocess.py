@@ -12,7 +12,7 @@ from automark.helpers import load_config
 
 def preprocess(config_path):
     config = load_config(config_path)
-    print("Read Config")
+    print("Read Config {}".format(config_path))
     pretrained_path = config['bert']['path']
 
     source_postfix = config['data']['source']
@@ -53,7 +53,7 @@ def preprocess(config_path):
             src_tok_string = " ".join(src_tokens)
             trg_tok_string = " ".join(trg_tokens)
             mark_dist_string = " ".join([str(x) for x in marking_dist])
-            print(src_tok_string)
+            #print(src_tok_string)
             source_tokenfile.write(src_tok_string + "\n")
             target_tokenfile.write(trg_tok_string + "\n")
             marking_distfile.write(mark_dist_string + '\n')
@@ -62,5 +62,7 @@ def preprocess(config_path):
     marking_distfile.close()
 
     print("Tokenization complete")
+    print("Wrote files to {}[{}|{}|{}]".format(
+        train_files, source_postfix, target_postfix, marking_postfix))
 
                         
