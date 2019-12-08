@@ -7,7 +7,7 @@ data:
   marking: '.ann'
   raw: 'data/markings'
   train: 'data/markings.tok'
-  dev: 'data/markings.tok'
+  dev: 'data/head.markings.tok'
 
 model:
   hidden_dimension: 50
@@ -25,7 +25,7 @@ train:
   model_dir: humanmt
   shuffle: True
   cuda: False
-  early_stopping_metric: loss
+  early_stopping_metric: 'eval_metric'
   overwrite: True
   normalization: tokens
   bad_weight: 5.0
@@ -33,3 +33,4 @@ train:
   logging_freq: 10
   weighting: 'wrong'
   eval_batch_size: 128
+  eval_metric: 'f1_prod' # f1_1, f1_0, acc, f1_prod

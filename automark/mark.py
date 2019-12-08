@@ -75,7 +75,8 @@ class AutoMark(torch.nn.Module):
 
     def get_loss_for_batch(self, batch, loss_function, weighting):
         assert batch.src_trg[0].shape == batch.id_mask.shape
-        predictions = self.forward(batch.src_trg, batch.id_mask, batch.attention_mask)
+        predictions = self.forward(batch.src_trg, batch.id_mask,
+                                   batch.attention_mask)
         labels = batch.weights
         mask = batch.label_mask
 
@@ -118,7 +119,7 @@ class AutoMark(torch.nn.Module):
 
         batch_loss = torch.sum(loss)
 
-        # proportion of ones in the prdictions
+        # proportion of ones in the predictions
         num_valid_tokens = batch.label_mask.sum().detach()
         pred_labels = predictions.argmax(-1)
         num_one_pred = (pred_labels.float() * batch.label_mask).sum().detach()

@@ -38,8 +38,6 @@ class TrainManager:
         self.valid_report_file = "{}/validations.txt".format(self.model_dir)
         self.tb_writer = SummaryWriter(log_dir=self.model_dir + "/tensorboard/")
 
-        self.eval_metric = "loss"
-
         # model
         self.model = model
         self.pad_index = self.model.pad_index
@@ -79,12 +77,16 @@ class TrainManager:
         self.early_stopping_metric = train_config.get(
             "early_stopping_metric", "eval_metric"
         )
+        self.eval_metric = train_config.get("eval_metric", "f1_prod")
+
 
         # if we schedule after BLEU/chrf, we want to maximize it, else minimize
         # early_stopping_metric decides on how to find the early stopping point:
         # ckpts are written when there's a new high/low score for this metric
         if self.early_stopping_metric in ["ppl", "loss"]:
             self.minimize_metric = True
+        elif self.early_stopping_metric == "eval_metric":
+            self.minimize_metric = False
         else:
             raise ConfigurationError(
                 "Invalid setting for 'early_stopping_metric', "
@@ -103,7 +105,8 @@ class TrainManager:
         self.shuffle = train_config.get("shuffle", True)
         self.epochs = train_config["epochs"]
         self.batch_size = train_config["batch_size"]
-        self.eval_batch_size = train_config.get("eval_batch_size", self.batch_size)
+        self.eval_batch_size = train_config.get("eval_batch_size",
+                                                self.batch_size)
 
         self.batch_multiplier = train_config.get("batch_multiplier", 1)
 
@@ -301,7 +304,10 @@ class TrainManager:
                         "valid/valid_ones", valid_ones, self.steps
                     )
 
-                    self.tb_writer.add_scalar("valid/valid_f1", f1, self.steps)
+                    self.tb_writer.add_scalar("valid/valid_f1_0", f1[0],
+                                              self.steps)
+                    self.tb_writer.add_scalar("valid/valid_f1_1", f1[1],
+                                              self.steps)
 
                     if self.early_stopping_metric == "loss":
                         ckpt_score = valid_loss
@@ -341,14 +347,17 @@ class TrainManager:
                     total_valid_duration += valid_duration
                     self.logger.info(
                         "Validation result at epoch %3d, step %8d: %s: %6.2f, "
-                        "loss: %8.4f, ones: %8.4f, f1: %8.4f, duration: %.4fs",
+                        "loss: %8.4f, ones: %8.4f, f1_0: %8.4f, f1_1: %8.4f,"
+                        "f1_prd: %8.4f, duration: %.4fs",
                         epoch_no + 1,
                         self.steps,
                         self.eval_metric,
                         valid_score,
                         valid_loss,
                         valid_ones,
-                        f1,
+                        f1[0],
+                        f1[1],
+                        f1[0]*f1[1],
                         valid_duration,
                     )
 
@@ -429,7 +438,7 @@ class TrainManager:
         valid_score: float,
         valid_loss: float,
         valid_ones: float,
-        valid_f1: float,
+        valid_f1: list,
         eval_metric: str,
         new_best: bool = False,
     ) -> None:
@@ -452,14 +461,17 @@ class TrainManager:
 
         with open(self.valid_report_file, "a") as opened_file:
             opened_file.write(
-                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\tOnes: {:.5f}\tF1: {:.5f}"
+                "Steps: {}\tLoss: {:.5f}\t{}: {:.5f}\tOnes: {:.5f}\t"
+                "F1_0: {:.5f}\tF1_1: {:.5f}\tF1_prod: {:.5f}\t"
                 "LR: {:.8f}\t{}\n".format(
                     self.steps,
                     valid_loss,
                     eval_metric,
                     valid_score,
                     valid_ones,
-                    valid_f1,
+                    valid_f1[0],
+                    valid_f1[1],
+                    valid_f1[0]*valid_f1[1],
                     current_lr,
                     "*" if new_best else "",
                 )
