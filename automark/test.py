@@ -1,6 +1,6 @@
 import torch
 from automark.helpers import load_config, load_checkpoint
-from automark.dataset import make_generate_data, make_data_iter
+from automark.dataset import make_generate_data, make_data_iter, batch_to
 from automark.mark import build_model
 
 
@@ -28,6 +28,9 @@ def generate(cfg_file, input_src, input_mt, output_path=None):
 
         with torch.no_grad():
             for i, input_batch in enumerate(data_iter):
+                if cuda:
+                    input_batch = batch_to(input_batch, "cuda")
+
                 predictions = model.predict(input_batch).argmax(-1).cpu().numpy()
                 label_mask = input_batch.id_mask.cpu().numpy()
                 assert predictions.shape == label_mask.shape

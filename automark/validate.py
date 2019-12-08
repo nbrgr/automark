@@ -1,6 +1,5 @@
 import torch
-from automark.dataset import MergeDataset, make_data_iter
-import numpy as np 
+from automark.dataset import make_data_iter, batch_to
 
 from sklearn.metrics import f1_score
 
@@ -28,6 +27,8 @@ def validate_on_data(
         valid_ones = 0
         valid_acc = 0
         for i, valid_batch in enumerate(valid_iter):
+            if use_cuda:
+                valid_batch = batch_to(valid_batch, "cuda")
             batch_loss, ones, acc, predictions = model.get_loss_for_batch(
                 valid_batch, loss_function, None
             )

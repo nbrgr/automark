@@ -7,11 +7,10 @@ import torch
 from torch.nn import functional as F
 
 from automark.mark import build_model
-from automark.dataset import make_dataset, make_data_iter
+from automark.dataset import make_dataset, make_data_iter, batch_to
 from automark.helpers import *
 from automark.loss import XentLoss
 from automark.builders import build_optimizer, build_scheduler, build_gradient_clipper
-from automark.batch import Batch
 from automark.validate import validate_on_data
 
 
@@ -236,7 +235,9 @@ class TrainManager:
             for batch in iter(train_iter):
                 # reactivate training
                 self.model.train()
-                # create a Batch object from torchtext batch
+                # move to cuda if needed
+                if self.use_cuda:
+                    batch = batch_to(batch, "cuda")
 
                 # only update every batch_multiplier batches
                 # see https://medium.com/@davidlmorton/
