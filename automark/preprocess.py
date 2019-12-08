@@ -19,50 +19,53 @@ def preprocess(config_path):
     target_postfix = config['data']['target']
     marking_postfix = config['data']['marking']
 
-    raw_files = config['data']['raw']
+    raw_train_files = config['data']['raw_train']
     train_files = config['data']['train']
 
-    tokenizer = BertTokenizer.from_pretrained(pretrained_path)
+    raw_dev_files = config['data']['raw_dev']
+    dev_files = config['data']['dev']
 
-    source_tokenfile = open(train_files + source_postfix, 'w')
-    target_tokenfile = open(train_files + target_postfix, 'w')
-    marking_distfile = open(train_files + marking_postfix, 'w')
+    for input_files, output_files in [(raw_train_files, train_files),
+                                      (raw_dev_files, dev_files)]:
 
-    with open(raw_files + source_postfix) as source_file, \
-        open(raw_files + target_postfix) as target_file, \
-        open(raw_files + marking_postfix) as marking_file:
-        print("Opened files")
-        for source_line, target_line, marking_line in \
-            zip(source_file, target_file, marking_file):
-            source = source_line.strip().split(" ")
-            target = target_line.strip().split(" ")
-            marking = marking_line.strip().split(" ")
+        tokenizer = BertTokenizer.from_pretrained(pretrained_path)
 
-            src_tokens = []
-            trg_tokens = []
-            marking_dist = []
+        source_tokenfile = open(output_files + source_postfix, 'w')
+        target_tokenfile = open(output_files + target_postfix, 'w')
+        marking_distfile = open(output_files + marking_postfix, 'w')
 
-            for word in source:
-                src_tokens.extend(tokenizer.wordpiece_tokenizer.tokenize(word))
+        with open(input_files + source_postfix) as source_file, \
+            open(input_files + target_postfix) as target_file, \
+            open(input_files + marking_postfix) as marking_file:
+            for source_line, target_line, marking_line in \
+                    zip(source_file, target_file, marking_file):
+                source = source_line.strip().split(" ")
+                target = target_line.strip().split(" ")
+                marking = marking_line.strip().split(" ")
 
-            for word, mark in zip(target, marking):
-                tokens = tokenizer.wordpiece_tokenizer.tokenize(word)
-                trg_tokens.extend(tokens)
-                marking_dist.extend([mark] * len(tokens))
+                src_tokens = []
+                trg_tokens = []
+                marking_dist = []
 
-            src_tok_string = " ".join(src_tokens)
-            trg_tok_string = " ".join(trg_tokens)
-            mark_dist_string = " ".join([str(x) for x in marking_dist])
-            #print(src_tok_string)
-            source_tokenfile.write(src_tok_string + "\n")
-            target_tokenfile.write(trg_tok_string + "\n")
-            marking_distfile.write(mark_dist_string + '\n')
-    source_tokenfile.close()
-    target_tokenfile.close()
-    marking_distfile.close()
+                for word in source:
+                    src_tokens.extend(
+                        tokenizer.wordpiece_tokenizer.tokenize(word))
 
-    print("Tokenization complete")
-    print("Wrote files to {}[{}|{}|{}]".format(
-        train_files, source_postfix, target_postfix, marking_postfix))
+                for word, mark in zip(target, marking):
+                    tokens = tokenizer.wordpiece_tokenizer.tokenize(word)
+                    trg_tokens.extend(tokens)
+                    marking_dist.extend([mark] * len(tokens))
 
-                        
+                src_tok_string = " ".join(src_tokens)
+                trg_tok_string = " ".join(trg_tokens)
+                mark_dist_string = " ".join([str(x) for x in marking_dist])
+                source_tokenfile.write(src_tok_string + "\n")
+                target_tokenfile.write(trg_tok_string + "\n")
+                marking_distfile.write(mark_dist_string + '\n')
+        source_tokenfile.close()
+        target_tokenfile.close()
+        marking_distfile.close()
+
+        print("Wrote files to {}[{}|{}|{}].".format(
+            train_files, source_postfix, target_postfix, marking_postfix))
+    print("Tokenization complete.")

@@ -386,7 +386,7 @@ class TrainManager:
 
         self.tb_writer.close()  # close Tensorboard writer
 
-    def _train_batch(self, batch: Batch, update: bool = True) -> (Tensor, float):
+    def _train_batch(self, batch, update: bool = True) -> (Tensor, float):
         """
         Train the model on one batch: Compute the loss, make a gradient step.
 

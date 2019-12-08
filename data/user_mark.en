@@ -1,0 +1,1043 @@
+Those are the little ones running around with their abdomens up in the air.
+But as soon as the threat is passed, the entrance is open again, and maybe there are situations in computer security where operating costs are low enough that we could just block access temporarily in response to an immediate threat, and then open it again, instead of trying to build a permanent firewall or fortress.
+So another environmental challenge that all systems have to deal with is resources, finding and collecting them.
+And to do this, ants solve the problem of collective search, and this is a problem that's of great interest right now in robotics, because we've understood that, rather than sending a single, sophisticated, expensive robot out to explore another planet or to search a burning building, that instead, it may be more effective to get a group of cheaper robots exchanging only minimal information, and that's the way that ants do it.
+So the invasive Argentine ant makes expandable search networks.
+They're good at dealing with the main problem of collective search, which is the trade-off between searching very thoroughly and covering a lot of ground.
+And what they do is, when there are many ants in a small space, then each one can search very thoroughly because there will be another ant nearby searching over there, but when there are a few ants in a large space, then they need to stretch out their paths to cover more ground.
+I think they use interactions to assess density, so when they're really crowded, they meet more often, and they search more thoroughly.
+Different ant species must use different algorithms, because they've evolved to deal with different resources, and it could be really useful to know about this, and so we recently asked ants to solve the collective search problem in the extreme environment of microgravity in the International Space Station.
+When I first saw this picture, I thought, Oh no, they've mounted the habitat vertically, but then I realized that, of course, it doesn't matter.
+So the idea here is that the ants are working so hard to hang on to the wall or the floor or whatever you call it that they're less likely to interact, and so the relationship between how crowded they are and how often they meet would be messed up.
+We're still analyzing the data.
+I don't have the results yet.
+But it would be interesting to know how other species solve this problem in different environments on Earth, and so we're setting up a program to encourage kids around the world to try this experiment with different species.
+It's very simple.
+It can be done with cheap materials.
+And that way, we could make a global map of ant collective search algorithms.
+And I think it's pretty likely that the invasive species, the ones that come into our buildings, are going to be really good at this, because they're in your kitchen because they're really good at finding food and water.
+So the most familiar resource for ants is a picnic, and this is a clustered resource.
+When there's one piece of fruit, there's likely to be another piece of fruit nearby, and the ants that specialize on clustered resources use interactions for recruitment.
+So when one ant meets another, or when it meets a chemical deposited on the ground by another, then it changes direction to follow in the direction of the interaction, and that's how you get the trail of ants sharing your picnic.
+Now this is a place where I think we might be able to learn something from ants about cancer.
+I mean, first, it's obvious that we could do a lot to prevent cancer by not allowing people to spread around or sell the toxins that promote the evolution of cancer in our bodies, but I don't think the ants can help us much with this because ants never poison their own colonies.
+But we might be able to learn something from ants about treating cancer.
+There are many different kinds of cancer.
+Each one originates in a particular part of the body, and then some kinds of cancer will spread or metastasize to particular other tissues where they must be getting resources that they need.
+So if you think from the perspective of early metastatic cancer cells as they're out searching around for the resources that they need, if those resources are clustered, they're likely to use interactions for recruitment, and if we can figure out how cancer cells are recruiting, then maybe we could set traps to catch them before they become established.
+So ants are using interactions in different ways in a huge variety of environments, and we could learn from this about other systems that operate without central control.
+Using only simple interactions, ant colonies have been performing amazing feats for more than 130 million years.
+We have a lot to learn from them.
+We all know that in our on-demand lives, one of the things that's most on demand is ourselves.
+Wherever we are, any time of night or day, our bosses, junk-mailers, our parents can get to us.
+Sociologists have actually found that in recent years Americans are working fewer hours than 50 years ago, but we feel as if we're working more.
+We have more and more time-saving devices, but sometimes, it seems, less and less time.
+We can more and more easily make contact with people on the furthest corners of the planet, but sometimes in that process we lose contact with ourselves.
+And one of my biggest surprises as a traveler has been to find that often it's exactly the people who have most enabled us to get anywhere who are intent on going nowhere.
+In other words, precisely those beings who have created the technologies that override so many of the limits of old, are the ones wisest about the need for limits, even when it comes to technology.
+I once went to the Google headquarters and I saw all the things many of you have heard about; the indoor tree houses, the trampolines, workers at that time enjoying 20 percent of their paid time free so that they could just let their imaginations go wandering.
+But what impressed me even more was that as I was waiting for my digital I.D., one Googler was telling me about the program that he was about to start to teach the many, many Googlers who practice yoga to become trainers in it, and the other Googler was telling me about the book that he was about to write on the inner search engine, and the ways in which science has empirically shown
+that sitting still, or meditation, can lead not just to better health or to clearer thinking, but even to emotional intelligence.
+I have another friend in Silicon Valley who is really one of the most eloquent spokesmen for the latest technologies, and in fact was one of the founders of Wired magazine, Kevin Kelly.
+And Kevin wrote his last book on fresh technologies without a smartphone or a laptop or a TV in his home.
+And like many in Silicon Valley, he tries really hard to observe what they call an Internet sabbath, whereby for 24 or 48 hours every week they go completely offline in order to gather the sense of direction and proportion they'll need when they go online again.
+The one thing perhaps that technology hasn't always given us is a sense of how to make the wisest use of technology.
+And when you speak of the sabbath, look at the Ten Commandments -- there's only one word there for which the adjective "holy" is used, and that's the Sabbath.
+I pick up the Jewish holy book of the Torah -- its longest chapter, it's on the Sabbath.
+And we all know that it's really one of our greatest luxuries, the empty space.
+In many a piece of music, it's the pause or the rest that gives the piece its beauty and its shape.
+And I know I as a writer will often try to include a lot of empty space on the page so that the reader can complete my thoughts and sentences and so that her imagination has room to breathe.
+Now, in the physical domain, of course, many people, if they have the resources, will try to get a place in the country, a second home.
+I've never begun to have those resources, but I sometimes remember that any time I want, I can get a second home in time, if not in space, just by taking a day off.
+And it's never easy because, of course, whenever I do I spend much of it worried about all the extra stuff that's going to crash down on me the following day.
+I sometimes think I'd rather give up meat or sex or wine than the chance to check on my emails.
+And every season I do try to take three days off on retreat but a part of me still feels guilty to be leaving my poor wife behind and to be ignoring all those seemingly urgent emails from my bosses and maybe to be missing a friend's birthday party.
+But as soon as I get to a place of real quiet, I realize that it's only by going there that I'll have anything fresh or creative or joyful to share with my wife or bosses or friends.
+I'm just foisting on them my exhaustion or my distractedness, which is no blessing at all.
+And so when I was 29, I decided to remake my entire life in the light of going nowhere.
+One evening I was coming back from the office, it was after midnight, I was in a taxi driving through Times Square, and I suddenly realized that I was racing around so much I could never catch up with my life.
+And my life then, as it happened, was pretty much the one I might have dreamed of as a little boy.
+I had really interesting friends and colleagues, I had a nice apartment on Park Avenue and 20th Street.
+The comprehensive peace agreement for Sudan signed in 2005 turned out to be less comprehensive than envisaged, and its provisions may yet bear the seeds of a full-scale return to war between north and south.
+Changes and shortcomings in leadership, more off than on international diplomacy and institutional failures account for this in almost equal measure.
+Unresolved boundary issues, squabbles over oil revenues, the ongoing conflict in Darfur, escalating tribal violence in the south and generally weak state capacity across all of Sudan complete a very depressing picture of the state of affairs in Africa's largest country.
+A final example: Kosovo.
+The failure to achieve a negotiated solution for Kosovo and the violence, tension and de facto partition that resulted from it have their reasons in many, many different factors.
+Central among them are three.
+First, the intransigence of local leaders to settle for nothing less than their maximum demands.
+Second, an international diplomatic effort that was hampered from the beginning by Western support for Kosovo's independence.
+And third, a lack of imagination when it came to designing institutions that could have addressed the concerns of Serbs and Albanians alike.
+By the same token -- and here we have some good news again -- the very fact that there is a high-level, well-resourced international presence in Kosovo and the Balkans region more generally and the fact that local leaders on both sides have showed relative restraint, explains why things have not been worse over the past two years since 2008.
+So even in situations where outcomes are less than optimal, local leaders and international leaders have a choice, and they can make a difference for the better.
+A cold war is not as good as a cold peace, but a cold peace is still better than a hot war.
+Good news is also about learning the right lesson.
+So what then distinguishes the Israeli/Palestinian conflict from that in Northern Ireland, or the civil war in Sudan from that in Liberia?
+Both successes and failures teach us several critically important things that we need to bear in mind if we want the good news to continue.
+First, leadership.
+In the same way in which ethnic conflict and civil war are not natural but man-made disasters, their prevention and settlement does not happen automatically either.
+Leadership needs to be capable, determined and visionary in its commitment to peace.
+Leaders need to connect to each other and to their followers, and they need to bring them along on what is an often arduous journey into a peaceful future.
+Second, diplomacy.
+Diplomacy needs to be well resourced, sustained, and apply the right mix of incentives and pressures on leaders and followers.
+It needs to help them reach an equitable compromise, and it needs to ensure that a broad coalition of local, regional and international supporters help them implement their agreement.
+Third, institutional design.
+Institutional design requires a keen focus on issues, innovative thinking and flexible and well-funded implementation.
+Conflict parties need to move away from maximum demands and towards a compromise that recognizes each other's needs.
+And they need to think about the substance of their agreement much more than about the labels they want to attach to them.
+Conflict parties also need to be prepared to return to the negotiation table if the agreement implementation stalls.
+For me personally, the most critical lesson of all is this: Local commitment to peace is all-important, but it is often not enough to prevent or end violence.
+Yet, no amount of diplomacy or institutional design can make up for local failures and the consequences that they have.
+Therefore, we must invest in developing leaders, leaders that have the skills, vision and determination to make peace.
+Leaders, in other words, that people will trust and that they will want to follow even if that means making hard choices.
+A final thought: Ending civil wars is a process that is fraught with dangers, frustrations and setbacks.
+It often takes a generation to accomplish, but it also requires us, today's generation, to take responsibility and to learn the right lessons about leadership, diplomacy and institutional design, so that the child soldiers of today can become the children of tomorrow.
+And really realized that that was because -- as traders would tell me over and over -- that's the only way people know what they're getting in terms of the quantity and the product quality.
+And that actually has huge implications for the ability of markets to quickly respond to price signals, and situations where there are deficits, for example.
+It also has very high cost implications.
+I have measured that 26 percent of the marketing margin is simply due to the fact that, because of the absence of grades and standards and market information, sacks have to be constantly changed.
+And this leads to very high handling costs.
+For their part, small farmers, who produce the bulk of our agricultural output in Africa, come to the market with virtually no information at all -- blind -- trusting that they're going to have some sort of demand for their produce, and completely at the mercy of the merchants in the only market, the nearest local market they know -- where they're unable to negotiate better prices or reduce their risk.
+Speaking of risk, we have seen that price volatility of food crops in Africa is the highest in the world.
+In Africa, small farmers bear the brunt of this risk.
+In fact, in my view, there is no region of the world and no period in history that farmers have been expected to bear the kind of market risk that Africa's farmers have to bear.
+And in my view, there is simply no place in the world that has grown its agriculture on the kind of risk that our farmers in Africa today face.
+In Ethiopia, for example, the variation in maize prices from year to year is as much as 50 percent annually.
+This kind of market risk is mind-boggling, and has direct implications for not only the incentives of farmers to invest in higher productivity technology, such as modern seeds and fertilizers, but also direct implications for food security.
+To give you an example, between 2001 and 2002, Ethiopian maize farmers produced two years of bumper harvest.
+That in turn, because of the weak marketing system, led to an 80 percent collapse in maize prices in the country.
+This made it unprofitable for some farmers to even harvest the grain from the fields.
+And we calculated that some 300,000 tons of grain was left in the fields to rot in early 2002.
+Not six months later, in July 2002, Ethiopia announced a major food crisis, to the same proportions as 1984: 14 million people at risk of starvation.
+What also happened that year is in the areas where there were good rains, and where farmers had previously produced surplus grain, farmers had decided to withdraw from the fertilizer market, not use fertilizer and actually had dropped their use of fertilizer by 27 percent.
+This is a tragic example of arrested development, or a budding green revolution stopped in its tracks.
+And this is not just specific to Ethiopia, but happens over and over, all over Africa.
+Well, I'm not here today to lament about the situation, or wring my hands.
+I am here to tell you that change is in the air.
+Africa today is not the Africa waiting for aid solutions, or cookie-cutter foreign expert policy prescriptions.
+Africa has learned, or is learning somewhat slowly, that markets don't happen by themselves.
+In the 1980s, it was very fashionable to talk about getting prices right.
+There was a very influential book about that, which was mainly about getting governments out of the market.
+We now recognize that getting markets right is about not just price incentives, but also investing in the right infrastructure and the appropriate and necessary institutions to create the conditions to unleash the power of innovation in the market.
+When conditions are right, we know and see that that innovation is ready to explode in rural Africa, just like anywhere else.
+Nearly three years ago, I decided to leave my comfortable job as a World Bank senior economist in Washington and come back to my country of birth, Ethiopia, after nearly 30 years abroad.
+I did so for a simple reason.
+After having spent more than a decade understanding, studying, and trying to convince policymakers and donors about what was wrong with Africa's agricultural markets, I decided it was time to do something about it.
+I currently lead, in Ethiopia, an exciting new initiative to establish the first Ethiopia Commodity Exchange, or ECX.
+Now, the commodity exchange itself, that concept, is not new to the world.
+In fact, in 1848, 82 grain merchants and farmers got together in a small town at the crossroads of the Illinois River and Lake Michigan to establish a way to trade better amongst themselves.
+That was, of course, the birth of the Chicago Board of Trade, which is the most famous commodity exchange in the world.
+The Chicago Board of Trade was established then for precisely the same reasons that our farmers today would benefit from a commodity exchange.
+In the American Midwest, farmers used to load grain onto barges and send it upriver to the Chicago market.
+But once it arrived, if no buyer was to be found, or if prices suddenly dropped, farmers would incur tremendous losses.
+And in fact, would even dump the grain in Lake Michigan, rather than spend more money transporting it back to their farms.
+Well, the need to avoid these huge risks and tremendous losses led to the birth of the futures market, and the underlying system of grading grain and receipting -- issuing warehouse receipts on the basis of which trade could be done.
+From there, the greatest innovation of all came about in this market, which is that buyers and sellers could transact grain without actually having to physically or visually inspect the grain.
+That meant that grain could be traded across tremendous distances, and even across time -- as far forward as 18 months into the future.
+This innovation is at the heart of the transformation of American agriculture, and the rise of Chicago to a global market, agricultural market, superpower from where it was, a small regional town.
+Now, over the last century, we tend to think of commodity exchanges as the purview of Western industrialized countries, and that the reference prices for cotton, coffee, cocoa -- products produced mainly in the south -- are actually a reference price, or a price discovered in these organized commodity exchanges in the northern countries.
+But that is actually changing.
+And we're seeing a shift -- powered mainly because of information technology -- a shift in market dominance towards the emerging markets.
+And over the last decade, you see that the share of Western exchanges -- and this is the U.S. share of exchanges in the world -- has gone down by nearly half in just the last decade.
+But it's very good that what is done is being done.
+But focus now is back on prevention.
+It is only by stopping the transmission that the world will be able to deal with it.
+Drugs is too costly -- had we had the vaccine, or when we will get the vaccine, that's something more effective -- but the drugs are very costly for the poor.
+Not the drug in itself, but the treatment and the care which is needed around it.
+So, when we look at the pattern, one thing comes out very clearly: you see the blue bubbles and people say HIV is very high in Africa.
+I would say, HIV is very different in Africa.
+You'll find the highest HIV rate in the world in African countries, and yet you'll find Senegal, down here -- the same rate as United States.
+And you'll find Madagascar, and you'll find a lot of African countries about as low as the rest of the world.
+It's this terrible simplification that there's one Africa and things go on in one way in Africa.
+We have to stop that.
+It's not respectful, and it's not very clever to think that way.
+I had the fortune to live and work for a time in the United States.
+I found out that Salt Lake City and San Francisco were different.
+And so it is in Africa -- it's a lot of difference.
+So, why is it so high? Is it war?
+No, it's not. Look here.
+War-torn Congo is down there -- two, three, four percent.
+And this is peaceful Zambia, neighboring country -- 15 percent.
+And there's good studies of the refugees coming out of Congo -- they have two, three percent infected, and peaceful Zambia -- much higher.
+There are now studies clearly showing that the wars are terrible, that rapes are terrible, but this is not the driving force for the high levels in Africa.
+So, is it poverty?
+Well if you look at the macro level, it seems more money, more HIV.
+But that's very simplistic, so let's go down and look at Tanzania.
+I will split Tanzania in five income groups, from the highest income to the lowest income, and here we go.
+The ones with the highest income, the better off -- I wouldn't say rich -- they have higher HIV.
+The difference goes from 11 percent down to four percent, and it is even bigger among women.
+There's a lot of things that we thought, that now, good research, done by African institutions and researchers together with the international researchers, show that that's not the case.
+So, this is the difference within Tanzania.
+And, I can't avoid showing Kenya.
+Look here at Kenya.
+I've split Kenya in its provinces.
+Here it goes.
+See the difference within one African country -- it goes from very low level to very high level, and most of the provinces in Kenya is quite modest.
+So, what is it then?
+Why do we see this extremely high levels in some countries?
+Well, it is more common with multiple partners, there is less condom use, and there is age-disparate sex -- that is, older men tend to have sex with younger women.
+We would expect there to be no difference, because Neanderthals were never in Africa.
+They should be equal, have no reason to be closer to one African than another African.
+And that's indeed the case.
+Statistically speaking, there is no difference in how often the Neanderthal matches one African or the other.
+But this is different if we now look at the European individual and an African.
+Then, significantly more often, does a Neanderthal match the European rather than the African.
+The same is true if we look at a Chinese individual versus an African, the Neanderthal will match the Chinese individual more often.
+This may also be surprising because the Neanderthals were never in China.
+So the model we've proposed to explain this is that when modern humans came out of Africa sometime after 100,000 years ago, they met Neanderthals.
+Presumably, they did so first in the Middle East, where there were Neanderthals living.
+If they then mixed with each other there, then those modern humans that became the ancestors of everyone outside Africa carried with them this Neanderthal component in their genome to the rest of the world.
+So that today, the people living outside Africa have about two and a half percent of their DNA from Neanderthals.
+So having now a Neanderthal genome on hand as a reference point and having the technologies to look at ancient remains and extract the DNA, we can begin to apply them elsewhere in the world.
+And the first place we've done that is in Southern Siberia in the Altai Mountains at a place called Denisova, a cave site in this mountain here, where archeologists in 2008 found a tiny little piece of bone -- this is a copy of it -- that they realized came from the last phalanx of a little finger of a pinky of a human.
+And it was well enough preserved so we could determine the DNA from this individual, even to a greater extent than for the Neanderthals actually, and start relating it to the Neanderthal genome and to people today.
+And we found that this individual shared a common origin for his DNA sequences with Neanderthals around 640,000 years ago.
+And further back, 800,000 years ago is there a common origin with present day humans.
+So this individual comes from a population that shares an origin with Neanderthals, but far back and then have a long independent history.
+We call this group of humans, that we then described for the first time from this tiny, tiny little piece of bone, the Denisovans, after this place where they were first described.
+So we can then ask for Denisovans the same things as for the Neanderthals: Did they mix with ancestors of present day people?
+If we ask that question, and compare the Denisovan genome to people around the world, we surprisingly find in any people living even close to Siberia today.
+But we do find it in Papua New Guinea and in other islands in Melanesia and the Pacific.
+So this presumably means that these Denisovans had been more widespread in the past, since we don't think that the ancestors of Melanesians were ever in Siberia.
+So from studying these genomes of extinct humans, we're beginning to arrive at a picture of what the world looked like when modern humans started coming out of Africa.
+In the West, there were Neanderthals; in the East, there were Denisovans -- maybe other forms of humans too that we've not yet described.
+We don't know quite where the borders between these people were, but we know that in Southern Siberia, there were both Neanderthals and Denisovans at least at some time in the past.
+Then modern humans emerged somewhere in Africa, came out of Africa, presumably in the Middle East.
+They meet Neanderthals, mix with them, continue to spread over the world, and somewhere in Southeast Asia, they meet Denisovans and mix with them and continue on out into the Pacific.
+And then these earlier forms of humans disappear, but they live on a little bit today in some of us -- in that people outside of Africa have two and a half percent of their DNA from Neanderthals, and people in Melanesia actually have an additional five percent approximately from the Denisovans.
+Does this then mean that there is after all some absolute difference between people outside Africa and inside Africa in that people outside Africa have this old component in their genome from these extinct forms of humans, whereas Africans do not?
+Well I don't think that is the case.
+Presumably, modern humans emerged somewhere in Africa.
+They spread across Africa also, of course, and there were older, earlier forms of humans there.
+And since we mixed elsewhere, I'm pretty sure that one day, when we will perhaps have a genome of also these earlier forms in Africa, we will find that they have also mixed with early modern humans in Africa.
+So to sum up, what have we learned from studying genomes of present day humans and extinct humans?
+We learn perhaps many things, but one thing that I find sort of important to mention is that I think the lesson is that we have always mixed.
+We mixed with these earlier forms of humans, wherever we met them, and we mixed with each other ever since.
+As the highest military commander of the Netherlands, with troops stationed around the world, I'm really honored to be here today.
+When I look around this TEDxAmsterdam venue, I see a very special audience.
+You are the reason why I said yes to the invitation to come here today.
+When I look around, I see people who want to make a contribution.
+I see people who want to make a better world, by doing groundbreaking scientific work, by creating impressive works of art, by writing critical articles or inspiring books, by starting up sustainable businesses.
+And you all have chosen your own instruments to fulfill this mission of creating a better world.
+Some chose the microscope as their instrument.
+Others chose dancing or painting, or making music like we just heard.
+Some chose the pen.
+Others work through the instrument of money.
+Ladies and gentlemen, I made a different choice.
+Thanks.
+Ladies and gentlemen ...
+I share your goals.
+I share the goals of the speakers you heard before.
+I did not choose to take up the pen, the brush, the camera.
+I chose this instrument.
+I chose the gun.
+For you, and you heard already, being so close to this gun may make you feel uneasy.
+It may even feel scary.
+A real gun at a few feet's distance.
+Let us stop for a moment and feel this uneasiness.
+You could even hear it.
+Let us cherish the fact that probably most of you have never been close to a gun.
+It means the Netherlands is a peaceful country.
+The Netherlands is not at war.
+It means soldiers are not needed to patrol our streets.
+Guns are not a part of our lives.
+In many countries, it is a different story.
+In many countries, people are confronted with guns.
+They are oppressed.
+They are intimidated -- by warlords, by terrorists, by criminals.
+Weapons can do a lot of harm.
+They are the cause of much distress.
+Why then am I standing before you with this weapon?
+Why did I choose the gun as my instrument?
+Today I want to tell you why.
+Today I want to tell you why I chose the gun to create a better world.
+And I want to tell you how this gun can help.
+My story starts in the city of Nijmegen in the east of the Netherlands, the city where I was born.
+My father was a hardworking baker, but when he had finished work in the bakery, he often told me and my brother stories.
+And most of the time, he told me this story I'm going to share with you now.
+The story of what happened when he was a conscripted soldier in the Dutch armed forces at the beginning of the Second World War.
+A gathering like this one offers such a juxtaposition where all the new stuff is displayed and all the garbage is used as props to display all their new home accessories.
+Like Makoko and the Torre David, throughout the Zabbaleen you'll find all the same facilities as in any typical neighborhood.
+There are the retail shops, the cafes and the restaurants, and the community is this community of Coptic Christians, so you'll also find a church, along with the scores of religious iconographies throughout the area, and also all the everyday services like the electronic repair shops, the barbers, everything.
+Visiting the homes of the Zabbaleen is also full of surprises.
+While from the outside, these homes look like any other informal structure in the city, when you step inside, you are met with all manner of design decisions and interior decoration.
+Despite having limited access to space and money, the homes in the area are designed with care and detail.
+Every apartment is unique, and this individuality tells a story about each family's circumstances and values.
+Many of these people take their homes and interior spaces very seriously, putting a lot of work and care into the details.
+The shared spaces are also treated in the same manner, where walls are decorated in faux marble patterns.
+But despite this elaborate decor, sometimes these apartments are used in very unexpected ways, like this home which caught my attention while all the mud and the grass was literally seeping out under the front door.
+When I was let in, it appeared that this fifth-floor apartment was being transformed into a complete animal farm, where six or seven cows stood grazing in what otherwise would be the living room.
+But then in the apartment across the hall from this cow shed lives a newly married couple in what locals describe as one of the nicest apartments in the area.
+The attention to this detail astonished me, and as the owner of the home so proudly led me around this apartment, from floor to ceiling, every part was decorated.
+But if it weren't for the strangely familiar stomach-churning odor that constantly passes through the apartment, it would be easy to forget that you are standing next to a cow shed and on top of a landfill.
+What moved me the most was that despite these seemingly inhospitable conditions, I was welcomed with open arms into a home that was made with love, care, and unreserved passion.
+Let's move across the map to China, to an area called Shanxi, Henan and Gansu.
+In a region famous for the soft, porous Loess Plateau soil, there lived until recently an estimated 40 million people in these houses underground.
+These dwellings are called the yaodongs.
+Through this architecture by subtraction, these yaodongs are built literally inside of the soil.
+In these villages, you see an entirely altered landscape, and hidden behind these mounds of dirt are these square, rectangular houses which sit seven meters below the ground.
+When I asked people why they were digging their houses from the ground, they simply replied that they are poor wheat and apple farmers who didn't have the money to buy materials, and this digging out was their most logical form of living.
+From Makoko to Zabbaleen, these communities have approached the tasks of planning, design and management of their communities and neighborhoods in ways that respond specifically to their environment and circumstances.
+Created by these very people who live, work and play in these particular spaces, these neighborhoods are intuitively designed to make the most of their circumstances.
+In most of these places, the government is completely absent, leaving inhabitants with no choice but to reappropriate found materials, and while these communities are highly disadvantaged, they do present examples of brilliant forms of ingenuity, and prove that indeed we have the ability to adapt to all manner of circumstances.
+What makes places like the Torre David particularly remarkable is this sort of skeleton framework where people can have a foundation where they can tap into.
+Now imagine what these already ingenious communities could create themselves, and how highly particular their solutions would be, if they were given the basic infrastructures that they could tap into.
+Today, you see these large residential development projects which offer cookie-cutter housing solutions to massive amounts of people.
+From China to Brazil, these projects attempt to provide as many houses as possible, but they're completely generic and simply do not work as an answer to the individual needs of the people.
+I would like to end with a quote from a friend of mine and a source of inspiration, Zita Cobb, the founder of the wonderful Shorefast Foundation, based out of Fogo Island, Newfoundland.
+She says that "there's this plague of sameness which is killing the human joy," and I couldn't agree with her more.
+Four thousand years is a long time.
+If you take a branch from one of these corals and polish it up, this is about 100 microns across.
+And Brendan took some analyses across this coral -- you can see the marks -- and he's been able to show that these are actual annual bands, so even at 500 meters deep in the ocean, corals can record seasonal changes, which is pretty spectacular.
+But 4,000 years is not enough to get us back to our last glacial maximum.
+So what do we do?
+We go in for these fossil specimens.
+This is what makes me really unpopular with my research team.
+there's giant sharks everywhere, there are pyrosomes, there are swimming holothurians, there's giant sponges, but I make everyone go down to these dead fossil areas and spend ages kind of shoveling around on the seafloor.
+And we pick up all these corals, bring them back, we sort them out.
+But each one of these is a different age, and if we can find out how old they are and then we can measure those chemical signals, this helps us to find out what's been going on in the ocean in the past.
+So on the left-hand image here, I've taken a slice through a coral, polished it very carefully and taken an optical image.
+On the right-hand side, we've taken that same piece of coral, put it in a nuclear reactor, induced fission, and every time there's some decay, you can see that marked out in the coral, so we can see the uranium distribution.
+Why are we doing this?
+Uranium is a very poorly regarded element, but I love it.
+The decay helps us find out about the rates and dates of what's going on in the ocean.
+And if you remember from the beginning, that's what we want to get at when we're thinking about climate.
+So we use a laser to analyze uranium and one of its daughter products, thorium, in these corals, and that tells us exactly how old the fossils are.
+This beautiful animation of the Southern Ocean I'm just going to use illustrate how we're using these corals to get at some of the ancient ocean feedbacks.
+You can see the density of the surface water in this animation by Ryan Abernathey.
+It's just one year of data, but you can see how dynamic the Southern Ocean is.
+The intense mixing, particularly the Drake Passage, which is shown by the box, is really one of the strongest currents in the world coming through here, flowing from west to east.
+It's very turbulently mixed, because it's moving over those great big undersea mountains, and this allows CO2 and heat to exchange with the atmosphere in and out.
+And essentially, the oceans are breathing through the Southern Ocean.
+We've collected corals from back and forth across this Antarctic passage, and we've found quite a surprising thing from my uranium dating: the corals migrated from south to north during this transition from the glacial to the interglacial.
+We don't really know why, but we think it's something to do with the food source and maybe the oxygen in the water.
+So here we are.
+I'm going to illustrate what I think we've found about climate from those corals in the Southern Ocean.
+We went up and down sea mountains. We collected little fossil corals.
+This is my illustration of that.
+We think back in the glacial, from the analysis we've made in the corals, that the deep part of the Southern Ocean was very rich in carbon, and there was a low-density layer sitting on top.
+That stops carbon dioxide coming out of the ocean.
+We then found corals that are of an intermediate age, and they show us that the ocean mixed partway through that climate transition.
+That allows carbon to come out of the deep ocean.
+And then if we analyze corals closer to the modern day, or indeed if we go down there today anyway and measure the chemistry of the corals, we see that we move to a position where carbon can exchange in and out.
+So this is the way we can use fossil corals to help us learn about the environment.
+So I want to leave you with this last slide.
+It's just a still taken out of that first piece of footage that I showed you.
+This is a spectacular coral garden.
+We didn't even expect to find things this beautiful.
+It's thousands of meters deep.
+There are new species.
+It's just a beautiful place.
+There are fossils in amongst, and now I've trained you to appreciate the fossil corals that are down there. So next time you're lucky enough to fly over the ocean or sail over the ocean, just think -- there are massive sea mountains down there that nobody's ever seen before, and there are beautiful corals.
+You see the forest in green in 3D, and you see the effects of gold mining down below the soil surface.
+Species have nowhere to migrate in a system like this, obviously.
+If you haven't been to the Amazon, you should go.
+It's an amazing experience every time, no matter where you go.
+You're going to probably see it this way, on a river.
+But what happens is a lot of times the rivers hide what's really going on back in the forest itself.
+We flew over this same river, imaged the system in 3D.
+The forest is on the left.
+And then we can digitally remove the forest and see what's going on below the canopy.
+And in this case, we found gold mining activity, all of it illegal, set back away from the river's edge, as you'll see in those strange pockmarks coming up on your screen on the right.
+Don't worry, we're working with the authorities to deal with this and many, many other problems in the region.
+So in order to put together a conservation plan for these unique, important corridors like the western Amazon and the Andes Amazon corridor, we have to start making geographically explicit plans now.
+How do we do that if we don't know the geography of biodiversity in the region, if it's so unknown to science?
+So what we've been doing is using the laser-guided spectroscopy from the CAO to map for the first time the biodiversity of the Amazon rainforest.
+Here you see actual data showing different species in different colors.
+Reds are one type of species, blues are another, and greens are yet another.
+And when we take this together and scale up to the regional level, we get a completely new geography of biodiversity unknown prior to this work.
+This tells us where the big biodiversity changes occur from habitat to habitat, and that's really important because it tells us a lot about where species may migrate to and migrate from as the climate shifts.
+And this is the pivotal information that's needed by decision makers to develop protected areas in the context of their regional development plans.
+And third and final question is, how do we manage biodiversity on a planet of protected ecosystems?
+The example I started out with about lions hunting, that was a study we did behind the fence line of a protected area in South Africa.
+And the truth is, much of Africa's nature is going to persist into the future in protected areas like I show in blue on the screen.
+This puts incredible pressure and responsibility on park management.
+They need to do and make decisions that will benefit all of the species that they're protecting.
+Some of their decisions have really big impacts.
+For example, how much and where to use fire as a management tool?
+Or, how to deal with a large species like elephants, which may, if their populations get too large, have a negative impact on the ecosystem and on other species.
+And let me tell you, these types of dynamics really play out on the landscape.
+In the foreground is an area with lots of fire and lots of elephants: wide open savanna in blue, and just a few trees.
+As we cross this fence line, now we're getting into an area that has had protection from fire and zero elephants: dense vegetation, a radically different ecosystem.
+And in a place like Kruger, the soaring elephant densities are a real problem.
+I know it's a sensitive issue for many of you, and there are no easy answers with this.
+But what's good is that the technology we've developed and we're working with in South Africa, for example, is allowing us to map every single tree in the savanna, and then through repeat flights we're able to see which trees are being pushed over by elephants, in the red as you see on the screen, and how much that's happening in different types of landscapes in the savanna.
+That's giving park managers a very first opportunity to use tactical management strategies that are more nuanced and don't lead to those extremes that I just showed you.
+So really, the way we're looking at protected areas nowadays is to think of it as tending to a circle of life, where we have fire management, elephant management, those impacts on the structure of the ecosystem, and then those impacts affecting everything from insects up to apex predators like lions.
+Going forward, I plan to greatly expand the airborne observatory.
+I'm hoping to actually put the technology into orbit so we can manage the entire planet with technologies like this.
+Until then, you're going to find me flying in some remote place that you've never heard of.
+I just want to end by saying that technology is absolutely critical to managing our planet, but even more important is the understanding and wisdom to apply it.
+We have reserves that can scale us up to large numbers.
+NATO has a mobile unit that can deploy very rapidly.
+NATO does a lot of war games to check, are people well trained?
+Do they understand about fuel and logistics and the same radio frequencies?
+So they are absolutely ready to go.
+So those are the kinds of things we need to deal with an epidemic.
+What are the key pieces?
+First, we need strong health systems in poor countries.
+That's where mothers can give birth safely, kids can get all their vaccines.
+But, also where we'll see the outbreak very early on.
+We need a medical reserve corps: lots of people who've got the training and background who are ready to go, with the expertise.
+And then we need to pair those medical people with the military.
+taking advantage of the military's ability to move fast, do logistics and secure areas.
+We need to do simulations, germ games, not war games, so that we see where the holes are.
+The last time a germ game was done in the United States was back in 2001, and it didn't go so well.
+So far the score is germs: 1, people: 0.
+Finally, we need lots of advanced R&amp;D in areas of vaccines and diagnostics.
+There are some big breakthroughs, like the Adeno-associated virus, that could work very, very quickly.
+Now I don't have an exact budget for what this would cost, but I'm quite sure it's very modest compared to the potential harm.
+The World Bank estimates that if we have a worldwide flu epidemic, global wealth will go down by over three trillion dollars and we'd have millions and millions of deaths.
+These investments offer significant benefits beyond just being ready for the epidemic.
+The primary healthcare, the R&amp;D, those things would reduce global health equity and make the world more just as well as more safe.
+So I think this should absolutely be a priority.
+There's no need to panic.
+We don't have to hoard cans of spaghetti or go down into the basement.
+But we need to get going, because time is not on our side.
+In fact, if there's one positive thing that can come out of the Ebola epidemic, it's that it can serve as an early warning, a wake-up call, to get ready.
+If we start now, we can be ready for the next epidemic.
+Financially, only one of us could leave, and it was decided that I would go, in the hope that if I arrived at my destination safely, I could work to get the rest of my family to join me later.
+We all knew about the risks, and how terrifying the journey is, and I met many people who lost loved ones at sea.
+It was a desperate decision to take, to leave everything behind, and no one makes this decision easily.
+If I had been able to simply fly to Australia, it would have taken me less than 24 hours.
+But getting a visa was impossible.
+My journey was much longer, much more complicated, and certainly more dangerous, traveling to Thailand by air, and then by road and boat to Malaysia and into Indonesia, paying people and smugglers all the way and spending a lot of time hiding and a lot of time in fear of being caught.
+In Indonesia, I joined a group of seven asylum seekers.
+We all shared a bedroom in a town outside of Jakarta called Bogor.
+After spending a week in Bogor, three of my roommates left for the perilous journey, and we got the news two days later that a distressed boat sank in the sea en route to Christmas Island.
+We found out that our three roommates -- Nawroz, Jaffar and Shabbir -- were also among those.
+Only Jaffar was rescued.
+Shabbir and Nawroz were never seen again.
+It made me think, am I doing the right thing?
+I concluded I really had no other choice but to go on.
+A few weeks later, we got the call from the people smuggler to alert us that the boat is ready for us to commence our sea journey.
+Taken in the night towards the main vessel on a motorboat, we boarded an old fishing boat that was already overloaded.
+There were 93 of us, and we were all below deck.
+No one was allowed up on the top.
+We all paid 6,000 dollars each for this part of the trip.
+The first night and day went smoothly, but by the second night, the weather turned.
+Waves tossed the boat around, and the timbers groaned.
+People below deck were crying, praying, recalling their loved ones.
+They were screaming.
+It was a terrible moment.
+It was like a scene from doomsday, or maybe like one of those scenes from those Hollywood movies that shows that everything is breaking apart and the world is just ending.
+It was happening to us for real.
+We didn't have any hope.
+Our boat was floating like a matchbox on the water without any control.
+The waves were much higher than our boat, and the water poured in faster than the motor pumps could take it out.
+We all lost hope.
+We thought, this is the end.
+I'd like to introduce you to an organism: a slime mold, Physarum polycephalum.
+It's a mold with an identity crisis, because it's not a mold, so let's get that straight to start with.
+It is one of 700 known slime molds belonging to the kingdom of the amoeba.
+It is a single-celled organism, a cell, that joins together with other cells to form a mass super-cell to maximize its resources.
+So within a slime mold you might find thousands or millions of nuclei, all sharing a cell wall, all operating as one entity.
+In its natural habitat, you might find the slime mold foraging in woodlands, eating rotting vegetation, but you might equally find it in research laboratories, classrooms, and even artists' studios.
+I first came across the slime mold about five years ago.
+A microbiologist friend of mine gave me a petri dish with a little yellow blob in it and told me to go home and play with it.
+The only instructions I was given, that it likes it dark and damp and its favorite food is porridge oats.
+I'm an artist who's worked for many years with biology, with scientific processes, so living material is not uncommon for me.
+I've worked with plants, bacteria, cuttlefish, fruit flies.
+So I was keen to get my new collaborator home to see what it could do.
+So I took it home and I watched.
+I fed it a varied diet.
+I observed as it networked.
+It formed a connection between food sources.
+I watched it leave a trail behind it, indicating where it had been.
+And I noticed that when it was fed up with one petri dish, it would escape and find a better home.
+I captured my observations through time-lapse photography.
+Slime mold grows at about one centimeter an hour, so it's not really ideal for live viewing unless there's some form of really extreme meditation, but through the time lapse, I could observe some really interesting behaviors.
+For instance, having fed on a nice pile of oats, the slime mold goes off to explore new territories in different directions simultaneously.
+When it meets itself, it knows it's already there, it recognizes it's there, and instead retreats back and grows in other directions.
+I was quite impressed by this feat, at how what was essentially just a bag of cellular slime could somehow map its territory, know itself, and move with seeming intention.
+I found countless scientific studies, research papers, journal articles, all citing incredible work with this one organism, and I'm going to share a few of those with you.
+For example, a team in Hokkaido University in Japan filled a maze with slime mold.
+It joined together and formed a mass cell.
+They introduced food at two points, oats of course, and it formed a connection between the food.
+It retracted from empty areas and dead ends.
+There are four possible routes through this maze, yet time and time again, the slime mold established the shortest and the most efficient route.
+Quite clever.
+The conclusion from their experiment was that the slime mold had a primitive form of intelligence.
+Another study exposed cold air at regular intervals to the slime mold.
+It didn't like it. It doesn't like it cold.
+It doesn't like it dry.
+They did this at repeat intervals, and each time, the slime mold slowed down its growth in response.
+This is the main broadcast control room, a technical installation so large, it can broadcast over 200 channels simultaneously.
+And this is how the building stands in Beijing today.
+Its first broadcast live was the London Olympics 2012, after it had been completed from the outside for the Beijing Olympics.
+And you can see at the very tip of this 75-meter cantilever, those three little circles.
+And they're indeed part of a public loop that goes through the building.
+They're a piece of glass that you can stand on and watch the city pass by below you in slow motion.
+The building has become part of everyday life in Beijing.
+It is there.
+It has also become a very popular backdrop for wedding photography.
+But its most important moment is maybe sill this one.
+"That's Beijing" is similar to "Time Out," a magazine that broadcasts what is happening in town during the week, and suddenly you see the building portrayed no longer as physical matter, but actually as an urban actor, as part of a series of personas that define the life of the city.
+So architecture suddenly assumes the quality of a player, of something that writes stories and performs stories.
+And I think that could be one of its primary meanings that we believe in.
+But of course, there's another story to this building.
+It is the story of the people that made it -- 400 engineers and architects that I was guiding over almost a decade of collaborative work that we spent together in scripting this building, in imagining its reality and ultimately getting it built in China.
+This is a residential development in Singapore, large scale.
+If we look at Singapore like most of Asia and more and more of the world, of course, it is dominated by the tower, a typology that indeed creates more isolation than connectedness, and I wanted to ask, how could we think about living, not only in terms of the privacy and individuality of ourselves and our apartment, but in an idea of a collective?
+How could we think about creating a communal environment in which sharing things was as great as having your own?
+The typical answer to the question -- we had to design 1,040 apartments -- would have looked like this: 24-story height limit given by the planning authorities, 12 towers with nothing but residual in between -- a very tight system that, although the tower isolates you, it doesn't even give you privacy, because you're so close to the next one, that it is very questionable what the qualities of this would be.
+So I proposed to topple the towers, throw the vertical into the horizontal and stack them up, and what looks a bit random from the side, if you look from the viewpoint of the helicopter, you can see its organizational structure is actually a hexagonal grid, in which these horizontal building blocks are stacked up to create huge outdoor courtyards -- central spaces for the community, programmed with a variety of amenities and functions.
+And you see that these courtyards are not hermetically sealed spaces.
+They're open, permeable; they're interconnected.
+We called the project "The Interlace," thinking that we interlace and interconnect the human beings and the spaces alike.
+And the detailed quality of everything we designed was about animating the space and giving the space to the inhabitants.
+And, in fact, it was a system where we would layer primarily communal spaces, stacked to more and more individual and private spaces.
+So we would open up a spectrum between the collective and the individual.
+A little piece of math: if we count all the green that we left on the ground, minus the footprint of the buildings, and we would add back the green of all the terraces, we have 112 percent green space, so more nature than not having built a building.
+And of course this little piece of math shows you that we are multiplying the space available to those who live there.
+This is, in fact, the 13th floor of one of these terraces.
+So you see new datum planes, new grounds planes for social activity.
+We paid a lot of attention to sustainability.
+In the tropics, the sun is the most important thing to pay attention to, and, in fact, it is seeking protection from the sun.
+We first proved that all apartments would have sufficient daylight through the year.
+We then went on to optimize the glazing of the facades to minimize the energy consumption of the building.
+But most importantly, we could prove that through the geometry of the building design, the building itself would provide sufficient shading to the courtyards so that those would be usable throughout the entire year.
+We further placed water bodies along the prevailing wind corridors, so that evaporative cooling would create microclimates that, again, would enhance the quality of those spaces available for the inhabitants.
+It requires close contact for a message to be sent and received.
+And after the moment of transmission, it's gone forever.
+Graphic communication, on the other hand, decouples that relationship.
+And with its invention, it became possible for the first time for a message to be transmitted and preserved beyond a single moment in place and time.
+Europe is one of the first places that we start to see graphic marks regularly appearing in caves, rock shelters and even a few surviving open-air sites.
+But this is not the Europe we know today.
+This was a world dominated by towering ice sheets, three to four kilometers high, with sweeping grass plains and frozen tundra.
+This was the Ice Age.
+Over the last century, more than 350 Ice Age rock art sites have been found across the continent, decorated with animals, abstract shapes and even the occasional human like these engraved figures from Grotta dell'Addaura in Sicily.
+They provide us with a rare glimpse into the creative world and imagination of these early artists.
+Since their discovery, it's been the animals that have received the majority of the study like this black horse from Cullalvera in Spain, or this unusual purple bison from La Pasiega.
+But for me, it was the abstract shapes, what we call geometric signs, that drew me to study the art.
+The funny this is that at most sites the geometric signs far outnumber the animal and human images.
+But when I started on this back in 2007, there wasn't even a definitive list of how many shapes there were, nor was there a strong sense of whether the same ones appeared across space or time.
+Before I could even get started on my questions, my first step was to compile a database of all known geometric signs from all of the rock art sites.
+The problem was that while they were well documented at some sites, usually the ones with the very nice animals, there was also a large number of them where it was very vague -- there wasn't a lot of description or detail.
+Some of them hadn't been visited in half a century or more.
+These were the ones that I targeted for my field work.
+Over the course of two years, my faithful husband Dylan and I each spent over 300 hours underground, hiking, crawling and wriggling around 52 sites in France, Spain, Portugal and Sicily.
+And it was totally worth it.
+We found new, undocumented geometric signs at 75 percent of the sites we visited.
+This is the level of accuracy I knew I was going to need if I wanted to start answering those larger questions.
+So let's get to those answers.
+Barring a handful of outliers, there are only 32 geometric signs.
+Only 32 signs across a 30,000-year time span and the entire continent of Europe.
+That is a very small number.
+Now, if these were random doodles or decorations, we would expect to see a lot more variation, but instead what we find are the same signs repeating across both space and time.
+Some signs start out strong, before losing popularity and vanishing, while other signs are later inventions.
+But 65 percent of those signs stayed in use during that entire time period -- things like lines, rectangles triangles, ovals and circles like we see here from the end of the Ice Age, at a 10,000-year-old site high in the Pyrenees Mountains.
+The number of beavers started to increase, because beavers like to eat the trees.
+And beavers, like wolves, are ecosystem engineers.
+They create niches for other species.
+And the dams they built in the rivers provided habitats for otters and muskrats and ducks and fish and reptiles and amphibians.
+The wolves killed coyotes, and as a result of that, the number of rabbits and mice began to rise, which meant more hawks, more weasels, more foxes, more badgers.
+Ravens and bald eagles came down to feed on the carrion that the wolves had left.
+Bears fed on it too, and their population began to rise as well, partly also because there were more berries growing on the regenerating shrubs, and the bears reinforced the impact of the wolves by killing some of the calves of the deer.
+But here's where it gets really interesting.
+The wolves changed the behavior of the rivers.
+They began to meander less.
+There was less erosion. The channels narrowed.
+More pools formed, more riffle sections, all of which were great for wildlife habitats.
+The rivers changed in response to the wolves, and the reason was that the regenerating forests stabilized the banks so that they collapsed less often, so that the rivers became more fixed in their course.
+Similarly, by driving the deer out of some places and the vegetation recovering on the valley sides, there was less soil erosion, because the vegetation stabilized that as well.
+So the wolves, small in number, transformed not just the ecosystem of the Yellowstone National Park, this huge area of land, but also its physical geography.
+Whales in the southern oceans have similarly wide-ranging effects.
+One of the many post-rational excuses made by the Japanese government for killing whales is that they said, "Well, the number of fish and krill will rise and then there'll be more for people to eat."
+Well, it's a stupid excuse, but it sort of kind of makes sense, doesn't it, because you'd think that whales eat huge amounts of fish and krill, so obviously take the whales away, there'll be more fish and krill.
+But the opposite happened.
+You take the whales away, and the number of krill collapses.
+Why would that possibly have happened?
+Well, it now turns out that the whales are crucial to sustaining that entire ecosystem, and one of the reasons for this is that they often feed at depth and then they come up to the surface and produce what biologists politely call large fecal plumes, huge explosions of poop right across the surface waters, up in the photic zone, where there's enough light to allow photosynthesis to take place, and those great plumes of fertilizer
+stimulate the growth of phytoplankton, the plant plankton at the bottom of the food chain, which stimulate the growth of zooplankton, which feed the fish and the krill and all the rest of it.
+The other thing that whales do is that, as they're plunging up and down through the water column, they're kicking the phytoplankton back up towards the surface where it can continue to survive and reproduce.
+And interestingly, well, we know that plant plankton in the oceans absorb carbon from the atmosphere -- the more plant plankton there are, the more carbon they absorb -- and eventually they filter down into the abyss and remove that carbon from the atmospheric system.
+Well, it seems that when whales were at their historic populations, they were probably responsible for sequestering some tens of millions of tons of carbon every year from the atmosphere.
+And when you look at it like that, you think, wait a minute, here are the wolves changing the physical geography of the Yellowstone National Park.
+Here are the whales changing the composition of the atmosphere.
+You begin to see that possibly, the evidence supporting James Lovelock's Gaia hypothesis, which conceives of the world as a coherent, self-regulating organism, is beginning, at the ecosystem level, to accumulate.
+Trophic cascades tell us that the natural world is even more fascinating and complex than we thought it was.
+They tell us that when you take away the large animals, you are left with a radically different ecosystem to one which retains its large animals.
+And they make, in my view, a powerful case for the reintroduction of missing species.
+Rewilding, to me, means bringing back some of the missing plants and animals.
+It means taking down the fences, it means blocking the drainage ditches, it means preventing commercial fishing in some large areas of sea, but otherwise stepping back.
+It has no view as to what a right ecosystem or a right assemblage of species looks like.
+It doesn't try to produce a heath or a meadow or a rain forest or a kelp garden or a coral reef.
+It lets nature decide, and nature, by and large, is pretty good at deciding.
+So last year, on the Fourth of July, experiments at the Large Hadron Collider discovered the Higgs boson.
+It was a historical day.
+There's no doubt that from now on, the Fourth of July will be remembered not as the day of the Declaration of Independence, but as the day of the discovery of the Higgs boson.
+Well, at least, here at CERN.
+But for me, the biggest surprise of that day was that there was no big surprise.
+In the eye of a theoretical physicist, the Higgs boson is a clever explanation of how some elementary particles gain mass, but it seems a fairly unsatisfactory and incomplete solution.
+Too many questions are left unanswered.
+The Higgs boson does not share the beauty, the symmetry, the elegance, of the rest of the elementary particle world.
+For this reason, the majority of theoretical physicists believe that the Higgs boson could not be the full story.
+We were expecting new particles and new phenomena accompanying the Higgs boson.
+Instead, so far, the measurements coming from the LHC show no signs of new particles or unexpected phenomena.
+Of course, the verdict is not definitive.
+In 2015, the LHC will almost double the energy of the colliding protons, and these more powerful collisions will allow us to explore further the particle world, and we will certainly learn much more.
+But for the moment, since we have found no evidence for new phenomena, let us suppose that the particles that we know today, including the Higgs boson, are the only elementary particles in nature, even at energies much larger than what we have explored so far.
+Let's see where this hypothesis is going to lead us.
+We will find a surprising and intriguing result about our universe, and to explain my point, let me first tell you what the Higgs is about, and to do so, we have to go back to one tenth of a billionth of a second after the Big Bang.
+And according to the Higgs theory, at that instant, a dramatic event took place in the universe.
+Space-time underwent a phase transition.
+It was something very similar to the phase transition that occurs when water turns into ice below zero degrees.
+But in our case, the phase transition is not a change in the way the molecules are arranged inside the material, but is about a change of the very fabric of space-time.
+During this phase transition, empty space became filled with a substance that we now call Higgs field.
+And this substance may seem invisible to us, but it has a physical reality.
+It surrounds us all the time, just like the air we breathe in this room.
+And some elementary particles interact with this substance, gaining energy in the process.
+And this intrinsic energy is what we call the mass of a particle, and by discovering the Higgs boson, the LHC has conclusively proved that this substance is real, because it is the stuff the Higgs bosons are made of.
+And this, in a nutshell, is the essence of the Higgs story.
+But this story is far more interesting than that.
+By studying the Higgs theory, theoretical physicists discovered, not through an experiment but with the power of mathematics, that the Higgs field does not necessarily exist only in the form that we observe today.
+Just like matter can exist as liquid or solid, so the Higgs field, the substance that fills all space-time, could exist in two states.
+Now this is a very early finding and we don't yet know whether it has relevance to clinical care.
+But it's findings like this that may provide hope and may provide an opportunity to save lives of both women and men.
+Now, let me share with you an example of when we do consider sex differences, it can drive the science.
+Several years ago a new lung cancer drug was being evaluated, and when the authors looked at whose tumors shrank, they found that 82 percent were women.
+This led them to ask the question: Well, why?
+And what they found was that the genetic mutations that the drug targeted were far more common in women.
+And what this has led to is a more personalized approach to the treatment of lung cancer that also includes sex.
+This is what we can accomplish when we don't leave women's health to chance.
+We know that when you invest in research, you get results.
+Take a look at the death rate from breast cancer over time.
+And now take a look at the death rates from lung cancer in women over time.
+Now let's look at the dollars invested in breast cancer -- these are the dollars invested per death -- and the dollars invested in lung cancer.
+Now, it's clear that our investment in breast cancer has produced results.
+They may not be fast enough, but it has produced results.
+We can do the same for lung cancer and for every other disease.
+So let's go back to depression.
+Depression is the number one cause of disability in women in the world today.
+Our investigators have found that there are differences in the brains of women and men in the areas that are connected with mood.
+And when you put men and women in a functional MRI scanner -- that's the kind of scanner that shows how the brain is functioning when it's activated -- so you put them in the scanner and you expose them to stress.
+You can actually see the difference.
+And it's findings like this that we believe hold some of the clues for why we see these very significant sex differences in depression.
+But even though we know that these differences occur, 66 percent of the brain research that begins in animals is done in either male animals or animals in whom the sex is not identified.
+So, I think we have to ask again the question: Why leave women's health to chance?
+And this is a question that haunts those of us in science and medicine who believe that we are on the verge of being able to dramatically improve the health of women.
+We know that every cell has a sex.
+We know that these differences are often overlooked.
+And therefore we know that women are not getting the full benefit of modern science and medicine today.
+We have the tools but we lack the collective will and momentum.
+Women's health is an equal rights issue as important as equal pay.
+And it's an issue of the quality and the integrity of science and medicine.
+So imagine the momentum we could achieve in advancing the health of women if we considered whether these sex differences were present at the very beginning of designing research.
+Or if we analyzed our data by sex.
+So, people often ask me: What can I do?
+And here's what I suggest: First, I suggest that you think about women's health in the same way that you think and care about other causes that are important to you.
+And second, and equally as important, that as a woman, you have to ask your doctor and the doctors who are caring for those who you love: Is this disease or treatment different in women?
+Now, this is a profound question because the answer is likely yes, but your doctor may not know the answer, at least not yet.
+But if you ask the question, your doctor will very likely go looking for the answer.
+And this is so important, not only for ourselves, but for all of those whom we love.
+Whether it be a mother, a daughter, a sister, a friend or a grandmother.
+It was my grandmother's suffering that inspired my work to improve the health of women.
+That's her legacy.
+Our legacy can be to improve the health of women for this generation and for generations to come.
+And this allows us to simulate this self-assembly behavior and try to optimize which parts are folding when.
+But most importantly, we can use this same software for the design of nanoscale self-assembly systems and human scale self-assembly systems.
+These are parts being printed with multi-material properties.
+Here's the first demonstration.
+A single strand dipped in water that completely self-folds on its own into the letters M I T.
+I'm biased.
+This is another part, single strand, dipped in a bigger tank that self-folds into a cube, a three-dimensional structure, on its own.
+So no human interaction.
+And we think this is the first time that a program and transformation has been embedded directly into the materials themselves.
+And it also might just be the manufacturing technique that allows us to produce more adaptive infrastructure in the future.
+So I know you're probably thinking, okay, that's cool, but how do we use any of this stuff for the built environment?
+So I've started a lab at MIT, and it's called the Self-Assembly Lab.
+And we're dedicated to trying to develop programmable materials for the built environment.
+And we think there's a few key sectors that have fairly near-term applications.
+One of those is in extreme environments.
+These are scenarios where it's difficult to build, our current construction techniques don't work, it's too large, it's too dangerous, it's expensive, too many parts.
+And space is a great example of that.
+We're trying to design new scenarios for space that have fully reconfigurable and self-assembly structures that can go from highly functional systems from one to another.
+Let's go back to infrastructure.
+In infrastructure, we're working with a company out of Boston called Geosyntec.
+And we're developing a new paradigm for piping.
+Imagine if water pipes could expand or contract to change capacity or change flow rate, or maybe even undulate like peristaltics to move the water themselves.
+So this isn't expensive pumps or valves.
+This is a completely programmable and adaptive pipe on its own.
+So I want to remind you today of the harsh realities of assembly in our world.
+These are complex things built with complex parts that come together in complex ways.
+So I would like to invite you from whatever industry you're from to join us in reinventing and reimagining the world, how things come together from the nanoscale to the human scale, so that we can go from a world like this to a world that's more like this.
+It's a promise to the kids.
+It's one sustainable material that they will not run out of.
+And when I first saw these structures under construction about six years ago, I just thought, this makes perfect sense.
+It is growing all around us.
+It's strong. It's elegant.
+It's earthquake-resistant.
+Why hasn't this happened sooner, and what can we do with it next?
+So along with some of the original builders of Green School, I founded Ibuku.
+Ibu means "mother," and ku means "mine," so it represents my Mother Earth, and at Ibuku, we are a team of artisans, architects and designers, and what we're doing together is creating a new way of building.
+Over the past five years together, we have built over 50 unique structures, most of them in Bali.
+Nine of them are at Green Village -- you've just seen inside some of these homes -- and we fill them with bespoke furniture, we surround them with veggie gardens, we would love to invite you all to come visit someday.
+And while you're there, you can also see Green School -- we keep building classrooms there each year -- as well as an updated fairy mushroom house.
+We're also working on a little house for export.
+This is a traditional Sumbanese home that we replicated, right down to the details and textiles.
+A restaurant with an open-air kitchen.
+It looks a lot like a kitchen, right?
+And a bridge that spans 22 meters across a river.
+Now, what we're doing, it's not entirely new.
+From little huts to elaborate bridges like this one in Java, bamboo has been in use across the tropical regions of the world for literally tens of thousands of years.
+There are islands and even continents that were first reached by bamboo rafts.
+But until recently, it was almost impossible to reliably protect bamboo from insects, and so, just about everything that was ever built out of bamboo is gone.
+Unprotected bamboo weathers.
+Untreated bamboo gets eaten to dust.
+And so that's why most people, especially in Asia, think that you couldn't be poor enough or rural enough to actually want to live in a bamboo house.
+And so we thought, what will it take to change their minds, to convince people that bamboo is worth building with, much less worth aspiring to?
+First, we needed safe treatment solutions.
+Borax is a natural salt.
+It turns bamboo into a viable building material.
+Treat it properly, design it carefully, and a bamboo structure can last a lifetime.
+Second, build something extraordinary out of it.
+Inspire people.
+Well a good place to start is with waste.
+It certainly doesn't cost as much as oil, and it's plentiful, as I hope that you've been able to see from the photographs.
+And because we're not breaking down the plastic into molecules and recombining them, we're using a mining approach to extract the materials.
+We have significantly lower capital costs in our plant equipment.
+We have enormous energy savings.
+I don't know how many other projects on the planet right now can save 80 to 90 percent of the energy compared to making something the traditional way.
+And instead of plopping down several hundred million dollars to build a chemical plant that will only make one type of plastic for its entire life, our plants can make any type of plastic we feed them.
+And we make a drop-in replacement for that plastic that's made from petrochemicals.
+Our customers get to enjoy huge CO2 savings.
+They get to close the loop with their products.
+And they get to make more sustainable products.
+In the short time period I have, I want to show you a little bit of a sense about how we do this.
+It starts with metal recyclers who shred our stuff into very small bits.
+They recover the metals and leave behind what's called shredder residue -- it's their waste -- a very complex mixture of materials, but predominantly plastics.
+We take out the things that aren't plastics, such as the metals they missed, carpeting, foam, rubber, wood, glass, paper, you name it.
+Even an occasional dead animal, unfortunately.
+And it goes in the first part of our process here, which is more like traditional recycling.
+We're sieving the material, we're using magnets, we're using air classification.
+It looks like the Willy Wonka factory at this point.
+At the end of this process, we have a mixed plastic composite: many different types of plastics and many different grades of plastics.
+This goes into the more sophisticated part of our process, and the really hard work, multi-step separation process begins.
+We grind the plastic down to about the size of your small fingernail.
+We use a very highly automated process to sort those plastics, not only by type, but by grade.
+And out the end of that part of the process come little flakes of plastic: one type, one grade.
+We then use optical sorting to color sort this material.
+We blend it in 50,000-lb. blending silos.
+We push that material to extruders where we melt it, push it through small die holes, make spaghetti-like plastic strands.
+And we chop those strands into what are called pellets.
+And this becomes the currency of the plastics industry.
+This is the same material that you would get from oil.
+And today, we're producing it from your old stuff, and it's going right back into your new stuff.
+So now, instead of your stuff ending up on a hillside in a developing country or literally going up in smoke, you can find your old stuff back on top of your desk in new products, in your office, or back at work in your home.
+And these are just a few examples of companies that are buying our plastic, replacing virgin plastic, to make their new products.
+So I hope I've changed the way you look at at least some of the stuff in your life.
+We took our clues from mother nature.
+Mother nature wastes very little, reuses practically everything.
+And I hope that you stop looking at yourself as a consumer -- that's a label I've always hated my entire life -- and think of yourself as just using resources in one form, until they can be transformed to another form for another use later in time.
+And finally, I hope you agree with me to change that last toddler rule just a little bit to: "If it's broken, it's my stuff."
+When we think of Nepal, we tend to think of the snow-capped mountains of the Himalayas, the crystal-clear still waters of its alpine lakes, or the huge expanse of its grasslands.
+What some of us may not realize is that in the Himalayan foothills, where the climate is much warmer and the landscape much greener, there lives a great diversity of wildlife, including the one-horned rhinoceros, the Asian elephant and the Bengal tiger.
+But unfortunately, these animals are under constant threat from poachers who hunt and kill them for their body parts.
+To stop the killing of these animals, battalions of soldiers and rangers are sent to protect Nepal's national parks, but that is not an easy task, because these soldiers have to patrol thousands of hectares of forests on foot or elephant backs.
+It is also risky for these soldiers when they get into gunfights with poachers, and therefore Nepal is always looking for new ways to help with protecting the forests and wildlife.
+Well recently, Nepal acquired a new tool in the fight against wildlife crime, and these are drones, or more specifically, conservation drones.
+For about a year now, my colleagues and I have been building drones for Nepal and training the park protection personnel on the use of these drones.
+Not only does a drone give you a bird's-eye view of the landscape, but it also allows you to capture detailed, high-resolution images of objects on the ground.
+This, for example, is a pair of rhinoceros taking a cooling bath on a hot summer day in the lowlands of Nepal.
+Now we believe that drones have tremendous potential, not only for combating wildlife crime, but also for monitoring the health of these wildlife populations.
+So what is a drone?
+Well, the kind of drone I'm talking about is simply a model aircraft fitted with an autopilot system, and this autopilot unit contains a tiny computer, a GPS, a compass, a barometric altimeter and a few other sensors.
+Now a drone like this is meant to carry a useful payload, such as a video camera or a photographic camera.
+It also requires a software that allows the user to program a mission, to tell the drone where to go.
+Now people I talk to are often surprised when they hear that these are the only four components that make a conservation drone, but they are even more surprised when I tell them how affordable these components are.
+The facts is, a conservation drone doesn't cost very much more than a good laptop computer or a decent pair of binoculars.
+So now that you've built your own conservation drone, you probably want to go fly it, but how does one fly a drone?
+Well, actually, you don't, because the drone flies itself.
+All you have to do is to program a mission to tell the drone where to fly.
+But you simply do that by clicking on a few way points on the Google Maps interface using the open-source software.
+Those missions could be as simple as just a few way points, or they could be slightly longer and more complicated, to fly along a river system.
+Sometimes, we fly the drone in a lawnmower-type pattern and take pictures of that area, and those pictures can be processed to produce a map of that forest.
+Other researchers might want to fly the drone along the boundaries of a forest to watch out for poachers or people who might be trying to enter the forest illegally.
+Now whatever your mission is, once you've programmed it, you simply upload it to the autopilot system, bring your drone to the field, and launch it simply by tossing it in the air.
+And often we'll go about this mission taking pictures or videos along the way, and usually at that point, we will go grab ourselves a cup of coffee, sit back, and relax for the next few minutes, although some of us sit back and panic for the next few minutes worrying that the drone will not return.
+Usually it does, and when it does, it even lands automatically.
+So what can we do with a conservation drone?
+Well, when we built our first prototype drone, our main objective was to fly it over a remote rainforest in North Sumatra, Indonesia, to look for the nest of a species of great ape known as the orangutan.
+The reason we wanted to do that was because we needed to know how many individuals of this species are still left in that forest.
+What was the most difficult job you ever did?
+Was it working in the sun?
+Was it working to provide food for a family or a community?
+Was it working days and nights trying to protect lives and property?
+Was it working alone or working on a project that wasn't guaranteed to succeed, but that might improve human health or save a life?
+Was it working to build something, create something, make a work of art?
+Was it work for which you were never sure you were fully understood or appreciated?
+The people in our communities who do these jobs deserve our attention, our love and our deepest support.
+But people aren't the only ones in our communities who do these difficult jobs.
+These jobs are also done by the plants, the animals and the ecosystems on our planet, including the ecosystems I study: the tropical coral reefs.
+Coral reefs are farmers.
+They provide food, income and food security for hundreds of millions of people around the world.
+Coral reefs are security guards.
+The structures that they build protect our shorelines from storm surge and waves, and the biological systems that they house filter the water and make it safer for us to work and play.
+Coral reefs are chemists.
+The molecules that we're discovering on coral reefs are increasingly important in the search for new antibiotics and new cancer drugs.
+And coral reefs are artists.
+The structures that they build are some of the most beautiful things on planet Earth.
+And this beauty is the foundation of the tourism industry in many countries with few or little other natural resources.
+So for all of these reasons, all of these ecosystem services, economists estimate the value of the world's coral reefs in the hundreds of billions of dollars per year.
+And yet despite all that hard work being done for us and all that wealth that we gain, we have done almost everything we possibly could to destroy that.
+We have taken the fish out of the oceans and we have added in fertilizer, sewage, diseases, oil, pollution, sediments.
+We have trampled the reefs physically with our boats, our fins, our bulldozers, and we have changed the chemistry of the entire sea, warmed the waters and made storms worse.
+And these would all be bad on their own, but these threats magnify each other and compound one another and make each other worse.
+I'll give you an example.
+Where I live and work, in Curaçao, a tropical storm went by a few years ago.
+And on the eastern end of the island, where the reefs are intact and thriving, you could barely tell a tropical storm had passed.
+But in town, where corals had died from overfishing, from pollution, the tropical storm picked up the dead corals and used them as bludgeons to kill the corals that were left.
+This is a coral that I studied during my PhD -- I got to know it quite well.
+And after this storm took off half of its tissue, it became infested with algae, the algae overgrew the tissue and that coral died.
+This magnification of threats, this compounding of factors is what Jeremy Jackson describes as the "slippery slope to slime."
+It's hardly even a metaphor because many of our reefs now are literally bacteria and algae and slime.
+Now, this is the part of the talk where you may expect me to launch into my plea for us to all save the coral reefs.
+But I have a confession to make: that phrase drives me nuts.
+Whether I see it in a tweet, in a news headline or the glossy pages of a conservation brochure, that phrase bothers me, because we as conservationists have been sounding the alarms about the death of coral reefs for decades.
+And yet, almost everyone I meet, no matter how educated, is not sure what a coral is or where they come from.
+How would we get someone to care about the world's coral reefs when it's an abstract thing they can barely understand?
+If they don't understand what a coral is or where it comes from, or how funny or interesting or beautiful it is, why would we expect them to care about saving them?
+So let's change that.
+That all of you seem to remember Iran after the Islamic Revolution.
+That Iran was once a secular society, and we had democracy, and this democracy was stolen from us by the American government, by the British government.
+This film also speaks to the Iranian people in asking them to return to their history and look at themselves before they were so Islamicized -- in the way we looked, in the way we played music, in the way we had intellectual life.
+And most of all, in the way that we fought for democracy.
+These are some of the shots actually from my film.
+These are some of the images of the coup.
+And we made this film in Casablanca, recreating all the shots.
+This film tried to find a balance between telling a political story, but also a feminine story.
+Being a visual artist, indeed, I am foremost interested to make art -- to make art that transcends politics, religion, the question of feminism, and become an important, timeless, universal work of art.
+The challenge I have is how to do that.
+How to tell a political story but an allegorical story.
+How to move you with your emotions, but also make your mind work.
+These are some of the images and the characters of the film.
+Now comes the green movement -- the summer of 2009, as my film is released -- the uprising begins in the streets of Tehran.
+What is unbelievably ironic is the period that we tried to depict in the film, the cry for democracy and social justice, repeats itself now again in Tehran.
+The green movement significantly inspired the world.
+It brought a lot of attention to all those Iranians who stand for basic human rights and struggle for democracy.
+What was most significant for me was, once again, the presence of the women.
+They're absolutely inspirational for me.
+If in the Islamic Revolution, the images of the woman portrayed were submissive and didn't have a voice, now we saw a new idea of feminism in the streets of Tehran -- women who were educated, forward thinking, non-traditional, sexually open, fearless and seriously feminist.
+These women and those young men united Iranians across the world, inside and outside.
+I then discovered why I take so much inspiration from Iranian women.
+That, under all circumstances, they have pushed the boundary.
+They have confronted the authority.
+They have broken every rule in the smallest and the biggest way.
+And once again, they proved themselves.
+I stand here to say that Iranian women have found a new voice, and their voice is giving me my voice.
+And it's a great honor to be an Iranian woman and an Iranian artist, even if I have to operate in the West only for now.
+It became routine for me to line up three times a day to eat lousy food in a noisy mess hall.
+It became normal for me to go with my father to bathe in a mass shower.
+Being in a prison, a barbed-wire prison camp, became my normality.
+When the war ended, we were released, and given a one-way ticket to anywhere in the United States.
+My parents decided to go back home to Los Angeles, but Los Angeles was not a welcoming place.
+We were penniless.
+Everything had been taken from us, and the hostility was intense.
+Our first home was on Skid Row in the lowest part of our city, living with derelicts, drunkards and crazy people, the stench of urine all over, on the street, in the alley, in the hallway.
+It was a horrible experience, and for us kids, it was terrorizing.
+I remember once a drunkard came staggering down, fell down right in front of us, and threw up.
+My baby sister said, "Mama, let's go back home," because behind barbed wires was for us home.
+My parents worked hard to get back on their feet.
+We had lost everything.
+They were at the middle of their lives and starting all over.
+They worked their fingers to the bone, and ultimately they were able to get the capital together to buy a three-bedroom home in a nice neighborhood.
+And I was a teenager, and I became very curious about my childhood imprisonment.
+I had read civics books that told me about the ideals of American democracy.
+All men are created equal, we have an inalienable right to life, liberty and the pursuit of happiness, and I couldn't quite make that fit with what I knew to be my childhood imprisonment.
+I read history books, and I couldn't find anything about it.
+And so I engaged my father after dinner in long, sometimes heated conversations.
+We had many, many conversations like that, and what I got from them was my father's wisdom.
+He was the one that suffered the most under those conditions of imprisonment, and yet he understood American democracy.
+He told me that our democracy is a people's democracy, and it can be as great as the people can be, but it is also as fallible as people are.
+He told me that American democracy is vitally dependent on good people who cherish the ideals of our system and actively engage in the process of making our democracy work.
+And he took me to a campaign headquarters — the governor of Illinois was running for the presidency — and introduced me to American electoral politics.
+And he also told me about young Japanese-Americans during the Second World War.
+When Pearl Harbor was bombed, young Japanese-Americans, like all young Americans, rushed to their draft board to volunteer to fight for our country.
+That act of patriotism was answered with a slap in the face.
+We were denied service, and categorized as enemy non-alien.
+It was outrageous to be called an enemy when you're volunteering to fight for your country, but that was compounded with the word "non-alien," which is a word that means "citizen" in the negative.
+They even took the word "citizen" away from us, and imprisoned them for a whole year.
+Thank you.
+I'm thrilled to be here.
+I'm going to talk about a new, old material that still continues to amaze us, and that might impact the way we think about material science, high technology -- and maybe, along the way, also do some stuff for medicine and for global health and help reforestation.
+So that's kind of a bold statement.
+I'll tell you a little bit more.
+This material actually has some traits that make it seem almost too good to be true.
+It's sustainable; it's a sustainable material that is processed all in water and at room temperature -- and is biodegradable with a clock, so you can watch it dissolve instantaneously in a glass of water or have it stable for years.
+It's edible; it's implantable in the human body without causing any immune response.
+It actually gets reintegrated in the body.
+And it's technological, so it can do things like microelectronics, and maybe photonics do.
+And the material looks something like this.
+In fact, this material you see is clear and transparent.
+The components of this material are just water and protein.
+So this material is silk.
+So it's kind of different from what we're used to thinking about silk.
+So the question is, how do you reinvent something that has been around for five millennia?
+The process of discovery, generally, is inspired by nature.
+And so we marvel at silk worms -- the silk worm you see here spinning its fiber.
+The silk worm does a remarkable thing: it uses these two ingredients, protein and water, that are in its gland, to make a material that is exceptionally tough for protection -- so comparable to technical fibers like Kevlar.
+And so in the reverse engineering process that we know about, and that we're familiar with, for the textile industry, the textile industry goes and unwinds the cocoon and then weaves glamorous things.
+We want to know how you go from water and protein to this liquid Kevlar, to this natural Kevlar.
+So the insight is how do you actually reverse engineer this and go from cocoon to gland and get water and protein that is your starting material.
+And this is an insight that came, about two decades ago, from a person that I'm very fortunate to work with, David Kaplan.
+And so we get this starting material.
+And so this starting material is back to the basic building block.
+And then we use this to do a variety of things -- like, for example, this film.
+And we take advantage of something that is very simple.
+The recipe to make those films is to take advantage of the fact that proteins are extremely smart at what they do.
+They find their way to self-assemble.
+So the recipe is simple: you take the silk solution, you pour it, and you wait for the protein to self-assemble.
+And then you detach the protein and you get this film, as the proteins find each other as the water evaporates.
+But I mentioned that the film is also technological.
+And so what does that mean?
+There's very little economies of scale.
+So you can now create one-offs very easily.
+Architects, for example, they want to create prototypes of buildings.
+Again you can see, this is a building of the Free University in Berlin and it was designed by Foster and Partners.
+Again, not buildable in any other way.
+And very hard to even create this by hand.
+Now this is an engine component.
+It was developed by a company called Within Technologies and 3T RPD.
+It's very, very, very detailed inside with the design.
+Now 3D printing can break away barriers in design which challenge the constraints of mass production.
+If we slice into this product which is actually sitting here, you can see that it has a number of cooling channels pass through it, which means it's a more efficient product.
+You can't create this with standard manufacturing techniques even if you tried to do it manually.
+It's more efficient because we can now create all these cavities within the object that cool fluid.
+And it's used by aerospace and automotive.
+It's a lighter part and it uses less material waste.
+So it's overall performance and efficiency just exceeds standard mass produced products.
+And then taking this idea of creating a very detailed structure, we can apply it to honeycomb structures and use them within implants.
+Typically an implant is more effective within the body if it's more porous, because our body tissue will grow into it.
+There's a lower chance of rejection.
+But it's very hard to create that in standard ways.
+With 3D printing, we're seeing today that we can create much better implants.
+And in fact, because we can create bespoke products en masse, one-offs, we can create implants that are specific to individuals.
+So as you can see, this technology and the quality of what comes out of the machines is fantastic.
+And we're starting to see it being used for final end products.
+And in fact, as the detail is improving, the quality is improving, the price of the machines are falling and they're becoming quicker.
+They're also now small enough to sit on a desktop.
+You can buy a machine today for about $300 that you can create yourself, which is quite incredible.
+But then it begs the question, why don't we all have one in our home?
+Because, simply, most of us here today don't know how to create the data that a 3D printer reads.
+If I gave you a 3D printer, you wouldn't know how to direct it to make what you want it to.
+But there are more and more technologies, software and processes today that are breaking down those barriers.
+I believe we're at a tipping point where this is now something that we can't avoid.
+This technology is really going to disrupt the landscape of manufacturing and, I believe, cause a revolution in manufacturing.
+So today, you can download products from the Web -- anything you would have on your desktop, like pens, whistles, lemon squeezers.
+You can use software like Google SketchUp to create products from scratch very easily.
+3D printing can be also used to download spare parts from the Web.
+So imagine you have, say, a Hoover in your home and it has broken down. You need a spare part, but you realize that Hoover's been discontinued.
+Can you imagine going online -- this is a reality -- and finding that spare part from a database of geometries of that discontinued product and downloading that information, that data, and having the product made for you at home, ready to use, on your demand?
+And in fact, because we can create spare parts with things the machines are quite literally making themselves.
+You're having machines fabricate themselves.
+These are parts of a RepRap machine, which is a kind of desktop printer.
+But what interests my company the most is the fact that you can create individual unique products en masse.
+There's no need to do a run of thousands of millions or send that product to be injection molded in China.
+You can just make it physically on the spot.
+Which means that we can now present to the public the next generation of customization.
+This is something that is now possible today, that you can direct personally how you want your products to look.
+We're all familiar with the idea of customization or personalization.
+We are very ignorant about what the time scale for these things are, but they all are consistent with everything we know about physical laws, laws of chemistry, etc.
+It's possible to assume, setting aside a possibility of catastrophe, that sooner or later we will develop all of these.
+And even just a couple of these would be enough to transform the human condition.
+So let's look at some of the dimensions of human nature that seem to leave room for improvement.
+Health span is a big and urgent thing, because if you're not alive, then all the other things will be to little avail.
+Intellectual capacity -- let's take that box, which falls into a lot of different sub-categories: memory, concentration, mental energy, intelligence, empathy.
+These are really great things.
+Part of the reason why we value these traits is that they make us better at competing with other people -- they're positional goods.
+But part of the reason -- and that's the reason why we have ethical ground for pursuing these -- is that they're also intrinsically valuable.
+It's just better to be able to understand more of the world around you and the people that you are communicating with, and to remember what you have learned.
+Modalities and special faculties.
+Now, the human mind is not a single unitary information processor, but it has a lot of different, special, evolved modules that do specific things for us.
+If you think about what we normally take as giving life a lot of its meaning -- music, humor, eroticism, spirituality, aesthetics, nurturing and caring, gossip, chatting with people -- all of these, very likely, are enabled by a special circuitry that we humans have, but that you could have another intelligent life form that lacks these.
+We're just lucky that we have the requisite neural machinery to process music and to appreciate it and enjoy it.
+All of these would enable, in principle -- be amenable to enhancement.
+Some people have a better musical ability and ability to appreciate music than others have.
+It's also interesting to think about what other things are -- so if these all enabled great values, why should we think that evolution has happened to provide us with all the modalities we would need to engage with other values that there might be?
+Imagine a species that just didn't have this neural machinery for processing music.
+And they would just stare at us with bafflement when we spend time listening to a beautiful performance, like the one we just heard -- because of people making stupid movements, and they would be really irritated and wouldn't see what we were up to.
+But maybe they have another faculty, something else that would seem equally irrational to us, but they actually tap into some great possible value there.
+But we are just literally deaf to that kind of value.
+So we could think of adding on different, new sensory capacities and mental faculties.
+Bodily functionality and morphology and affective self-control.
+Greater subjective well-being.
+Be able to switch between relaxation and activity -- being able to go slow when you need to do that, and to speed up.
+Able to switch back and forth more easily would be a neat thing to be able to do -- easier to achieve the flow state, when you're totally immersed in something you are doing.
+Conscientiousness and sympathy.
+The ability to -- it's another interesting application that would have large social ramification, perhaps.
+If you could actually choose to preserve your romantic attachments to one person, undiminished through time, so that wouldn't have to -- love would never have to fade if you didn't want it to.
+That's probably not all that difficult.
+It might just be a simple hormone or something that could do this.
+It's been done in voles.
+You can engineer a prairie vole to become monogamous when it's naturally polygamous.
+It's just a single gene.
+Might be more complicated in humans, but perhaps not that much.
+This is the last picture that I want to -- now we've got to use the laser pointer.
+A possible mode of being here would be a way of life -- a way of being, experiencing, thinking, seeing, interacting with the world.
+Down here in this little corner, here, we have the little sub-space of this larger space that is accessible to human beings -- beings with our biological capacities.
+It's a part of the space that's accessible to animals; since we are animals, we are a subset of that.
+And then you can imagine some enhancements of human capacities.
+There would be different modes of being you could experience if you were able to stay alive for, say, 200 years.
+Then you could live sorts of lives and accumulate wisdoms that are just not possible for humans as we currently are.
+So then, you move off to this larger sphere of "human +," and you could continue that process and eventually explore a lot of this larger space of possible modes of being.
+Now, why is that a good thing to do?
+Well, we know already that in this little human circle there, there are these enormously wonderful and worthwhile modes of being -- human life at its best is wonderful.
+We have no reason to believe that within this much, much larger space there would not also be extremely worthwhile modes of being, perhaps ones that would be way beyond our wildest ability even to imagine or dream about.
+And so, to fix this third problem, I think we need -- slowly, carefully, with ethical wisdom and constraint -- develop the means that enable us to go out in this larger space and explore it and find the great values that might hide there.
+A couple of years ago, Harvard Business School chose the best business model of that year.
+It chose Somali piracy.
+Pretty much around the same time, I discovered that there were 544 seafarers being held hostage on ships, often anchored just off the Somali coast in plain sight.
+And I learned these two facts, and I thought, what's going on in shipping?
+And I thought, would that happen in any other industry?
+Would we see 544 airline pilots on a runway for months, or a year?
+Would we see 544 Greyhound bus drivers?
+It wouldn't happen.
+So I started to get intrigued.
+And I discovered another fact, which to me was more astonishing almost for the fact that I hadn't known it before at the age of 42, 43.
+That is how fundamentally we still depend on shipping.
+Because perhaps the general public thinks of shipping as an old-fashioned industry, something brought by sailboat with Moby Dicks and Jack Sparrows.
+But shipping isn't that.
+Shipping is as crucial to us as it has ever been.
+Shipping brings us 90 percent of world trade.
+Shipping has quadrupled in size since 1970.
+We are more dependent on it now than ever.
+And yet, for such an enormous industry -- there are a 100,000 working vessels on the sea — it's become pretty much invisible.
+Now that sounds absurd in Singapore to say that, because here shipping is so present that you stuck a ship on top of a hotel.
+But elsewhere in the world, if you ask the general public what they know about shipping and how much trade is carried by sea, you will get essentially a blank face.
+You will ask someone on the street if they've heard of Microsoft.
+I should think they'll say yes, because they'll know that they make software that goes on computers, and occasionally works.
+But if you ask them if they've heard of Maersk, I doubt you'd get the same response, even though Maersk, which is just one shipping company amongst many, has revenues pretty much on a par with Microsoft.
+[$60.2 billion] Now why is this?
+A few years ago, the first sea lord of the British admiralty -- he is called the first sea lord, although the chief of the army is not called a land lord — he said that we, and he meant in the industrialized nations in the West, that we suffer from sea blindness.
+We are blind to the sea as a place of industry or of work.
+It's just something we fly over, a patch of blue on an airline map.
+Nothing to see, move along.
+So I wanted to open my own eyes to my own sea blindness, so I ran away to sea.
+A couple of years ago, I took a passage on the Maersk Kendal, a mid-sized container ship carrying nearly 7,000 boxes, and I departed from Felixstowe, on the south coast of England, and I ended up right here in Singapore five weeks later, considerably less jet-lagged than I am right now.
+And the senior water rights holders, if they don't use their water right, they risk losing their water right, along with the economic value that goes with it.
+So they have no incentive to conserve.
+So it's not just about the number of people; the system itself creates a disincentive to conserve because you can lose your water right if you don't use it.
+So after decades of lawsuits and 140 years, now, of experience, we still have this.
+It's a broken system.
+There's a disincentive to conserve, because, if you don't use your water right, you can lose your water right.
+And I'm sure you all know, this has created significant conflicts between the agricultural and environmental communities.
+Okay. Now I'm going to change gears here.
+Most of you will be happy to know that the rest of the presentation's free, and some of you'll be happy to know that it involves beer.
+There's another thing happening around the country, which is that companies are starting to get concerned about their water footprint.
+They're concerned about securing an adequate supply of water, they're trying to be really efficient with their water use, and they're concerned about how their water use affects the image of their brand.
+Well, it's a national problem, but I'm going to tell you another story from Montana, and it involves beer.
+I bet you didn't know, it takes about 5 pints of water to make a pint of beer.
+If you include all the drain, it takes more than a hundred pints of water to make a pint of beer.
+Now the brewers in Montana have already done a lot to reduce their water consumption, but they still use millions of gallons of water.
+I mean, there's water in beer.
+So what can they do about this remaining water footprint that can have serious effects on the ecosystem?
+These ecosystems are really important to the Montana brewers and their customers.
+After all, there's a strong correlation between water and fishing, and for some, there's a strong correlation between fishing and beer.
+So the Montana brewers and their customers are concerned, and they're looking for some way to address the problem.
+So how can they address this remaining water footprint?
+Remember Prickly Pear.
+Up until now, business water stewardship has been limited to measuring and reducing, and we're suggesting that the next step is to restore.
+Remember Prickly Pear.
+It's a broken system.
+You've got a disincentive to conserve, because if you don't use your water right, you risk losing your water right.
+Well, we decided to connect these two worlds -- the world of the companies with their water footprints and the world of the farmers with their senior water rights on these creeks.

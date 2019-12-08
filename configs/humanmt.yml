@@ -5,9 +5,10 @@ data:
   source: '.en'
   target: '.hyp'
   marking: '.ann'
-  raw: 'data/markings'
+  raw_train: 'data/markings'
   train: 'data/markings.tok'
-  dev: 'data/head.markings.tok'
+  raw_dev: 'data/user_mark'
+  dev: 'data/user_mark.tok'
 
 model:
   hidden_dimension: 50
