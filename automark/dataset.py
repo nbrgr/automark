@@ -40,6 +40,35 @@ def batch_to(batch, loc):
     batch.attention_mask = batch.attention_mask.to(loc)
     return batch
     
+def make_generate_data(config, input_src, input_mt):
+    bert_path = config['bert']['path']
+    tokenizer = BertTokenizer.from_pretrained(bert_path)
+    unk_id = tokenizer.vocab['[UNK]']
+    pad_id = tokenizer.vocab['[PAD]']
+    unk_fun = lambda: unk_id
+
+    vocab = defaultdict(unk_fun)
+
+    for k, v in tokenizer.vocab.items():
+        vocab[k] = v
+
+    src_trg_field = data.Field(eos_token=None,
+                               pad_token=pad_id,
+                               batch_first=True,
+                               include_lengths=True,
+                               sequential=True,
+                               use_vocab=False)
+
+    mask_field = data.RawField(postprocessing=tensorify(batch_fun,
+                                                        torch.float32))
+
+    id_mask = data.RawField(postprocessing=tensorify(batch_fun, torch.long))
+
+    test_data = TestMergeDataset(src_path=input_src, trg_path=input_mt,
+                                  fields=(src_trg_field, mask_field, id_mask),
+                                  bos_token='[CLS]',
+                                  sep_token='[SEP]', vocab=vocab)
+    return test_data
 
 def make_dataset(config):
     bert_path = config['bert']['path']
@@ -138,6 +167,50 @@ def make_data_iter(dataset: Dataset,
             train=False, sort=False)
 
     return data_iter
+
+
+class TestMergeDataset(Dataset):
+
+    def __init__(self, src_path, trg_path, fields, bos_token='[CLS]',
+                 sep_token='[SEP]', vocab=None, **kwargs):
+
+        src_len = data.RawField(
+            postprocessing=tensorify(identity_fun, torch.long))
+        trg_len = data.RawField(
+            postprocessing=tensorify(identity_fun, torch.long))
+        attention_mask = data.RawField(
+            postprocessing=tensorify(batch_fun, torch.long))
+
+        if not isinstance(fields[0], (tuple, list)):
+            fields = [('src_trg', fields[0]),
+                      ('label_mask', fields[1]), ('id_mask', fields[2]),
+                      ('src_len', src_len), ('trg_len', trg_len),
+                      ('attention_mask', attention_mask)]
+
+        examples = []
+        with open(src_path) as src_file, open(trg_path) as trg_file:
+            for src_line, trg_line in \
+                    zip(src_file, trg_file):
+                src_line, trg_line = src_line.strip().split(" "), \
+                                     trg_line.strip().split(" ")
+
+                src_line = [vocab[bos_token]] + [vocab[x] for x in src_line] + \
+                           [vocab[sep_token]]
+                trg_line = [vocab[x] for x in trg_line]
+                label_mask = [0.0] * len(src_line) + [1.0] * len(trg_line)
+
+                if src_line != '' and trg_line != '':
+                    merged_line = src_line + trg_line
+                    att_mask = [1] * len(merged_line)
+                    id_mask = [0] * len(src_line) + [1] * len(trg_line)
+                    assert len(merged_line) == len(id_mask)
+                    assert len(label_mask) == len(merged_line)
+                    examples.append(data.Example.fromlist(
+                        [merged_line, label_mask, id_mask,
+                         len(src_line), len(trg_line), att_mask],
+                        fields))
+
+        super(TestMergeDataset, self).__init__(examples, fields, **kwargs)
 
 
 class MergeDataset(Dataset):

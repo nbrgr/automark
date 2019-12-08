@@ -73,15 +73,19 @@ class AutoMark(torch.nn.Module):
         # print("shape markings {}".format(markings.shape))
         return markings
 
-    def get_loss_for_batch(self, batch, loss_function, weighting):
-        assert batch.src_trg[0].shape == batch.id_mask.shape
+    def predict(self, batch):
         predictions = self.forward(batch.src_trg, batch.id_mask,
                                    batch.attention_mask)
+        return predictions
+
+    def get_loss_for_batch(self, batch, loss_function, weighting):
+        assert batch.src_trg[0].shape == batch.id_mask.shape
+        predictions = self.predict(batch)
+
         labels = batch.weights
         mask = batch.label_mask
 
         if weighting == "percentage":
-            weights = torch.ones_like(batch.loss_weight)
             total_ones = torch.sum(labels, dim=1).float()
             total_trgs = batch.trg_len.float()
 

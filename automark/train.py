@@ -6,13 +6,12 @@ import os
 import torch
 from torch.nn import functional as F
 
-from automark.mark import AutoMark, build_model
+from automark.mark import build_model
 from automark.dataset import make_dataset, make_data_iter
 from automark.helpers import *
 from automark.loss import XentLoss
 from automark.builders import build_optimizer, build_scheduler, build_gradient_clipper
 from automark.batch import Batch
-from automark.test import test
 from automark.validate import validate_on_data
 
 
@@ -572,7 +571,7 @@ def train(cfg_file):
 
     # predict with the best model on validation and test
     # (if test data is available)
-    ckpt = "{}/{}.ckpt".format(trainer.model_dir, trainer.best_ckpt_iteration)
-    output_name = "{:08d}.hyps".format(trainer.best_ckpt_iteration)
-    output_path = os.path.join(trainer.model_dir, output_name)
-    test(cfg_file, ckpt=ckpt, output_path=output_path, logger=trainer.logger)
+    #ckpt = "{}/{}.ckpt".format(trainer.model_dir, trainer.best_ckpt_iteration)
+    #output_name = "{:08d}.hyps".format(trainer.best_ckpt_iteration)
+    #output_path = os.path.join(trainer.model_dir, output_name)
+    #test(cfg_file, ckpt=ckpt, output_path=output_path, logger=trainer.logger)

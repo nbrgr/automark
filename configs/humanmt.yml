@@ -34,3 +34,6 @@ train:
   weighting: 'wrong'
   eval_batch_size: 128
   eval_metric: 'f1_prod' # f1_1, f1_0, acc, f1_prod
+
+generate:
+  batch_size: 2
