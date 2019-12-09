@@ -11,28 +11,28 @@ data:
   dev: 'data/user_mark.tok'
 
 model:
-  hidden_dimension: 50
-  activation: "tanh"
-  freeze_bert: False
+  hidden_dimension: 100
+  activation: "relu"
+  freeze_bert: True
   head_bias: False
 
 train:
-  bert_lr: 0.000003
+  bert_lr: 0.0003
   lr: 0.0003
   optimizer: adam
   batch_size: 32
-  epochs: 10
-  seed: 42
-  model_dir: humanmt
+  epochs: 100
+  seed: 41
+  model_dir: humanmt_2hl_100e
   shuffle: True
-  cuda: False
+  cuda: True
   early_stopping_metric: 'eval_metric'
   overwrite: True
   normalization: tokens
-  bad_weight: 5.0
+  bad_weight: 10.0
   validation_freq: 100
   logging_freq: 10
-  weighting: 'wrong'
+  weighting: 'constant'
   eval_batch_size: 128
   eval_metric: 'f1_prod' # f1_1, f1_0, acc, f1_prod
 

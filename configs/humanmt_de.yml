@@ -1,5 +1,5 @@
 bert:
-  path: 'bert-base-multilingual-cased'
+  path: 'bert-base-german-dbmdz-cased'
 
 data:
   source: '.en'
@@ -11,7 +11,7 @@ data:
   dev: 'data/user_mark.tok'
 
 model:
-  hidden_dimension: 50
+  hidden_dimension: 100
   activation: "tanh"
   freeze_bert: False
   head_bias: False
@@ -21,11 +21,11 @@ train:
   lr: 0.0003
   optimizer: adam
   batch_size: 32
-  epochs: 10
-  seed: 42
-  model_dir: humanmt
+  epochs: 25
+  seed: 41
+  model_dir: humanmt_de
   shuffle: True
-  cuda: False
+  cuda: True
   early_stopping_metric: 'eval_metric'
   overwrite: True
   normalization: tokens

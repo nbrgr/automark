@@ -26,7 +26,9 @@ def validate_on_data(
         total_seqs = 0
         valid_ones = 0
         valid_acc = 0
+        batch_count = 0
         for i, valid_batch in enumerate(valid_iter):
+            batch_count += 1
             if use_cuda:
                 valid_batch = batch_to(valid_batch, "cuda")
             batch_loss, ones, acc, predictions = model.get_loss_for_batch(
@@ -46,7 +48,7 @@ def validate_on_data(
             valid_ones += ones
             valid_acc += acc
 
-        valid_ones = valid_ones / total_seqs
+        valid_ones = valid_ones / batch_count
         valid_acc = valid_acc / total_seqs
         total_loss = total_loss / total_tokens
 

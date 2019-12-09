@@ -1,0 +1,1106 @@
+2019-12-08 14:25:44,985 Hello! This is AutoMark. For all your Automatic Marking needs.
+2019-12-08 14:25:44,997 Total params: 177930540
+2019-12-08 14:25:44,999 Trainable parameters: ['bert.embeddings.LayerNorm.bias', 'bert.embeddings.LayerNorm.weight', 'bert.embeddings.position_embeddings.weight', 'bert.embeddings.token_type_embeddings.weight', 'bert.embeddings.word_embeddings.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.dense.bias', 'bert.encoder.layer.0.attention.output.dense.weight', 'bert.encoder.layer.0.attention.self.key.bias', 'bert.encoder.layer.0.attention.self.key.weight', 'bert.encoder.layer.0.attention.self.query.bias', 'bert.encoder.layer.0.attention.self.query.weight', 'bert.encoder.layer.0.attention.self.value.bias', 'bert.encoder.layer.0.attention.self.value.weight', 'bert.encoder.layer.0.intermediate.dense.bias', 'bert.encoder.layer.0.intermediate.dense.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.dense.bias', 'bert.encoder.layer.0.output.dense.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.dense.bias', 'bert.encoder.layer.1.attention.output.dense.weight', 'bert.encoder.layer.1.attention.self.key.bias', 'bert.encoder.layer.1.attention.self.key.weight', 'bert.encoder.layer.1.attention.self.query.bias', 'bert.encoder.layer.1.attention.self.query.weight', 'bert.encoder.layer.1.attention.self.value.bias', 'bert.encoder.layer.1.attention.self.value.weight', 'bert.encoder.layer.1.intermediate.dense.bias', 'bert.encoder.layer.1.intermediate.dense.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.dense.bias', 'bert.encoder.layer.1.output.dense.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.dense.bias', 'bert.encoder.layer.10.attention.output.dense.weight', 'bert.encoder.layer.10.attention.self.key.bias', 'bert.encoder.layer.10.attention.self.key.weight', 'bert.encoder.layer.10.attention.self.query.bias', 'bert.encoder.layer.10.attention.self.query.weight', 'bert.encoder.layer.10.attention.self.value.bias', 'bert.encoder.layer.10.attention.self.value.weight', 'bert.encoder.layer.10.intermediate.dense.bias', 'bert.encoder.layer.10.intermediate.dense.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.dense.bias', 'bert.encoder.layer.10.output.dense.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.dense.bias', 'bert.encoder.layer.11.attention.output.dense.weight', 'bert.encoder.layer.11.attention.self.key.bias', 'bert.encoder.layer.11.attention.self.key.weight', 'bert.encoder.layer.11.attention.self.query.bias', 'bert.encoder.layer.11.attention.self.query.weight', 'bert.encoder.layer.11.attention.self.value.bias', 'bert.encoder.layer.11.attention.self.value.weight', 'bert.encoder.layer.11.intermediate.dense.bias', 'bert.encoder.layer.11.intermediate.dense.weight', 'bert.encoder.layer.11.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.dense.bias', 'bert.encoder.layer.11.output.dense.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.dense.bias', 'bert.encoder.layer.2.attention.output.dense.weight', 'bert.encoder.layer.2.attention.self.key.bias', 'bert.encoder.layer.2.attention.self.key.weight', 'bert.encoder.layer.2.attention.self.query.bias', 'bert.encoder.layer.2.attention.self.query.weight', 'bert.encoder.layer.2.attention.self.value.bias', 'bert.encoder.layer.2.attention.self.value.weight', 'bert.encoder.layer.2.intermediate.dense.bias', 'bert.encoder.layer.2.intermediate.dense.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.dense.bias', 'bert.encoder.layer.2.output.dense.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.dense.bias', 'bert.encoder.layer.3.attention.output.dense.weight', 'bert.encoder.layer.3.attention.self.key.bias', 'bert.encoder.layer.3.attention.self.key.weight', 'bert.encoder.layer.3.attention.self.query.bias', 'bert.encoder.layer.3.attention.self.query.weight', 'bert.encoder.layer.3.attention.self.value.bias', 'bert.encoder.layer.3.attention.self.value.weight', 'bert.encoder.layer.3.intermediate.dense.bias', 'bert.encoder.layer.3.intermediate.dense.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.dense.bias', 'bert.encoder.layer.3.output.dense.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.dense.bias', 'bert.encoder.layer.4.attention.output.dense.weight', 'bert.encoder.layer.4.attention.self.key.bias', 'bert.encoder.layer.4.attention.self.key.weight', 'bert.encoder.layer.4.attention.self.query.bias', 'bert.encoder.layer.4.attention.self.query.weight', 'bert.encoder.layer.4.attention.self.value.bias', 'bert.encoder.layer.4.attention.self.value.weight', 'bert.encoder.layer.4.intermediate.dense.bias', 'bert.encoder.layer.4.intermediate.dense.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.dense.bias', 'bert.encoder.layer.4.output.dense.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.dense.bias', 'bert.encoder.layer.5.attention.output.dense.weight', 'bert.encoder.layer.5.attention.self.key.bias', 'bert.encoder.layer.5.attention.self.key.weight', 'bert.encoder.layer.5.attention.self.query.bias', 'bert.encoder.layer.5.attention.self.query.weight', 'bert.encoder.layer.5.attention.self.value.bias', 'bert.encoder.layer.5.attention.self.value.weight', 'bert.encoder.layer.5.intermediate.dense.bias', 'bert.encoder.layer.5.intermediate.dense.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.dense.bias', 'bert.encoder.layer.5.output.dense.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.dense.bias', 'bert.encoder.layer.6.attention.output.dense.weight', 'bert.encoder.layer.6.attention.self.key.bias', 'bert.encoder.layer.6.attention.self.key.weight', 'bert.encoder.layer.6.attention.self.query.bias', 'bert.encoder.layer.6.attention.self.query.weight', 'bert.encoder.layer.6.attention.self.value.bias', 'bert.encoder.layer.6.attention.self.value.weight', 'bert.encoder.layer.6.intermediate.dense.bias', 'bert.encoder.layer.6.intermediate.dense.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.dense.bias', 'bert.encoder.layer.6.output.dense.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.dense.bias', 'bert.encoder.layer.7.attention.output.dense.weight', 'bert.encoder.layer.7.attention.self.key.bias', 'bert.encoder.layer.7.attention.self.key.weight', 'bert.encoder.layer.7.attention.self.query.bias', 'bert.encoder.layer.7.attention.self.query.weight', 'bert.encoder.layer.7.attention.self.value.bias', 'bert.encoder.layer.7.attention.self.value.weight', 'bert.encoder.layer.7.intermediate.dense.bias', 'bert.encoder.layer.7.intermediate.dense.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.dense.bias', 'bert.encoder.layer.7.output.dense.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.dense.bias', 'bert.encoder.layer.8.attention.output.dense.weight', 'bert.encoder.layer.8.attention.self.key.bias', 'bert.encoder.layer.8.attention.self.key.weight', 'bert.encoder.layer.8.attention.self.query.bias', 'bert.encoder.layer.8.attention.self.query.weight', 'bert.encoder.layer.8.attention.self.value.bias', 'bert.encoder.layer.8.attention.self.value.weight', 'bert.encoder.layer.8.intermediate.dense.bias', 'bert.encoder.layer.8.intermediate.dense.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.dense.bias', 'bert.encoder.layer.8.output.dense.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.dense.bias', 'bert.encoder.layer.9.attention.output.dense.weight', 'bert.encoder.layer.9.attention.self.key.bias', 'bert.encoder.layer.9.attention.self.key.weight', 'bert.encoder.layer.9.attention.self.query.bias', 'bert.encoder.layer.9.attention.self.query.weight', 'bert.encoder.layer.9.attention.self.value.bias', 'bert.encoder.layer.9.attention.self.value.weight', 'bert.encoder.layer.9.intermediate.dense.bias', 'bert.encoder.layer.9.intermediate.dense.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.dense.bias', 'bert.encoder.layer.9.output.dense.weight', 'bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.prediction.weight']
+2019-12-08 14:25:48,630 cfg.bert.path                      : bert-base-multilingual-cased
+2019-12-08 14:25:48,631 cfg.data.source                    : .en
+2019-12-08 14:25:48,631 cfg.data.target                    : .hyp
+2019-12-08 14:25:48,631 cfg.data.marking                   : .ann
+2019-12-08 14:25:48,631 cfg.data.raw_train                 : data/markings
+2019-12-08 14:25:48,632 cfg.data.train                     : data/markings.tok
+2019-12-08 14:25:48,632 cfg.data.raw_dev                   : data/user_mark
+2019-12-08 14:25:48,632 cfg.data.dev                       : data/user_mark.tok
+2019-12-08 14:25:48,632 cfg.model.hidden_dimension         : 100
+2019-12-08 14:25:48,632 cfg.model.activation               : tanh
+2019-12-08 14:25:48,632 cfg.model.freeze_bert              : False
+2019-12-08 14:25:48,632 cfg.model.head_bias                : False
+2019-12-08 14:25:48,633 cfg.train.bert_lr                  : 3e-05
+2019-12-08 14:25:48,633 cfg.train.lr                       : 0.0003
+2019-12-08 14:25:48,633 cfg.train.optimizer                : adam
+2019-12-08 14:25:48,633 cfg.train.batch_size               : 4
+2019-12-08 14:25:48,633 cfg.train.epochs                   : 25
+2019-12-08 14:25:48,633 cfg.train.seed                     : 41
+2019-12-08 14:25:48,633 cfg.train.model_dir                : humanmt_25
+2019-12-08 14:25:48,634 cfg.train.shuffle                  : True
+2019-12-08 14:25:48,634 cfg.train.cuda                     : True
+2019-12-08 14:25:48,634 cfg.train.early_stopping_metric    : eval_metric
+2019-12-08 14:25:48,634 cfg.train.overwrite                : True
+2019-12-08 14:25:48,634 cfg.train.normalization            : tokens
+2019-12-08 14:25:48,634 cfg.train.bad_weight               : 5.0
+2019-12-08 14:25:48,634 cfg.train.validation_freq          : 100
+2019-12-08 14:25:48,634 cfg.train.logging_freq             : 10
+2019-12-08 14:25:48,635 cfg.train.weighting                : constant
+2019-12-08 14:25:48,635 cfg.train.eval_batch_size          : 128
+2019-12-08 14:25:48,635 cfg.train.eval_metric              : f1_prod
+2019-12-08 14:25:48,635 cfg.generate.batch_size            : 2
+2019-12-08 14:25:48,639 AutoMark(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(119547, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (marking_head): MarkingHead(
+    (fc1): Linear(in_features=768, out_features=100, bias=True)
+    (prediction): Linear(in_features=100, out_features=2, bias=False)
+  )
+)
+2019-12-08 14:25:48,639 EPOCH 1
+2019-12-08 14:25:50,308 Epoch   1 Step:       10 Batch Loss:     1.342546 Ones: 0.66 Accuracy: 0.74 Tokens per Sec:      532, Lr: 0.000300
+2019-12-08 14:25:51,711 Epoch   1 Step:       20 Batch Loss:     1.088618 Ones: 0.95 Accuracy: 0.83 Tokens per Sec:     1521, Lr: 0.000300
+2019-12-08 14:25:53,054 Epoch   1 Step:       30 Batch Loss:     0.904451 Ones: 0.54 Accuracy: 0.54 Tokens per Sec:     2342, Lr: 0.000300
+2019-12-08 14:25:54,430 Epoch   1 Step:       40 Batch Loss:     0.407112 Ones: 0.93 Accuracy: 0.93 Tokens per Sec:     2937, Lr: 0.000300
+2019-12-08 14:25:55,704 Epoch   1 Step:       50 Batch Loss:     0.754470 Ones: 0.49 Accuracy: 0.60 Tokens per Sec:     3917, Lr: 0.000300
+2019-12-08 14:25:57,074 Epoch   1 Step:       60 Batch Loss:     1.219639 Ones: 0.54 Accuracy: 0.61 Tokens per Sec:     4551, Lr: 0.000300
+2019-12-08 14:25:58,438 Epoch   1 Step:       70 Batch Loss:     0.755070 Ones: 0.55 Accuracy: 0.62 Tokens per Sec:     5530, Lr: 0.000300
+2019-12-08 14:25:59,793 Epoch   1 Step:       80 Batch Loss:     1.125355 Ones: 0.24 Accuracy: 0.37 Tokens per Sec:     6154, Lr: 0.000300
+2019-12-08 14:26:01,104 Epoch   1 Step:       90 Batch Loss:     1.241497 Ones: 0.83 Accuracy: 0.73 Tokens per Sec:     7048, Lr: 0.000300
+2019-12-08 14:26:02,478 Epoch   1 Step:      100 Batch Loss:     0.673900 Ones: 0.57 Accuracy: 0.62 Tokens per Sec:     7685, Lr: 0.000300
+2019-12-08 14:26:05,293 Hooray! New best validation result [eval_metric]!
+2019-12-08 14:26:05,295 Saving new checkpoint.
+2019-12-08 14:26:25,775 Validation result at epoch   1, step      100: f1_prod:   0.14, loss:   0.5772, ones:   0.7466, f1_0:   0.1754, f1_1:   0.8098,f1_prd:   0.1420, duration: 23.2962s
+2019-12-08 14:26:27,133 Epoch   1 Step:      110 Batch Loss:     0.927299 Ones: 0.75 Accuracy: 0.73 Tokens per Sec:     8359, Lr: 0.000300
+2019-12-08 14:26:28,467 Epoch   1 Step:      120 Batch Loss:     1.034314 Ones: 0.39 Accuracy: 0.61 Tokens per Sec:     9191, Lr: 0.000300
+2019-12-08 14:26:29,770 Epoch   1 Step:      130 Batch Loss:     1.140796 Ones: 0.46 Accuracy: 0.60 Tokens per Sec:    10186, Lr: 0.000300
+2019-12-08 14:26:31,063 Epoch   1 Step:      140 Batch Loss:     0.877726 Ones: 0.74 Accuracy: 0.82 Tokens per Sec:    10967, Lr: 0.000300
+2019-12-08 14:26:32,340 Epoch   1 Step:      150 Batch Loss:     0.936440 Ones: 0.57 Accuracy: 0.55 Tokens per Sec:    12156, Lr: 0.000300
+2019-12-08 14:26:33,591 Epoch   1 Step:      160 Batch Loss:     1.057598 Ones: 0.71 Accuracy: 0.77 Tokens per Sec:    13343, Lr: 0.000300
+2019-12-08 14:26:34,843 Epoch   1 Step:      170 Batch Loss:     1.301892 Ones: 0.47 Accuracy: 0.61 Tokens per Sec:    14271, Lr: 0.000300
+2019-12-08 14:26:36,086 Epoch   1 Step:      180 Batch Loss:     1.127323 Ones: 0.84 Accuracy: 0.79 Tokens per Sec:    14987, Lr: 0.000300
+2019-12-08 14:26:37,357 Epoch   1 Step:      190 Batch Loss:     1.032367 Ones: 0.69 Accuracy: 0.87 Tokens per Sec:    15694, Lr: 0.000300
+2019-12-08 14:26:38,620 Epoch   1 Step:      200 Batch Loss:     1.074123 Ones: 0.45 Accuracy: 0.67 Tokens per Sec:    16826, Lr: 0.000300
+2019-12-08 14:26:41,413 Hooray! New best validation result [eval_metric]!
+2019-12-08 14:26:41,414 Saving new checkpoint.
+2019-12-08 14:27:02,758 Validation result at epoch   1, step      200: f1_prod:   0.14, loss:   0.6520, ones:   0.6561, f1_0:   0.1917, f1_1:   0.7524,f1_prd:   0.1443, duration: 24.1366s
+2019-12-08 14:27:04,010 Epoch   1 Step:      210 Batch Loss:     0.977064 Ones: 0.73 Accuracy: 0.81 Tokens per Sec:    17610, Lr: 0.000300
+2019-12-08 14:27:05,184 Epoch   1 Step:      220 Batch Loss:     1.095404 Ones: 0.50 Accuracy: 0.62 Tokens per Sec:    19575, Lr: 0.000300
+2019-12-08 14:27:06,293 Epoch   1 Step:      230 Batch Loss:     1.036929 Ones: 0.40 Accuracy: 0.54 Tokens per Sec:    21607, Lr: 0.000300
+2019-12-08 14:27:07,524 Epoch   1 Step:      240 Batch Loss:     0.994756 Ones: 0.70 Accuracy: 0.72 Tokens per Sec:    20631, Lr: 0.000300
+2019-12-08 14:27:08,730 Epoch   1 Step:      250 Batch Loss:     0.532156 Ones: 0.74 Accuracy: 0.74 Tokens per Sec:    21798, Lr: 0.000300
+2019-12-08 14:27:09,973 Epoch   1 Step:      260 Batch Loss:     0.626962 Ones: 0.80 Accuracy: 0.79 Tokens per Sec:    21857, Lr: 0.000300
+2019-12-08 14:27:10,094 Epoch   1: total training loss 275.82
+2019-12-08 14:27:10,094 EPOCH 2
+2019-12-08 14:27:11,189 Epoch   2 Step:      270 Batch Loss:     0.644022 Ones: 0.70 Accuracy: 0.77 Tokens per Sec:      802, Lr: 0.000300
+2019-12-08 14:27:12,398 Epoch   2 Step:      280 Batch Loss:     0.751575 Ones: 0.78 Accuracy: 0.81 Tokens per Sec:     1509, Lr: 0.000300
+2019-12-08 14:27:13,537 Epoch   2 Step:      290 Batch Loss:     0.816495 Ones: 0.79 Accuracy: 0.88 Tokens per Sec:     2475, Lr: 0.000300
+2019-12-08 14:27:14,726 Epoch   2 Step:      300 Batch Loss:     0.707631 Ones: 0.63 Accuracy: 0.79 Tokens per Sec:     3327, Lr: 0.000300
+2019-12-08 14:27:17,515 Validation result at epoch   2, step      300: f1_prod:   0.14, loss:   0.6332, ones:   0.7632, f1_0:   0.1664, f1_1:   0.8232,f1_prd:   0.1369, duration: 2.7888s
+2019-12-08 14:27:18,747 Epoch   2 Step:      310 Batch Loss:     0.799367 Ones: 0.73 Accuracy: 0.79 Tokens per Sec:     4001, Lr: 0.000300
+2019-12-08 14:27:19,990 Epoch   2 Step:      320 Batch Loss:     1.944799 Ones: 0.67 Accuracy: 0.60 Tokens per Sec:     4888, Lr: 0.000300
+2019-12-08 14:27:21,251 Epoch   2 Step:      330 Batch Loss:     0.566935 Ones: 0.81 Accuracy: 0.79 Tokens per Sec:     5780, Lr: 0.000300
+2019-12-08 14:27:22,420 Epoch   2 Step:      340 Batch Loss:     1.175938 Ones: 0.27 Accuracy: 0.47 Tokens per Sec:     7189, Lr: 0.000300
+2019-12-08 14:27:23,671 Epoch   2 Step:      350 Batch Loss:     0.846717 Ones: 0.60 Accuracy: 0.71 Tokens per Sec:     7191, Lr: 0.000300
+2019-12-08 14:27:24,878 Epoch   2 Step:      360 Batch Loss:     1.012364 Ones: 0.67 Accuracy: 0.76 Tokens per Sec:     8516, Lr: 0.000300
+2019-12-08 14:27:26,133 Epoch   2 Step:      370 Batch Loss:     0.871121 Ones: 0.62 Accuracy: 0.78 Tokens per Sec:     9007, Lr: 0.000300
+2019-12-08 14:27:27,416 Epoch   2 Step:      380 Batch Loss:     0.886106 Ones: 0.62 Accuracy: 0.77 Tokens per Sec:     9745, Lr: 0.000300
+2019-12-08 14:27:28,688 Epoch   2 Step:      390 Batch Loss:     0.208501 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    10418, Lr: 0.000300
+2019-12-08 14:27:29,982 Epoch   2 Step:      400 Batch Loss:     1.864298 Ones: 0.93 Accuracy: 0.77 Tokens per Sec:    11065, Lr: 0.000300
+2019-12-08 14:27:32,768 Validation result at epoch   2, step      400: f1_prod:   0.12, loss:   0.4986, ones:   0.8683, f1_0:   0.1417, f1_1:   0.8759,f1_prd:   0.1241, duration: 2.7842s
+2019-12-08 14:27:34,000 Epoch   2 Step:      410 Batch Loss:     0.852214 Ones: 0.61 Accuracy: 0.67 Tokens per Sec:    12380, Lr: 0.000300
+2019-12-08 14:27:35,279 Epoch   2 Step:      420 Batch Loss:     0.550508 Ones: 0.73 Accuracy: 0.81 Tokens per Sec:    12969, Lr: 0.000300
+2019-12-08 14:27:36,556 Epoch   2 Step:      430 Batch Loss:     0.690425 Ones: 0.78 Accuracy: 0.84 Tokens per Sec:    13934, Lr: 0.000300
+2019-12-08 14:27:37,805 Epoch   2 Step:      440 Batch Loss:     0.509481 Ones: 0.85 Accuracy: 0.90 Tokens per Sec:    15142, Lr: 0.000300
+2019-12-08 14:27:39,037 Epoch   2 Step:      450 Batch Loss:     0.168574 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    16060, Lr: 0.000300
+2019-12-08 14:27:40,245 Epoch   2 Step:      460 Batch Loss:     0.813550 Ones: 0.79 Accuracy: 0.74 Tokens per Sec:    17279, Lr: 0.000300
+2019-12-08 14:27:41,512 Epoch   2 Step:      470 Batch Loss:     0.724906 Ones: 0.81 Accuracy: 0.84 Tokens per Sec:    17057, Lr: 0.000300
+2019-12-08 14:27:42,760 Epoch   2 Step:      480 Batch Loss:     1.200799 Ones: 0.84 Accuracy: 0.81 Tokens per Sec:    18115, Lr: 0.000300
+2019-12-08 14:27:44,030 Epoch   2 Step:      490 Batch Loss:     0.617759 Ones: 0.55 Accuracy: 0.72 Tokens per Sec:    18679, Lr: 0.000300
+2019-12-08 14:27:45,323 Epoch   2 Step:      500 Batch Loss:     0.966334 Ones: 0.75 Accuracy: 0.83 Tokens per Sec:    19199, Lr: 0.000300
+2019-12-08 14:27:48,110 Validation result at epoch   2, step      500: f1_prod:   0.11, loss:   0.5203, ones:   0.8479, f1_0:   0.1275, f1_1:   0.8658,f1_prd:   0.1104, duration: 2.7858s
+2019-12-08 14:27:49,350 Epoch   2 Step:      510 Batch Loss:     0.441787 Ones: 0.86 Accuracy: 0.88 Tokens per Sec:    20821, Lr: 0.000300
+2019-12-08 14:27:50,587 Epoch   2 Step:      520 Batch Loss:     0.687485 Ones: 0.76 Accuracy: 0.77 Tokens per Sec:    21845, Lr: 0.000300
+2019-12-08 14:27:50,837 Epoch   2: total training loss 220.29
+2019-12-08 14:27:50,838 EPOCH 3
+2019-12-08 14:27:51,847 Epoch   3 Step:      530 Batch Loss:     0.776147 Ones: 0.63 Accuracy: 0.86 Tokens per Sec:      791, Lr: 0.000300
+2019-12-08 14:27:53,114 Epoch   3 Step:      540 Batch Loss:     0.595677 Ones: 0.67 Accuracy: 0.80 Tokens per Sec:     1413, Lr: 0.000300
+2019-12-08 14:27:54,406 Epoch   3 Step:      550 Batch Loss:     0.325215 Ones: 0.85 Accuracy: 0.98 Tokens per Sec:     2431, Lr: 0.000300
+2019-12-08 14:27:55,638 Epoch   3 Step:      560 Batch Loss:     0.353068 Ones: 0.90 Accuracy: 0.92 Tokens per Sec:     3285, Lr: 0.000300
+2019-12-08 14:27:56,898 Epoch   3 Step:      570 Batch Loss:     0.609343 Ones: 0.95 Accuracy: 0.93 Tokens per Sec:     4252, Lr: 0.000300
+2019-12-08 14:27:58,144 Epoch   3 Step:      580 Batch Loss:     0.634865 Ones: 0.63 Accuracy: 0.69 Tokens per Sec:     5225, Lr: 0.000300
+2019-12-08 14:27:59,383 Epoch   3 Step:      590 Batch Loss:     0.680116 Ones: 0.84 Accuracy: 0.87 Tokens per Sec:     5997, Lr: 0.000300
+2019-12-08 14:28:00,602 Epoch   3 Step:      600 Batch Loss:     0.428145 Ones: 0.72 Accuracy: 0.87 Tokens per Sec:     6918, Lr: 0.000300
+2019-12-08 14:28:03,388 Validation result at epoch   3, step      600: f1_prod:   0.14, loss:   0.6020, ones:   0.8368, f1_0:   0.1665, f1_1:   0.8627,f1_prd:   0.1437, duration: 2.7849s
+2019-12-08 14:28:04,633 Epoch   3 Step:      610 Batch Loss:     0.572592 Ones: 0.48 Accuracy: 0.76 Tokens per Sec:     7679, Lr: 0.000300
+2019-12-08 14:28:05,890 Epoch   3 Step:      620 Batch Loss:     0.137239 Ones: 0.95 Accuracy: 0.95 Tokens per Sec:     8396, Lr: 0.000300
+2019-12-08 14:28:07,093 Epoch   3 Step:      630 Batch Loss:     0.604845 Ones: 0.84 Accuracy: 0.85 Tokens per Sec:     9579, Lr: 0.000300
+2019-12-08 14:28:08,324 Epoch   3 Step:      640 Batch Loss:     0.762916 Ones: 0.75 Accuracy: 0.84 Tokens per Sec:    10262, Lr: 0.000300
+2019-12-08 14:28:09,554 Epoch   3 Step:      650 Batch Loss:     0.937555 Ones: 0.54 Accuracy: 0.76 Tokens per Sec:    11089, Lr: 0.000300
+2019-12-08 14:28:10,776 Epoch   3 Step:      660 Batch Loss:     0.357605 Ones: 1.00 Accuracy: 0.97 Tokens per Sec:    12041, Lr: 0.000300
+2019-12-08 14:28:12,017 Epoch   3 Step:      670 Batch Loss:     0.486240 Ones: 0.84 Accuracy: 0.92 Tokens per Sec:    12958, Lr: 0.000300
+2019-12-08 14:28:13,255 Epoch   3 Step:      680 Batch Loss:     0.148161 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    13622, Lr: 0.000300
+2019-12-08 14:28:14,484 Epoch   3 Step:      690 Batch Loss:     0.439868 Ones: 0.97 Accuracy: 0.94 Tokens per Sec:    14440, Lr: 0.000300
+2019-12-08 14:28:15,724 Epoch   3 Step:      700 Batch Loss:     0.842596 Ones: 0.69 Accuracy: 0.79 Tokens per Sec:    15157, Lr: 0.000300
+2019-12-08 14:28:18,511 Validation result at epoch   3, step      700: f1_prod:   0.11, loss:   0.5160, ones:   0.8874, f1_0:   0.1263, f1_1:   0.8870,f1_prd:   0.1121, duration: 2.7859s
+2019-12-08 14:28:19,722 Epoch   3 Step:      710 Batch Loss:     0.683906 Ones: 0.60 Accuracy: 0.76 Tokens per Sec:    16288, Lr: 0.000300
+2019-12-08 14:28:20,930 Epoch   3 Step:      720 Batch Loss:     0.441009 Ones: 0.83 Accuracy: 0.92 Tokens per Sec:    16930, Lr: 0.000300
+2019-12-08 14:28:22,172 Epoch   3 Step:      730 Batch Loss:     0.442537 Ones: 0.68 Accuracy: 0.86 Tokens per Sec:    17373, Lr: 0.000300
+2019-12-08 14:28:23,341 Epoch   3 Step:      740 Batch Loss:     0.902327 Ones: 0.82 Accuracy: 0.88 Tokens per Sec:    19063, Lr: 0.000300
+2019-12-08 14:28:24,474 Epoch   3 Step:      750 Batch Loss:     0.686073 Ones: 0.77 Accuracy: 0.81 Tokens per Sec:    20527, Lr: 0.000300
+2019-12-08 14:28:25,603 Epoch   3 Step:      760 Batch Loss:     0.314726 Ones: 0.91 Accuracy: 0.92 Tokens per Sec:    21681, Lr: 0.000300
+2019-12-08 14:28:26,770 Epoch   3 Step:      770 Batch Loss:     0.739641 Ones: 0.67 Accuracy: 0.78 Tokens per Sec:    22321, Lr: 0.000300
+2019-12-08 14:28:28,029 Epoch   3 Step:      780 Batch Loss:     0.845076 Ones: 0.65 Accuracy: 0.69 Tokens per Sec:    21588, Lr: 0.000300
+2019-12-08 14:28:28,388 Epoch   3: total training loss 157.28
+2019-12-08 14:28:28,389 EPOCH 4
+2019-12-08 14:28:29,292 Epoch   4 Step:      790 Batch Loss:     0.235760 Ones: 0.77 Accuracy: 0.92 Tokens per Sec:      974, Lr: 0.000300
+2019-12-08 14:28:30,589 Epoch   4 Step:      800 Batch Loss:     0.571703 Ones: 0.69 Accuracy: 0.91 Tokens per Sec:     1612, Lr: 0.000300
+2019-12-08 14:28:33,378 Validation result at epoch   4, step      800: f1_prod:   0.11, loss:   0.6012, ones:   0.8616, f1_0:   0.1306, f1_1:   0.8727,f1_prd:   0.1139, duration: 2.7875s
+2019-12-08 14:28:34,590 Epoch   4 Step:      810 Batch Loss:     0.216974 Ones: 0.82 Accuracy: 0.90 Tokens per Sec:     2443, Lr: 0.000300
+2019-12-08 14:28:35,836 Epoch   4 Step:      820 Batch Loss:     0.042192 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     2878, Lr: 0.000300
+2019-12-08 14:28:37,100 Epoch   4 Step:      830 Batch Loss:     0.221952 Ones: 0.90 Accuracy: 0.97 Tokens per Sec:     3622, Lr: 0.000300
+2019-12-08 14:28:38,389 Epoch   4 Step:      840 Batch Loss:     0.475079 Ones: 0.82 Accuracy: 0.87 Tokens per Sec:     4673, Lr: 0.000300
+2019-12-08 14:28:39,680 Epoch   4 Step:      850 Batch Loss:     0.645937 Ones: 0.49 Accuracy: 0.88 Tokens per Sec:     5474, Lr: 0.000300
+2019-12-08 14:28:40,982 Epoch   4 Step:      860 Batch Loss:     0.298179 Ones: 0.73 Accuracy: 0.90 Tokens per Sec:     6158, Lr: 0.000300
+2019-12-08 14:28:42,275 Epoch   4 Step:      870 Batch Loss:     0.637692 Ones: 0.92 Accuracy: 0.92 Tokens per Sec:     7163, Lr: 0.000300
+2019-12-08 14:28:43,570 Epoch   4 Step:      880 Batch Loss:     0.558729 Ones: 0.75 Accuracy: 0.84 Tokens per Sec:     8073, Lr: 0.000300
+2019-12-08 14:28:44,845 Epoch   4 Step:      890 Batch Loss:     0.277359 Ones: 0.93 Accuracy: 0.98 Tokens per Sec:     8922, Lr: 0.000300
+2019-12-08 14:28:46,148 Epoch   4 Step:      900 Batch Loss:     0.443003 Ones: 0.73 Accuracy: 0.83 Tokens per Sec:     9562, Lr: 0.000300
+2019-12-08 14:28:48,938 Validation result at epoch   4, step      900: f1_prod:   0.12, loss:   0.6918, ones:   0.8298, f1_0:   0.1453, f1_1:   0.8522,f1_prd:   0.1238, duration: 2.7882s
+2019-12-08 14:28:50,179 Epoch   4 Step:      910 Batch Loss:     0.523114 Ones: 0.81 Accuracy: 0.84 Tokens per Sec:    10811, Lr: 0.000300
+2019-12-08 14:28:51,463 Epoch   4 Step:      920 Batch Loss:     0.955355 Ones: 0.84 Accuracy: 0.88 Tokens per Sec:    11296, Lr: 0.000300
+2019-12-08 14:28:52,712 Epoch   4 Step:      930 Batch Loss:     0.447314 Ones: 0.85 Accuracy: 0.92 Tokens per Sec:    12420, Lr: 0.000300
+2019-12-08 14:28:53,919 Epoch   4 Step:      940 Batch Loss:     0.116846 Ones: 0.91 Accuracy: 0.97 Tokens per Sec:    13565, Lr: 0.000300
+2019-12-08 14:28:55,177 Epoch   4 Step:      950 Batch Loss:     0.490973 Ones: 0.72 Accuracy: 0.87 Tokens per Sec:    13875, Lr: 0.000300
+2019-12-08 14:28:56,461 Epoch   4 Step:      960 Batch Loss:     0.399890 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    14306, Lr: 0.000300
+2019-12-08 14:28:57,718 Epoch   4 Step:      970 Batch Loss:     0.870739 Ones: 0.80 Accuracy: 0.86 Tokens per Sec:    15600, Lr: 0.000300
+2019-12-08 14:28:58,971 Epoch   4 Step:      980 Batch Loss:     0.611259 Ones: 0.59 Accuracy: 0.80 Tokens per Sec:    16516, Lr: 0.000300
+2019-12-08 14:29:00,187 Epoch   4 Step:      990 Batch Loss:     0.142657 Ones: 0.89 Accuracy: 0.95 Tokens per Sec:    17848, Lr: 0.000300
+2019-12-08 14:29:01,396 Epoch   4 Step:     1000 Batch Loss:     0.045741 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:    18853, Lr: 0.000300
+2019-12-08 14:29:04,184 Validation result at epoch   4, step     1000: f1_prod:   0.14, loss:   1.0198, ones:   0.6872, f1_0:   0.1775, f1_1:   0.7608,f1_prd:   0.1350, duration: 2.7869s
+2019-12-08 14:29:05,431 Epoch   4 Step:     1010 Batch Loss:     0.015351 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    19004, Lr: 0.000300
+2019-12-08 14:29:06,661 Epoch   4 Step:     1020 Batch Loss:     0.774900 Ones: 0.62 Accuracy: 0.72 Tokens per Sec:    20081, Lr: 0.000300
+2019-12-08 14:29:07,949 Epoch   4 Step:     1030 Batch Loss:     0.262007 Ones: 0.90 Accuracy: 0.97 Tokens per Sec:    20009, Lr: 0.000300
+2019-12-08 14:29:09,177 Epoch   4 Step:     1040 Batch Loss:     0.329667 Ones: 0.86 Accuracy: 0.90 Tokens per Sec:    21814, Lr: 0.000300
+2019-12-08 14:29:09,663 Epoch   4: total training loss 109.66
+2019-12-08 14:29:09,663 EPOCH 5
+2019-12-08 14:29:10,384 Epoch   5 Step:     1050 Batch Loss:     0.160747 Ones: 0.80 Accuracy: 0.98 Tokens per Sec:      844, Lr: 0.000300
+2019-12-08 14:29:11,567 Epoch   5 Step:     1060 Batch Loss:     0.379380 Ones: 0.81 Accuracy: 0.87 Tokens per Sec:     1237, Lr: 0.000300
+2019-12-08 14:29:12,766 Epoch   5 Step:     1070 Batch Loss:     0.461717 Ones: 0.80 Accuracy: 0.91 Tokens per Sec:     2000, Lr: 0.000300
+2019-12-08 14:29:13,955 Epoch   5 Step:     1080 Batch Loss:     0.350438 Ones: 0.71 Accuracy: 0.88 Tokens per Sec:     2825, Lr: 0.000300
+2019-12-08 14:29:15,219 Epoch   5 Step:     1090 Batch Loss:     0.440497 Ones: 0.81 Accuracy: 0.96 Tokens per Sec:     3662, Lr: 0.000300
+2019-12-08 14:29:16,498 Epoch   5 Step:     1100 Batch Loss:     0.261193 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:     4497, Lr: 0.000300
+2019-12-08 14:29:19,288 Validation result at epoch   5, step     1100: f1_prod:   0.13, loss:   0.7585, ones:   0.8335, f1_0:   0.1504, f1_1:   0.8544,f1_prd:   0.1285, duration: 2.7886s
+2019-12-08 14:29:20,512 Epoch   5 Step:     1110 Batch Loss:     0.388752 Ones: 0.75 Accuracy: 0.85 Tokens per Sec:     5629, Lr: 0.000300
+2019-12-08 14:29:21,770 Epoch   5 Step:     1120 Batch Loss:     0.546822 Ones: 0.68 Accuracy: 0.88 Tokens per Sec:     6507, Lr: 0.000300
+2019-12-08 14:29:23,006 Epoch   5 Step:     1130 Batch Loss:     0.485047 Ones: 0.74 Accuracy: 0.92 Tokens per Sec:     7306, Lr: 0.000300
+2019-12-08 14:29:24,234 Epoch   5 Step:     1140 Batch Loss:     0.345978 Ones: 0.76 Accuracy: 0.87 Tokens per Sec:     8074, Lr: 0.000300
+2019-12-08 14:29:25,475 Epoch   5 Step:     1150 Batch Loss:     0.572684 Ones: 0.60 Accuracy: 0.78 Tokens per Sec:     8834, Lr: 0.000300
+2019-12-08 14:29:26,728 Epoch   5 Step:     1160 Batch Loss:     0.277072 Ones: 0.83 Accuracy: 0.94 Tokens per Sec:     9805, Lr: 0.000300
+2019-12-08 14:29:27,963 Epoch   5 Step:     1170 Batch Loss:     0.252384 Ones: 0.71 Accuracy: 0.88 Tokens per Sec:    10742, Lr: 0.000300
+2019-12-08 14:29:29,234 Epoch   5 Step:     1180 Batch Loss:     0.293362 Ones: 0.77 Accuracy: 0.88 Tokens per Sec:    11632, Lr: 0.000300
+2019-12-08 14:29:30,485 Epoch   5 Step:     1190 Batch Loss:     0.194090 Ones: 1.00 Accuracy: 0.97 Tokens per Sec:    12620, Lr: 0.000300
+2019-12-08 14:29:31,709 Epoch   5 Step:     1200 Batch Loss:     0.276102 Ones: 0.68 Accuracy: 0.85 Tokens per Sec:    13592, Lr: 0.000300
+2019-12-08 14:29:34,498 Validation result at epoch   5, step     1200: f1_prod:   0.13, loss:   0.8157, ones:   0.8003, f1_0:   0.1512, f1_1:   0.8369,f1_prd:   0.1265, duration: 2.7879s
+2019-12-08 14:29:35,722 Epoch   5 Step:     1210 Batch Loss:     0.233920 Ones: 0.88 Accuracy: 0.97 Tokens per Sec:    14374, Lr: 0.000300
+2019-12-08 14:29:36,976 Epoch   5 Step:     1220 Batch Loss:     0.241203 Ones: 0.74 Accuracy: 0.93 Tokens per Sec:    14853, Lr: 0.000300
+2019-12-08 14:29:38,271 Epoch   5 Step:     1230 Batch Loss:     0.574696 Ones: 0.73 Accuracy: 0.85 Tokens per Sec:    15160, Lr: 0.000300
+2019-12-08 14:29:39,555 Epoch   5 Step:     1240 Batch Loss:     0.054273 Ones: 0.73 Accuracy: 1.00 Tokens per Sec:    16077, Lr: 0.000300
+2019-12-08 14:29:40,783 Epoch   5 Step:     1250 Batch Loss:     0.439474 Ones: 0.66 Accuracy: 0.80 Tokens per Sec:    17543, Lr: 0.000300
+2019-12-08 14:29:42,019 Epoch   5 Step:     1260 Batch Loss:     0.454095 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    18260, Lr: 0.000300
+2019-12-08 14:29:43,232 Epoch   5 Step:     1270 Batch Loss:     0.188097 Ones: 0.82 Accuracy: 0.97 Tokens per Sec:    19284, Lr: 0.000300
+2019-12-08 14:29:44,494 Epoch   5 Step:     1280 Batch Loss:     0.082941 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:    19485, Lr: 0.000300
+2019-12-08 14:29:45,747 Epoch   5 Step:     1290 Batch Loss:     0.132506 Ones: 0.83 Accuracy: 0.97 Tokens per Sec:    20407, Lr: 0.000300
+2019-12-08 14:29:47,009 Epoch   5 Step:     1300 Batch Loss:     0.533908 Ones: 0.92 Accuracy: 0.92 Tokens per Sec:    21149, Lr: 0.000300
+2019-12-08 14:29:49,794 Validation result at epoch   5, step     1300: f1_prod:   0.12, loss:   0.7804, ones:   0.8420, f1_0:   0.1390, f1_1:   0.8572,f1_prd:   0.1192, duration: 2.7846s
+2019-12-08 14:29:50,381 Epoch   5: total training loss 85.75
+2019-12-08 14:29:50,382 EPOCH 6
+2019-12-08 14:29:50,989 Epoch   6 Step:     1310 Batch Loss:     0.213487 Ones: 0.82 Accuracy: 0.93 Tokens per Sec:      862, Lr: 0.000300
+2019-12-08 14:29:52,191 Epoch   6 Step:     1320 Batch Loss:     0.032353 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     1069, Lr: 0.000300
+2019-12-08 14:29:53,316 Epoch   6 Step:     1330 Batch Loss:     0.271217 Ones: 0.79 Accuracy: 0.94 Tokens per Sec:     1912, Lr: 0.000300
+2019-12-08 14:29:54,441 Epoch   6 Step:     1340 Batch Loss:     0.048454 Ones: 0.98 Accuracy: 0.98 Tokens per Sec:     2901, Lr: 0.000300
+2019-12-08 14:29:55,660 Epoch   6 Step:     1350 Batch Loss:     0.469965 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:     3501, Lr: 0.000300
+2019-12-08 14:29:56,829 Epoch   6 Step:     1360 Batch Loss:     0.027999 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     4577, Lr: 0.000300
+2019-12-08 14:29:57,979 Epoch   6 Step:     1370 Batch Loss:     0.520592 Ones: 0.67 Accuracy: 0.89 Tokens per Sec:     5670, Lr: 0.000300
+2019-12-08 14:29:59,184 Epoch   6 Step:     1380 Batch Loss:     0.155317 Ones: 0.83 Accuracy: 0.94 Tokens per Sec:     6394, Lr: 0.000300
+2019-12-08 14:30:00,404 Epoch   6 Step:     1390 Batch Loss:     0.037642 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:     7058, Lr: 0.000300
+2019-12-08 14:30:01,649 Epoch   6 Step:     1400 Batch Loss:     0.094874 Ones: 0.88 Accuracy: 0.99 Tokens per Sec:     7998, Lr: 0.000300
+2019-12-08 14:30:04,446 Validation result at epoch   6, step     1400: f1_prod:   0.09, loss:   0.7236, ones:   0.9232, f1_0:   0.1016, f1_1:   0.8986,f1_prd:   0.0913, duration: 2.7954s
+2019-12-08 14:30:05,646 Epoch   6 Step:     1410 Batch Loss:     0.315344 Ones: 0.77 Accuracy: 0.90 Tokens per Sec:     9192, Lr: 0.000300
+2019-12-08 14:30:06,875 Epoch   6 Step:     1420 Batch Loss:     0.329361 Ones: 0.84 Accuracy: 0.89 Tokens per Sec:     9741, Lr: 0.000300
+2019-12-08 14:30:08,094 Epoch   6 Step:     1430 Batch Loss:     0.204754 Ones: 0.76 Accuracy: 0.95 Tokens per Sec:    10402, Lr: 0.000300
+2019-12-08 14:30:09,329 Epoch   6 Step:     1440 Batch Loss:     0.599184 Ones: 0.56 Accuracy: 0.86 Tokens per Sec:    11567, Lr: 0.000300
+2019-12-08 14:30:10,582 Epoch   6 Step:     1450 Batch Loss:     0.218862 Ones: 0.92 Accuracy: 0.98 Tokens per Sec:    11996, Lr: 0.000300
+2019-12-08 14:30:11,838 Epoch   6 Step:     1460 Batch Loss:     0.263075 Ones: 0.76 Accuracy: 0.92 Tokens per Sec:    12744, Lr: 0.000300
+2019-12-08 14:30:13,062 Epoch   6 Step:     1470 Batch Loss:     0.365263 Ones: 0.96 Accuracy: 0.98 Tokens per Sec:    13944, Lr: 0.000300
+2019-12-08 14:30:14,288 Epoch   6 Step:     1480 Batch Loss:     0.564009 Ones: 0.52 Accuracy: 0.79 Tokens per Sec:    14707, Lr: 0.000300
+2019-12-08 14:30:15,533 Epoch   6 Step:     1490 Batch Loss:     0.704666 Ones: 0.69 Accuracy: 0.90 Tokens per Sec:    15480, Lr: 0.000300
+2019-12-08 14:30:16,752 Epoch   6 Step:     1500 Batch Loss:     0.025036 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    16536, Lr: 0.000300
+2019-12-08 14:30:19,548 Validation result at epoch   6, step     1500: f1_prod:   0.12, loss:   0.8269, ones:   0.8510, f1_0:   0.1344, f1_1:   0.8614,f1_prd:   0.1158, duration: 2.7947s
+2019-12-08 14:30:20,758 Epoch   6 Step:     1510 Batch Loss:     0.021218 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    17548, Lr: 0.000300
+2019-12-08 14:30:22,052 Epoch   6 Step:     1520 Batch Loss:     0.270442 Ones: 0.63 Accuracy: 0.93 Tokens per Sec:    17105, Lr: 0.000300
+2019-12-08 14:30:23,367 Epoch   6 Step:     1530 Batch Loss:     0.171038 Ones: 0.89 Accuracy: 0.98 Tokens per Sec:    17772, Lr: 0.000300
+2019-12-08 14:30:24,686 Epoch   6 Step:     1540 Batch Loss:     0.255879 Ones: 0.85 Accuracy: 0.94 Tokens per Sec:    18438, Lr: 0.000300
+2019-12-08 14:30:25,988 Epoch   6 Step:     1550 Batch Loss:     0.005717 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    19512, Lr: 0.000300
+2019-12-08 14:30:27,274 Epoch   6 Step:     1560 Batch Loss:     0.295745 Ones: 0.85 Accuracy: 0.93 Tokens per Sec:    20748, Lr: 0.000300
+2019-12-08 14:30:28,029 Epoch   6: total training loss 64.99
+2019-12-08 14:30:28,030 EPOCH 7
+2019-12-08 14:30:28,542 Epoch   7 Step:     1570 Batch Loss:     0.158113 Ones: 0.89 Accuracy: 0.98 Tokens per Sec:      938, Lr: 0.000300
+2019-12-08 14:30:29,789 Epoch   7 Step:     1580 Batch Loss:     0.131486 Ones: 0.93 Accuracy: 0.93 Tokens per Sec:      952, Lr: 0.000300
+2019-12-08 14:30:31,020 Epoch   7 Step:     1590 Batch Loss:     0.879178 Ones: 0.61 Accuracy: 0.75 Tokens per Sec:     1462, Lr: 0.000300
+2019-12-08 14:30:32,269 Epoch   7 Step:     1600 Batch Loss:     0.063928 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:     2340, Lr: 0.000300
+2019-12-08 14:30:35,060 Validation result at epoch   7, step     1600: f1_prod:   0.13, loss:   0.8703, ones:   0.7776, f1_0:   0.1583, f1_1:   0.8226,f1_prd:   0.1302, duration: 2.7902s
+2019-12-08 14:30:36,289 Epoch   7 Step:     1610 Batch Loss:     0.071200 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:     3223, Lr: 0.000300
+2019-12-08 14:30:37,537 Epoch   7 Step:     1620 Batch Loss:     0.350430 Ones: 0.90 Accuracy: 0.96 Tokens per Sec:     4042, Lr: 0.000300
+2019-12-08 14:30:38,788 Epoch   7 Step:     1630 Batch Loss:     0.409661 Ones: 0.63 Accuracy: 0.92 Tokens per Sec:     4981, Lr: 0.000300
+2019-12-08 14:30:40,043 Epoch   7 Step:     1640 Batch Loss:     0.218914 Ones: 0.75 Accuracy: 0.92 Tokens per Sec:     5901, Lr: 0.000300
+2019-12-08 14:30:41,302 Epoch   7 Step:     1650 Batch Loss:     0.443310 Ones: 0.70 Accuracy: 0.92 Tokens per Sec:     6607, Lr: 0.000300
+2019-12-08 14:30:42,564 Epoch   7 Step:     1660 Batch Loss:     0.018242 Ones: 0.73 Accuracy: 1.00 Tokens per Sec:     7394, Lr: 0.000300
+2019-12-08 14:30:43,857 Epoch   7 Step:     1670 Batch Loss:     0.300211 Ones: 0.78 Accuracy: 0.94 Tokens per Sec:     8193, Lr: 0.000300
+2019-12-08 14:30:45,105 Epoch   7 Step:     1680 Batch Loss:     0.916962 Ones: 0.79 Accuracy: 0.92 Tokens per Sec:     9274, Lr: 0.000300
+2019-12-08 14:30:46,364 Epoch   7 Step:     1690 Batch Loss:     0.247820 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:    10371, Lr: 0.000300
+2019-12-08 14:30:47,612 Epoch   7 Step:     1700 Batch Loss:     0.077432 Ones: 0.90 Accuracy: 0.99 Tokens per Sec:    11354, Lr: 0.000300
+2019-12-08 14:30:50,404 Validation result at epoch   7, step     1700: f1_prod:   0.12, loss:   0.9127, ones:   0.8593, f1_0:   0.1362, f1_1:   0.8699,f1_prd:   0.1185, duration: 2.7905s
+2019-12-08 14:30:51,640 Epoch   7 Step:     1710 Batch Loss:     0.095051 Ones: 0.88 Accuracy: 0.96 Tokens per Sec:    12410, Lr: 0.000300
+2019-12-08 14:30:52,878 Epoch   7 Step:     1720 Batch Loss:     0.004882 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    13151, Lr: 0.000300
+2019-12-08 14:30:54,124 Epoch   7 Step:     1730 Batch Loss:     0.496197 Ones: 0.87 Accuracy: 0.95 Tokens per Sec:    13826, Lr: 0.000300
+2019-12-08 14:30:55,363 Epoch   7 Step:     1740 Batch Loss:     0.078245 Ones: 0.87 Accuracy: 0.99 Tokens per Sec:    14748, Lr: 0.000300
+2019-12-08 14:30:56,639 Epoch   7 Step:     1750 Batch Loss:     0.407739 Ones: 0.63 Accuracy: 0.93 Tokens per Sec:    15261, Lr: 0.000300
+2019-12-08 14:30:57,918 Epoch   7 Step:     1760 Batch Loss:     0.335982 Ones: 0.63 Accuracy: 0.86 Tokens per Sec:    15971, Lr: 0.000300
+2019-12-08 14:30:59,153 Epoch   7 Step:     1770 Batch Loss:     0.036855 Ones: 0.77 Accuracy: 0.98 Tokens per Sec:    17183, Lr: 0.000300
+2019-12-08 14:31:00,448 Epoch   7 Step:     1780 Batch Loss:     0.203224 Ones: 0.87 Accuracy: 0.92 Tokens per Sec:    17298, Lr: 0.000300
+2019-12-08 14:31:01,754 Epoch   7 Step:     1790 Batch Loss:     0.152162 Ones: 0.79 Accuracy: 0.95 Tokens per Sec:    17880, Lr: 0.000300
+2019-12-08 14:31:03,002 Epoch   7 Step:     1800 Batch Loss:     0.007963 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:    19484, Lr: 0.000300
+2019-12-08 14:31:05,799 Validation result at epoch   7, step     1800: f1_prod:   0.12, loss:   0.8399, ones:   0.8595, f1_0:   0.1328, f1_1:   0.8669,f1_prd:   0.1151, duration: 2.7958s
+2019-12-08 14:31:07,040 Epoch   7 Step:     1810 Batch Loss:     0.110269 Ones: 0.84 Accuracy: 0.98 Tokens per Sec:    20605, Lr: 0.000300
+2019-12-08 14:31:08,280 Epoch   7 Step:     1820 Batch Loss:     0.098916 Ones: 0.76 Accuracy: 0.97 Tokens per Sec:    21510, Lr: 0.000300
+2019-12-08 14:31:09,146 Epoch   7: total training loss 53.11
+2019-12-08 14:31:09,146 EPOCH 8
+2019-12-08 14:31:09,524 Epoch   8 Step:     1830 Batch Loss:     0.121757 Ones: 0.79 Accuracy: 0.94 Tokens per Sec:      937, Lr: 0.000300
+2019-12-08 14:31:10,730 Epoch   8 Step:     1840 Batch Loss:     0.041574 Ones: 0.69 Accuracy: 1.00 Tokens per Sec:      890, Lr: 0.000300
+2019-12-08 14:31:11,971 Epoch   8 Step:     1850 Batch Loss:     0.026889 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     1902, Lr: 0.000300
+2019-12-08 14:31:13,230 Epoch   8 Step:     1860 Batch Loss:     0.250586 Ones: 0.84 Accuracy: 0.94 Tokens per Sec:     2613, Lr: 0.000300
+2019-12-08 14:31:14,528 Epoch   8 Step:     1870 Batch Loss:     0.096595 Ones: 0.77 Accuracy: 0.97 Tokens per Sec:     3551, Lr: 0.000300
+2019-12-08 14:31:15,767 Epoch   8 Step:     1880 Batch Loss:     0.162688 Ones: 0.66 Accuracy: 0.96 Tokens per Sec:     4630, Lr: 0.000300
+2019-12-08 14:31:17,029 Epoch   8 Step:     1890 Batch Loss:     0.136324 Ones: 0.79 Accuracy: 0.99 Tokens per Sec:     5411, Lr: 0.000300
+2019-12-08 14:31:18,199 Epoch   8 Step:     1900 Batch Loss:     0.224190 Ones: 0.76 Accuracy: 0.94 Tokens per Sec:     6558, Lr: 0.000300
+2019-12-08 14:31:20,996 Validation result at epoch   8, step     1900: f1_prod:   0.11, loss:   0.7354, ones:   0.8670, f1_0:   0.1275, f1_1:   0.8739,f1_prd:   0.1114, duration: 2.7968s
+2019-12-08 14:31:22,242 Epoch   8 Step:     1910 Batch Loss:     0.197687 Ones: 0.79 Accuracy: 0.94 Tokens per Sec:     6923, Lr: 0.000300
+2019-12-08 14:31:23,528 Epoch   8 Step:     1920 Batch Loss:     0.325595 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:     7725, Lr: 0.000300
+2019-12-08 14:31:24,790 Epoch   8 Step:     1930 Batch Loss:     0.084565 Ones: 0.86 Accuracy: 0.98 Tokens per Sec:     8832, Lr: 0.000300
+2019-12-08 14:31:26,026 Epoch   8 Step:     1940 Batch Loss:     0.432252 Ones: 0.84 Accuracy: 0.91 Tokens per Sec:     9647, Lr: 0.000300
+2019-12-08 14:31:27,288 Epoch   8 Step:     1950 Batch Loss:     0.357993 Ones: 0.82 Accuracy: 0.96 Tokens per Sec:    10383, Lr: 0.000300
+2019-12-08 14:31:28,530 Epoch   8 Step:     1960 Batch Loss:     0.334940 Ones: 0.76 Accuracy: 0.91 Tokens per Sec:    11449, Lr: 0.000300
+2019-12-08 14:31:29,805 Epoch   8 Step:     1970 Batch Loss:     0.334429 Ones: 0.60 Accuracy: 0.85 Tokens per Sec:    12146, Lr: 0.000300
+2019-12-08 14:31:31,112 Epoch   8 Step:     1980 Batch Loss:     0.307238 Ones: 0.79 Accuracy: 0.94 Tokens per Sec:    12795, Lr: 0.000300
+2019-12-08 14:31:32,380 Epoch   8 Step:     1990 Batch Loss:     0.089699 Ones: 0.53 Accuracy: 0.97 Tokens per Sec:    13933, Lr: 0.000300
+2019-12-08 14:31:33,623 Epoch   8 Step:     2000 Batch Loss:     0.118516 Ones: 0.83 Accuracy: 0.94 Tokens per Sec:    14800, Lr: 0.000300
+2019-12-08 14:31:36,422 Validation result at epoch   8, step     2000: f1_prod:   0.13, loss:   0.8645, ones:   0.8016, f1_0:   0.1591, f1_1:   0.8401,f1_prd:   0.1337, duration: 2.7979s
+2019-12-08 14:31:37,649 Epoch   8 Step:     2010 Batch Loss:     0.194472 Ones: 0.74 Accuracy: 0.96 Tokens per Sec:    15862, Lr: 0.000300
+2019-12-08 14:31:38,889 Epoch   8 Step:     2020 Batch Loss:     0.027972 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:    16330, Lr: 0.000300
+2019-12-08 14:31:40,165 Epoch   8 Step:     2030 Batch Loss:     0.013341 Ones: 0.93 Accuracy: 1.00 Tokens per Sec:    16683, Lr: 0.000300
+2019-12-08 14:31:41,446 Epoch   8 Step:     2040 Batch Loss:     0.192788 Ones: 0.81 Accuracy: 0.96 Tokens per Sec:    17559, Lr: 0.000300
+2019-12-08 14:31:42,725 Epoch   8 Step:     2050 Batch Loss:     0.338690 Ones: 0.63 Accuracy: 0.95 Tokens per Sec:    18289, Lr: 0.000300
+2019-12-08 14:31:43,965 Epoch   8 Step:     2060 Batch Loss:     0.064709 Ones: 0.85 Accuracy: 0.96 Tokens per Sec:    19710, Lr: 0.000300
+2019-12-08 14:31:45,207 Epoch   8 Step:     2070 Batch Loss:     0.338484 Ones: 0.86 Accuracy: 0.97 Tokens per Sec:    20547, Lr: 0.000300
+2019-12-08 14:31:46,461 Epoch   8 Step:     2080 Batch Loss:     0.248891 Ones: 0.85 Accuracy: 0.96 Tokens per Sec:    21243, Lr: 0.000300
+2019-12-08 14:31:47,452 Epoch   8: total training loss 52.90
+2019-12-08 14:31:47,453 EPOCH 9
+2019-12-08 14:31:47,705 Epoch   9 Step:     2090 Batch Loss:     0.443725 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:     1177, Lr: 0.000300
+2019-12-08 14:31:48,970 Epoch   9 Step:     2100 Batch Loss:     0.110274 Ones: 0.78 Accuracy: 0.96 Tokens per Sec:      875, Lr: 0.000300
+2019-12-08 14:31:51,766 Validation result at epoch   9, step     2100: f1_prod:   0.13, loss:   0.8607, ones:   0.8405, f1_0:   0.1473, f1_1:   0.8626,f1_prd:   0.1270, duration: 2.7950s
+2019-12-08 14:31:53,006 Epoch   9 Step:     2110 Batch Loss:     0.009629 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:     1508, Lr: 0.000300
+2019-12-08 14:31:54,276 Epoch   9 Step:     2120 Batch Loss:     0.032652 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:     2167, Lr: 0.000300
+2019-12-08 14:31:55,508 Epoch   9 Step:     2130 Batch Loss:     0.015631 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:     3353, Lr: 0.000300
+2019-12-08 14:31:56,736 Epoch   9 Step:     2140 Batch Loss:     0.003427 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:     4041, Lr: 0.000300
+2019-12-08 14:31:57,972 Epoch   9 Step:     2150 Batch Loss:     0.076021 Ones: 0.82 Accuracy: 0.98 Tokens per Sec:     4794, Lr: 0.000300
+2019-12-08 14:31:59,236 Epoch   9 Step:     2160 Batch Loss:     0.064897 Ones: 0.94 Accuracy: 0.98 Tokens per Sec:     5610, Lr: 0.000300
+2019-12-08 14:32:00,537 Epoch   9 Step:     2170 Batch Loss:     0.075708 Ones: 0.90 Accuracy: 0.98 Tokens per Sec:     6501, Lr: 0.000300
+2019-12-08 14:32:01,833 Epoch   9 Step:     2180 Batch Loss:     0.144814 Ones: 0.65 Accuracy: 0.95 Tokens per Sec:     7459, Lr: 0.000300
+2019-12-08 14:32:03,098 Epoch   9 Step:     2190 Batch Loss:     0.434158 Ones: 0.92 Accuracy: 0.94 Tokens per Sec:     8471, Lr: 0.000300
+2019-12-08 14:32:04,335 Epoch   9 Step:     2200 Batch Loss:     0.081482 Ones: 0.88 Accuracy: 0.94 Tokens per Sec:     9415, Lr: 0.000300
+2019-12-08 14:32:07,136 Validation result at epoch   9, step     2200: f1_prod:   0.12, loss:   0.8986, ones:   0.8458, f1_0:   0.1393, f1_1:   0.8609,f1_prd:   0.1199, duration: 2.8007s
+2019-12-08 14:32:08,355 Epoch   9 Step:     2210 Batch Loss:     0.057067 Ones: 0.61 Accuracy: 0.98 Tokens per Sec:    10406, Lr: 0.000300
+2019-12-08 14:32:09,650 Epoch   9 Step:     2220 Batch Loss:     0.038573 Ones: 0.82 Accuracy: 0.98 Tokens per Sec:    10444, Lr: 0.000300
+2019-12-08 14:32:10,942 Epoch   9 Step:     2230 Batch Loss:     0.009123 Ones: 0.97 Accuracy: 1.00 Tokens per Sec:    11295, Lr: 0.000300
+2019-12-08 14:32:12,197 Epoch   9 Step:     2240 Batch Loss:     0.022835 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:    12450, Lr: 0.000300
+2019-12-08 14:32:13,453 Epoch   9 Step:     2250 Batch Loss:     0.004293 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    13478, Lr: 0.000300
+2019-12-08 14:32:14,687 Epoch   9 Step:     2260 Batch Loss:     0.126070 Ones: 0.94 Accuracy: 0.95 Tokens per Sec:    14478, Lr: 0.000300
+2019-12-08 14:32:15,927 Epoch   9 Step:     2270 Batch Loss:     0.129571 Ones: 0.89 Accuracy: 0.96 Tokens per Sec:    15186, Lr: 0.000300
+2019-12-08 14:32:17,185 Epoch   9 Step:     2280 Batch Loss:     0.207168 Ones: 0.78 Accuracy: 0.95 Tokens per Sec:    15944, Lr: 0.000300
+2019-12-08 14:32:18,503 Epoch   9 Step:     2290 Batch Loss:     0.217622 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:    16093, Lr: 0.000300
+2019-12-08 14:32:19,804 Epoch   9 Step:     2300 Batch Loss:     0.006375 Ones: 0.71 Accuracy: 1.00 Tokens per Sec:    17056, Lr: 0.000300
+2019-12-08 14:32:22,612 Validation result at epoch   9, step     2300: f1_prod:   0.11, loss:   0.9574, ones:   0.8558, f1_0:   0.1285, f1_1:   0.8678,f1_prd:   0.1115, duration: 2.8070s
+2019-12-08 14:32:23,833 Epoch   9 Step:     2310 Batch Loss:     0.009697 Ones: 0.71 Accuracy: 1.00 Tokens per Sec:    18888, Lr: 0.000300
+2019-12-08 14:32:25,083 Epoch   9 Step:     2320 Batch Loss:     0.005251 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    19377, Lr: 0.000300
+2019-12-08 14:32:26,326 Epoch   9 Step:     2330 Batch Loss:     0.160760 Ones: 0.71 Accuracy: 0.96 Tokens per Sec:    20237, Lr: 0.000300
+2019-12-08 14:32:27,574 Epoch   9 Step:     2340 Batch Loss:     0.286381 Ones: 0.79 Accuracy: 0.94 Tokens per Sec:    21139, Lr: 0.000300
+2019-12-08 14:32:28,697 Epoch   9: total training loss 36.16
+2019-12-08 14:32:28,697 EPOCH 10
+2019-12-08 14:32:28,826 Epoch  10 Step:     2350 Batch Loss:     0.059012 Ones: 0.74 Accuracy: 0.99 Tokens per Sec:     1071, Lr: 0.000300
+2019-12-08 14:32:30,098 Epoch  10 Step:     2360 Batch Loss:     0.127374 Ones: 0.80 Accuracy: 0.95 Tokens per Sec:      888, Lr: 0.000300
+2019-12-08 14:32:31,375 Epoch  10 Step:     2370 Batch Loss:     0.272823 Ones: 0.68 Accuracy: 0.92 Tokens per Sec:     1812, Lr: 0.000300
+2019-12-08 14:32:32,621 Epoch  10 Step:     2380 Batch Loss:     0.023733 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     2841, Lr: 0.000300
+2019-12-08 14:32:33,854 Epoch  10 Step:     2390 Batch Loss:     0.002116 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:     3850, Lr: 0.000300
+2019-12-08 14:32:35,069 Epoch  10 Step:     2400 Batch Loss:     0.089286 Ones: 0.88 Accuracy: 0.97 Tokens per Sec:     5029, Lr: 0.000300
+2019-12-08 14:32:37,867 Validation result at epoch  10, step     2400: f1_prod:   0.11, loss:   0.9716, ones:   0.8579, f1_0:   0.1254, f1_1:   0.8712,f1_prd:   0.1093, duration: 2.7972s
+2019-12-08 14:32:39,132 Epoch  10 Step:     2410 Batch Loss:     0.136048 Ones: 0.84 Accuracy: 0.96 Tokens per Sec:     5602, Lr: 0.000300
+2019-12-08 14:32:40,357 Epoch  10 Step:     2420 Batch Loss:     0.021214 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     6589, Lr: 0.000300
+2019-12-08 14:32:41,547 Epoch  10 Step:     2430 Batch Loss:     0.132568 Ones: 0.59 Accuracy: 0.93 Tokens per Sec:     7529, Lr: 0.000300
+2019-12-08 14:32:42,763 Epoch  10 Step:     2440 Batch Loss:     0.009361 Ones: 0.72 Accuracy: 1.00 Tokens per Sec:     8249, Lr: 0.000300
+2019-12-08 14:32:43,996 Epoch  10 Step:     2450 Batch Loss:     0.201400 Ones: 0.65 Accuracy: 0.96 Tokens per Sec:     8714, Lr: 0.000300
+2019-12-08 14:32:45,237 Epoch  10 Step:     2460 Batch Loss:     0.100034 Ones: 0.86 Accuracy: 0.98 Tokens per Sec:     9511, Lr: 0.000300
+2019-12-08 14:32:46,523 Epoch  10 Step:     2470 Batch Loss:     0.030547 Ones: 0.79 Accuracy: 0.98 Tokens per Sec:    10300, Lr: 0.000300
+2019-12-08 14:32:47,775 Epoch  10 Step:     2480 Batch Loss:     0.031186 Ones: 0.78 Accuracy: 1.00 Tokens per Sec:    11401, Lr: 0.000300
+2019-12-08 14:32:49,015 Epoch  10 Step:     2490 Batch Loss:     0.026098 Ones: 0.88 Accuracy: 0.98 Tokens per Sec:    12480, Lr: 0.000300
+2019-12-08 14:32:50,234 Epoch  10 Step:     2500 Batch Loss:     0.003051 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:    13538, Lr: 0.000300
+2019-12-08 14:32:53,036 Validation result at epoch  10, step     2500: f1_prod:   0.11, loss:   1.0588, ones:   0.8453, f1_0:   0.1284, f1_1:   0.8588,f1_prd:   0.1103, duration: 2.8004s
+2019-12-08 14:32:54,308 Epoch  10 Step:     2510 Batch Loss:     0.003191 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:    13919, Lr: 0.000300
+2019-12-08 14:32:55,594 Epoch  10 Step:     2520 Batch Loss:     0.177930 Ones: 0.70 Accuracy: 0.92 Tokens per Sec:    14680, Lr: 0.000300
+2019-12-08 14:32:56,856 Epoch  10 Step:     2530 Batch Loss:     0.053680 Ones: 0.74 Accuracy: 0.99 Tokens per Sec:    15716, Lr: 0.000300
+2019-12-08 14:32:58,093 Epoch  10 Step:     2540 Batch Loss:     0.190916 Ones: 0.86 Accuracy: 0.97 Tokens per Sec:    16697, Lr: 0.000300
+2019-12-08 14:32:59,348 Epoch  10 Step:     2550 Batch Loss:     0.045482 Ones: 0.77 Accuracy: 0.99 Tokens per Sec:    17381, Lr: 0.000300
+2019-12-08 14:33:00,581 Epoch  10 Step:     2560 Batch Loss:     0.075065 Ones: 0.88 Accuracy: 0.97 Tokens per Sec:    18437, Lr: 0.000300
+2019-12-08 14:33:01,820 Epoch  10 Step:     2570 Batch Loss:     0.104271 Ones: 0.75 Accuracy: 0.97 Tokens per Sec:    19189, Lr: 0.000300
+2019-12-08 14:33:03,104 Epoch  10 Step:     2580 Batch Loss:     0.005721 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:    19200, Lr: 0.000300
+2019-12-08 14:33:04,331 Epoch  10 Step:     2590 Batch Loss:     0.099566 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    20831, Lr: 0.000300
+2019-12-08 14:33:05,533 Epoch  10 Step:     2600 Batch Loss:     0.037439 Ones: 0.90 Accuracy: 0.99 Tokens per Sec:    21948, Lr: 0.000300
+2019-12-08 14:33:08,328 Validation result at epoch  10, step     2600: f1_prod:   0.10, loss:   0.9428, ones:   0.8911, f1_0:   0.1081, f1_1:   0.8876,f1_prd:   0.0960, duration: 2.7948s
+2019-12-08 14:33:09,603 Epoch  10 Step:     2610 Batch Loss:     0.069968 Ones: 0.78 Accuracy: 0.98 Tokens per Sec:    21458, Lr: 0.000300
+2019-12-08 14:33:09,604 Epoch  10: total training loss 24.96
+2019-12-08 14:33:09,604 EPOCH 11
+2019-12-08 14:33:10,885 Epoch  11 Step:     2620 Batch Loss:     0.096729 Ones: 0.80 Accuracy: 0.98 Tokens per Sec:      757, Lr: 0.000300
+2019-12-08 14:33:12,115 Epoch  11 Step:     2630 Batch Loss:     0.056598 Ones: 0.75 Accuracy: 0.98 Tokens per Sec:     1879, Lr: 0.000300
+2019-12-08 14:33:13,360 Epoch  11 Step:     2640 Batch Loss:     0.008728 Ones: 0.78 Accuracy: 1.00 Tokens per Sec:     2566, Lr: 0.000300
+2019-12-08 14:33:14,611 Epoch  11 Step:     2650 Batch Loss:     0.240400 Ones: 0.85 Accuracy: 0.96 Tokens per Sec:     3451, Lr: 0.000300
+2019-12-08 14:33:15,853 Epoch  11 Step:     2660 Batch Loss:     0.007557 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     4286, Lr: 0.000300
+2019-12-08 14:33:17,136 Epoch  11 Step:     2670 Batch Loss:     0.002664 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:     4956, Lr: 0.000300
+2019-12-08 14:33:18,426 Epoch  11 Step:     2680 Batch Loss:     0.068887 Ones: 0.83 Accuracy: 0.98 Tokens per Sec:     5762, Lr: 0.000300
+2019-12-08 14:33:19,711 Epoch  11 Step:     2690 Batch Loss:     0.102150 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:     6758, Lr: 0.000300
+2019-12-08 14:33:20,990 Epoch  11 Step:     2700 Batch Loss:     0.001858 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:     7540, Lr: 0.000300
+2019-12-08 14:33:23,791 Validation result at epoch  11, step     2700: f1_prod:   0.12, loss:   1.1536, ones:   0.8466, f1_0:   0.1413, f1_1:   0.8616,f1_prd:   0.1218, duration: 2.7997s
+2019-12-08 14:33:25,035 Epoch  11 Step:     2710 Batch Loss:     0.034119 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:     8412, Lr: 0.000300
+2019-12-08 14:33:26,288 Epoch  11 Step:     2720 Batch Loss:     0.009571 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:     9227, Lr: 0.000300
+2019-12-08 14:33:27,521 Epoch  11 Step:     2730 Batch Loss:     0.001476 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    10071, Lr: 0.000300
+2019-12-08 14:33:28,776 Epoch  11 Step:     2740 Batch Loss:     0.100151 Ones: 0.71 Accuracy: 0.97 Tokens per Sec:    10717, Lr: 0.000300
+2019-12-08 14:33:29,990 Epoch  11 Step:     2750 Batch Loss:     0.170995 Ones: 0.79 Accuracy: 0.92 Tokens per Sec:    11802, Lr: 0.000300
+2019-12-08 14:33:31,216 Epoch  11 Step:     2760 Batch Loss:     0.016245 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:    12537, Lr: 0.000300
+2019-12-08 14:33:32,491 Epoch  11 Step:     2770 Batch Loss:     0.062076 Ones: 0.78 Accuracy: 1.00 Tokens per Sec:    12727, Lr: 0.000300
+2019-12-08 14:33:33,786 Epoch  11 Step:     2780 Batch Loss:     0.150126 Ones: 0.76 Accuracy: 0.96 Tokens per Sec:    13479, Lr: 0.000300
+2019-12-08 14:33:35,032 Epoch  11 Step:     2790 Batch Loss:     0.075592 Ones: 0.89 Accuracy: 0.98 Tokens per Sec:    15032, Lr: 0.000300
+2019-12-08 14:33:36,279 Epoch  11 Step:     2800 Batch Loss:     0.032338 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:    15647, Lr: 0.000300
+2019-12-08 14:33:39,086 Validation result at epoch  11, step     2800: f1_prod:   0.10, loss:   1.0927, ones:   0.8619, f1_0:   0.1176, f1_1:   0.8690,f1_prd:   0.1022, duration: 2.8056s
+2019-12-08 14:33:40,297 Epoch  11 Step:     2810 Batch Loss:     0.180138 Ones: 0.88 Accuracy: 0.96 Tokens per Sec:    17120, Lr: 0.000300
+2019-12-08 14:33:41,566 Epoch  11 Step:     2820 Batch Loss:     0.022494 Ones: 0.73 Accuracy: 1.00 Tokens per Sec:    17067, Lr: 0.000300
+2019-12-08 14:33:42,819 Epoch  11 Step:     2830 Batch Loss:     0.263104 Ones: 0.74 Accuracy: 0.94 Tokens per Sec:    17839, Lr: 0.000300
+2019-12-08 14:33:44,079 Epoch  11 Step:     2840 Batch Loss:     0.081566 Ones: 0.78 Accuracy: 0.97 Tokens per Sec:    18577, Lr: 0.000300
+2019-12-08 14:33:45,351 Epoch  11 Step:     2850 Batch Loss:     0.151230 Ones: 0.88 Accuracy: 0.96 Tokens per Sec:    19546, Lr: 0.000300
+2019-12-08 14:33:46,588 Epoch  11 Step:     2860 Batch Loss:     0.126547 Ones: 0.88 Accuracy: 0.98 Tokens per Sec:    20808, Lr: 0.000300
+2019-12-08 14:33:47,862 Epoch  11 Step:     2870 Batch Loss:     0.097186 Ones: 0.80 Accuracy: 0.94 Tokens per Sec:    21473, Lr: 0.000300
+2019-12-08 14:33:47,994 Epoch  11: total training loss 24.47
+2019-12-08 14:33:47,994 EPOCH 12
+2019-12-08 14:33:49,156 Epoch  12 Step:     2880 Batch Loss:     0.226918 Ones: 0.73 Accuracy: 0.94 Tokens per Sec:     1184, Lr: 0.000300
+2019-12-08 14:33:50,356 Epoch  12 Step:     2890 Batch Loss:     0.056114 Ones: 0.76 Accuracy: 0.98 Tokens per Sec:     1986, Lr: 0.000300
+2019-12-08 14:33:51,558 Epoch  12 Step:     2900 Batch Loss:     0.005448 Ones: 0.68 Accuracy: 1.00 Tokens per Sec:     2775, Lr: 0.000300
+2019-12-08 14:33:54,359 Validation result at epoch  12, step     2900: f1_prod:   0.12, loss:   1.0502, ones:   0.8560, f1_0:   0.1391, f1_1:   0.8695,f1_prd:   0.1210, duration: 2.8006s
+2019-12-08 14:33:55,658 Epoch  12 Step:     2910 Batch Loss:     0.277880 Ones: 0.74 Accuracy: 0.92 Tokens per Sec:     3612, Lr: 0.000300
+2019-12-08 14:33:56,953 Epoch  12 Step:     2920 Batch Loss:     0.235565 Ones: 0.72 Accuracy: 0.93 Tokens per Sec:     4716, Lr: 0.000300
+2019-12-08 14:33:58,208 Epoch  12 Step:     2930 Batch Loss:     0.189159 Ones: 0.78 Accuracy: 0.94 Tokens per Sec:     5619, Lr: 0.000300
+2019-12-08 14:33:59,446 Epoch  12 Step:     2940 Batch Loss:     0.145515 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:     6439, Lr: 0.000300
+2019-12-08 14:34:00,650 Epoch  12 Step:     2950 Batch Loss:     0.022482 Ones: 0.75 Accuracy: 1.00 Tokens per Sec:     7290, Lr: 0.000300
+2019-12-08 14:34:01,843 Epoch  12 Step:     2960 Batch Loss:     0.122204 Ones: 0.72 Accuracy: 0.99 Tokens per Sec:     8190, Lr: 0.000300
+2019-12-08 14:34:03,058 Epoch  12 Step:     2970 Batch Loss:     0.005755 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:     8712, Lr: 0.000300
+2019-12-08 14:34:04,328 Epoch  12 Step:     2980 Batch Loss:     0.005773 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:     9168, Lr: 0.000300
+2019-12-08 14:34:05,599 Epoch  12 Step:     2990 Batch Loss:     0.025766 Ones: 0.64 Accuracy: 1.00 Tokens per Sec:     9855, Lr: 0.000300
+2019-12-08 14:34:06,870 Epoch  12 Step:     3000 Batch Loss:     0.167608 Ones: 0.83 Accuracy: 0.93 Tokens per Sec:    10801, Lr: 0.000300
+2019-12-08 14:34:09,678 Validation result at epoch  12, step     3000: f1_prod:   0.12, loss:   0.8615, ones:   0.8720, f1_0:   0.1346, f1_1:   0.8762,f1_prd:   0.1179, duration: 2.8066s
+2019-12-08 14:34:10,904 Epoch  12 Step:     3010 Batch Loss:     0.100960 Ones: 0.65 Accuracy: 0.96 Tokens per Sec:    12183, Lr: 0.000300
+2019-12-08 14:34:12,151 Epoch  12 Step:     3020 Batch Loss:     0.086292 Ones: 0.86 Accuracy: 0.98 Tokens per Sec:    12935, Lr: 0.000300
+2019-12-08 14:34:13,422 Epoch  12 Step:     3030 Batch Loss:     0.002278 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    13464, Lr: 0.000300
+2019-12-08 14:34:14,659 Epoch  12 Step:     3040 Batch Loss:     0.091681 Ones: 0.93 Accuracy: 0.97 Tokens per Sec:    14567, Lr: 0.000300
+2019-12-08 14:34:15,914 Epoch  12 Step:     3050 Batch Loss:     0.052755 Ones: 0.77 Accuracy: 0.98 Tokens per Sec:    15293, Lr: 0.000300
+2019-12-08 14:34:17,152 Epoch  12 Step:     3060 Batch Loss:     0.332454 Ones: 0.69 Accuracy: 0.91 Tokens per Sec:    16328, Lr: 0.000300
+2019-12-08 14:34:18,386 Epoch  12 Step:     3070 Batch Loss:     0.070613 Ones: 0.79 Accuracy: 0.99 Tokens per Sec:    17074, Lr: 0.000300
+2019-12-08 14:34:19,641 Epoch  12 Step:     3080 Batch Loss:     0.058254 Ones: 0.77 Accuracy: 0.99 Tokens per Sec:    17630, Lr: 0.000300
+2019-12-08 14:34:20,884 Epoch  12 Step:     3090 Batch Loss:     0.356043 Ones: 0.71 Accuracy: 0.95 Tokens per Sec:    18764, Lr: 0.000300
+2019-12-08 14:34:22,129 Epoch  12 Step:     3100 Batch Loss:     0.011389 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:    19496, Lr: 0.000300
+2019-12-08 14:34:24,938 Validation result at epoch  12, step     3100: f1_prod:   0.12, loss:   0.9539, ones:   0.8870, f1_0:   0.1363, f1_1:   0.8822,f1_prd:   0.1202, duration: 2.8077s
+2019-12-08 14:34:26,160 Epoch  12 Step:     3110 Batch Loss:     0.176121 Ones: 0.75 Accuracy: 0.98 Tokens per Sec:    20480, Lr: 0.000300
+2019-12-08 14:34:27,401 Epoch  12 Step:     3120 Batch Loss:     0.415754 Ones: 0.69 Accuracy: 0.88 Tokens per Sec:    21077, Lr: 0.000300
+2019-12-08 14:34:28,662 Epoch  12 Step:     3130 Batch Loss:     0.492849 Ones: 0.78 Accuracy: 0.95 Tokens per Sec:    21514, Lr: 0.000300
+2019-12-08 14:34:28,911 Epoch  12: total training loss 33.66
+2019-12-08 14:34:28,911 EPOCH 13
+2019-12-08 14:34:29,895 Epoch  13 Step:     3140 Batch Loss:     0.095431 Ones: 0.82 Accuracy: 0.97 Tokens per Sec:      623, Lr: 0.000300
+2019-12-08 14:34:31,105 Epoch  13 Step:     3150 Batch Loss:     0.276619 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:     1523, Lr: 0.000300
+2019-12-08 14:34:32,300 Epoch  13 Step:     3160 Batch Loss:     0.009845 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:     2465, Lr: 0.000300
+2019-12-08 14:34:33,536 Epoch  13 Step:     3170 Batch Loss:     0.044569 Ones: 0.77 Accuracy: 0.99 Tokens per Sec:     3226, Lr: 0.000300
+2019-12-08 14:34:34,773 Epoch  13 Step:     3180 Batch Loss:     0.012709 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     3839, Lr: 0.000300
+2019-12-08 14:34:36,046 Epoch  13 Step:     3190 Batch Loss:     0.018717 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     4714, Lr: 0.000300
+2019-12-08 14:34:37,252 Epoch  13 Step:     3200 Batch Loss:     0.027127 Ones: 0.77 Accuracy: 0.99 Tokens per Sec:     5777, Lr: 0.000300
+2019-12-08 14:34:40,063 Validation result at epoch  13, step     3200: f1_prod:   0.10, loss:   0.9227, ones:   0.9038, f1_0:   0.1171, f1_1:   0.8898,f1_prd:   0.1042, duration: 2.8097s
+2019-12-08 14:34:41,318 Epoch  13 Step:     3210 Batch Loss:     0.184787 Ones: 0.72 Accuracy: 0.94 Tokens per Sec:     6716, Lr: 0.000300
+2019-12-08 14:34:42,608 Epoch  13 Step:     3220 Batch Loss:     0.315335 Ones: 0.62 Accuracy: 0.91 Tokens per Sec:     7231, Lr: 0.000300
+2019-12-08 14:34:43,883 Epoch  13 Step:     3230 Batch Loss:     0.049027 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     8161, Lr: 0.000300
+2019-12-08 14:34:45,131 Epoch  13 Step:     3240 Batch Loss:     0.011867 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:     9178, Lr: 0.000300
+2019-12-08 14:34:46,359 Epoch  13 Step:     3250 Batch Loss:     0.097236 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:    10202, Lr: 0.000300
+2019-12-08 14:34:47,590 Epoch  13 Step:     3260 Batch Loss:     0.084255 Ones: 0.79 Accuracy: 0.98 Tokens per Sec:    11200, Lr: 0.000300
+2019-12-08 14:34:48,833 Epoch  13 Step:     3270 Batch Loss:     0.017617 Ones: 0.75 Accuracy: 1.00 Tokens per Sec:    12036, Lr: 0.000300
+2019-12-08 14:34:50,035 Epoch  13 Step:     3280 Batch Loss:     0.053536 Ones: 0.98 Accuracy: 1.00 Tokens per Sec:    12924, Lr: 0.000300
+2019-12-08 14:34:51,243 Epoch  13 Step:     3290 Batch Loss:     0.141111 Ones: 0.81 Accuracy: 0.97 Tokens per Sec:    13757, Lr: 0.000300
+2019-12-08 14:34:52,513 Epoch  13 Step:     3300 Batch Loss:     0.102613 Ones: 0.87 Accuracy: 0.98 Tokens per Sec:    13993, Lr: 0.000300
+2019-12-08 14:34:55,321 Validation result at epoch  13, step     3300: f1_prod:   0.12, loss:   1.0394, ones:   0.8625, f1_0:   0.1417, f1_1:   0.8719,f1_prd:   0.1235, duration: 2.8071s
+2019-12-08 14:34:56,541 Epoch  13 Step:     3310 Batch Loss:     0.042041 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:    15330, Lr: 0.000300
+2019-12-08 14:34:57,810 Epoch  13 Step:     3320 Batch Loss:     0.197442 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    15776, Lr: 0.000300
+2019-12-08 14:34:59,088 Epoch  13 Step:     3330 Batch Loss:     0.046005 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:    16457, Lr: 0.000300
+2019-12-08 14:35:00,350 Epoch  13 Step:     3340 Batch Loss:     0.122979 Ones: 0.84 Accuracy: 0.97 Tokens per Sec:    17651, Lr: 0.000300
+2019-12-08 14:35:01,545 Epoch  13 Step:     3350 Batch Loss:     0.018742 Ones: 0.86 Accuracy: 0.99 Tokens per Sec:    19248, Lr: 0.000300
+2019-12-08 14:35:02,735 Epoch  13 Step:     3360 Batch Loss:     0.052303 Ones: 0.85 Accuracy: 0.98 Tokens per Sec:    20106, Lr: 0.000300
+2019-12-08 14:35:03,959 Epoch  13 Step:     3370 Batch Loss:     0.001875 Ones: 0.97 Accuracy: 1.00 Tokens per Sec:    20431, Lr: 0.000300
+2019-12-08 14:35:05,109 Epoch  13 Step:     3380 Batch Loss:     0.003556 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:    22401, Lr: 0.000300
+2019-12-08 14:35:06,348 Epoch  13 Step:     3390 Batch Loss:     0.042457 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:    21723, Lr: 0.000300
+2019-12-08 14:35:06,733 Epoch  13: total training loss 24.03
+2019-12-08 14:35:06,734 EPOCH 14
+2019-12-08 14:35:07,534 Epoch  14 Step:     3400 Batch Loss:     0.014090 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:      760, Lr: 0.000300
+2019-12-08 14:35:10,344 Validation result at epoch  14, step     3400: f1_prod:   0.10, loss:   0.8977, ones:   0.8935, f1_0:   0.1106, f1_1:   0.8891,f1_prd:   0.0984, duration: 2.8088s
+2019-12-08 14:35:11,456 Epoch  14 Step:     3410 Batch Loss:     0.097581 Ones: 0.89 Accuracy: 0.96 Tokens per Sec:     1775, Lr: 0.000300
+2019-12-08 14:35:12,538 Epoch  14 Step:     3420 Batch Loss:     0.158681 Ones: 0.85 Accuracy: 0.94 Tokens per Sec:     2761, Lr: 0.000300
+2019-12-08 14:35:13,790 Epoch  14 Step:     3430 Batch Loss:     0.048895 Ones: 0.79 Accuracy: 0.98 Tokens per Sec:     3510, Lr: 0.000300
+2019-12-08 14:35:15,002 Epoch  14 Step:     3440 Batch Loss:     0.008189 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     4270, Lr: 0.000300
+2019-12-08 14:35:16,220 Epoch  14 Step:     3450 Batch Loss:     0.145289 Ones: 0.64 Accuracy: 0.93 Tokens per Sec:     5017, Lr: 0.000300
+2019-12-08 14:35:17,457 Epoch  14 Step:     3460 Batch Loss:     0.004705 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:     5973, Lr: 0.000300
+2019-12-08 14:35:18,699 Epoch  14 Step:     3470 Batch Loss:     0.102881 Ones: 0.86 Accuracy: 0.95 Tokens per Sec:     6910, Lr: 0.000300
+2019-12-08 14:35:19,919 Epoch  14 Step:     3480 Batch Loss:     0.159112 Ones: 0.56 Accuracy: 0.97 Tokens per Sec:     7725, Lr: 0.000300
+2019-12-08 14:35:21,143 Epoch  14 Step:     3490 Batch Loss:     0.295909 Ones: 0.74 Accuracy: 0.95 Tokens per Sec:     8457, Lr: 0.000300
+2019-12-08 14:35:22,424 Epoch  14 Step:     3500 Batch Loss:     0.005379 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:     9112, Lr: 0.000300
+2019-12-08 14:35:25,242 Validation result at epoch  14, step     3500: f1_prod:   0.10, loss:   1.0239, ones:   0.8878, f1_0:   0.1181, f1_1:   0.8832,f1_prd:   0.1043, duration: 2.8174s
+2019-12-08 14:35:26,503 Epoch  14 Step:     3510 Batch Loss:     0.005416 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:    10217, Lr: 0.000300
+2019-12-08 14:35:27,751 Epoch  14 Step:     3520 Batch Loss:     0.029520 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:    11216, Lr: 0.000300
+2019-12-08 14:35:28,994 Epoch  14 Step:     3530 Batch Loss:     0.008095 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:    12036, Lr: 0.000300
+2019-12-08 14:35:30,243 Epoch  14 Step:     3540 Batch Loss:     0.100277 Ones: 0.82 Accuracy: 0.97 Tokens per Sec:    12976, Lr: 0.000300
+2019-12-08 14:35:31,430 Epoch  14 Step:     3550 Batch Loss:     0.094220 Ones: 0.79 Accuracy: 0.97 Tokens per Sec:    14397, Lr: 0.000300
+2019-12-08 14:35:32,662 Epoch  14 Step:     3560 Batch Loss:     0.007830 Ones: 0.74 Accuracy: 1.00 Tokens per Sec:    14310, Lr: 0.000300
+2019-12-08 14:35:33,894 Epoch  14 Step:     3570 Batch Loss:     0.007073 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    15006, Lr: 0.000300
+2019-12-08 14:35:35,113 Epoch  14 Step:     3580 Batch Loss:     0.061699 Ones: 0.79 Accuracy: 0.98 Tokens per Sec:    15975, Lr: 0.000300
+2019-12-08 14:35:36,344 Epoch  14 Step:     3590 Batch Loss:     0.015114 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    16707, Lr: 0.000300
+2019-12-08 14:35:37,647 Epoch  14 Step:     3600 Batch Loss:     0.047934 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:    16788, Lr: 0.000300
+2019-12-08 14:35:40,470 Validation result at epoch  14, step     3600: f1_prod:   0.13, loss:   1.0137, ones:   0.8456, f1_0:   0.1485, f1_1:   0.8641,f1_prd:   0.1284, duration: 2.8222s
+2019-12-08 14:35:41,703 Epoch  14 Step:     3610 Batch Loss:     0.024144 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:    18440, Lr: 0.000300
+2019-12-08 14:35:42,975 Epoch  14 Step:     3620 Batch Loss:     0.107655 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:    19061, Lr: 0.000300
+2019-12-08 14:35:44,225 Epoch  14 Step:     3630 Batch Loss:     0.018786 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    20330, Lr: 0.000300
+2019-12-08 14:35:45,464 Epoch  14 Step:     3640 Batch Loss:     0.189880 Ones: 0.90 Accuracy: 0.96 Tokens per Sec:    21059, Lr: 0.000300
+2019-12-08 14:35:46,712 Epoch  14 Step:     3650 Batch Loss:     0.002400 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:    21599, Lr: 0.000300
+2019-12-08 14:35:47,209 Epoch  14: total training loss 21.43
+2019-12-08 14:35:47,209 EPOCH 15
+2019-12-08 14:35:47,954 Epoch  15 Step:     3660 Batch Loss:     0.036283 Ones: 0.87 Accuracy: 0.99 Tokens per Sec:      776, Lr: 0.000300
+2019-12-08 14:35:49,191 Epoch  15 Step:     3670 Batch Loss:     0.004919 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:     1243, Lr: 0.000300
+2019-12-08 14:35:50,407 Epoch  15 Step:     3680 Batch Loss:     0.049958 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:     2273, Lr: 0.000300
+2019-12-08 14:35:51,611 Epoch  15 Step:     3690 Batch Loss:     0.121806 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:     2937, Lr: 0.000300
+2019-12-08 14:35:52,830 Epoch  15 Step:     3700 Batch Loss:     0.057333 Ones: 0.78 Accuracy: 0.99 Tokens per Sec:     3883, Lr: 0.000300
+2019-12-08 14:35:55,705 Validation result at epoch  15, step     3700: f1_prod:   0.09, loss:   1.0113, ones:   0.8780, f1_0:   0.1047, f1_1:   0.8785,f1_prd:   0.0920, duration: 2.8741s
+2019-12-08 14:35:56,927 Epoch  15 Step:     3710 Batch Loss:     0.037905 Ones: 0.93 Accuracy: 0.99 Tokens per Sec:     4568, Lr: 0.000300
+2019-12-08 14:35:58,163 Epoch  15 Step:     3720 Batch Loss:     0.035505 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:     5404, Lr: 0.000300
+2019-12-08 14:35:59,391 Epoch  15 Step:     3730 Batch Loss:     0.039830 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:     6127, Lr: 0.000300
+2019-12-08 14:36:00,640 Epoch  15 Step:     3740 Batch Loss:     0.305994 Ones: 0.75 Accuracy: 0.93 Tokens per Sec:     7099, Lr: 0.000300
+2019-12-08 14:36:01,893 Epoch  15 Step:     3750 Batch Loss:     0.008628 Ones: 0.65 Accuracy: 1.00 Tokens per Sec:     8067, Lr: 0.000300
+2019-12-08 14:36:03,108 Epoch  15 Step:     3760 Batch Loss:     0.015963 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:     8958, Lr: 0.000300
+2019-12-08 14:36:04,343 Epoch  15 Step:     3770 Batch Loss:     0.009820 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:     9730, Lr: 0.000300
+2019-12-08 14:36:05,575 Epoch  15 Step:     3780 Batch Loss:     0.004168 Ones: 0.68 Accuracy: 1.00 Tokens per Sec:    10770, Lr: 0.000300
+2019-12-08 14:36:06,815 Epoch  15 Step:     3790 Batch Loss:     0.003462 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:    11520, Lr: 0.000300
+2019-12-08 14:36:08,055 Epoch  15 Step:     3800 Batch Loss:     0.036607 Ones: 0.74 Accuracy: 0.99 Tokens per Sec:    12403, Lr: 0.000300
+2019-12-08 14:36:10,897 Validation result at epoch  15, step     3800: f1_prod:   0.12, loss:   1.1661, ones:   0.8570, f1_0:   0.1331, f1_1:   0.8674,f1_prd:   0.1154, duration: 2.8418s
+2019-12-08 14:36:12,132 Epoch  15 Step:     3810 Batch Loss:     0.367023 Ones: 0.88 Accuracy: 0.95 Tokens per Sec:    13317, Lr: 0.000300
+2019-12-08 14:36:13,369 Epoch  15 Step:     3820 Batch Loss:     0.017219 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:    14145, Lr: 0.000300
+2019-12-08 14:36:14,615 Epoch  15 Step:     3830 Batch Loss:     0.006825 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    14950, Lr: 0.000300
+2019-12-08 14:36:15,867 Epoch  15 Step:     3840 Batch Loss:     0.005077 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:    15870, Lr: 0.000300
+2019-12-08 14:36:17,117 Epoch  15 Step:     3850 Batch Loss:     0.003713 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    16630, Lr: 0.000300
+2019-12-08 14:36:18,364 Epoch  15 Step:     3860 Batch Loss:     0.005347 Ones: 0.68 Accuracy: 1.00 Tokens per Sec:    17555, Lr: 0.000300
+2019-12-08 14:36:19,602 Epoch  15 Step:     3870 Batch Loss:     0.002317 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:    18286, Lr: 0.000300
+2019-12-08 14:36:20,827 Epoch  15 Step:     3880 Batch Loss:     0.324600 Ones: 0.72 Accuracy: 0.93 Tokens per Sec:    19538, Lr: 0.000300
+2019-12-08 14:36:22,054 Epoch  15 Step:     3890 Batch Loss:     0.011116 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:    20286, Lr: 0.000300
+2019-12-08 14:36:23,293 Epoch  15 Step:     3900 Batch Loss:     0.013699 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    20923, Lr: 0.000300
+2019-12-08 14:36:26,151 Validation result at epoch  15, step     3900: f1_prod:   0.11, loss:   0.9552, ones:   0.8657, f1_0:   0.1276, f1_1:   0.8733,f1_prd:   0.1114, duration: 2.8571s
+2019-12-08 14:36:27,370 Epoch  15 Step:     3910 Batch Loss:     0.097639 Ones: 0.73 Accuracy: 0.97 Tokens per Sec:    22009, Lr: 0.000300
+2019-12-08 14:36:27,991 Epoch  15: total training loss 18.85
+2019-12-08 14:36:27,992 EPOCH 16
+2019-12-08 14:36:28,592 Epoch  16 Step:     3920 Batch Loss:     0.003797 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:      623, Lr: 0.000300
+2019-12-08 14:36:29,787 Epoch  16 Step:     3930 Batch Loss:     0.018987 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:     1081, Lr: 0.000300
+2019-12-08 14:36:30,978 Epoch  16 Step:     3940 Batch Loss:     0.066204 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:     2002, Lr: 0.000300
+2019-12-08 14:36:32,170 Epoch  16 Step:     3950 Batch Loss:     0.002432 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:     2756, Lr: 0.000300
+2019-12-08 14:36:33,392 Epoch  16 Step:     3960 Batch Loss:     0.088296 Ones: 0.86 Accuracy: 0.97 Tokens per Sec:     3572, Lr: 0.000300
+2019-12-08 14:36:34,649 Epoch  16 Step:     3970 Batch Loss:     0.054129 Ones: 0.84 Accuracy: 0.99 Tokens per Sec:     4616, Lr: 0.000300
+2019-12-08 14:36:35,890 Epoch  16 Step:     3980 Batch Loss:     0.039388 Ones: 0.92 Accuracy: 0.98 Tokens per Sec:     5419, Lr: 0.000300
+2019-12-08 14:36:37,128 Epoch  16 Step:     3990 Batch Loss:     0.002090 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:     6212, Lr: 0.000300
+2019-12-08 14:36:38,364 Epoch  16 Step:     4000 Batch Loss:     0.073660 Ones: 0.90 Accuracy: 0.98 Tokens per Sec:     6953, Lr: 0.000300
+2019-12-08 14:36:41,239 Validation result at epoch  16, step     4000: f1_prod:   0.12, loss:   1.1329, ones:   0.8276, f1_0:   0.1419, f1_1:   0.8515,f1_prd:   0.1208, duration: 2.8738s
+2019-12-08 14:36:42,466 Epoch  16 Step:     4010 Batch Loss:     0.018479 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:     7863, Lr: 0.000300
+2019-12-08 14:36:43,707 Epoch  16 Step:     4020 Batch Loss:     0.074759 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     8370, Lr: 0.000300
+2019-12-08 14:36:44,965 Epoch  16 Step:     4030 Batch Loss:     0.013169 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:     9242, Lr: 0.000300
+2019-12-08 14:36:46,199 Epoch  16 Step:     4040 Batch Loss:     0.012938 Ones: 0.73 Accuracy: 1.00 Tokens per Sec:    10166, Lr: 0.000300
+2019-12-08 14:36:47,440 Epoch  16 Step:     4050 Batch Loss:     0.120307 Ones: 0.81 Accuracy: 0.96 Tokens per Sec:    11052, Lr: 0.000300
+2019-12-08 14:36:48,677 Epoch  16 Step:     4060 Batch Loss:     0.016755 Ones: 0.94 Accuracy: 0.99 Tokens per Sec:    11771, Lr: 0.000300
+2019-12-08 14:36:49,909 Epoch  16 Step:     4070 Batch Loss:     0.009887 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:    12783, Lr: 0.000300
+2019-12-08 14:36:51,094 Epoch  16 Step:     4080 Batch Loss:     0.002745 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:    13991, Lr: 0.000300
+2019-12-08 14:36:52,341 Epoch  16 Step:     4090 Batch Loss:     0.047992 Ones: 0.81 Accuracy: 0.99 Tokens per Sec:    14313, Lr: 0.000300
+2019-12-08 14:36:53,577 Epoch  16 Step:     4100 Batch Loss:     0.005655 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    15185, Lr: 0.000300
+2019-12-08 14:36:56,447 Validation result at epoch  16, step     4100: f1_prod:   0.11, loss:   0.9599, ones:   0.8953, f1_0:   0.1181, f1_1:   0.8917,f1_prd:   0.1053, duration: 2.8691s
+2019-12-08 14:36:57,678 Epoch  16 Step:     4110 Batch Loss:     0.006120 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    16197, Lr: 0.000300
+2019-12-08 14:36:58,934 Epoch  16 Step:     4120 Batch Loss:     0.020345 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    16886, Lr: 0.000300
+2019-12-08 14:37:00,131 Epoch  16 Step:     4130 Batch Loss:     0.082922 Ones: 0.84 Accuracy: 0.98 Tokens per Sec:    18401, Lr: 0.000300
+2019-12-08 14:37:01,345 Epoch  16 Step:     4140 Batch Loss:     0.003963 Ones: 0.78 Accuracy: 1.00 Tokens per Sec:    19192, Lr: 0.000300
+2019-12-08 14:37:02,587 Epoch  16 Step:     4150 Batch Loss:     0.354227 Ones: 0.91 Accuracy: 0.95 Tokens per Sec:    19618, Lr: 0.000300
+2019-12-08 14:37:03,840 Epoch  16 Step:     4160 Batch Loss:     0.004037 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:    20292, Lr: 0.000300
+2019-12-08 14:37:05,058 Epoch  16 Step:     4170 Batch Loss:     0.018896 Ones: 0.81 Accuracy: 0.98 Tokens per Sec:    21702, Lr: 0.000300
+2019-12-08 14:37:05,801 Epoch  16: total training loss 16.22
+2019-12-08 14:37:05,802 EPOCH 17
+2019-12-08 14:37:06,297 Epoch  17 Step:     4180 Batch Loss:     0.016822 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:     1121, Lr: 0.000300
+2019-12-08 14:37:07,522 Epoch  17 Step:     4190 Batch Loss:     0.109284 Ones: 0.91 Accuracy: 0.97 Tokens per Sec:     1217, Lr: 0.000300
+2019-12-08 14:37:08,754 Epoch  17 Step:     4200 Batch Loss:     0.002565 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:     1897, Lr: 0.000300
+2019-12-08 14:37:11,653 Validation result at epoch  17, step     4200: f1_prod:   0.12, loss:   1.0441, ones:   0.8827, f1_0:   0.1331, f1_1:   0.8841,f1_prd:   0.1177, duration: 2.8985s
+2019-12-08 14:37:12,887 Epoch  17 Step:     4210 Batch Loss:     0.004799 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:     2717, Lr: 0.000300
+2019-12-08 14:37:14,126 Epoch  17 Step:     4220 Batch Loss:     0.006629 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:     3333, Lr: 0.000300
+2019-12-08 14:37:15,367 Epoch  17 Step:     4230 Batch Loss:     0.001665 Ones: 0.98 Accuracy: 1.00 Tokens per Sec:     4065, Lr: 0.000300
+2019-12-08 14:37:16,568 Epoch  17 Step:     4240 Batch Loss:     0.004548 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:     4945, Lr: 0.000300
+2019-12-08 14:37:17,778 Epoch  17 Step:     4250 Batch Loss:     0.167009 Ones: 0.76 Accuracy: 0.96 Tokens per Sec:     5786, Lr: 0.000300
+2019-12-08 14:37:19,063 Epoch  17 Step:     4260 Batch Loss:     0.171475 Ones: 0.78 Accuracy: 0.96 Tokens per Sec:     6348, Lr: 0.000300
+2019-12-08 14:37:20,348 Epoch  17 Step:     4270 Batch Loss:     0.017849 Ones: 0.88 Accuracy: 0.99 Tokens per Sec:     7506, Lr: 0.000300
+2019-12-08 14:37:21,620 Epoch  17 Step:     4280 Batch Loss:     0.112132 Ones: 0.82 Accuracy: 0.96 Tokens per Sec:     8509, Lr: 0.000300
+2019-12-08 14:37:22,860 Epoch  17 Step:     4290 Batch Loss:     0.002305 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:     9550, Lr: 0.000300
+2019-12-08 14:37:24,094 Epoch  17 Step:     4300 Batch Loss:     0.091518 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:    10216, Lr: 0.000300
+2019-12-08 14:37:26,986 Validation result at epoch  17, step     4300: f1_prod:   0.10, loss:   0.9957, ones:   0.8729, f1_0:   0.1178, f1_1:   0.8820,f1_prd:   0.1039, duration: 2.8913s
+2019-12-08 14:37:28,259 Epoch  17 Step:     4310 Batch Loss:     0.706546 Ones: 0.81 Accuracy: 0.97 Tokens per Sec:    10525, Lr: 0.000300
+2019-12-08 14:37:29,544 Epoch  17 Step:     4320 Batch Loss:     0.113224 Ones: 0.82 Accuracy: 0.96 Tokens per Sec:    11521, Lr: 0.000300
+2019-12-08 14:37:30,787 Epoch  17 Step:     4330 Batch Loss:     0.066790 Ones: 0.89 Accuracy: 0.97 Tokens per Sec:    12731, Lr: 0.000300
+2019-12-08 14:37:32,034 Epoch  17 Step:     4340 Batch Loss:     0.057043 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:    13763, Lr: 0.000300
+2019-12-08 14:37:33,277 Epoch  17 Step:     4350 Batch Loss:     0.326773 Ones: 0.90 Accuracy: 0.98 Tokens per Sec:    14611, Lr: 0.000300
+2019-12-08 14:37:34,520 Epoch  17 Step:     4360 Batch Loss:     0.025736 Ones: 0.91 Accuracy: 0.99 Tokens per Sec:    15530, Lr: 0.000300
+2019-12-08 14:37:35,771 Epoch  17 Step:     4370 Batch Loss:     0.005971 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    16377, Lr: 0.000300
+2019-12-08 14:37:37,055 Epoch  17 Step:     4380 Batch Loss:     0.267265 Ones: 0.89 Accuracy: 0.95 Tokens per Sec:    16661, Lr: 0.000300
+2019-12-08 14:37:38,320 Epoch  17 Step:     4390 Batch Loss:     0.065865 Ones: 0.82 Accuracy: 0.96 Tokens per Sec:    17723, Lr: 0.000300
+2019-12-08 14:37:39,581 Epoch  17 Step:     4400 Batch Loss:     0.019562 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:    18617, Lr: 0.000300
+2019-12-08 14:37:42,468 Validation result at epoch  17, step     4400: f1_prod:   0.13, loss:   0.9884, ones:   0.8435, f1_0:   0.1484, f1_1:   0.8621,f1_prd:   0.1280, duration: 2.8858s
+2019-12-08 14:37:43,720 Epoch  17 Step:     4410 Batch Loss:     0.004379 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:    19746, Lr: 0.000300
+2019-12-08 14:37:44,982 Epoch  17 Step:     4420 Batch Loss:     0.102277 Ones: 0.82 Accuracy: 0.97 Tokens per Sec:    20552, Lr: 0.000300
+2019-12-08 14:37:46,181 Epoch  17 Step:     4430 Batch Loss:     0.101902 Ones: 0.77 Accuracy: 0.99 Tokens per Sec:    22410, Lr: 0.000300
+2019-12-08 14:37:46,958 Epoch  17: total training loss 21.34
+2019-12-08 14:37:46,958 EPOCH 18
+2019-12-08 14:37:47,292 Epoch  18 Step:     4440 Batch Loss:     0.008951 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:      624, Lr: 0.000300
+2019-12-08 14:37:48,500 Epoch  18 Step:     4450 Batch Loss:     0.210044 Ones: 0.71 Accuracy: 0.98 Tokens per Sec:     1084, Lr: 0.000300
+2019-12-08 14:37:49,721 Epoch  18 Step:     4460 Batch Loss:     0.050763 Ones: 0.87 Accuracy: 0.98 Tokens per Sec:     1723, Lr: 0.000300
+2019-12-08 14:37:50,927 Epoch  18 Step:     4470 Batch Loss:     0.060425 Ones: 0.86 Accuracy: 0.99 Tokens per Sec:     2632, Lr: 0.000300
+2019-12-08 14:37:52,235 Epoch  18 Step:     4480 Batch Loss:     0.003535 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:     3470, Lr: 0.000300
+2019-12-08 14:37:53,520 Epoch  18 Step:     4490 Batch Loss:     0.009632 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:     4488, Lr: 0.000300
+2019-12-08 14:37:54,761 Epoch  18 Step:     4500 Batch Loss:     0.006263 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:     5494, Lr: 0.000300
+2019-12-08 14:37:57,676 Validation result at epoch  18, step     4500: f1_prod:   0.08, loss:   0.9693, ones:   0.9235, f1_0:   0.0902, f1_1:   0.9002,f1_prd:   0.0812, duration: 2.9142s
+2019-12-08 14:37:58,886 Epoch  18 Step:     4510 Batch Loss:     0.085982 Ones: 0.80 Accuracy: 0.98 Tokens per Sec:     6468, Lr: 0.000300
+2019-12-08 14:38:00,123 Epoch  18 Step:     4520 Batch Loss:     0.023057 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:     7004, Lr: 0.000300
+2019-12-08 14:38:01,348 Epoch  18 Step:     4530 Batch Loss:     0.098542 Ones: 0.79 Accuracy: 0.96 Tokens per Sec:     8078, Lr: 0.000300
+2019-12-08 14:38:02,582 Epoch  18 Step:     4540 Batch Loss:     0.005551 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:     8628, Lr: 0.000300
+2019-12-08 14:38:03,817 Epoch  18 Step:     4550 Batch Loss:     0.059977 Ones: 0.85 Accuracy: 0.99 Tokens per Sec:     9535, Lr: 0.000300
+2019-12-08 14:38:05,049 Epoch  18 Step:     4560 Batch Loss:     0.124557 Ones: 0.80 Accuracy: 0.95 Tokens per Sec:    10323, Lr: 0.000300
+2019-12-08 14:38:06,275 Epoch  18 Step:     4570 Batch Loss:     0.152752 Ones: 0.79 Accuracy: 0.89 Tokens per Sec:    11070, Lr: 0.000300
+2019-12-08 14:38:07,505 Epoch  18 Step:     4580 Batch Loss:     0.227900 Ones: 0.92 Accuracy: 0.92 Tokens per Sec:    11858, Lr: 0.000300
+2019-12-08 14:38:08,735 Epoch  18 Step:     4590 Batch Loss:     0.032844 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:    12733, Lr: 0.000300
+2019-12-08 14:38:09,981 Epoch  18 Step:     4600 Batch Loss:     0.274339 Ones: 0.74 Accuracy: 0.91 Tokens per Sec:    13627, Lr: 0.000300
+2019-12-08 14:38:12,881 Validation result at epoch  18, step     4600: f1_prod:   0.13, loss:   1.1892, ones:   0.8251, f1_0:   0.1502, f1_1:   0.8498,f1_prd:   0.1277, duration: 2.8990s
+2019-12-08 14:38:14,097 Epoch  18 Step:     4610 Batch Loss:     0.028776 Ones: 0.85 Accuracy: 0.99 Tokens per Sec:    14992, Lr: 0.000300
+2019-12-08 14:38:15,327 Epoch  18 Step:     4620 Batch Loss:     0.037458 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:    15580, Lr: 0.000300
+2019-12-08 14:38:16,550 Epoch  18 Step:     4630 Batch Loss:     0.012922 Ones: 0.93 Accuracy: 1.00 Tokens per Sec:    16452, Lr: 0.000300
+2019-12-08 14:38:17,801 Epoch  18 Step:     4640 Batch Loss:     0.072704 Ones: 0.87 Accuracy: 0.98 Tokens per Sec:    17099, Lr: 0.000300
+2019-12-08 14:38:19,037 Epoch  18 Step:     4650 Batch Loss:     0.009923 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:    18266, Lr: 0.000300
+2019-12-08 14:38:20,265 Epoch  18 Step:     4660 Batch Loss:     0.075572 Ones: 0.76 Accuracy: 0.99 Tokens per Sec:    19339, Lr: 0.000300
+2019-12-08 14:38:21,489 Epoch  18 Step:     4670 Batch Loss:     0.039361 Ones: 0.83 Accuracy: 0.98 Tokens per Sec:    20348, Lr: 0.000300
+2019-12-08 14:38:22,719 Epoch  18 Step:     4680 Batch Loss:     0.009957 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:    21031, Lr: 0.000300
+2019-12-08 14:38:23,940 Epoch  18 Step:     4690 Batch Loss:     0.033816 Ones: 0.84 Accuracy: 1.00 Tokens per Sec:    21770, Lr: 0.000300
+2019-12-08 14:38:24,925 Epoch  18: total training loss 22.48
+2019-12-08 14:38:24,925 EPOCH 19
+2019-12-08 14:38:25,178 Epoch  19 Step:     4700 Batch Loss:     0.061924 Ones: 0.85 Accuracy: 0.99 Tokens per Sec:     1258, Lr: 0.000300
+2019-12-08 14:38:28,096 Validation result at epoch  19, step     4700: f1_prod:   0.10, loss:   1.0651, ones:   0.8959, f1_0:   0.1111, f1_1:   0.8864,f1_prd:   0.0985, duration: 2.9168s
+2019-12-08 14:38:29,308 Epoch  19 Step:     4710 Batch Loss:     0.014598 Ones: 0.96 Accuracy: 1.00 Tokens per Sec:      966, Lr: 0.000300
+2019-12-08 14:38:30,513 Epoch  19 Step:     4720 Batch Loss:     0.010877 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:     2161, Lr: 0.000300
+2019-12-08 14:38:31,689 Epoch  19 Step:     4730 Batch Loss:     0.009002 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     3062, Lr: 0.000300
+2019-12-08 14:38:32,865 Epoch  19 Step:     4740 Batch Loss:     0.022942 Ones: 0.75 Accuracy: 0.99 Tokens per Sec:     3712, Lr: 0.000300
+2019-12-08 14:38:34,089 Epoch  19 Step:     4750 Batch Loss:     0.003485 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:     4304, Lr: 0.000300
+2019-12-08 14:38:35,330 Epoch  19 Step:     4760 Batch Loss:     0.034396 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:     5295, Lr: 0.000300
+2019-12-08 14:38:36,582 Epoch  19 Step:     4770 Batch Loss:     0.044233 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:     6385, Lr: 0.000300
+2019-12-08 14:38:37,824 Epoch  19 Step:     4780 Batch Loss:     0.179998 Ones: 0.84 Accuracy: 0.98 Tokens per Sec:     7224, Lr: 0.000300
+2019-12-08 14:38:39,052 Epoch  19 Step:     4790 Batch Loss:     0.066456 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:     8050, Lr: 0.000300
+2019-12-08 14:38:40,248 Epoch  19 Step:     4800 Batch Loss:     0.017151 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:     8952, Lr: 0.000300
+2019-12-08 14:38:43,154 Validation result at epoch  19, step     4800: f1_prod:   0.10, loss:   1.0258, ones:   0.8705, f1_0:   0.1121, f1_1:   0.8777,f1_prd:   0.0984, duration: 2.9043s
+2019-12-08 14:38:44,412 Epoch  19 Step:     4810 Batch Loss:     0.002200 Ones: 0.99 Accuracy: 1.00 Tokens per Sec:     9119, Lr: 0.000300
+2019-12-08 14:38:45,706 Epoch  19 Step:     4820 Batch Loss:     0.002763 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:     9632, Lr: 0.000300
+2019-12-08 14:38:46,924 Epoch  19 Step:     4830 Batch Loss:     0.624748 Ones: 0.97 Accuracy: 0.97 Tokens per Sec:    10996, Lr: 0.000300
+2019-12-08 14:38:48,161 Epoch  19 Step:     4840 Batch Loss:     0.012004 Ones: 0.74 Accuracy: 1.00 Tokens per Sec:    11710, Lr: 0.000300
+2019-12-08 14:38:49,390 Epoch  19 Step:     4850 Batch Loss:     0.021247 Ones: 0.78 Accuracy: 0.99 Tokens per Sec:    12690, Lr: 0.000300
+2019-12-08 14:38:50,603 Epoch  19 Step:     4860 Batch Loss:     0.013682 Ones: 0.96 Accuracy: 1.00 Tokens per Sec:    13883, Lr: 0.000300
+2019-12-08 14:38:51,818 Epoch  19 Step:     4870 Batch Loss:     0.006247 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:    14934, Lr: 0.000300
+2019-12-08 14:38:53,016 Epoch  19 Step:     4880 Batch Loss:     0.097045 Ones: 0.79 Accuracy: 0.96 Tokens per Sec:    15990, Lr: 0.000300
+2019-12-08 14:38:54,247 Epoch  19 Step:     4890 Batch Loss:     0.028550 Ones: 0.90 Accuracy: 0.99 Tokens per Sec:    16339, Lr: 0.000300
+2019-12-08 14:38:55,476 Epoch  19 Step:     4900 Batch Loss:     0.018564 Ones: 0.75 Accuracy: 1.00 Tokens per Sec:    17122, Lr: 0.000300
+2019-12-08 14:38:58,420 Validation result at epoch  19, step     4900: f1_prod:   0.09, loss:   0.9559, ones:   0.8873, f1_0:   0.1068, f1_1:   0.8867,f1_prd:   0.0947, duration: 2.9432s
+2019-12-08 14:38:59,644 Epoch  19 Step:     4910 Batch Loss:     0.012038 Ones: 0.73 Accuracy: 1.00 Tokens per Sec:    18111, Lr: 0.000300
+2019-12-08 14:39:00,835 Epoch  19 Step:     4920 Batch Loss:     0.002991 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:    19584, Lr: 0.000300
+2019-12-08 14:39:02,036 Epoch  19 Step:     4930 Batch Loss:     0.027576 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:    20262, Lr: 0.000300
+2019-12-08 14:39:03,243 Epoch  19 Step:     4940 Batch Loss:     0.003430 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:    21155, Lr: 0.000300
+2019-12-08 14:39:04,475 Epoch  19 Step:     4950 Batch Loss:     0.021229 Ones: 0.86 Accuracy: 0.99 Tokens per Sec:    21640, Lr: 0.000300
+2019-12-08 14:39:05,583 Epoch  19: total training loss 16.61
+2019-12-08 14:39:05,584 EPOCH 20
+2019-12-08 14:39:05,710 Epoch  20 Step:     4960 Batch Loss:     0.027668 Ones: 0.84 Accuracy: 0.99 Tokens per Sec:     1002, Lr: 0.000300
+2019-12-08 14:39:06,938 Epoch  20 Step:     4970 Batch Loss:     0.021161 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:      978, Lr: 0.000300
+2019-12-08 14:39:08,176 Epoch  20 Step:     4980 Batch Loss:     0.036503 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:     1926, Lr: 0.000300
+2019-12-08 14:39:09,397 Epoch  20 Step:     4990 Batch Loss:     0.082851 Ones: 0.69 Accuracy: 0.97 Tokens per Sec:     2776, Lr: 0.000300
+2019-12-08 14:39:10,589 Epoch  20 Step:     5000 Batch Loss:     0.045630 Ones: 0.81 Accuracy: 0.98 Tokens per Sec:     3640, Lr: 0.000300
+2019-12-08 14:39:13,502 Validation result at epoch  20, step     5000: f1_prod:   0.11, loss:   1.0034, ones:   0.8808, f1_0:   0.1201, f1_1:   0.8849,f1_prd:   0.1063, duration: 2.9116s
+2019-12-08 14:39:14,711 Epoch  20 Step:     5010 Batch Loss:     0.015976 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:     4177, Lr: 0.000300
+2019-12-08 14:39:15,938 Epoch  20 Step:     5020 Batch Loss:     0.051273 Ones: 0.86 Accuracy: 0.99 Tokens per Sec:     4931, Lr: 0.000300
+2019-12-08 14:39:17,190 Epoch  20 Step:     5030 Batch Loss:     0.599974 Ones: 0.78 Accuracy: 0.91 Tokens per Sec:     5874, Lr: 0.000300
+2019-12-08 14:39:18,434 Epoch  20 Step:     5040 Batch Loss:     0.010911 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:     6815, Lr: 0.000300
+2019-12-08 14:39:19,655 Epoch  20 Step:     5050 Batch Loss:     0.003639 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:     7745, Lr: 0.000300
+2019-12-08 14:39:20,840 Epoch  20 Step:     5060 Batch Loss:     0.174387 Ones: 0.94 Accuracy: 0.99 Tokens per Sec:     8828, Lr: 0.000300
+2019-12-08 14:39:22,079 Epoch  20 Step:     5070 Batch Loss:     0.026697 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:     9554, Lr: 0.000300
+2019-12-08 14:39:23,296 Epoch  20 Step:     5080 Batch Loss:     0.003578 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:    10782, Lr: 0.000300
+2019-12-08 14:39:24,522 Epoch  20 Step:     5090 Batch Loss:     0.003978 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:    11533, Lr: 0.000300
+2019-12-08 14:39:25,741 Epoch  20 Step:     5100 Batch Loss:     0.002245 Ones: 0.84 Accuracy: 1.00 Tokens per Sec:    12143, Lr: 0.000300
+2019-12-08 14:39:28,654 Validation result at epoch  20, step     5100: f1_prod:   0.09, loss:   1.0090, ones:   0.9072, f1_0:   0.1044, f1_1:   0.8958,f1_prd:   0.0935, duration: 2.9121s
+2019-12-08 14:39:29,874 Epoch  20 Step:     5110 Batch Loss:     0.010027 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:    12915, Lr: 0.000300
+2019-12-08 14:39:31,072 Epoch  20 Step:     5120 Batch Loss:     0.010314 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:    14284, Lr: 0.000300
+2019-12-08 14:39:32,258 Epoch  20 Step:     5130 Batch Loss:     0.043117 Ones: 0.84 Accuracy: 0.99 Tokens per Sec:    15365, Lr: 0.000300
+2019-12-08 14:39:33,471 Epoch  20 Step:     5140 Batch Loss:     0.020712 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    15851, Lr: 0.000300
+2019-12-08 14:39:34,699 Epoch  20 Step:     5150 Batch Loss:     0.289108 Ones: 0.83 Accuracy: 0.97 Tokens per Sec:    16367, Lr: 0.000300
+2019-12-08 14:39:35,941 Epoch  20 Step:     5160 Batch Loss:     0.012033 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:    17173, Lr: 0.000300
+2019-12-08 14:39:37,183 Epoch  20 Step:     5170 Batch Loss:     0.002108 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    18108, Lr: 0.000300
+2019-12-08 14:39:38,417 Epoch  20 Step:     5180 Batch Loss:     0.013524 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:    19000, Lr: 0.000300
+2019-12-08 14:39:39,631 Epoch  20 Step:     5190 Batch Loss:     0.002010 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:    20050, Lr: 0.000300
+2019-12-08 14:39:40,833 Epoch  20 Step:     5200 Batch Loss:     0.026937 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:    21146, Lr: 0.000300
+2019-12-08 14:39:43,760 Validation result at epoch  20, step     5200: f1_prod:   0.12, loss:   1.0950, ones:   0.8755, f1_0:   0.1347, f1_1:   0.8785,f1_prd:   0.1184, duration: 2.9263s
+2019-12-08 14:39:44,984 Epoch  20 Step:     5210 Batch Loss:     0.045424 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    21700, Lr: 0.000300
+2019-12-08 14:39:46,209 Epoch  20 Step:     5220 Batch Loss:     0.104605 Ones: 0.89 Accuracy: 0.97 Tokens per Sec:    22332, Lr: 0.000300
+2019-12-08 14:39:46,210 Epoch  20: total training loss 14.46
+2019-12-08 14:39:46,210 EPOCH 21
+2019-12-08 14:39:47,450 Epoch  21 Step:     5230 Batch Loss:     0.001785 Ones: 0.93 Accuracy: 1.00 Tokens per Sec:      788, Lr: 0.000300
+2019-12-08 14:39:48,704 Epoch  21 Step:     5240 Batch Loss:     0.017053 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:     1996, Lr: 0.000300
+2019-12-08 14:39:49,905 Epoch  21 Step:     5250 Batch Loss:     0.381378 Ones: 0.88 Accuracy: 0.94 Tokens per Sec:     3136, Lr: 0.000300
+2019-12-08 14:39:51,031 Epoch  21 Step:     5260 Batch Loss:     0.093677 Ones: 0.82 Accuracy: 0.98 Tokens per Sec:     4255, Lr: 0.000300
+2019-12-08 14:39:52,132 Epoch  21 Step:     5270 Batch Loss:     0.026646 Ones: 0.66 Accuracy: 0.99 Tokens per Sec:     5029, Lr: 0.000300
+2019-12-08 14:39:53,274 Epoch  21 Step:     5280 Batch Loss:     0.027895 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:     5786, Lr: 0.000300
+2019-12-08 14:39:54,516 Epoch  21 Step:     5290 Batch Loss:     0.014918 Ones: 0.78 Accuracy: 1.00 Tokens per Sec:     6337, Lr: 0.000300
+2019-12-08 14:39:55,734 Epoch  21 Step:     5300 Batch Loss:     0.023621 Ones: 0.73 Accuracy: 0.99 Tokens per Sec:     7003, Lr: 0.000300
+2019-12-08 14:39:58,697 Validation result at epoch  21, step     5300: f1_prod:   0.13, loss:   1.3440, ones:   0.7844, f1_0:   0.1544, f1_1:   0.8301,f1_prd:   0.1282, duration: 2.9628s
+2019-12-08 14:39:59,901 Epoch  21 Step:     5310 Batch Loss:     0.148468 Ones: 0.87 Accuracy: 0.94 Tokens per Sec:     7885, Lr: 0.000300
+2019-12-08 14:40:01,098 Epoch  21 Step:     5320 Batch Loss:     0.041013 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:     8778, Lr: 0.000300
+2019-12-08 14:40:02,279 Epoch  21 Step:     5330 Batch Loss:     0.146306 Ones: 0.94 Accuracy: 0.99 Tokens per Sec:     9706, Lr: 0.000300
+2019-12-08 14:40:03,500 Epoch  21 Step:     5340 Batch Loss:     0.080217 Ones: 0.80 Accuracy: 0.98 Tokens per Sec:    10445, Lr: 0.000300
+2019-12-08 14:40:04,738 Epoch  21 Step:     5350 Batch Loss:     0.227899 Ones: 0.81 Accuracy: 0.98 Tokens per Sec:    11235, Lr: 0.000300
+2019-12-08 14:40:05,940 Epoch  21 Step:     5360 Batch Loss:     0.007792 Ones: 0.91 Accuracy: 1.00 Tokens per Sec:    12251, Lr: 0.000300
+2019-12-08 14:40:07,134 Epoch  21 Step:     5370 Batch Loss:     0.002584 Ones: 0.97 Accuracy: 1.00 Tokens per Sec:    13153, Lr: 0.000300
+2019-12-08 14:40:08,295 Epoch  21 Step:     5380 Batch Loss:     0.001632 Ones: 0.98 Accuracy: 1.00 Tokens per Sec:    14433, Lr: 0.000300
+2019-12-08 14:40:09,480 Epoch  21 Step:     5390 Batch Loss:     0.006499 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:    15048, Lr: 0.000300
+2019-12-08 14:40:10,572 Epoch  21 Step:     5400 Batch Loss:     0.016403 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:    17347, Lr: 0.000300
+2019-12-08 14:40:13,498 Validation result at epoch  21, step     5400: f1_prod:   0.10, loss:   1.1591, ones:   0.8951, f1_0:   0.1127, f1_1:   0.8884,f1_prd:   0.1002, duration: 2.9254s
+2019-12-08 14:40:14,704 Epoch  21 Step:     5410 Batch Loss:     0.040211 Ones: 0.82 Accuracy: 0.99 Tokens per Sec:    16587, Lr: 0.000300
+2019-12-08 14:40:15,947 Epoch  21 Step:     5420 Batch Loss:     0.044634 Ones: 0.92 Accuracy: 0.98 Tokens per Sec:    17016, Lr: 0.000300
+2019-12-08 14:40:17,178 Epoch  21 Step:     5430 Batch Loss:     0.083959 Ones: 0.79 Accuracy: 0.97 Tokens per Sec:    18016, Lr: 0.000300
+2019-12-08 14:40:18,412 Epoch  21 Step:     5440 Batch Loss:     0.154813 Ones: 0.72 Accuracy: 0.98 Tokens per Sec:    18879, Lr: 0.000300
+2019-12-08 14:40:19,635 Epoch  21 Step:     5450 Batch Loss:     0.358987 Ones: 0.91 Accuracy: 0.96 Tokens per Sec:    19713, Lr: 0.000300
+2019-12-08 14:40:20,885 Epoch  21 Step:     5460 Batch Loss:     0.011823 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    20315, Lr: 0.000300
+2019-12-08 14:40:22,122 Epoch  21 Step:     5470 Batch Loss:     0.023849 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    21440, Lr: 0.000300
+2019-12-08 14:40:23,344 Epoch  21 Step:     5480 Batch Loss:     0.051767 Ones: 0.80 Accuracy: 0.97 Tokens per Sec:    22295, Lr: 0.000300
+2019-12-08 14:40:23,467 Epoch  21: total training loss 13.89
+2019-12-08 14:40:23,467 EPOCH 22
+2019-12-08 14:40:24,584 Epoch  22 Step:     5490 Batch Loss:     0.057594 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:      876, Lr: 0.000300
+2019-12-08 14:40:25,808 Epoch  22 Step:     5500 Batch Loss:     0.002207 Ones: 0.70 Accuracy: 1.00 Tokens per Sec:     1419, Lr: 0.000300
+2019-12-08 14:40:28,740 Validation result at epoch  22, step     5500: f1_prod:   0.10, loss:   1.0883, ones:   0.8900, f1_0:   0.1181, f1_1:   0.8855,f1_prd:   0.1045, duration: 2.9314s
+2019-12-08 14:40:29,962 Epoch  22 Step:     5510 Batch Loss:     0.023403 Ones: 0.84 Accuracy: 0.99 Tokens per Sec:     2435, Lr: 0.000300
+2019-12-08 14:40:31,141 Epoch  22 Step:     5520 Batch Loss:     0.005926 Ones: 0.80 Accuracy: 1.00 Tokens per Sec:     3213, Lr: 0.000300
+2019-12-08 14:40:32,343 Epoch  22 Step:     5530 Batch Loss:     0.030859 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:     4154, Lr: 0.000300
+2019-12-08 14:40:33,576 Epoch  22 Step:     5540 Batch Loss:     0.041094 Ones: 0.75 Accuracy: 1.00 Tokens per Sec:     4950, Lr: 0.000300
+2019-12-08 14:40:34,787 Epoch  22 Step:     5550 Batch Loss:     0.017272 Ones: 0.75 Accuracy: 1.00 Tokens per Sec:     6018, Lr: 0.000300
+2019-12-08 14:40:35,962 Epoch  22 Step:     5560 Batch Loss:     0.011940 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:     7115, Lr: 0.000300
+2019-12-08 14:40:37,174 Epoch  22 Step:     5570 Batch Loss:     0.005682 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     7918, Lr: 0.000300
+2019-12-08 14:40:38,388 Epoch  22 Step:     5580 Batch Loss:     0.003026 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:     8507, Lr: 0.000300
+2019-12-08 14:40:39,628 Epoch  22 Step:     5590 Batch Loss:     0.001006 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     9116, Lr: 0.000300
+2019-12-08 14:40:40,836 Epoch  22 Step:     5600 Batch Loss:     0.001194 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:    10520, Lr: 0.000300
+2019-12-08 14:40:43,785 Validation result at epoch  22, step     5600: f1_prod:   0.11, loss:   1.2542, ones:   0.8802, f1_0:   0.1206, f1_1:   0.8793,f1_prd:   0.1060, duration: 2.9485s
+2019-12-08 14:40:45,019 Epoch  22 Step:     5610 Batch Loss:     0.001150 Ones: 0.81 Accuracy: 1.00 Tokens per Sec:    11022, Lr: 0.000300
+2019-12-08 14:40:46,235 Epoch  22 Step:     5620 Batch Loss:     0.007905 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:    11926, Lr: 0.000300
+2019-12-08 14:40:47,435 Epoch  22 Step:     5630 Batch Loss:     0.001152 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    12899, Lr: 0.000300
+2019-12-08 14:40:48,642 Epoch  22 Step:     5640 Batch Loss:     0.038932 Ones: 0.89 Accuracy: 0.99 Tokens per Sec:    13630, Lr: 0.000300
+2019-12-08 14:40:49,859 Epoch  22 Step:     5650 Batch Loss:     0.037843 Ones: 0.67 Accuracy: 1.00 Tokens per Sec:    14309, Lr: 0.000300
+2019-12-08 14:40:51,064 Epoch  22 Step:     5660 Batch Loss:     0.009168 Ones: 0.85 Accuracy: 0.99 Tokens per Sec:    15180, Lr: 0.000300
+2019-12-08 14:40:52,266 Epoch  22 Step:     5670 Batch Loss:     0.001500 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    16241, Lr: 0.000300
+2019-12-08 14:40:53,464 Epoch  22 Step:     5680 Batch Loss:     0.006242 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    17121, Lr: 0.000300
+2019-12-08 14:40:54,709 Epoch  22 Step:     5690 Batch Loss:     0.025427 Ones: 0.91 Accuracy: 0.99 Tokens per Sec:    17498, Lr: 0.000300
+2019-12-08 14:40:55,938 Epoch  22 Step:     5700 Batch Loss:     0.001280 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:    18607, Lr: 0.000300
+2019-12-08 14:40:58,892 Validation result at epoch  22, step     5700: f1_prod:   0.11, loss:   1.1863, ones:   0.8737, f1_0:   0.1293, f1_1:   0.8762,f1_prd:   0.1133, duration: 2.9532s
+2019-12-08 14:41:00,119 Epoch  22 Step:     5710 Batch Loss:     0.001448 Ones: 0.87 Accuracy: 1.00 Tokens per Sec:    19537, Lr: 0.000300
+2019-12-08 14:41:01,319 Epoch  22 Step:     5720 Batch Loss:     0.000899 Ones: 0.97 Accuracy: 1.00 Tokens per Sec:    20886, Lr: 0.000300
+2019-12-08 14:41:02,546 Epoch  22 Step:     5730 Batch Loss:     0.013772 Ones: 0.69 Accuracy: 1.00 Tokens per Sec:    21250, Lr: 0.000300
+2019-12-08 14:41:03,760 Epoch  22 Step:     5740 Batch Loss:     0.001074 Ones: 0.85 Accuracy: 1.00 Tokens per Sec:    22413, Lr: 0.000300
+2019-12-08 14:41:03,994 Epoch  22: total training loss 8.77
+2019-12-08 14:41:03,995 EPOCH 23
+2019-12-08 14:41:04,939 Epoch  23 Step:     5750 Batch Loss:     0.000840 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:      737, Lr: 0.000300
+2019-12-08 14:41:06,120 Epoch  23 Step:     5760 Batch Loss:     0.003538 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:     1394, Lr: 0.000300
+2019-12-08 14:41:07,267 Epoch  23 Step:     5770 Batch Loss:     0.001883 Ones: 0.96 Accuracy: 1.00 Tokens per Sec:     2504, Lr: 0.000300
+2019-12-08 14:41:08,430 Epoch  23 Step:     5780 Batch Loss:     0.004919 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:     3370, Lr: 0.000300
+2019-12-08 14:41:09,659 Epoch  23 Step:     5790 Batch Loss:     0.153210 Ones: 0.95 Accuracy: 0.95 Tokens per Sec:     4030, Lr: 0.000300
+2019-12-08 14:41:10,865 Epoch  23 Step:     5800 Batch Loss:     0.013403 Ones: 0.91 Accuracy: 0.99 Tokens per Sec:     4945, Lr: 0.000300
+2019-12-08 14:41:13,805 Validation result at epoch  23, step     5800: f1_prod:   0.10, loss:   1.1972, ones:   0.8922, f1_0:   0.1132, f1_1:   0.8865,f1_prd:   0.1003, duration: 2.9400s
+2019-12-08 14:41:15,039 Epoch  23 Step:     5810 Batch Loss:     0.014634 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:     5840, Lr: 0.000300
+2019-12-08 14:41:16,270 Epoch  23 Step:     5820 Batch Loss:     0.131652 Ones: 0.89 Accuracy: 0.96 Tokens per Sec:     6660, Lr: 0.000300
+2019-12-08 14:41:17,506 Epoch  23 Step:     5830 Batch Loss:     0.002986 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     7435, Lr: 0.000300
+2019-12-08 14:41:18,741 Epoch  23 Step:     5840 Batch Loss:     0.016994 Ones: 0.81 Accuracy: 0.99 Tokens per Sec:     8372, Lr: 0.000300
+2019-12-08 14:41:19,959 Epoch  23 Step:     5850 Batch Loss:     0.005627 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:     9296, Lr: 0.000300
+2019-12-08 14:41:21,149 Epoch  23 Step:     5860 Batch Loss:     0.048004 Ones: 0.83 Accuracy: 0.98 Tokens per Sec:    10389, Lr: 0.000300
+2019-12-08 14:41:22,349 Epoch  23 Step:     5870 Batch Loss:     0.018814 Ones: 0.84 Accuracy: 1.00 Tokens per Sec:    11201, Lr: 0.000300
+2019-12-08 14:41:23,581 Epoch  23 Step:     5880 Batch Loss:     0.118091 Ones: 0.77 Accuracy: 0.99 Tokens per Sec:    11765, Lr: 0.000300
+2019-12-08 14:41:24,821 Epoch  23 Step:     5890 Batch Loss:     0.072754 Ones: 0.84 Accuracy: 0.96 Tokens per Sec:    12632, Lr: 0.000300
+2019-12-08 14:41:26,058 Epoch  23 Step:     5900 Batch Loss:     0.000700 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    13554, Lr: 0.000300
+2019-12-08 14:41:29,007 Validation result at epoch  23, step     5900: f1_prod:   0.10, loss:   1.1167, ones:   0.8892, f1_0:   0.1162, f1_1:   0.8878,f1_prd:   0.1031, duration: 2.9489s
+2019-12-08 14:41:30,203 Epoch  23 Step:     5910 Batch Loss:     0.081097 Ones: 0.84 Accuracy: 0.97 Tokens per Sec:    14864, Lr: 0.000300
+2019-12-08 14:41:31,364 Epoch  23 Step:     5920 Batch Loss:     0.005942 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    15967, Lr: 0.000300
+2019-12-08 14:41:32,470 Epoch  23 Step:     5930 Batch Loss:     0.094580 Ones: 0.79 Accuracy: 0.97 Tokens per Sec:    17479, Lr: 0.000300
+2019-12-08 14:41:33,678 Epoch  23 Step:     5940 Batch Loss:     0.120389 Ones: 0.67 Accuracy: 0.95 Tokens per Sec:    17227, Lr: 0.000300
+2019-12-08 14:41:34,904 Epoch  23 Step:     5950 Batch Loss:     0.001092 Ones: 0.88 Accuracy: 1.00 Tokens per Sec:    17582, Lr: 0.000300
+2019-12-08 14:41:36,149 Epoch  23 Step:     5960 Batch Loss:     0.022164 Ones: 0.86 Accuracy: 0.99 Tokens per Sec:    18339, Lr: 0.000300
+2019-12-08 14:41:37,388 Epoch  23 Step:     5970 Batch Loss:     0.025688 Ones: 0.76 Accuracy: 0.99 Tokens per Sec:    19591, Lr: 0.000300
+2019-12-08 14:41:38,610 Epoch  23 Step:     5980 Batch Loss:     0.002743 Ones: 0.93 Accuracy: 1.00 Tokens per Sec:    20535, Lr: 0.000300
+2019-12-08 14:41:39,857 Epoch  23 Step:     5990 Batch Loss:     0.071196 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:    21089, Lr: 0.000300
+2019-12-08 14:41:41,057 Epoch  23 Step:     6000 Batch Loss:     0.006064 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:    22617, Lr: 0.000300
+2019-12-08 14:41:44,005 Validation result at epoch  23, step     6000: f1_prod:   0.12, loss:   1.2340, ones:   0.8579, f1_0:   0.1370, f1_1:   0.8682,f1_prd:   0.1189, duration: 2.9464s
+2019-12-08 14:41:44,352 Epoch  23: total training loss 13.38
+2019-12-08 14:41:44,353 EPOCH 24
+2019-12-08 14:41:45,222 Epoch  24 Step:     6010 Batch Loss:     0.003037 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:      949, Lr: 0.000300
+2019-12-08 14:41:46,474 Epoch  24 Step:     6020 Batch Loss:     0.001483 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:     1816, Lr: 0.000300
+2019-12-08 14:41:47,697 Epoch  24 Step:     6030 Batch Loss:     0.214854 Ones: 0.76 Accuracy: 0.96 Tokens per Sec:     2636, Lr: 0.000300
+2019-12-08 14:41:48,934 Epoch  24 Step:     6040 Batch Loss:     0.003964 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:     3342, Lr: 0.000300
+2019-12-08 14:41:50,148 Epoch  24 Step:     6050 Batch Loss:     0.073838 Ones: 0.74 Accuracy: 0.99 Tokens per Sec:     4431, Lr: 0.000300
+2019-12-08 14:41:51,336 Epoch  24 Step:     6060 Batch Loss:     0.001818 Ones: 0.75 Accuracy: 1.00 Tokens per Sec:     5442, Lr: 0.000300
+2019-12-08 14:41:52,525 Epoch  24 Step:     6070 Batch Loss:     0.010632 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:     6251, Lr: 0.000300
+2019-12-08 14:41:53,726 Epoch  24 Step:     6080 Batch Loss:     0.079310 Ones: 0.73 Accuracy: 0.97 Tokens per Sec:     6952, Lr: 0.000300
+2019-12-08 14:41:54,960 Epoch  24 Step:     6090 Batch Loss:     0.011276 Ones: 0.90 Accuracy: 0.99 Tokens per Sec:     7758, Lr: 0.000300
+2019-12-08 14:41:56,180 Epoch  24 Step:     6100 Batch Loss:     0.021061 Ones: 0.94 Accuracy: 1.00 Tokens per Sec:     8394, Lr: 0.000300
+2019-12-08 14:41:59,111 Validation result at epoch  24, step     6100: f1_prod:   0.11, loss:   1.1626, ones:   0.8641, f1_0:   0.1311, f1_1:   0.8727,f1_prd:   0.1144, duration: 2.9302s
+2019-12-08 14:42:00,289 Epoch  24 Step:     6110 Batch Loss:     0.002470 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:     9679, Lr: 0.000300
+2019-12-08 14:42:01,480 Epoch  24 Step:     6120 Batch Loss:     0.001693 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    10393, Lr: 0.000300
+2019-12-08 14:42:02,659 Epoch  24 Step:     6130 Batch Loss:     0.000816 Ones: 1.00 Accuracy: 1.00 Tokens per Sec:    11277, Lr: 0.000300
+2019-12-08 14:42:03,873 Epoch  24 Step:     6140 Batch Loss:     0.051122 Ones: 0.81 Accuracy: 0.96 Tokens per Sec:    11805, Lr: 0.000300
+2019-12-08 14:42:05,109 Epoch  24 Step:     6150 Batch Loss:     0.073656 Ones: 0.81 Accuracy: 0.99 Tokens per Sec:    12531, Lr: 0.000300
+2019-12-08 14:42:06,347 Epoch  24 Step:     6160 Batch Loss:     0.007166 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    13445, Lr: 0.000300
+2019-12-08 14:42:07,584 Epoch  24 Step:     6170 Batch Loss:     0.013392 Ones: 0.93 Accuracy: 1.00 Tokens per Sec:    14298, Lr: 0.000300
+2019-12-08 14:42:08,804 Epoch  24 Step:     6180 Batch Loss:     0.002413 Ones: 0.97 Accuracy: 1.00 Tokens per Sec:    15159, Lr: 0.000300
+2019-12-08 14:42:10,043 Epoch  24 Step:     6190 Batch Loss:     0.115852 Ones: 0.71 Accuracy: 0.96 Tokens per Sec:    16076, Lr: 0.000300
+2019-12-08 14:42:11,211 Epoch  24 Step:     6200 Batch Loss:     0.046267 Ones: 0.69 Accuracy: 0.97 Tokens per Sec:    17740, Lr: 0.000300
+2019-12-08 14:42:14,140 Validation result at epoch  24, step     6200: f1_prod:   0.11, loss:   1.1021, ones:   0.8744, f1_0:   0.1278, f1_1:   0.8757,f1_prd:   0.1119, duration: 2.9282s
+2019-12-08 14:42:15,359 Epoch  24 Step:     6210 Batch Loss:     0.057569 Ones: 0.88 Accuracy: 0.99 Tokens per Sec:    17839, Lr: 0.000300
+2019-12-08 14:42:16,596 Epoch  24 Step:     6220 Batch Loss:     0.331831 Ones: 0.91 Accuracy: 0.95 Tokens per Sec:    18485, Lr: 0.000300
+2019-12-08 14:42:17,820 Epoch  24 Step:     6230 Batch Loss:     0.010595 Ones: 0.70 Accuracy: 1.00 Tokens per Sec:    19502, Lr: 0.000300
+2019-12-08 14:42:19,047 Epoch  24 Step:     6240 Batch Loss:     0.001468 Ones: 0.90 Accuracy: 1.00 Tokens per Sec:    20290, Lr: 0.000300
+2019-12-08 14:42:20,249 Epoch  24 Step:     6250 Batch Loss:     0.001288 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    21463, Lr: 0.000300
+2019-12-08 14:42:21,434 Epoch  24 Step:     6260 Batch Loss:     0.021083 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:    22625, Lr: 0.000300
+2019-12-08 14:42:21,931 Epoch  24: total training loss 11.28
+2019-12-08 14:42:21,931 EPOCH 25
+2019-12-08 14:42:22,671 Epoch  25 Step:     6270 Batch Loss:     0.002624 Ones: 0.84 Accuracy: 1.00 Tokens per Sec:      870, Lr: 0.000300
+2019-12-08 14:42:23,904 Epoch  25 Step:     6280 Batch Loss:     0.101646 Ones: 0.79 Accuracy: 0.99 Tokens per Sec:     1462, Lr: 0.000300
+2019-12-08 14:42:25,132 Epoch  25 Step:     6290 Batch Loss:     0.012321 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:     2215, Lr: 0.000300
+2019-12-08 14:42:26,362 Epoch  25 Step:     6300 Batch Loss:     0.017071 Ones: 0.76 Accuracy: 1.00 Tokens per Sec:     2876, Lr: 0.000300
+2019-12-08 14:42:29,315 Validation result at epoch  25, step     6300: f1_prod:   0.12, loss:   1.2147, ones:   0.8491, f1_0:   0.1435, f1_1:   0.8657,f1_prd:   0.1243, duration: 2.9529s
+2019-12-08 14:42:30,515 Epoch  25 Step:     6310 Batch Loss:     0.056299 Ones: 0.74 Accuracy: 1.00 Tokens per Sec:     3994, Lr: 0.000300
+2019-12-08 14:42:31,719 Epoch  25 Step:     6320 Batch Loss:     0.002700 Ones: 0.86 Accuracy: 1.00 Tokens per Sec:     4953, Lr: 0.000300
+2019-12-08 14:42:32,924 Epoch  25 Step:     6330 Batch Loss:     0.036594 Ones: 0.79 Accuracy: 1.00 Tokens per Sec:     5768, Lr: 0.000300
+2019-12-08 14:42:34,140 Epoch  25 Step:     6340 Batch Loss:     0.026540 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:     6442, Lr: 0.000300
+2019-12-08 14:42:35,368 Epoch  25 Step:     6350 Batch Loss:     0.000950 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:     7226, Lr: 0.000300
+2019-12-08 14:42:36,604 Epoch  25 Step:     6360 Batch Loss:     0.000753 Ones: 0.95 Accuracy: 1.00 Tokens per Sec:     8052, Lr: 0.000300
+2019-12-08 14:42:37,855 Epoch  25 Step:     6370 Batch Loss:     0.057041 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:     9014, Lr: 0.000300
+2019-12-08 14:42:39,102 Epoch  25 Step:     6380 Batch Loss:     0.010005 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:     9984, Lr: 0.000300
+2019-12-08 14:42:40,302 Epoch  25 Step:     6390 Batch Loss:     0.020261 Ones: 0.84 Accuracy: 0.98 Tokens per Sec:    11095, Lr: 0.000300
+2019-12-08 14:42:41,523 Epoch  25 Step:     6400 Batch Loss:     0.448650 Ones: 0.75 Accuracy: 0.94 Tokens per Sec:    11714, Lr: 0.000300
+2019-12-08 14:42:44,478 Validation result at epoch  25, step     6400: f1_prod:   0.10, loss:   1.1045, ones:   0.9098, f1_0:   0.1068, f1_1:   0.8928,f1_prd:   0.0953, duration: 2.9541s
+2019-12-08 14:42:45,683 Epoch  25 Step:     6410 Batch Loss:     0.005504 Ones: 0.82 Accuracy: 1.00 Tokens per Sec:    12561, Lr: 0.000300
+2019-12-08 14:42:46,907 Epoch  25 Step:     6420 Batch Loss:     0.001975 Ones: 0.77 Accuracy: 1.00 Tokens per Sec:    13004, Lr: 0.000300
+2019-12-08 14:42:48,134 Epoch  25 Step:     6430 Batch Loss:     0.001527 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    13613, Lr: 0.000300
+2019-12-08 14:42:49,377 Epoch  25 Step:     6440 Batch Loss:     0.016165 Ones: 0.92 Accuracy: 0.99 Tokens per Sec:    14506, Lr: 0.000300
+2019-12-08 14:42:50,587 Epoch  25 Step:     6450 Batch Loss:     0.001335 Ones: 0.89 Accuracy: 1.00 Tokens per Sec:    15956, Lr: 0.000300
+2019-12-08 14:42:51,775 Epoch  25 Step:     6460 Batch Loss:     0.030461 Ones: 0.83 Accuracy: 0.99 Tokens per Sec:    17061, Lr: 0.000300
+2019-12-08 14:42:52,932 Epoch  25 Step:     6470 Batch Loss:     0.001305 Ones: 0.84 Accuracy: 1.00 Tokens per Sec:    18495, Lr: 0.000300
+2019-12-08 14:42:54,149 Epoch  25 Step:     6480 Batch Loss:     0.083627 Ones: 0.75 Accuracy: 0.97 Tokens per Sec:    18450, Lr: 0.000300
+2019-12-08 14:42:55,376 Epoch  25 Step:     6490 Batch Loss:     0.002859 Ones: 0.74 Accuracy: 1.00 Tokens per Sec:    18908, Lr: 0.000300
+2019-12-08 14:42:56,625 Epoch  25 Step:     6500 Batch Loss:     0.005345 Ones: 0.83 Accuracy: 1.00 Tokens per Sec:    19694, Lr: 0.000300
+2019-12-08 14:42:59,578 Validation result at epoch  25, step     6500: f1_prod:   0.11, loss:   1.2224, ones:   0.8753, f1_0:   0.1232, f1_1:   0.8810,f1_prd:   0.1085, duration: 2.9523s
+2019-12-08 14:43:00,782 Epoch  25 Step:     6510 Batch Loss:     0.008213 Ones: 0.92 Accuracy: 1.00 Tokens per Sec:    21107, Lr: 0.000300
+2019-12-08 14:43:01,988 Epoch  25 Step:     6520 Batch Loss:     0.105302 Ones: 0.89 Accuracy: 0.98 Tokens per Sec:    22056, Lr: 0.000300
+2019-12-08 14:43:02,597 Epoch  25: total training loss 9.54
+2019-12-08 14:43:02,597 Training ended after  25 epochs.
+2019-12-08 14:43:02,597 Best validation result at step      200:   0.14 eval_metric.

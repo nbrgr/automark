@@ -9,6 +9,7 @@ class MarkingHead(torch.nn.Module):
         super(MarkingHead, self).__init__()
 
         self.fc1 = torch.nn.Linear(dimension, hidden_dimension)
+        self.fc2 = torch.nn.Linear(hidden_dimension, hidden_dimension)
         # Output 0 = not marked, Output 1 = marked, Output 2 = ignore
         self.prediction = torch.nn.Linear(hidden_dimension, 2, bias=bias)
 
@@ -25,6 +26,7 @@ class MarkingHead(torch.nn.Module):
 
     def forward(self, embedding):
         x = self.activation(self.fc1(embedding))
+        x = self.activation(self.fc2(x))
         # print("Avg activation {:.2f}".format(torch.mean(x)))
         # print("Min activation {:.2f}".format(torch.min(x)))
         # print("Max activation {:.2f}".format(torch.max(x)))
@@ -113,7 +115,7 @@ class AutoMark(torch.nn.Module):
 
             weights = torch.ones_like(batch.loss_weight)
 
-            weights = torch.where(wrong_predictions, weights * 5, weights * 0.1)
+            weights = torch.where(wrong_predictions, weights * 2, weights * 0.1)
         else: 
             weights=torch.ones_like(batch.loss_weight)
 

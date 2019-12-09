@@ -1,0 +1,1893 @@
+I1208 17:59:04.130614 139845289953024 font_manager.py:1341] generated new fontManager
+I1208 17:59:05.058019 139845289953024 file_utils.py:40] PyTorch version 1.2.0 available.
+I1208 17:59:12.350403 139845289953024 tokenization_utils.py:379] loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/students/berger/.cache/torch/transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+I1208 17:59:13.108230 139845289953024 tokenization_utils.py:379] loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/students/berger/.cache/torch/transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+I1208 17:59:13.717263 139845289953024 configuration_utils.py:157] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-config.json from cache at /home/students/berger/.cache/torch/transformers/45629519f3117b89d89fd9c740073d8e4c1f0a70f9842476185100a8afe715d1.83b0fa3d7f1ac0e113ad300189a938c6f14d0588a4200f30eef109d0a047c484
+I1208 17:59:13.719367 139845289953024 configuration_utils.py:174] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 119547
+}
+
+I1208 17:59:14.125341 139845289953024 modeling_utils.py:393] loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-pytorch_model.bin from cache at /home/students/berger/.cache/torch/transformers/5b5b80054cd2c95a946a8e0ce0b93f56326dff9fbda6a6c3e02de3c91c918342.7131dcb754361639a7d5526985f880879c9bfd144b65a0bf50590bddb7de9059
+I1208 17:59:17.863143 139845289953024 helpers.py:67] Hello! This is AutoMark. For all your Automatic Marking needs.
+2019-12-08 17:59:17,863 Hello! This is AutoMark. For all your Automatic Marking needs.
+I1208 17:59:17.870071 139845289953024 train.py:486] Total params: 87200
+2019-12-08 17:59:17,870 Total params: 87200
+I1208 17:59:17.872488 139845289953024 train.py:490] Trainable parameters: ['marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.fc2.bias', 'marking_head.fc2.weight', 'marking_head.prediction.weight']
+2019-12-08 17:59:17,872 Trainable parameters: ['marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.fc2.bias', 'marking_head.fc2.weight', 'marking_head.prediction.weight']
+I1208 17:59:21.134895 139845289953024 helpers.py:85] cfg.bert.path                      : bert-base-multilingual-cased
+2019-12-08 17:59:21,134 cfg.bert.path                      : bert-base-multilingual-cased
+I1208 17:59:21.135186 139845289953024 helpers.py:85] cfg.data.source                    : .en
+2019-12-08 17:59:21,135 cfg.data.source                    : .en
+I1208 17:59:21.135262 139845289953024 helpers.py:85] cfg.data.target                    : .hyp
+2019-12-08 17:59:21,135 cfg.data.target                    : .hyp
+I1208 17:59:21.135350 139845289953024 helpers.py:85] cfg.data.marking                   : .ann
+2019-12-08 17:59:21,135 cfg.data.marking                   : .ann
+I1208 17:59:21.135417 139845289953024 helpers.py:85] cfg.data.raw_train                 : data/markings
+2019-12-08 17:59:21,135 cfg.data.raw_train                 : data/markings
+I1208 17:59:21.135484 139845289953024 helpers.py:85] cfg.data.train                     : data/markings.tok
+2019-12-08 17:59:21,135 cfg.data.train                     : data/markings.tok
+I1208 17:59:21.135549 139845289953024 helpers.py:85] cfg.data.raw_dev                   : data/user_mark
+2019-12-08 17:59:21,135 cfg.data.raw_dev                   : data/user_mark
+I1208 17:59:21.135612 139845289953024 helpers.py:85] cfg.data.dev                       : data/user_mark.tok
+2019-12-08 17:59:21,135 cfg.data.dev                       : data/user_mark.tok
+I1208 17:59:21.135679 139845289953024 helpers.py:85] cfg.model.hidden_dimension         : 100
+2019-12-08 17:59:21,135 cfg.model.hidden_dimension         : 100
+I1208 17:59:21.135744 139845289953024 helpers.py:85] cfg.model.activation               : relu
+2019-12-08 17:59:21,135 cfg.model.activation               : relu
+I1208 17:59:21.135815 139845289953024 helpers.py:85] cfg.model.freeze_bert              : True
+2019-12-08 17:59:21,135 cfg.model.freeze_bert              : True
+I1208 17:59:21.135881 139845289953024 helpers.py:85] cfg.model.head_bias                : False
+2019-12-08 17:59:21,135 cfg.model.head_bias                : False
+I1208 17:59:21.135955 139845289953024 helpers.py:85] cfg.train.bert_lr                  : 0.0003
+2019-12-08 17:59:21,135 cfg.train.bert_lr                  : 0.0003
+I1208 17:59:21.136021 139845289953024 helpers.py:85] cfg.train.lr                       : 0.0003
+2019-12-08 17:59:21,136 cfg.train.lr                       : 0.0003
+I1208 17:59:21.136086 139845289953024 helpers.py:85] cfg.train.optimizer                : adam
+2019-12-08 17:59:21,136 cfg.train.optimizer                : adam
+I1208 17:59:21.136150 139845289953024 helpers.py:85] cfg.train.batch_size               : 32
+2019-12-08 17:59:21,136 cfg.train.batch_size               : 32
+I1208 17:59:21.136213 139845289953024 helpers.py:85] cfg.train.epochs                   : 100
+2019-12-08 17:59:21,136 cfg.train.epochs                   : 100
+I1208 17:59:21.136277 139845289953024 helpers.py:85] cfg.train.seed                     : 41
+2019-12-08 17:59:21,136 cfg.train.seed                     : 41
+I1208 17:59:21.136340 139845289953024 helpers.py:85] cfg.train.model_dir                : humanmt_2hl_100e
+2019-12-08 17:59:21,136 cfg.train.model_dir                : humanmt_2hl_100e
+I1208 17:59:21.136404 139845289953024 helpers.py:85] cfg.train.shuffle                  : True
+2019-12-08 17:59:21,136 cfg.train.shuffle                  : True
+I1208 17:59:21.136468 139845289953024 helpers.py:85] cfg.train.cuda                     : True
+2019-12-08 17:59:21,136 cfg.train.cuda                     : True
+I1208 17:59:21.136531 139845289953024 helpers.py:85] cfg.train.early_stopping_metric    : eval_metric
+2019-12-08 17:59:21,136 cfg.train.early_stopping_metric    : eval_metric
+I1208 17:59:21.136594 139845289953024 helpers.py:85] cfg.train.overwrite                : True
+2019-12-08 17:59:21,136 cfg.train.overwrite                : True
+I1208 17:59:21.136658 139845289953024 helpers.py:85] cfg.train.normalization            : tokens
+2019-12-08 17:59:21,136 cfg.train.normalization            : tokens
+I1208 17:59:21.136722 139845289953024 helpers.py:85] cfg.train.bad_weight               : 10.0
+2019-12-08 17:59:21,136 cfg.train.bad_weight               : 10.0
+I1208 17:59:21.136785 139845289953024 helpers.py:85] cfg.train.validation_freq          : 100
+2019-12-08 17:59:21,136 cfg.train.validation_freq          : 100
+I1208 17:59:21.136847 139845289953024 helpers.py:85] cfg.train.logging_freq             : 10
+2019-12-08 17:59:21,136 cfg.train.logging_freq             : 10
+I1208 17:59:21.136912 139845289953024 helpers.py:85] cfg.train.weighting                : constant
+2019-12-08 17:59:21,136 cfg.train.weighting                : constant
+I1208 17:59:21.136975 139845289953024 helpers.py:85] cfg.train.eval_batch_size          : 128
+2019-12-08 17:59:21,136 cfg.train.eval_batch_size          : 128
+I1208 17:59:21.137037 139845289953024 helpers.py:85] cfg.train.eval_metric              : f1_prod
+2019-12-08 17:59:21,137 cfg.train.eval_metric              : f1_prod
+I1208 17:59:21.137103 139845289953024 helpers.py:85] cfg.generate.batch_size            : 2
+2019-12-08 17:59:21,137 cfg.generate.batch_size            : 2
+I1208 17:59:21.138784 139845289953024 train.py:568] AutoMark(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(119547, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (marking_head): MarkingHead(
+    (fc1): Linear(in_features=768, out_features=100, bias=True)
+    (fc2): Linear(in_features=100, out_features=100, bias=True)
+    (prediction): Linear(in_features=100, out_features=2, bias=False)
+  )
+)
+2019-12-08 17:59:21,138 AutoMark(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(119547, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (marking_head): MarkingHead(
+    (fc1): Linear(in_features=768, out_features=100, bias=True)
+    (fc2): Linear(in_features=100, out_features=100, bias=True)
+    (prediction): Linear(in_features=100, out_features=2, bias=False)
+  )
+)
+I1208 17:59:21.139028 139845289953024 train.py:222] EPOCH 1
+2019-12-08 17:59:21,139 EPOCH 1
+I1208 17:59:22.074681 139845289953024 train.py:278] Epoch   1 Step:       10 Batch Loss:     1.596360 Ones: 0.00 Accuracy: 0.16 Tokens per Sec:     8798, Lr: 0.000300
+2019-12-08 17:59:22,074 Epoch   1 Step:       10 Batch Loss:     1.596360 Ones: 0.00 Accuracy: 0.16 Tokens per Sec:     8798, Lr: 0.000300
+I1208 17:59:22.842877 139845289953024 train.py:278] Epoch   1 Step:       20 Batch Loss:     1.460565 Ones: 0.00 Accuracy: 0.13 Tokens per Sec:    23406, Lr: 0.000300
+2019-12-08 17:59:22,842 Epoch   1 Step:       20 Batch Loss:     1.460565 Ones: 0.00 Accuracy: 0.13 Tokens per Sec:    23406, Lr: 0.000300
+I1208 17:59:23.504811 139845289953024 train.py:278] Epoch   1 Step:       30 Batch Loss:     1.304218 Ones: 0.00 Accuracy: 0.10 Tokens per Sec:    38319, Lr: 0.000300
+2019-12-08 17:59:23,504 Epoch   1 Step:       30 Batch Loss:     1.304218 Ones: 0.00 Accuracy: 0.10 Tokens per Sec:    38319, Lr: 0.000300
+I1208 17:59:23.684649 139845289953024 train.py:376] Epoch   1: total training loss 51.79
+2019-12-08 17:59:23,684 Epoch   1: total training loss 51.79
+I1208 17:59:23.684919 139845289953024 train.py:222] EPOCH 2
+2019-12-08 17:59:23,684 EPOCH 2
+I1208 17:59:24.142243 139845289953024 train.py:278] Epoch   2 Step:       40 Batch Loss:     1.591873 Ones: 0.00 Accuracy: 0.19 Tokens per Sec:    12362, Lr: 0.000300
+2019-12-08 17:59:24,142 Epoch   2 Step:       40 Batch Loss:     1.591873 Ones: 0.00 Accuracy: 0.19 Tokens per Sec:    12362, Lr: 0.000300
+I1208 17:59:24.908886 139845289953024 train.py:278] Epoch   2 Step:       50 Batch Loss:     1.517353 Ones: 0.02 Accuracy: 0.19 Tokens per Sec:    19145, Lr: 0.000300
+2019-12-08 17:59:24,908 Epoch   2 Step:       50 Batch Loss:     1.517353 Ones: 0.02 Accuracy: 0.19 Tokens per Sec:    19145, Lr: 0.000300
+I1208 17:59:25.583031 139845289953024 train.py:278] Epoch   2 Step:       60 Batch Loss:     1.519369 Ones: 0.24 Accuracy: 0.38 Tokens per Sec:    33342, Lr: 0.000300
+2019-12-08 17:59:25,583 Epoch   2 Step:       60 Batch Loss:     1.519369 Ones: 0.24 Accuracy: 0.38 Tokens per Sec:    33342, Lr: 0.000300
+I1208 17:59:26.005594 139845289953024 train.py:376] Epoch   2: total training loss 48.43
+2019-12-08 17:59:26,005 Epoch   2: total training loss 48.43
+I1208 17:59:26.005949 139845289953024 train.py:222] EPOCH 3
+2019-12-08 17:59:26,005 EPOCH 3
+I1208 17:59:26.306008 139845289953024 train.py:278] Epoch   3 Step:       70 Batch Loss:     1.506284 Ones: 0.14 Accuracy: 0.31 Tokens per Sec:    10503, Lr: 0.000300
+2019-12-08 17:59:26,306 Epoch   3 Step:       70 Batch Loss:     1.506284 Ones: 0.14 Accuracy: 0.31 Tokens per Sec:    10503, Lr: 0.000300
+I1208 17:59:26.874264 139845289953024 train.py:278] Epoch   3 Step:       80 Batch Loss:     1.661877 Ones: 0.34 Accuracy: 0.47 Tokens per Sec:    17146, Lr: 0.000300
+2019-12-08 17:59:26,874 Epoch   3 Step:       80 Batch Loss:     1.661877 Ones: 0.34 Accuracy: 0.47 Tokens per Sec:    17146, Lr: 0.000300
+I1208 17:59:27.663000 139845289953024 train.py:278] Epoch   3 Step:       90 Batch Loss:     1.378662 Ones: 0.35 Accuracy: 0.46 Tokens per Sec:    24981, Lr: 0.000300
+2019-12-08 17:59:27,663 Epoch   3 Step:       90 Batch Loss:     1.378662 Ones: 0.35 Accuracy: 0.46 Tokens per Sec:    24981, Lr: 0.000300
+I1208 17:59:28.312714 139845289953024 train.py:376] Epoch   3: total training loss 46.30
+2019-12-08 17:59:28,312 Epoch   3: total training loss 46.30
+I1208 17:59:28.312958 139845289953024 train.py:222] EPOCH 4
+2019-12-08 17:59:28,312 EPOCH 4
+I1208 17:59:28.382713 139845289953024 train.py:278] Epoch   4 Step:      100 Batch Loss:     1.378283 Ones: 0.27 Accuracy: 0.40 Tokens per Sec:    11561, Lr: 0.000300
+2019-12-08 17:59:28,382 Epoch   4 Step:      100 Batch Loss:     1.378283 Ones: 0.27 Accuracy: 0.40 Tokens per Sec:    11561, Lr: 0.000300
+I1208 17:59:31.174010 139845289953024 train.py:323] Hooray! New best validation result [eval_metric]!
+2019-12-08 17:59:31,174 Hooray! New best validation result [eval_metric]!
+I1208 17:59:31.175373 139845289953024 train.py:326] Saving new checkpoint.
+2019-12-08 17:59:31,175 Saving new checkpoint.
+I1208 17:59:38.385713 139845289953024 train.py:361] Validation result at epoch   4, step      100: f1_prod:   0.11, loss:   0.9209, ones:   0.3647, f1_0:   0.2184, f1_1:   0.5172,f1_prd:   0.1129, duration: 10.0024s
+2019-12-08 17:59:38,385 Validation result at epoch   4, step      100: f1_prod:   0.11, loss:   0.9209, ones:   0.3647, f1_0:   0.2184, f1_1:   0.5172,f1_prd:   0.1129, duration: 10.0024s
+I1208 17:59:39.133626 139845289953024 train.py:278] Epoch   4 Step:      110 Batch Loss:     1.303637 Ones: 0.42 Accuracy: 0.51 Tokens per Sec:    12847, Lr: 0.000300
+2019-12-08 17:59:39,133 Epoch   4 Step:      110 Batch Loss:     1.303637 Ones: 0.42 Accuracy: 0.51 Tokens per Sec:    12847, Lr: 0.000300
+I1208 17:59:39.754397 139845289953024 train.py:278] Epoch   4 Step:      120 Batch Loss:     1.430135 Ones: 0.25 Accuracy: 0.42 Tokens per Sec:    27085, Lr: 0.000300
+2019-12-08 17:59:39,754 Epoch   4 Step:      120 Batch Loss:     1.430135 Ones: 0.25 Accuracy: 0.42 Tokens per Sec:    27085, Lr: 0.000300
+I1208 17:59:40.471019 139845289953024 train.py:278] Epoch   4 Step:      130 Batch Loss:     1.460399 Ones: 0.34 Accuracy: 0.45 Tokens per Sec:    35417, Lr: 0.000300
+2019-12-08 17:59:40,471 Epoch   4 Step:      130 Batch Loss:     1.460399 Ones: 0.34 Accuracy: 0.45 Tokens per Sec:    35417, Lr: 0.000300
+I1208 17:59:40.645967 139845289953024 train.py:376] Epoch   4: total training loss 45.34
+2019-12-08 17:59:40,645 Epoch   4: total training loss 45.34
+I1208 17:59:40.646245 139845289953024 train.py:222] EPOCH 5
+2019-12-08 17:59:40,646 EPOCH 5
+I1208 17:59:41.163402 139845289953024 train.py:278] Epoch   5 Step:      140 Batch Loss:     1.343282 Ones: 0.37 Accuracy: 0.53 Tokens per Sec:    11684, Lr: 0.000300
+2019-12-08 17:59:41,163 Epoch   5 Step:      140 Batch Loss:     1.343282 Ones: 0.37 Accuracy: 0.53 Tokens per Sec:    11684, Lr: 0.000300
+I1208 17:59:41.838856 139845289953024 train.py:278] Epoch   5 Step:      150 Batch Loss:     1.423782 Ones: 0.48 Accuracy: 0.60 Tokens per Sec:    20970, Lr: 0.000300
+2019-12-08 17:59:41,838 Epoch   5 Step:      150 Batch Loss:     1.423782 Ones: 0.48 Accuracy: 0.60 Tokens per Sec:    20970, Lr: 0.000300
+I1208 17:59:42.530605 139845289953024 train.py:278] Epoch   5 Step:      160 Batch Loss:     1.388378 Ones: 0.32 Accuracy: 0.46 Tokens per Sec:    33061, Lr: 0.000300
+2019-12-08 17:59:42,530 Epoch   5 Step:      160 Batch Loss:     1.388378 Ones: 0.32 Accuracy: 0.46 Tokens per Sec:    33061, Lr: 0.000300
+I1208 17:59:42.893771 139845289953024 train.py:376] Epoch   5: total training loss 44.55
+2019-12-08 17:59:42,893 Epoch   5: total training loss 44.55
+I1208 17:59:42.893944 139845289953024 train.py:222] EPOCH 6
+2019-12-08 17:59:42,893 EPOCH 6
+I1208 17:59:43.207690 139845289953024 train.py:278] Epoch   6 Step:      170 Batch Loss:     1.287259 Ones: 0.42 Accuracy: 0.56 Tokens per Sec:    11807, Lr: 0.000300
+2019-12-08 17:59:43,207 Epoch   6 Step:      170 Batch Loss:     1.287259 Ones: 0.42 Accuracy: 0.56 Tokens per Sec:    11807, Lr: 0.000300
+I1208 17:59:43.819755 139845289953024 train.py:278] Epoch   6 Step:      180 Batch Loss:     1.378858 Ones: 0.27 Accuracy: 0.42 Tokens per Sec:    18780, Lr: 0.000300
+2019-12-08 17:59:43,819 Epoch   6 Step:      180 Batch Loss:     1.378858 Ones: 0.27 Accuracy: 0.42 Tokens per Sec:    18780, Lr: 0.000300
+I1208 17:59:44.403051 139845289953024 train.py:278] Epoch   6 Step:      190 Batch Loss:     1.342870 Ones: 0.46 Accuracy: 0.54 Tokens per Sec:    32064, Lr: 0.000300
+2019-12-08 17:59:44,403 Epoch   6 Step:      190 Batch Loss:     1.342870 Ones: 0.46 Accuracy: 0.54 Tokens per Sec:    32064, Lr: 0.000300
+I1208 17:59:45.080475 139845289953024 train.py:376] Epoch   6: total training loss 44.04
+2019-12-08 17:59:45,080 Epoch   6: total training loss 44.04
+I1208 17:59:45.080709 139845289953024 train.py:222] EPOCH 7
+2019-12-08 17:59:45,080 EPOCH 7
+I1208 17:59:45.202277 139845289953024 train.py:278] Epoch   7 Step:      200 Batch Loss:     1.328706 Ones: 0.30 Accuracy: 0.42 Tokens per Sec:    11867, Lr: 0.000300
+2019-12-08 17:59:45,202 Epoch   7 Step:      200 Batch Loss:     1.328706 Ones: 0.30 Accuracy: 0.42 Tokens per Sec:    11867, Lr: 0.000300
+I1208 17:59:48.005790 139845289953024 train.py:361] Validation result at epoch   7, step      200: f1_prod:   0.11, loss:   0.9776, ones:   0.3395, f1_0:   0.2198, f1_1:   0.4889,f1_prd:   0.1075, duration: 2.8026s
+2019-12-08 17:59:48,005 Validation result at epoch   7, step      200: f1_prod:   0.11, loss:   0.9776, ones:   0.3395, f1_0:   0.2198, f1_1:   0.4889,f1_prd:   0.1075, duration: 2.8026s
+I1208 17:59:48.671957 139845289953024 train.py:278] Epoch   7 Step:      210 Batch Loss:     1.305676 Ones: 0.52 Accuracy: 0.60 Tokens per Sec:    14320, Lr: 0.000300
+2019-12-08 17:59:48,671 Epoch   7 Step:      210 Batch Loss:     1.305676 Ones: 0.52 Accuracy: 0.60 Tokens per Sec:    14320, Lr: 0.000300
+I1208 17:59:49.421038 139845289953024 train.py:278] Epoch   7 Step:      220 Batch Loss:     1.375757 Ones: 0.30 Accuracy: 0.44 Tokens per Sec:    24804, Lr: 0.000300
+2019-12-08 17:59:49,421 Epoch   7 Step:      220 Batch Loss:     1.375757 Ones: 0.30 Accuracy: 0.44 Tokens per Sec:    24804, Lr: 0.000300
+I1208 17:59:50.120616 139845289953024 train.py:278] Epoch   7 Step:      230 Batch Loss:     1.275579 Ones: 0.57 Accuracy: 0.64 Tokens per Sec:    38683, Lr: 0.000300
+2019-12-08 17:59:50,120 Epoch   7 Step:      230 Batch Loss:     1.275579 Ones: 0.57 Accuracy: 0.64 Tokens per Sec:    38683, Lr: 0.000300
+I1208 17:59:50.158077 139845289953024 train.py:376] Epoch   7: total training loss 43.89
+2019-12-08 17:59:50,158 Epoch   7: total training loss 43.89
+I1208 17:59:50.158338 139845289953024 train.py:222] EPOCH 8
+2019-12-08 17:59:50,158 EPOCH 8
+I1208 17:59:50.749217 139845289953024 train.py:278] Epoch   8 Step:      240 Batch Loss:     1.161843 Ones: 0.36 Accuracy: 0.52 Tokens per Sec:    12367, Lr: 0.000300
+2019-12-08 17:59:50,749 Epoch   8 Step:      240 Batch Loss:     1.161843 Ones: 0.36 Accuracy: 0.52 Tokens per Sec:    12367, Lr: 0.000300
+I1208 17:59:51.480471 139845289953024 train.py:278] Epoch   8 Step:      250 Batch Loss:     1.066063 Ones: 0.53 Accuracy: 0.57 Tokens per Sec:    21736, Lr: 0.000300
+2019-12-08 17:59:51,480 Epoch   8 Step:      250 Batch Loss:     1.066063 Ones: 0.53 Accuracy: 0.57 Tokens per Sec:    21736, Lr: 0.000300
+I1208 17:59:52.124739 139845289953024 train.py:278] Epoch   8 Step:      260 Batch Loss:     1.261580 Ones: 0.44 Accuracy: 0.53 Tokens per Sec:    36632, Lr: 0.000300
+2019-12-08 17:59:52,124 Epoch   8 Step:      260 Batch Loss:     1.261580 Ones: 0.44 Accuracy: 0.53 Tokens per Sec:    36632, Lr: 0.000300
+I1208 17:59:52.429484 139845289953024 train.py:376] Epoch   8: total training loss 42.87
+2019-12-08 17:59:52,429 Epoch   8: total training loss 42.87
+I1208 17:59:52.429860 139845289953024 train.py:222] EPOCH 9
+2019-12-08 17:59:52,429 EPOCH 9
+I1208 17:59:52.842633 139845289953024 train.py:278] Epoch   9 Step:      270 Batch Loss:     1.244914 Ones: 0.48 Accuracy: 0.57 Tokens per Sec:    11784, Lr: 0.000300
+2019-12-08 17:59:52,842 Epoch   9 Step:      270 Batch Loss:     1.244914 Ones: 0.48 Accuracy: 0.57 Tokens per Sec:    11784, Lr: 0.000300
+I1208 17:59:53.499228 139845289953024 train.py:278] Epoch   9 Step:      280 Batch Loss:     1.221730 Ones: 0.42 Accuracy: 0.51 Tokens per Sec:    19973, Lr: 0.000300
+2019-12-08 17:59:53,499 Epoch   9 Step:      280 Batch Loss:     1.221730 Ones: 0.42 Accuracy: 0.51 Tokens per Sec:    19973, Lr: 0.000300
+I1208 17:59:54.108124 139845289953024 train.py:278] Epoch   9 Step:      290 Batch Loss:     1.391873 Ones: 0.35 Accuracy: 0.52 Tokens per Sec:    32970, Lr: 0.000300
+2019-12-08 17:59:54,108 Epoch   9 Step:      290 Batch Loss:     1.391873 Ones: 0.35 Accuracy: 0.52 Tokens per Sec:    32970, Lr: 0.000300
+I1208 17:59:54.704148 139845289953024 train.py:376] Epoch   9: total training loss 42.18
+2019-12-08 17:59:54,704 Epoch   9: total training loss 42.18
+I1208 17:59:54.704406 139845289953024 train.py:222] EPOCH 10
+2019-12-08 17:59:54,704 EPOCH 10
+I1208 17:59:54.888579 139845289953024 train.py:278] Epoch  10 Step:      300 Batch Loss:     1.114169 Ones: 0.55 Accuracy: 0.64 Tokens per Sec:    11706, Lr: 0.000300
+2019-12-08 17:59:54,888 Epoch  10 Step:      300 Batch Loss:     1.114169 Ones: 0.55 Accuracy: 0.64 Tokens per Sec:    11706, Lr: 0.000300
+I1208 17:59:57.675865 139845289953024 train.py:323] Hooray! New best validation result [eval_metric]!
+2019-12-08 17:59:57,675 Hooray! New best validation result [eval_metric]!
+I1208 17:59:57.676211 139845289953024 train.py:326] Saving new checkpoint.
+2019-12-08 17:59:57,676 Saving new checkpoint.
+I1208 18:00:05.110985 139845289953024 train.py:361] Validation result at epoch  10, step      300: f1_prod:   0.14, loss:   0.7411, ones:   0.5944, f1_0:   0.2004, f1_1:   0.7085,f1_prd:   0.1420, duration: 10.2218s
+2019-12-08 18:00:05,110 Validation result at epoch  10, step      300: f1_prod:   0.14, loss:   0.7411, ones:   0.5944, f1_0:   0.2004, f1_1:   0.7085,f1_prd:   0.1420, duration: 10.2218s
+I1208 18:00:05.931767 139845289953024 train.py:278] Epoch  10 Step:      310 Batch Loss:     1.419011 Ones: 0.29 Accuracy: 0.44 Tokens per Sec:    13980, Lr: 0.000300
+2019-12-08 18:00:05,931 Epoch  10 Step:      310 Batch Loss:     1.419011 Ones: 0.29 Accuracy: 0.44 Tokens per Sec:    13980, Lr: 0.000300
+I1208 18:00:06.672056 139845289953024 train.py:278] Epoch  10 Step:      320 Batch Loss:     1.226983 Ones: 0.55 Accuracy: 0.63 Tokens per Sec:    27926, Lr: 0.000300
+2019-12-08 18:00:06,672 Epoch  10 Step:      320 Batch Loss:     1.226983 Ones: 0.55 Accuracy: 0.63 Tokens per Sec:    27926, Lr: 0.000300
+I1208 18:00:07.250639 139845289953024 train.py:278] Epoch  10 Step:      330 Batch Loss:     1.281582 Ones: 0.39 Accuracy: 0.46 Tokens per Sec:    47307, Lr: 0.000300
+2019-12-08 18:00:07,250 Epoch  10 Step:      330 Batch Loss:     1.281582 Ones: 0.39 Accuracy: 0.46 Tokens per Sec:    47307, Lr: 0.000300
+I1208 18:00:07.251234 139845289953024 train.py:376] Epoch  10: total training loss 41.63
+2019-12-08 18:00:07,251 Epoch  10: total training loss 41.63
+I1208 18:00:07.251394 139845289953024 train.py:222] EPOCH 11
+2019-12-08 18:00:07,251 EPOCH 11
+I1208 18:00:07.982205 139845289953024 train.py:278] Epoch  11 Step:      340 Batch Loss:     1.384765 Ones: 0.32 Accuracy: 0.46 Tokens per Sec:    12006, Lr: 0.000300
+2019-12-08 18:00:07,982 Epoch  11 Step:      340 Batch Loss:     1.384765 Ones: 0.32 Accuracy: 0.46 Tokens per Sec:    12006, Lr: 0.000300
+I1208 18:00:08.721558 139845289953024 train.py:278] Epoch  11 Step:      350 Batch Loss:     1.622136 Ones: 0.28 Accuracy: 0.50 Tokens per Sec:    23515, Lr: 0.000300
+2019-12-08 18:00:08,721 Epoch  11 Step:      350 Batch Loss:     1.622136 Ones: 0.28 Accuracy: 0.50 Tokens per Sec:    23515, Lr: 0.000300
+I1208 18:00:09.293584 139845289953024 train.py:278] Epoch  11 Step:      360 Batch Loss:     1.253338 Ones: 0.52 Accuracy: 0.62 Tokens per Sec:    42329, Lr: 0.000300
+2019-12-08 18:00:09,293 Epoch  11 Step:      360 Batch Loss:     1.253338 Ones: 0.52 Accuracy: 0.62 Tokens per Sec:    42329, Lr: 0.000300
+I1208 18:00:09.538818 139845289953024 train.py:376] Epoch  11: total training loss 40.75
+2019-12-08 18:00:09,538 Epoch  11: total training loss 40.75
+I1208 18:00:09.539005 139845289953024 train.py:222] EPOCH 12
+2019-12-08 18:00:09,539 EPOCH 12
+I1208 18:00:09.967699 139845289953024 train.py:278] Epoch  12 Step:      370 Batch Loss:     1.099836 Ones: 0.47 Accuracy: 0.64 Tokens per Sec:    12452, Lr: 0.000300
+2019-12-08 18:00:09,967 Epoch  12 Step:      370 Batch Loss:     1.099836 Ones: 0.47 Accuracy: 0.64 Tokens per Sec:    12452, Lr: 0.000300
+I1208 18:00:10.534285 139845289953024 train.py:278] Epoch  12 Step:      380 Batch Loss:     1.213713 Ones: 0.48 Accuracy: 0.58 Tokens per Sec:    21950, Lr: 0.000300
+2019-12-08 18:00:10,534 Epoch  12 Step:      380 Batch Loss:     1.213713 Ones: 0.48 Accuracy: 0.58 Tokens per Sec:    21950, Lr: 0.000300
+I1208 18:00:11.420920 139845289953024 train.py:278] Epoch  12 Step:      390 Batch Loss:     1.181534 Ones: 0.41 Accuracy: 0.55 Tokens per Sec:    26110, Lr: 0.000300
+2019-12-08 18:00:11,420 Epoch  12 Step:      390 Batch Loss:     1.181534 Ones: 0.41 Accuracy: 0.55 Tokens per Sec:    26110, Lr: 0.000300
+I1208 18:00:11.766135 139845289953024 train.py:376] Epoch  12: total training loss 40.26
+2019-12-08 18:00:11,766 Epoch  12: total training loss 40.26
+I1208 18:00:11.766366 139845289953024 train.py:222] EPOCH 13
+2019-12-08 18:00:11,766 EPOCH 13
+I1208 18:00:12.073101 139845289953024 train.py:278] Epoch  13 Step:      400 Batch Loss:     1.364930 Ones: 0.53 Accuracy: 0.63 Tokens per Sec:    11384, Lr: 0.000300
+2019-12-08 18:00:12,073 Epoch  13 Step:      400 Batch Loss:     1.364930 Ones: 0.53 Accuracy: 0.63 Tokens per Sec:    11384, Lr: 0.000300
+I1208 18:00:14.860577 139845289953024 train.py:323] Hooray! New best validation result [eval_metric]!
+2019-12-08 18:00:14,860 Hooray! New best validation result [eval_metric]!
+I1208 18:00:14.861155 139845289953024 train.py:326] Saving new checkpoint.
+2019-12-08 18:00:14,861 Saving new checkpoint.
+I1208 18:00:22.137192 139845289953024 train.py:361] Validation result at epoch  13, step      400: f1_prod:   0.14, loss:   0.7108, ones:   0.6380, f1_0:   0.1954, f1_1:   0.7381,f1_prd:   0.1443, duration: 10.0633s
+2019-12-08 18:00:22,137 Validation result at epoch  13, step      400: f1_prod:   0.14, loss:   0.7108, ones:   0.6380, f1_0:   0.1954, f1_1:   0.7381,f1_prd:   0.1443, duration: 10.0633s
+I1208 18:00:22.932521 139845289953024 train.py:278] Epoch  13 Step:      410 Batch Loss:     1.265091 Ones: 0.34 Accuracy: 0.48 Tokens per Sec:    16722, Lr: 0.000300
+2019-12-08 18:00:22,932 Epoch  13 Step:      410 Batch Loss:     1.265091 Ones: 0.34 Accuracy: 0.48 Tokens per Sec:    16722, Lr: 0.000300
+I1208 18:00:23.489252 139845289953024 train.py:278] Epoch  13 Step:      420 Batch Loss:     1.230396 Ones: 0.48 Accuracy: 0.58 Tokens per Sec:    35962, Lr: 0.000300
+2019-12-08 18:00:23,489 Epoch  13 Step:      420 Batch Loss:     1.230396 Ones: 0.48 Accuracy: 0.58 Tokens per Sec:    35962, Lr: 0.000300
+I1208 18:00:24.102762 139845289953024 train.py:376] Epoch  13: total training loss 38.94
+2019-12-08 18:00:24,102 Epoch  13: total training loss 38.94
+I1208 18:00:24.103036 139845289953024 train.py:222] EPOCH 14
+2019-12-08 18:00:24,103 EPOCH 14
+I1208 18:00:24.241730 139845289953024 train.py:278] Epoch  14 Step:      430 Batch Loss:     1.257897 Ones: 0.45 Accuracy: 0.59 Tokens per Sec:    12304, Lr: 0.000300
+2019-12-08 18:00:24,241 Epoch  14 Step:      430 Batch Loss:     1.257897 Ones: 0.45 Accuracy: 0.59 Tokens per Sec:    12304, Lr: 0.000300
+I1208 18:00:24.813945 139845289953024 train.py:278] Epoch  14 Step:      440 Batch Loss:     1.010336 Ones: 0.57 Accuracy: 0.69 Tokens per Sec:    14772, Lr: 0.000300
+2019-12-08 18:00:24,813 Epoch  14 Step:      440 Batch Loss:     1.010336 Ones: 0.57 Accuracy: 0.69 Tokens per Sec:    14772, Lr: 0.000300
+I1208 18:00:25.556620 139845289953024 train.py:278] Epoch  14 Step:      450 Batch Loss:     1.365141 Ones: 0.44 Accuracy: 0.57 Tokens per Sec:    23346, Lr: 0.000300
+2019-12-08 18:00:25,556 Epoch  14 Step:      450 Batch Loss:     1.365141 Ones: 0.44 Accuracy: 0.57 Tokens per Sec:    23346, Lr: 0.000300
+I1208 18:00:26.165508 139845289953024 train.py:278] Epoch  14 Step:      460 Batch Loss:     1.699570 Ones: 0.37 Accuracy: 0.58 Tokens per Sec:    40775, Lr: 0.000300
+2019-12-08 18:00:26,165 Epoch  14 Step:      460 Batch Loss:     1.699570 Ones: 0.37 Accuracy: 0.58 Tokens per Sec:    40775, Lr: 0.000300
+I1208 18:00:26.361794 139845289953024 train.py:376] Epoch  14: total training loss 38.80
+2019-12-08 18:00:26,361 Epoch  14: total training loss 38.80
+I1208 18:00:26.362086 139845289953024 train.py:222] EPOCH 15
+2019-12-08 18:00:26,362 EPOCH 15
+I1208 18:00:27.010537 139845289953024 train.py:278] Epoch  15 Step:      470 Batch Loss:     1.120836 Ones: 0.63 Accuracy: 0.73 Tokens per Sec:    12121, Lr: 0.000300
+2019-12-08 18:00:27,010 Epoch  15 Step:      470 Batch Loss:     1.120836 Ones: 0.63 Accuracy: 0.73 Tokens per Sec:    12121, Lr: 0.000300
+I1208 18:00:27.591265 139845289953024 train.py:278] Epoch  15 Step:      480 Batch Loss:     1.092453 Ones: 0.49 Accuracy: 0.63 Tokens per Sec:    25215, Lr: 0.000300
+2019-12-08 18:00:27,591 Epoch  15 Step:      480 Batch Loss:     1.092453 Ones: 0.49 Accuracy: 0.63 Tokens per Sec:    25215, Lr: 0.000300
+I1208 18:00:28.355837 139845289953024 train.py:278] Epoch  15 Step:      490 Batch Loss:     1.143953 Ones: 0.47 Accuracy: 0.58 Tokens per Sec:    31577, Lr: 0.000300
+2019-12-08 18:00:28,355 Epoch  15 Step:      490 Batch Loss:     1.143953 Ones: 0.47 Accuracy: 0.58 Tokens per Sec:    31577, Lr: 0.000300
+I1208 18:00:28.658144 139845289953024 train.py:376] Epoch  15: total training loss 37.85
+2019-12-08 18:00:28,658 Epoch  15: total training loss 37.85
+I1208 18:00:28.658323 139845289953024 train.py:222] EPOCH 16
+2019-12-08 18:00:28,658 EPOCH 16
+I1208 18:00:28.942611 139845289953024 train.py:278] Epoch  16 Step:      500 Batch Loss:     1.047951 Ones: 0.59 Accuracy: 0.71 Tokens per Sec:    11803, Lr: 0.000300
+2019-12-08 18:00:28,942 Epoch  16 Step:      500 Batch Loss:     1.047951 Ones: 0.59 Accuracy: 0.71 Tokens per Sec:    11803, Lr: 0.000300
+I1208 18:00:31.730965 139845289953024 train.py:361] Validation result at epoch  16, step      500: f1_prod:   0.14, loss:   0.7472, ones:   0.6314, f1_0:   0.1958, f1_1:   0.7330,f1_prd:   0.1435, duration: 2.7879s
+2019-12-08 18:00:31,730 Validation result at epoch  16, step      500: f1_prod:   0.14, loss:   0.7472, ones:   0.6314, f1_0:   0.1958, f1_1:   0.7330,f1_prd:   0.1435, duration: 2.7879s
+I1208 18:00:32.398701 139845289953024 train.py:278] Epoch  16 Step:      510 Batch Loss:     1.154017 Ones: 0.57 Accuracy: 0.69 Tokens per Sec:    16245, Lr: 0.000300
+2019-12-08 18:00:32,398 Epoch  16 Step:      510 Batch Loss:     1.154017 Ones: 0.57 Accuracy: 0.69 Tokens per Sec:    16245, Lr: 0.000300
+I1208 18:00:33.151500 139845289953024 train.py:278] Epoch  16 Step:      520 Batch Loss:     1.236723 Ones: 0.39 Accuracy: 0.49 Tokens per Sec:    27002, Lr: 0.000300
+2019-12-08 18:00:33,151 Epoch  16 Step:      520 Batch Loss:     1.236723 Ones: 0.39 Accuracy: 0.49 Tokens per Sec:    27002, Lr: 0.000300
+I1208 18:00:33.725291 139845289953024 train.py:376] Epoch  16: total training loss 36.99
+2019-12-08 18:00:33,725 Epoch  16: total training loss 36.99
+I1208 18:00:33.725479 139845289953024 train.py:222] EPOCH 17
+2019-12-08 18:00:33,725 EPOCH 17
+I1208 18:00:33.915141 139845289953024 train.py:278] Epoch  17 Step:      530 Batch Loss:     1.346853 Ones: 0.40 Accuracy: 0.54 Tokens per Sec:    11879, Lr: 0.000300
+2019-12-08 18:00:33,915 Epoch  17 Step:      530 Batch Loss:     1.346853 Ones: 0.40 Accuracy: 0.54 Tokens per Sec:    11879, Lr: 0.000300
+I1208 18:00:34.493513 139845289953024 train.py:278] Epoch  17 Step:      540 Batch Loss:     1.063944 Ones: 0.53 Accuracy: 0.65 Tokens per Sec:    15644, Lr: 0.000300
+2019-12-08 18:00:34,493 Epoch  17 Step:      540 Batch Loss:     1.063944 Ones: 0.53 Accuracy: 0.65 Tokens per Sec:    15644, Lr: 0.000300
+I1208 18:00:35.212435 139845289953024 train.py:278] Epoch  17 Step:      550 Batch Loss:     0.663522 Ones: 0.58 Accuracy: 0.72 Tokens per Sec:    24722, Lr: 0.000300
+2019-12-08 18:00:35,212 Epoch  17 Step:      550 Batch Loss:     0.663522 Ones: 0.58 Accuracy: 0.72 Tokens per Sec:    24722, Lr: 0.000300
+I1208 18:00:35.895043 139845289953024 train.py:278] Epoch  17 Step:      560 Batch Loss:     0.725509 Ones: 0.68 Accuracy: 0.75 Tokens per Sec:    38042, Lr: 0.000300
+2019-12-08 18:00:35,895 Epoch  17 Step:      560 Batch Loss:     0.725509 Ones: 0.68 Accuracy: 0.75 Tokens per Sec:    38042, Lr: 0.000300
+I1208 18:00:36.000647 139845289953024 train.py:376] Epoch  17: total training loss 35.50
+2019-12-08 18:00:36,000 Epoch  17: total training loss 35.50
+I1208 18:00:36.000864 139845289953024 train.py:222] EPOCH 18
+2019-12-08 18:00:36,000 EPOCH 18
+I1208 18:00:36.639521 139845289953024 train.py:278] Epoch  18 Step:      570 Batch Loss:     1.069171 Ones: 0.51 Accuracy: 0.63 Tokens per Sec:    12561, Lr: 0.000300
+2019-12-08 18:00:36,639 Epoch  18 Step:      570 Batch Loss:     1.069171 Ones: 0.51 Accuracy: 0.63 Tokens per Sec:    12561, Lr: 0.000300
+I1208 18:00:37.300072 139845289953024 train.py:278] Epoch  18 Step:      580 Batch Loss:     0.814972 Ones: 0.59 Accuracy: 0.70 Tokens per Sec:    24113, Lr: 0.000300
+2019-12-08 18:00:37,300 Epoch  18 Step:      580 Batch Loss:     0.814972 Ones: 0.59 Accuracy: 0.70 Tokens per Sec:    24113, Lr: 0.000300
+I1208 18:00:38.005951 139845289953024 train.py:278] Epoch  18 Step:      590 Batch Loss:     0.642289 Ones: 0.71 Accuracy: 0.82 Tokens per Sec:    34102, Lr: 0.000300
+2019-12-08 18:00:38,005 Epoch  18 Step:      590 Batch Loss:     0.642289 Ones: 0.71 Accuracy: 0.82 Tokens per Sec:    34102, Lr: 0.000300
+I1208 18:00:38.281566 139845289953024 train.py:376] Epoch  18: total training loss 34.74
+2019-12-08 18:00:38,281 Epoch  18: total training loss 34.74
+I1208 18:00:38.281826 139845289953024 train.py:222] EPOCH 19
+2019-12-08 18:00:38,281 EPOCH 19
+I1208 18:00:38.710554 139845289953024 train.py:278] Epoch  19 Step:      600 Batch Loss:     0.948654 Ones: 0.54 Accuracy: 0.70 Tokens per Sec:    12345, Lr: 0.000300
+2019-12-08 18:00:38,710 Epoch  19 Step:      600 Batch Loss:     0.948654 Ones: 0.54 Accuracy: 0.70 Tokens per Sec:    12345, Lr: 0.000300
+I1208 18:00:41.501084 139845289953024 train.py:323] Hooray! New best validation result [eval_metric]!
+2019-12-08 18:00:41,501 Hooray! New best validation result [eval_metric]!
+I1208 18:00:41.501722 139845289953024 train.py:326] Saving new checkpoint.
+2019-12-08 18:00:41,501 Saving new checkpoint.
+I1208 18:00:48.764595 139845289953024 train.py:361] Validation result at epoch  19, step      600: f1_prod:   0.15, loss:   0.7788, ones:   0.6159, f1_0:   0.2030, f1_1:   0.7198,f1_prd:   0.1462, duration: 10.0535s
+2019-12-08 18:00:48,764 Validation result at epoch  19, step      600: f1_prod:   0.15, loss:   0.7788, ones:   0.6159, f1_0:   0.2030, f1_1:   0.7198,f1_prd:   0.1462, duration: 10.0535s
+I1208 18:00:49.528291 139845289953024 train.py:278] Epoch  19 Step:      610 Batch Loss:     1.133270 Ones: 0.42 Accuracy: 0.57 Tokens per Sec:    18654, Lr: 0.000300
+2019-12-08 18:00:49,528 Epoch  19 Step:      610 Batch Loss:     1.133270 Ones: 0.42 Accuracy: 0.57 Tokens per Sec:    18654, Lr: 0.000300
+I1208 18:00:50.113750 139845289953024 train.py:278] Epoch  19 Step:      620 Batch Loss:     1.100844 Ones: 0.55 Accuracy: 0.69 Tokens per Sec:    36491, Lr: 0.000300
+2019-12-08 18:00:50,113 Epoch  19 Step:      620 Batch Loss:     1.100844 Ones: 0.55 Accuracy: 0.69 Tokens per Sec:    36491, Lr: 0.000300
+I1208 18:00:50.623577 139845289953024 train.py:376] Epoch  19: total training loss 33.65
+2019-12-08 18:00:50,623 Epoch  19: total training loss 33.65
+I1208 18:00:50.623841 139845289953024 train.py:222] EPOCH 20
+2019-12-08 18:00:50,623 EPOCH 20
+I1208 18:00:50.761475 139845289953024 train.py:278] Epoch  20 Step:      630 Batch Loss:     0.809811 Ones: 0.55 Accuracy: 0.73 Tokens per Sec:    10523, Lr: 0.000300
+2019-12-08 18:00:50,761 Epoch  20 Step:      630 Batch Loss:     0.809811 Ones: 0.55 Accuracy: 0.73 Tokens per Sec:    10523, Lr: 0.000300
+I1208 18:00:51.580151 139845289953024 train.py:278] Epoch  20 Step:      640 Batch Loss:     1.494352 Ones: 0.46 Accuracy: 0.66 Tokens per Sec:    13462, Lr: 0.000300
+2019-12-08 18:00:51,580 Epoch  20 Step:      640 Batch Loss:     1.494352 Ones: 0.46 Accuracy: 0.66 Tokens per Sec:    13462, Lr: 0.000300
+I1208 18:00:52.234269 139845289953024 train.py:278] Epoch  20 Step:      650 Batch Loss:     0.914598 Ones: 0.60 Accuracy: 0.70 Tokens per Sec:    29145, Lr: 0.000300
+2019-12-08 18:00:52,234 Epoch  20 Step:      650 Batch Loss:     0.914598 Ones: 0.60 Accuracy: 0.70 Tokens per Sec:    29145, Lr: 0.000300
+I1208 18:00:52.887667 139845289953024 train.py:278] Epoch  20 Step:      660 Batch Loss:     0.683214 Ones: 0.68 Accuracy: 0.82 Tokens per Sec:    41880, Lr: 0.000300
+2019-12-08 18:00:52,887 Epoch  20 Step:      660 Batch Loss:     0.683214 Ones: 0.68 Accuracy: 0.82 Tokens per Sec:    41880, Lr: 0.000300
+I1208 18:00:52.888072 139845289953024 train.py:376] Epoch  20: total training loss 33.04
+2019-12-08 18:00:52,888 Epoch  20: total training loss 33.04
+I1208 18:00:52.888200 139845289953024 train.py:222] EPOCH 21
+2019-12-08 18:00:52,888 EPOCH 21
+I1208 18:00:53.602705 139845289953024 train.py:278] Epoch  21 Step:      670 Batch Loss:     1.063262 Ones: 0.56 Accuracy: 0.66 Tokens per Sec:    12018, Lr: 0.000300
+2019-12-08 18:00:53,602 Epoch  21 Step:      670 Batch Loss:     1.063262 Ones: 0.56 Accuracy: 0.66 Tokens per Sec:    12018, Lr: 0.000300
+I1208 18:00:54.291346 139845289953024 train.py:278] Epoch  21 Step:      680 Batch Loss:     1.135504 Ones: 0.56 Accuracy: 0.65 Tokens per Sec:    24897, Lr: 0.000300
+2019-12-08 18:00:54,291 Epoch  21 Step:      680 Batch Loss:     1.135504 Ones: 0.56 Accuracy: 0.65 Tokens per Sec:    24897, Lr: 0.000300
+I1208 18:00:55.003806 139845289953024 train.py:278] Epoch  21 Step:      690 Batch Loss:     1.113014 Ones: 0.55 Accuracy: 0.62 Tokens per Sec:    35991, Lr: 0.000300
+2019-12-08 18:00:55,003 Epoch  21 Step:      690 Batch Loss:     1.113014 Ones: 0.55 Accuracy: 0.62 Tokens per Sec:    35991, Lr: 0.000300
+I1208 18:00:55.162576 139845289953024 train.py:376] Epoch  21: total training loss 32.73
+2019-12-08 18:00:55,162 Epoch  21: total training loss 32.73
+I1208 18:00:55.162827 139845289953024 train.py:222] EPOCH 22
+2019-12-08 18:00:55,162 EPOCH 22
+I1208 18:00:55.703634 139845289953024 train.py:278] Epoch  22 Step:      700 Batch Loss:     1.038467 Ones: 0.53 Accuracy: 0.69 Tokens per Sec:    12172, Lr: 0.000300
+2019-12-08 18:00:55,703 Epoch  22 Step:      700 Batch Loss:     1.038467 Ones: 0.53 Accuracy: 0.69 Tokens per Sec:    12172, Lr: 0.000300
+I1208 18:00:58.490545 139845289953024 train.py:361] Validation result at epoch  22, step      700: f1_prod:   0.15, loss:   0.7770, ones:   0.6352, f1_0:   0.1993, f1_1:   0.7327,f1_prd:   0.1460, duration: 2.7862s
+2019-12-08 18:00:58,490 Validation result at epoch  22, step      700: f1_prod:   0.15, loss:   0.7770, ones:   0.6352, f1_0:   0.1993, f1_1:   0.7327,f1_prd:   0.1460, duration: 2.7862s
+I1208 18:00:59.259646 139845289953024 train.py:278] Epoch  22 Step:      710 Batch Loss:     1.138683 Ones: 0.47 Accuracy: 0.60 Tokens per Sec:    20899, Lr: 0.000300
+2019-12-08 18:00:59,259 Epoch  22 Step:      710 Batch Loss:     1.138683 Ones: 0.47 Accuracy: 0.60 Tokens per Sec:    20899, Lr: 0.000300
+I1208 18:00:59.832309 139845289953024 train.py:278] Epoch  22 Step:      720 Batch Loss:     0.761619 Ones: 0.68 Accuracy: 0.80 Tokens per Sec:    39551, Lr: 0.000300
+2019-12-08 18:00:59,832 Epoch  22 Step:      720 Batch Loss:     0.761619 Ones: 0.68 Accuracy: 0.80 Tokens per Sec:    39551, Lr: 0.000300
+I1208 18:01:00.253481 139845289953024 train.py:376] Epoch  22: total training loss 31.66
+2019-12-08 18:01:00,253 Epoch  22: total training loss 31.66
+I1208 18:01:00.253817 139845289953024 train.py:222] EPOCH 23
+2019-12-08 18:01:00,253 EPOCH 23
+I1208 18:01:00.569588 139845289953024 train.py:278] Epoch  23 Step:      730 Batch Loss:     1.447280 Ones: 0.35 Accuracy: 0.59 Tokens per Sec:    11810, Lr: 0.000300
+2019-12-08 18:01:00,569 Epoch  23 Step:      730 Batch Loss:     1.447280 Ones: 0.35 Accuracy: 0.59 Tokens per Sec:    11810, Lr: 0.000300
+I1208 18:01:01.216534 139845289953024 train.py:278] Epoch  23 Step:      740 Batch Loss:     1.044236 Ones: 0.48 Accuracy: 0.63 Tokens per Sec:    17825, Lr: 0.000300
+2019-12-08 18:01:01,216 Epoch  23 Step:      740 Batch Loss:     1.044236 Ones: 0.48 Accuracy: 0.63 Tokens per Sec:    17825, Lr: 0.000300
+I1208 18:01:01.889103 139845289953024 train.py:278] Epoch  23 Step:      750 Batch Loss:     1.161487 Ones: 0.51 Accuracy: 0.66 Tokens per Sec:    28975, Lr: 0.000300
+2019-12-08 18:01:01,889 Epoch  23 Step:      750 Batch Loss:     1.161487 Ones: 0.51 Accuracy: 0.66 Tokens per Sec:    28975, Lr: 0.000300
+I1208 18:01:02.521892 139845289953024 train.py:376] Epoch  23: total training loss 30.17
+2019-12-08 18:01:02,521 Epoch  23: total training loss 30.17
+I1208 18:01:02.522100 139845289953024 train.py:222] EPOCH 24
+2019-12-08 18:01:02,522 EPOCH 24
+I1208 18:01:02.626881 139845289953024 train.py:278] Epoch  24 Step:      760 Batch Loss:     1.143222 Ones: 0.58 Accuracy: 0.68 Tokens per Sec:    12508, Lr: 0.000300
+2019-12-08 18:01:02,626 Epoch  24 Step:      760 Batch Loss:     1.143222 Ones: 0.58 Accuracy: 0.68 Tokens per Sec:    12508, Lr: 0.000300
+I1208 18:01:03.381915 139845289953024 train.py:278] Epoch  24 Step:      770 Batch Loss:     0.875382 Ones: 0.73 Accuracy: 0.80 Tokens per Sec:    13129, Lr: 0.000300
+2019-12-08 18:01:03,381 Epoch  24 Step:      770 Batch Loss:     0.875382 Ones: 0.73 Accuracy: 0.80 Tokens per Sec:    13129, Lr: 0.000300
+I1208 18:01:04.020287 139845289953024 train.py:278] Epoch  24 Step:      780 Batch Loss:     1.248851 Ones: 0.43 Accuracy: 0.58 Tokens per Sec:    27304, Lr: 0.000300
+2019-12-08 18:01:04,020 Epoch  24 Step:      780 Batch Loss:     1.248851 Ones: 0.43 Accuracy: 0.58 Tokens per Sec:    27304, Lr: 0.000300
+I1208 18:01:04.628485 139845289953024 train.py:278] Epoch  24 Step:      790 Batch Loss:     0.777685 Ones: 0.62 Accuracy: 0.75 Tokens per Sec:    41644, Lr: 0.000300
+2019-12-08 18:01:04,628 Epoch  24 Step:      790 Batch Loss:     0.777685 Ones: 0.62 Accuracy: 0.75 Tokens per Sec:    41644, Lr: 0.000300
+I1208 18:01:04.790533 139845289953024 train.py:376] Epoch  24: total training loss 30.45
+2019-12-08 18:01:04,790 Epoch  24: total training loss 30.45
+I1208 18:01:04.790710 139845289953024 train.py:222] EPOCH 25
+2019-12-08 18:01:04,790 EPOCH 25
+I1208 18:01:05.466792 139845289953024 train.py:278] Epoch  25 Step:      800 Batch Loss:     0.752716 Ones: 0.67 Accuracy: 0.77 Tokens per Sec:    12024, Lr: 0.000300
+2019-12-08 18:01:05,466 Epoch  25 Step:      800 Batch Loss:     0.752716 Ones: 0.67 Accuracy: 0.77 Tokens per Sec:    12024, Lr: 0.000300
+I1208 18:01:08.257421 139845289953024 train.py:323] Hooray! New best validation result [eval_metric]!
+2019-12-08 18:01:08,257 Hooray! New best validation result [eval_metric]!
+I1208 18:01:08.257879 139845289953024 train.py:326] Saving new checkpoint.
+2019-12-08 18:01:08,257 Saving new checkpoint.
+I1208 18:01:15.611357 139845289953024 train.py:361] Validation result at epoch  25, step      800: f1_prod:   0.15, loss:   0.8293, ones:   0.6112, f1_0:   0.2100, f1_1:   0.7252,f1_prd:   0.1523, duration: 10.1438s
+2019-12-08 18:01:15,611 Validation result at epoch  25, step      800: f1_prod:   0.15, loss:   0.8293, ones:   0.6112, f1_0:   0.2100, f1_1:   0.7252,f1_prd:   0.1523, duration: 10.1438s
+I1208 18:01:16.319329 139845289953024 train.py:278] Epoch  25 Step:      810 Batch Loss:     0.781200 Ones: 0.65 Accuracy: 0.80 Tokens per Sec:    22972, Lr: 0.000300
+2019-12-08 18:01:16,319 Epoch  25 Step:      810 Batch Loss:     0.781200 Ones: 0.65 Accuracy: 0.80 Tokens per Sec:    22972, Lr: 0.000300
+I1208 18:01:16.991809 139845289953024 train.py:278] Epoch  25 Step:      820 Batch Loss:     0.982604 Ones: 0.73 Accuracy: 0.82 Tokens per Sec:    36512, Lr: 0.000300
+2019-12-08 18:01:16,991 Epoch  25 Step:      820 Batch Loss:     0.982604 Ones: 0.73 Accuracy: 0.82 Tokens per Sec:    36512, Lr: 0.000300
+I1208 18:01:17.253933 139845289953024 train.py:376] Epoch  25: total training loss 30.04
+2019-12-08 18:01:17,253 Epoch  25: total training loss 30.04
+I1208 18:01:17.254250 139845289953024 train.py:222] EPOCH 26
+2019-12-08 18:01:17,254 EPOCH 26
+I1208 18:01:17.659376 139845289953024 train.py:278] Epoch  26 Step:      830 Batch Loss:     0.706472 Ones: 0.65 Accuracy: 0.86 Tokens per Sec:    11459, Lr: 0.000300
+2019-12-08 18:01:17,659 Epoch  26 Step:      830 Batch Loss:     0.706472 Ones: 0.65 Accuracy: 0.86 Tokens per Sec:    11459, Lr: 0.000300
+I1208 18:01:18.193713 139845289953024 train.py:278] Epoch  26 Step:      840 Batch Loss:     0.808083 Ones: 0.63 Accuracy: 0.75 Tokens per Sec:    20758, Lr: 0.000300
+2019-12-08 18:01:18,193 Epoch  26 Step:      840 Batch Loss:     0.808083 Ones: 0.63 Accuracy: 0.75 Tokens per Sec:    20758, Lr: 0.000300
+I1208 18:01:18.911466 139845289953024 train.py:278] Epoch  26 Step:      850 Batch Loss:     0.679567 Ones: 0.62 Accuracy: 0.75 Tokens per Sec:    27795, Lr: 0.000300
+2019-12-08 18:01:18,911 Epoch  26 Step:      850 Batch Loss:     0.679567 Ones: 0.62 Accuracy: 0.75 Tokens per Sec:    27795, Lr: 0.000300
+I1208 18:01:19.541013 139845289953024 train.py:376] Epoch  26: total training loss 29.42
+2019-12-08 18:01:19,541 Epoch  26: total training loss 29.42
+I1208 18:01:19.541304 139845289953024 train.py:222] EPOCH 27
+2019-12-08 18:01:19,541 EPOCH 27
+I1208 18:01:19.728126 139845289953024 train.py:278] Epoch  27 Step:      860 Batch Loss:     0.790726 Ones: 0.56 Accuracy: 0.71 Tokens per Sec:    11287, Lr: 0.000300
+2019-12-08 18:01:19,728 Epoch  27 Step:      860 Batch Loss:     0.790726 Ones: 0.56 Accuracy: 0.71 Tokens per Sec:    11287, Lr: 0.000300
+I1208 18:01:20.497617 139845289953024 train.py:278] Epoch  27 Step:      870 Batch Loss:     0.978289 Ones: 0.57 Accuracy: 0.74 Tokens per Sec:    15200, Lr: 0.000300
+2019-12-08 18:01:20,497 Epoch  27 Step:      870 Batch Loss:     0.978289 Ones: 0.57 Accuracy: 0.74 Tokens per Sec:    15200, Lr: 0.000300
+I1208 18:01:21.153045 139845289953024 train.py:278] Epoch  27 Step:      880 Batch Loss:     0.612432 Ones: 0.71 Accuracy: 0.87 Tokens per Sec:    29137, Lr: 0.000300
+2019-12-08 18:01:21,153 Epoch  27 Step:      880 Batch Loss:     0.612432 Ones: 0.71 Accuracy: 0.87 Tokens per Sec:    29137, Lr: 0.000300
+I1208 18:01:21.780309 139845289953024 train.py:278] Epoch  27 Step:      890 Batch Loss:     0.968481 Ones: 0.63 Accuracy: 0.76 Tokens per Sec:    43020, Lr: 0.000300
+2019-12-08 18:01:21,780 Epoch  27 Step:      890 Batch Loss:     0.968481 Ones: 0.63 Accuracy: 0.76 Tokens per Sec:    43020, Lr: 0.000300
+I1208 18:01:21.817772 139845289953024 train.py:376] Epoch  27: total training loss 28.27
+2019-12-08 18:01:21,817 Epoch  27: total training loss 28.27
+I1208 18:01:21.817945 139845289953024 train.py:222] EPOCH 28
+2019-12-08 18:01:21,817 EPOCH 28
+I1208 18:01:22.316881 139845289953024 train.py:278] Epoch  28 Step:      900 Batch Loss:     0.614991 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    11742, Lr: 0.000300
+2019-12-08 18:01:22,316 Epoch  28 Step:      900 Batch Loss:     0.614991 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    11742, Lr: 0.000300
+I1208 18:01:25.115947 139845289953024 train.py:361] Validation result at epoch  28, step      900: f1_prod:   0.15, loss:   0.8405, ones:   0.6294, f1_0:   0.2074, f1_1:   0.7325,f1_prd:   0.1519, duration: 2.7984s
+2019-12-08 18:01:25,115 Validation result at epoch  28, step      900: f1_prod:   0.15, loss:   0.8405, ones:   0.6294, f1_0:   0.2074, f1_1:   0.7325,f1_prd:   0.1519, duration: 2.7984s
+I1208 18:01:25.888557 139845289953024 train.py:278] Epoch  28 Step:      910 Batch Loss:     0.974254 Ones: 0.65 Accuracy: 0.74 Tokens per Sec:    19751, Lr: 0.000300
+2019-12-08 18:01:25,888 Epoch  28 Step:      910 Batch Loss:     0.974254 Ones: 0.65 Accuracy: 0.74 Tokens per Sec:    19751, Lr: 0.000300
+I1208 18:01:26.587231 139845289953024 train.py:278] Epoch  28 Step:      920 Batch Loss:     1.223762 Ones: 0.63 Accuracy: 0.72 Tokens per Sec:    33908, Lr: 0.000300
+2019-12-08 18:01:26,587 Epoch  28 Step:      920 Batch Loss:     1.223762 Ones: 0.63 Accuracy: 0.72 Tokens per Sec:    33908, Lr: 0.000300
+I1208 18:01:26.884828 139845289953024 train.py:376] Epoch  28: total training loss 28.11
+2019-12-08 18:01:26,884 Epoch  28: total training loss 28.11
+I1208 18:01:26.885113 139845289953024 train.py:222] EPOCH 29
+2019-12-08 18:01:26,885 EPOCH 29
+I1208 18:01:27.374333 139845289953024 train.py:278] Epoch  29 Step:      930 Batch Loss:     1.200094 Ones: 0.44 Accuracy: 0.59 Tokens per Sec:    11825, Lr: 0.000300
+2019-12-08 18:01:27,374 Epoch  29 Step:      930 Batch Loss:     1.200094 Ones: 0.44 Accuracy: 0.59 Tokens per Sec:    11825, Lr: 0.000300
+I1208 18:01:27.975799 139845289953024 train.py:278] Epoch  29 Step:      940 Batch Loss:     1.043011 Ones: 0.47 Accuracy: 0.59 Tokens per Sec:    21839, Lr: 0.000300
+2019-12-08 18:01:27,975 Epoch  29 Step:      940 Batch Loss:     1.043011 Ones: 0.47 Accuracy: 0.59 Tokens per Sec:    21839, Lr: 0.000300
+I1208 18:01:28.754315 139845289953024 train.py:278] Epoch  29 Step:      950 Batch Loss:     1.025979 Ones: 0.58 Accuracy: 0.67 Tokens per Sec:    29036, Lr: 0.000300
+2019-12-08 18:01:28,754 Epoch  29 Step:      950 Batch Loss:     1.025979 Ones: 0.58 Accuracy: 0.67 Tokens per Sec:    29036, Lr: 0.000300
+I1208 18:01:29.156534 139845289953024 train.py:376] Epoch  29: total training loss 27.75
+2019-12-08 18:01:29,156 Epoch  29: total training loss 27.75
+I1208 18:01:29.156778 139845289953024 train.py:222] EPOCH 30
+2019-12-08 18:01:29,156 EPOCH 30
+I1208 18:01:29.282420 139845289953024 train.py:278] Epoch  30 Step:      960 Batch Loss:     0.269951 Ones: 0.81 Accuracy: 0.93 Tokens per Sec:     9434, Lr: 0.000300
+2019-12-08 18:01:29,282 Epoch  30 Step:      960 Batch Loss:     0.269951 Ones: 0.81 Accuracy: 0.93 Tokens per Sec:     9434, Lr: 0.000300
+I1208 18:01:30.036496 139845289953024 train.py:278] Epoch  30 Step:      970 Batch Loss:     0.977474 Ones: 0.58 Accuracy: 0.69 Tokens per Sec:    14057, Lr: 0.000300
+2019-12-08 18:01:30,036 Epoch  30 Step:      970 Batch Loss:     0.977474 Ones: 0.58 Accuracy: 0.69 Tokens per Sec:    14057, Lr: 0.000300
+I1208 18:01:30.776714 139845289953024 train.py:278] Epoch  30 Step:      980 Batch Loss:     1.170751 Ones: 0.44 Accuracy: 0.61 Tokens per Sec:    26663, Lr: 0.000300
+2019-12-08 18:01:30,776 Epoch  30 Step:      980 Batch Loss:     1.170751 Ones: 0.44 Accuracy: 0.61 Tokens per Sec:    26663, Lr: 0.000300
+I1208 18:01:31.408990 139845289953024 train.py:278] Epoch  30 Step:      990 Batch Loss:     0.778099 Ones: 0.59 Accuracy: 0.77 Tokens per Sec:    43286, Lr: 0.000300
+2019-12-08 18:01:31,408 Epoch  30 Step:      990 Batch Loss:     0.778099 Ones: 0.59 Accuracy: 0.77 Tokens per Sec:    43286, Lr: 0.000300
+I1208 18:01:31.409827 139845289953024 train.py:376] Epoch  30: total training loss 27.13
+2019-12-08 18:01:31,409 Epoch  30: total training loss 27.13
+I1208 18:01:31.410033 139845289953024 train.py:222] EPOCH 31
+2019-12-08 18:01:31,410 EPOCH 31
+I1208 18:01:32.155800 139845289953024 train.py:278] Epoch  31 Step:     1000 Batch Loss:     1.199344 Ones: 0.46 Accuracy: 0.60 Tokens per Sec:    11522, Lr: 0.000300
+2019-12-08 18:01:32,155 Epoch  31 Step:     1000 Batch Loss:     1.199344 Ones: 0.46 Accuracy: 0.60 Tokens per Sec:    11522, Lr: 0.000300
+I1208 18:01:34.966290 139845289953024 train.py:361] Validation result at epoch  31, step     1000: f1_prod:   0.15, loss:   0.7358, ones:   0.7019, f1_0:   0.1916, f1_1:   0.7762,f1_prd:   0.1487, duration: 2.8094s
+2019-12-08 18:01:34,966 Validation result at epoch  31, step     1000: f1_prod:   0.15, loss:   0.7358, ones:   0.7019, f1_0:   0.1916, f1_1:   0.7762,f1_prd:   0.1487, duration: 2.8094s
+I1208 18:01:35.638283 139845289953024 train.py:278] Epoch  31 Step:     1010 Batch Loss:     0.498657 Ones: 0.70 Accuracy: 0.89 Tokens per Sec:    24743, Lr: 0.000300
+2019-12-08 18:01:35,638 Epoch  31 Step:     1010 Batch Loss:     0.498657 Ones: 0.70 Accuracy: 0.89 Tokens per Sec:    24743, Lr: 0.000300
+I1208 18:01:36.382076 139845289953024 train.py:278] Epoch  31 Step:     1020 Batch Loss:     1.204168 Ones: 0.55 Accuracy: 0.67 Tokens per Sec:    34221, Lr: 0.000300
+2019-12-08 18:01:36,382 Epoch  31 Step:     1020 Batch Loss:     1.204168 Ones: 0.55 Accuracy: 0.67 Tokens per Sec:    34221, Lr: 0.000300
+I1208 18:01:36.546583 139845289953024 train.py:376] Epoch  31: total training loss 26.29
+2019-12-08 18:01:36,546 Epoch  31: total training loss 26.29
+I1208 18:01:36.546860 139845289953024 train.py:222] EPOCH 32
+2019-12-08 18:01:36,546 EPOCH 32
+I1208 18:01:36.974781 139845289953024 train.py:278] Epoch  32 Step:     1030 Batch Loss:     0.626270 Ones: 0.72 Accuracy: 0.84 Tokens per Sec:    11661, Lr: 0.000300
+2019-12-08 18:01:36,974 Epoch  32 Step:     1030 Batch Loss:     0.626270 Ones: 0.72 Accuracy: 0.84 Tokens per Sec:    11661, Lr: 0.000300
+I1208 18:01:37.609671 139845289953024 train.py:278] Epoch  32 Step:     1040 Batch Loss:     0.620011 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    19820, Lr: 0.000300
+2019-12-08 18:01:37,609 Epoch  32 Step:     1040 Batch Loss:     0.620011 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    19820, Lr: 0.000300
+I1208 18:01:38.296641 139845289953024 train.py:278] Epoch  32 Step:     1050 Batch Loss:     0.589917 Ones: 0.67 Accuracy: 0.86 Tokens per Sec:    30580, Lr: 0.000300
+2019-12-08 18:01:38,296 Epoch  32 Step:     1050 Batch Loss:     0.589917 Ones: 0.67 Accuracy: 0.86 Tokens per Sec:    30580, Lr: 0.000300
+I1208 18:01:38.832898 139845289953024 train.py:376] Epoch  32: total training loss 25.77
+2019-12-08 18:01:38,832 Epoch  32: total training loss 25.77
+I1208 18:01:38.833592 139845289953024 train.py:222] EPOCH 33
+2019-12-08 18:01:38,833 EPOCH 33
+I1208 18:01:39.072574 139845289953024 train.py:278] Epoch  33 Step:     1060 Batch Loss:     0.732031 Ones: 0.71 Accuracy: 0.82 Tokens per Sec:    11012, Lr: 0.000300
+2019-12-08 18:01:39,072 Epoch  33 Step:     1060 Batch Loss:     0.732031 Ones: 0.71 Accuracy: 0.82 Tokens per Sec:    11012, Lr: 0.000300
+I1208 18:01:39.825223 139845289953024 train.py:278] Epoch  33 Step:     1070 Batch Loss:     0.465497 Ones: 0.76 Accuracy: 0.87 Tokens per Sec:    15528, Lr: 0.000300
+2019-12-08 18:01:39,825 Epoch  33 Step:     1070 Batch Loss:     0.465497 Ones: 0.76 Accuracy: 0.87 Tokens per Sec:    15528, Lr: 0.000300
+I1208 18:01:40.375194 139845289953024 train.py:278] Epoch  33 Step:     1080 Batch Loss:     0.365349 Ones: 0.75 Accuracy: 0.84 Tokens per Sec:    33286, Lr: 0.000300
+2019-12-08 18:01:40,375 Epoch  33 Step:     1080 Batch Loss:     0.365349 Ones: 0.75 Accuracy: 0.84 Tokens per Sec:    33286, Lr: 0.000300
+I1208 18:01:41.123879 139845289953024 train.py:376] Epoch  33: total training loss 25.52
+2019-12-08 18:01:41,123 Epoch  33: total training loss 25.52
+I1208 18:01:41.124061 139845289953024 train.py:222] EPOCH 34
+2019-12-08 18:01:41,124 EPOCH 34
+I1208 18:01:41.213698 139845289953024 train.py:278] Epoch  34 Step:     1090 Batch Loss:     0.914322 Ones: 0.56 Accuracy: 0.68 Tokens per Sec:    12962, Lr: 0.000300
+2019-12-08 18:01:41,213 Epoch  34 Step:     1090 Batch Loss:     0.914322 Ones: 0.56 Accuracy: 0.68 Tokens per Sec:    12962, Lr: 0.000300
+I1208 18:01:42.008107 139845289953024 train.py:278] Epoch  34 Step:     1100 Batch Loss:     0.784249 Ones: 0.62 Accuracy: 0.76 Tokens per Sec:    13833, Lr: 0.000300
+2019-12-08 18:01:42,008 Epoch  34 Step:     1100 Batch Loss:     0.784249 Ones: 0.62 Accuracy: 0.76 Tokens per Sec:    13833, Lr: 0.000300
+I1208 18:01:44.809196 139845289953024 train.py:361] Validation result at epoch  34, step     1100: f1_prod:   0.15, loss:   0.8328, ones:   0.6457, f1_0:   0.2004, f1_1:   0.7477,f1_prd:   0.1499, duration: 2.8006s
+2019-12-08 18:01:44,809 Validation result at epoch  34, step     1100: f1_prod:   0.15, loss:   0.8328, ones:   0.6457, f1_0:   0.2004, f1_1:   0.7477,f1_prd:   0.1499, duration: 2.8006s
+I1208 18:01:45.309528 139845289953024 train.py:278] Epoch  34 Step:     1110 Batch Loss:     0.378894 Ones: 0.78 Accuracy: 0.90 Tokens per Sec:    33485, Lr: 0.000300
+2019-12-08 18:01:45,309 Epoch  34 Step:     1110 Batch Loss:     0.378894 Ones: 0.78 Accuracy: 0.90 Tokens per Sec:    33485, Lr: 0.000300
+I1208 18:01:46.094361 139845289953024 train.py:278] Epoch  34 Step:     1120 Batch Loss:     0.850293 Ones: 0.64 Accuracy: 0.78 Tokens per Sec:    33245, Lr: 0.000300
+2019-12-08 18:01:46,094 Epoch  34 Step:     1120 Batch Loss:     0.850293 Ones: 0.64 Accuracy: 0.78 Tokens per Sec:    33245, Lr: 0.000300
+I1208 18:01:46.205666 139845289953024 train.py:376] Epoch  34: total training loss 25.26
+2019-12-08 18:01:46,205 Epoch  34: total training loss 25.26
+I1208 18:01:46.205945 139845289953024 train.py:222] EPOCH 35
+2019-12-08 18:01:46,205 EPOCH 35
+I1208 18:01:46.630566 139845289953024 train.py:278] Epoch  35 Step:     1130 Batch Loss:     0.569908 Ones: 0.72 Accuracy: 0.89 Tokens per Sec:    10772, Lr: 0.000300
+2019-12-08 18:01:46,630 Epoch  35 Step:     1130 Batch Loss:     0.569908 Ones: 0.72 Accuracy: 0.89 Tokens per Sec:    10772, Lr: 0.000300
+I1208 18:01:47.259731 139845289953024 train.py:278] Epoch  35 Step:     1140 Batch Loss:     0.794110 Ones: 0.69 Accuracy: 0.82 Tokens per Sec:    19085, Lr: 0.000300
+2019-12-08 18:01:47,259 Epoch  35 Step:     1140 Batch Loss:     0.794110 Ones: 0.69 Accuracy: 0.82 Tokens per Sec:    19085, Lr: 0.000300
+I1208 18:01:48.144019 139845289953024 train.py:278] Epoch  35 Step:     1150 Batch Loss:     0.953728 Ones: 0.56 Accuracy: 0.69 Tokens per Sec:    25189, Lr: 0.000300
+2019-12-08 18:01:48,144 Epoch  35 Step:     1150 Batch Loss:     0.953728 Ones: 0.56 Accuracy: 0.69 Tokens per Sec:    25189, Lr: 0.000300
+I1208 18:01:48.569365 139845289953024 train.py:376] Epoch  35: total training loss 24.64
+2019-12-08 18:01:48,569 Epoch  35: total training loss 24.64
+I1208 18:01:48.569653 139845289953024 train.py:222] EPOCH 36
+2019-12-08 18:01:48,569 EPOCH 36
+I1208 18:01:48.955941 139845289953024 train.py:278] Epoch  36 Step:     1160 Batch Loss:     0.821170 Ones: 0.70 Accuracy: 0.80 Tokens per Sec:    12280, Lr: 0.000300
+2019-12-08 18:01:48,955 Epoch  36 Step:     1160 Batch Loss:     0.821170 Ones: 0.70 Accuracy: 0.80 Tokens per Sec:    12280, Lr: 0.000300
+I1208 18:01:49.578135 139845289953024 train.py:278] Epoch  36 Step:     1170 Batch Loss:     0.540595 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    18520, Lr: 0.000300
+2019-12-08 18:01:49,578 Epoch  36 Step:     1170 Batch Loss:     0.540595 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    18520, Lr: 0.000300
+I1208 18:01:50.289629 139845289953024 train.py:278] Epoch  36 Step:     1180 Batch Loss:     0.786754 Ones: 0.67 Accuracy: 0.79 Tokens per Sec:    28623, Lr: 0.000300
+2019-12-08 18:01:50,289 Epoch  36 Step:     1180 Batch Loss:     0.786754 Ones: 0.67 Accuracy: 0.79 Tokens per Sec:    28623, Lr: 0.000300
+I1208 18:01:50.873500 139845289953024 train.py:376] Epoch  36: total training loss 24.24
+2019-12-08 18:01:50,873 Epoch  36: total training loss 24.24
+I1208 18:01:50.873787 139845289953024 train.py:222] EPOCH 37
+2019-12-08 18:01:50,873 EPOCH 37
+I1208 18:01:51.048675 139845289953024 train.py:278] Epoch  37 Step:     1190 Batch Loss:     1.349809 Ones: 0.45 Accuracy: 0.68 Tokens per Sec:    11332, Lr: 0.000300
+2019-12-08 18:01:51,048 Epoch  37 Step:     1190 Batch Loss:     1.349809 Ones: 0.45 Accuracy: 0.68 Tokens per Sec:    11332, Lr: 0.000300
+I1208 18:01:51.920445 139845289953024 train.py:278] Epoch  37 Step:     1200 Batch Loss:     0.648301 Ones: 0.71 Accuracy: 0.84 Tokens per Sec:    14639, Lr: 0.000300
+2019-12-08 18:01:51,920 Epoch  37 Step:     1200 Batch Loss:     0.648301 Ones: 0.71 Accuracy: 0.84 Tokens per Sec:    14639, Lr: 0.000300
+I1208 18:01:54.716788 139845289953024 train.py:361] Validation result at epoch  37, step     1200: f1_prod:   0.15, loss:   0.7212, ones:   0.7430, f1_0:   0.1837, f1_1:   0.8017,f1_prd:   0.1473, duration: 2.7959s
+2019-12-08 18:01:54,716 Validation result at epoch  37, step     1200: f1_prod:   0.15, loss:   0.7212, ones:   0.7430, f1_0:   0.1837, f1_1:   0.8017,f1_prd:   0.1473, duration: 2.7959s
+I1208 18:01:55.313344 139845289953024 train.py:278] Epoch  37 Step:     1210 Batch Loss:     0.755283 Ones: 0.62 Accuracy: 0.76 Tokens per Sec:    33300, Lr: 0.000300
+2019-12-08 18:01:55,313 Epoch  37 Step:     1210 Batch Loss:     0.755283 Ones: 0.62 Accuracy: 0.76 Tokens per Sec:    33300, Lr: 0.000300
+I1208 18:01:55.903264 139845289953024 train.py:278] Epoch  37 Step:     1220 Batch Loss:     0.480510 Ones: 0.72 Accuracy: 0.85 Tokens per Sec:    45553, Lr: 0.000300
+2019-12-08 18:01:55,903 Epoch  37 Step:     1220 Batch Loss:     0.480510 Ones: 0.72 Accuracy: 0.85 Tokens per Sec:    45553, Lr: 0.000300
+I1208 18:01:55.950749 139845289953024 train.py:376] Epoch  37: total training loss 23.83
+2019-12-08 18:01:55,950 Epoch  37: total training loss 23.83
+I1208 18:01:55.951504 139845289953024 train.py:222] EPOCH 38
+2019-12-08 18:01:55,951 EPOCH 38
+I1208 18:01:56.535009 139845289953024 train.py:278] Epoch  38 Step:     1230 Batch Loss:     0.514744 Ones: 0.72 Accuracy: 0.84 Tokens per Sec:    11429, Lr: 0.000300
+2019-12-08 18:01:56,535 Epoch  38 Step:     1230 Batch Loss:     0.514744 Ones: 0.72 Accuracy: 0.84 Tokens per Sec:    11429, Lr: 0.000300
+I1208 18:01:57.241787 139845289953024 train.py:278] Epoch  38 Step:     1240 Batch Loss:     0.396487 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    21477, Lr: 0.000300
+2019-12-08 18:01:57,241 Epoch  38 Step:     1240 Batch Loss:     0.396487 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    21477, Lr: 0.000300
+I1208 18:01:57.889949 139845289953024 train.py:278] Epoch  38 Step:     1250 Batch Loss:     0.567257 Ones: 0.67 Accuracy: 0.81 Tokens per Sec:    35418, Lr: 0.000300
+2019-12-08 18:01:57,889 Epoch  38 Step:     1250 Batch Loss:     0.567257 Ones: 0.67 Accuracy: 0.81 Tokens per Sec:    35418, Lr: 0.000300
+I1208 18:01:58.241785 139845289953024 train.py:376] Epoch  38: total training loss 22.86
+2019-12-08 18:01:58,241 Epoch  38: total training loss 22.86
+I1208 18:01:58.242090 139845289953024 train.py:222] EPOCH 39
+2019-12-08 18:01:58,242 EPOCH 39
+I1208 18:01:58.598163 139845289953024 train.py:278] Epoch  39 Step:     1260 Batch Loss:     0.273721 Ones: 0.82 Accuracy: 0.95 Tokens per Sec:    10525, Lr: 0.000300
+2019-12-08 18:01:58,598 Epoch  39 Step:     1260 Batch Loss:     0.273721 Ones: 0.82 Accuracy: 0.95 Tokens per Sec:    10525, Lr: 0.000300
+I1208 18:01:59.280081 139845289953024 train.py:278] Epoch  39 Step:     1270 Batch Loss:     0.711874 Ones: 0.69 Accuracy: 0.80 Tokens per Sec:    17757, Lr: 0.000300
+2019-12-08 18:01:59,280 Epoch  39 Step:     1270 Batch Loss:     0.711874 Ones: 0.69 Accuracy: 0.80 Tokens per Sec:    17757, Lr: 0.000300
+I1208 18:02:00.037749 139845289953024 train.py:278] Epoch  39 Step:     1280 Batch Loss:     0.693040 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    28206, Lr: 0.000300
+2019-12-08 18:02:00,037 Epoch  39 Step:     1280 Batch Loss:     0.693040 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    28206, Lr: 0.000300
+I1208 18:02:00.537960 139845289953024 train.py:376] Epoch  39: total training loss 23.56
+2019-12-08 18:02:00,537 Epoch  39: total training loss 23.56
+I1208 18:02:00.538161 139845289953024 train.py:222] EPOCH 40
+2019-12-08 18:02:00,538 EPOCH 40
+I1208 18:02:00.692425 139845289953024 train.py:278] Epoch  40 Step:     1290 Batch Loss:     0.451161 Ones: 0.73 Accuracy: 0.85 Tokens per Sec:    11335, Lr: 0.000300
+2019-12-08 18:02:00,692 Epoch  40 Step:     1290 Batch Loss:     0.451161 Ones: 0.73 Accuracy: 0.85 Tokens per Sec:    11335, Lr: 0.000300
+I1208 18:02:01.304656 139845289953024 train.py:278] Epoch  40 Step:     1300 Batch Loss:     0.475117 Ones: 0.67 Accuracy: 0.82 Tokens per Sec:    14715, Lr: 0.000300
+2019-12-08 18:02:01,304 Epoch  40 Step:     1300 Batch Loss:     0.475117 Ones: 0.67 Accuracy: 0.82 Tokens per Sec:    14715, Lr: 0.000300
+I1208 18:02:04.108834 139845289953024 train.py:361] Validation result at epoch  40, step     1300: f1_prod:   0.15, loss:   0.8870, ones:   0.6451, f1_0:   0.2045, f1_1:   0.7405,f1_prd:   0.1514, duration: 2.8036s
+2019-12-08 18:02:04,108 Validation result at epoch  40, step     1300: f1_prod:   0.15, loss:   0.8870, ones:   0.6451, f1_0:   0.2045, f1_1:   0.7405,f1_prd:   0.1514, duration: 2.8036s
+I1208 18:02:04.867700 139845289953024 train.py:278] Epoch  40 Step:     1310 Batch Loss:     0.533314 Ones: 0.67 Accuracy: 0.82 Tokens per Sec:    24243, Lr: 0.000300
+2019-12-08 18:02:04,867 Epoch  40 Step:     1310 Batch Loss:     0.533314 Ones: 0.67 Accuracy: 0.82 Tokens per Sec:    24243, Lr: 0.000300
+I1208 18:02:05.605491 139845289953024 train.py:278] Epoch  40 Step:     1320 Batch Loss:     0.954914 Ones: 0.58 Accuracy: 0.72 Tokens per Sec:    37102, Lr: 0.000300
+2019-12-08 18:02:05,605 Epoch  40 Step:     1320 Batch Loss:     0.954914 Ones: 0.58 Accuracy: 0.72 Tokens per Sec:    37102, Lr: 0.000300
+I1208 18:02:05.606771 139845289953024 train.py:376] Epoch  40: total training loss 22.83
+2019-12-08 18:02:05,606 Epoch  40: total training loss 22.83
+I1208 18:02:05.606996 139845289953024 train.py:222] EPOCH 41
+2019-12-08 18:02:05,606 EPOCH 41
+I1208 18:02:06.487953 139845289953024 train.py:278] Epoch  41 Step:     1330 Batch Loss:     0.493577 Ones: 0.73 Accuracy: 0.88 Tokens per Sec:    12035, Lr: 0.000300
+2019-12-08 18:02:06,487 Epoch  41 Step:     1330 Batch Loss:     0.493577 Ones: 0.73 Accuracy: 0.88 Tokens per Sec:    12035, Lr: 0.000300
+I1208 18:02:06.948436 139845289953024 train.py:278] Epoch  41 Step:     1340 Batch Loss:     0.633669 Ones: 0.79 Accuracy: 0.87 Tokens per Sec:    33939, Lr: 0.000300
+2019-12-08 18:02:06,948 Epoch  41 Step:     1340 Batch Loss:     0.633669 Ones: 0.79 Accuracy: 0.87 Tokens per Sec:    33939, Lr: 0.000300
+I1208 18:02:07.610154 139845289953024 train.py:278] Epoch  41 Step:     1350 Batch Loss:     0.435773 Ones: 0.77 Accuracy: 0.89 Tokens per Sec:    35627, Lr: 0.000300
+2019-12-08 18:02:07,610 Epoch  41 Step:     1350 Batch Loss:     0.435773 Ones: 0.77 Accuracy: 0.89 Tokens per Sec:    35627, Lr: 0.000300
+I1208 18:02:07.916779 139845289953024 train.py:376] Epoch  41: total training loss 22.91
+2019-12-08 18:02:07,916 Epoch  41: total training loss 22.91
+I1208 18:02:07.917082 139845289953024 train.py:222] EPOCH 42
+2019-12-08 18:02:07,917 EPOCH 42
+I1208 18:02:08.288896 139845289953024 train.py:278] Epoch  42 Step:     1360 Batch Loss:     0.369855 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    11330, Lr: 0.000300
+2019-12-08 18:02:08,288 Epoch  42 Step:     1360 Batch Loss:     0.369855 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    11330, Lr: 0.000300
+I1208 18:02:09.184907 139845289953024 train.py:278] Epoch  42 Step:     1370 Batch Loss:     0.503310 Ones: 0.72 Accuracy: 0.84 Tokens per Sec:    16942, Lr: 0.000300
+2019-12-08 18:02:09,184 Epoch  42 Step:     1370 Batch Loss:     0.503310 Ones: 0.72 Accuracy: 0.84 Tokens per Sec:    16942, Lr: 0.000300
+I1208 18:02:09.751378 139845289953024 train.py:278] Epoch  42 Step:     1380 Batch Loss:     0.530782 Ones: 0.68 Accuracy: 0.80 Tokens per Sec:    39040, Lr: 0.000300
+2019-12-08 18:02:09,751 Epoch  42 Step:     1380 Batch Loss:     0.530782 Ones: 0.68 Accuracy: 0.80 Tokens per Sec:    39040, Lr: 0.000300
+I1208 18:02:10.158605 139845289953024 train.py:376] Epoch  42: total training loss 22.27
+2019-12-08 18:02:10,158 Epoch  42: total training loss 22.27
+I1208 18:02:10.158855 139845289953024 train.py:222] EPOCH 43
+2019-12-08 18:02:10,158 EPOCH 43
+I1208 18:02:10.473328 139845289953024 train.py:278] Epoch  43 Step:     1390 Batch Loss:     0.420267 Ones: 0.70 Accuracy: 0.89 Tokens per Sec:    11704, Lr: 0.000300
+2019-12-08 18:02:10,473 Epoch  43 Step:     1390 Batch Loss:     0.420267 Ones: 0.70 Accuracy: 0.89 Tokens per Sec:    11704, Lr: 0.000300
+I1208 18:02:11.188063 139845289953024 train.py:278] Epoch  43 Step:     1400 Batch Loss:     0.780610 Ones: 0.62 Accuracy: 0.78 Tokens per Sec:    17151, Lr: 0.000300
+2019-12-08 18:02:11,188 Epoch  43 Step:     1400 Batch Loss:     0.780610 Ones: 0.62 Accuracy: 0.78 Tokens per Sec:    17151, Lr: 0.000300
+I1208 18:02:14.006851 139845289953024 train.py:323] Hooray! New best validation result [eval_metric]!
+2019-12-08 18:02:14,006 Hooray! New best validation result [eval_metric]!
+I1208 18:02:14.007546 139845289953024 train.py:326] Saving new checkpoint.
+2019-12-08 18:02:14,007 Saving new checkpoint.
+I1208 18:02:20.662950 139845289953024 train.py:361] Validation result at epoch  43, step     1400: f1_prod:   0.15, loss:   0.8321, ones:   0.6959, f1_0:   0.1974, f1_1:   0.7721,f1_prd:   0.1524, duration: 9.4742s
+2019-12-08 18:02:20,662 Validation result at epoch  43, step     1400: f1_prod:   0.15, loss:   0.8321, ones:   0.6959, f1_0:   0.1974, f1_1:   0.7721,f1_prd:   0.1524, duration: 9.4742s
+I1208 18:02:21.337100 139845289953024 train.py:278] Epoch  43 Step:     1410 Batch Loss:     0.221896 Ones: 0.82 Accuracy: 0.95 Tokens per Sec:    29254, Lr: 0.000300
+2019-12-08 18:02:21,337 Epoch  43 Step:     1410 Batch Loss:     0.221896 Ones: 0.82 Accuracy: 0.95 Tokens per Sec:    29254, Lr: 0.000300
+I1208 18:02:21.955572 139845289953024 train.py:376] Epoch  43: total training loss 21.89
+2019-12-08 18:02:21,955 Epoch  43: total training loss 21.89
+I1208 18:02:21.956039 139845289953024 train.py:222] EPOCH 44
+2019-12-08 18:02:21,956 EPOCH 44
+I1208 18:02:22.061285 139845289953024 train.py:278] Epoch  44 Step:     1420 Batch Loss:     0.822884 Ones: 0.68 Accuracy: 0.80 Tokens per Sec:    12510, Lr: 0.000300
+2019-12-08 18:02:22,061 Epoch  44 Step:     1420 Batch Loss:     0.822884 Ones: 0.68 Accuracy: 0.80 Tokens per Sec:    12510, Lr: 0.000300
+I1208 18:02:22.856801 139845289953024 train.py:278] Epoch  44 Step:     1430 Batch Loss:     0.452688 Ones: 0.78 Accuracy: 0.92 Tokens per Sec:    13448, Lr: 0.000300
+2019-12-08 18:02:22,856 Epoch  44 Step:     1430 Batch Loss:     0.452688 Ones: 0.78 Accuracy: 0.92 Tokens per Sec:    13448, Lr: 0.000300
+I1208 18:02:23.441954 139845289953024 train.py:278] Epoch  44 Step:     1440 Batch Loss:     0.578224 Ones: 0.71 Accuracy: 0.86 Tokens per Sec:    30141, Lr: 0.000300
+2019-12-08 18:02:23,441 Epoch  44 Step:     1440 Batch Loss:     0.578224 Ones: 0.71 Accuracy: 0.86 Tokens per Sec:    30141, Lr: 0.000300
+I1208 18:02:24.151521 139845289953024 train.py:278] Epoch  44 Step:     1450 Batch Loss:     0.214891 Ones: 0.87 Accuracy: 0.97 Tokens per Sec:    36770, Lr: 0.000300
+2019-12-08 18:02:24,151 Epoch  44 Step:     1450 Batch Loss:     0.214891 Ones: 0.87 Accuracy: 0.97 Tokens per Sec:    36770, Lr: 0.000300
+I1208 18:02:24.268123 139845289953024 train.py:376] Epoch  44: total training loss 21.65
+2019-12-08 18:02:24,268 Epoch  44: total training loss 21.65
+I1208 18:02:24.268402 139845289953024 train.py:222] EPOCH 45
+2019-12-08 18:02:24,268 EPOCH 45
+I1208 18:02:24.750244 139845289953024 train.py:278] Epoch  45 Step:     1460 Batch Loss:     0.423782 Ones: 0.76 Accuracy: 0.88 Tokens per Sec:    10786, Lr: 0.000300
+2019-12-08 18:02:24,750 Epoch  45 Step:     1460 Batch Loss:     0.423782 Ones: 0.76 Accuracy: 0.88 Tokens per Sec:    10786, Lr: 0.000300
+I1208 18:02:25.398546 139845289953024 train.py:278] Epoch  45 Step:     1470 Batch Loss:     1.086683 Ones: 0.41 Accuracy: 0.66 Tokens per Sec:    20176, Lr: 0.000300
+2019-12-08 18:02:25,398 Epoch  45 Step:     1470 Batch Loss:     1.086683 Ones: 0.41 Accuracy: 0.66 Tokens per Sec:    20176, Lr: 0.000300
+I1208 18:02:26.241333 139845289953024 train.py:278] Epoch  45 Step:     1480 Batch Loss:     0.519028 Ones: 0.62 Accuracy: 0.82 Tokens per Sec:    27582, Lr: 0.000300
+2019-12-08 18:02:26,241 Epoch  45 Step:     1480 Batch Loss:     0.519028 Ones: 0.62 Accuracy: 0.82 Tokens per Sec:    27582, Lr: 0.000300
+I1208 18:02:26.586273 139845289953024 train.py:376] Epoch  45: total training loss 21.74
+2019-12-08 18:02:26,586 Epoch  45: total training loss 21.74
+I1208 18:02:26.586507 139845289953024 train.py:222] EPOCH 46
+2019-12-08 18:02:26,586 EPOCH 46
+I1208 18:02:26.859630 139845289953024 train.py:278] Epoch  46 Step:     1490 Batch Loss:     0.335457 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    10877, Lr: 0.000300
+2019-12-08 18:02:26,859 Epoch  46 Step:     1490 Batch Loss:     0.335457 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    10877, Lr: 0.000300
+I1208 18:02:27.569917 139845289953024 train.py:278] Epoch  46 Step:     1500 Batch Loss:     0.714298 Ones: 0.69 Accuracy: 0.80 Tokens per Sec:    16351, Lr: 0.000300
+2019-12-08 18:02:27,569 Epoch  46 Step:     1500 Batch Loss:     0.714298 Ones: 0.69 Accuracy: 0.80 Tokens per Sec:    16351, Lr: 0.000300
+I1208 18:02:30.378691 139845289953024 train.py:361] Validation result at epoch  46, step     1500: f1_prod:   0.15, loss:   0.7515, ones:   0.7543, f1_0:   0.1823, f1_1:   0.8102,f1_prd:   0.1477, duration: 2.8081s
+2019-12-08 18:02:30,378 Validation result at epoch  46, step     1500: f1_prod:   0.15, loss:   0.7515, ones:   0.7543, f1_0:   0.1823, f1_1:   0.8102,f1_prd:   0.1477, duration: 2.8081s
+I1208 18:02:31.164625 139845289953024 train.py:278] Epoch  46 Step:     1510 Batch Loss:     0.998995 Ones: 0.66 Accuracy: 0.77 Tokens per Sec:    27034, Lr: 0.000300
+2019-12-08 18:02:31,164 Epoch  46 Step:     1510 Batch Loss:     0.998995 Ones: 0.66 Accuracy: 0.77 Tokens per Sec:    27034, Lr: 0.000300
+I1208 18:02:31.697907 139845289953024 train.py:376] Epoch  46: total training loss 21.21
+2019-12-08 18:02:31,697 Epoch  46: total training loss 21.21
+I1208 18:02:31.698602 139845289953024 train.py:222] EPOCH 47
+2019-12-08 18:02:31,698 EPOCH 47
+I1208 18:02:31.849300 139845289953024 train.py:278] Epoch  47 Step:     1520 Batch Loss:     0.611004 Ones: 0.79 Accuracy: 0.89 Tokens per Sec:    12359, Lr: 0.000300
+2019-12-08 18:02:31,849 Epoch  47 Step:     1520 Batch Loss:     0.611004 Ones: 0.79 Accuracy: 0.89 Tokens per Sec:    12359, Lr: 0.000300
+I1208 18:02:32.488739 139845289953024 train.py:278] Epoch  47 Step:     1530 Batch Loss:     0.818167 Ones: 0.70 Accuracy: 0.79 Tokens per Sec:    14472, Lr: 0.000300
+2019-12-08 18:02:32,488 Epoch  47 Step:     1530 Batch Loss:     0.818167 Ones: 0.70 Accuracy: 0.79 Tokens per Sec:    14472, Lr: 0.000300
+I1208 18:02:33.158049 139845289953024 train.py:278] Epoch  47 Step:     1540 Batch Loss:     1.068994 Ones: 0.58 Accuracy: 0.71 Tokens per Sec:    25730, Lr: 0.000300
+2019-12-08 18:02:33,158 Epoch  47 Step:     1540 Batch Loss:     1.068994 Ones: 0.58 Accuracy: 0.71 Tokens per Sec:    25730, Lr: 0.000300
+I1208 18:02:33.913842 139845289953024 train.py:278] Epoch  47 Step:     1550 Batch Loss:     0.427357 Ones: 0.77 Accuracy: 0.92 Tokens per Sec:    35065, Lr: 0.000300
+2019-12-08 18:02:33,913 Epoch  47 Step:     1550 Batch Loss:     0.427357 Ones: 0.77 Accuracy: 0.92 Tokens per Sec:    35065, Lr: 0.000300
+I1208 18:02:33.980052 139845289953024 train.py:376] Epoch  47: total training loss 20.53
+2019-12-08 18:02:33,980 Epoch  47: total training loss 20.53
+I1208 18:02:33.980297 139845289953024 train.py:222] EPOCH 48
+2019-12-08 18:02:33,980 EPOCH 48
+I1208 18:02:34.608702 139845289953024 train.py:278] Epoch  48 Step:     1560 Batch Loss:     0.296176 Ones: 0.78 Accuracy: 0.91 Tokens per Sec:    12157, Lr: 0.000300
+2019-12-08 18:02:34,608 Epoch  48 Step:     1560 Batch Loss:     0.296176 Ones: 0.78 Accuracy: 0.91 Tokens per Sec:    12157, Lr: 0.000300
+I1208 18:02:35.421397 139845289953024 train.py:278] Epoch  48 Step:     1570 Batch Loss:     0.708619 Ones: 0.65 Accuracy: 0.77 Tokens per Sec:    21332, Lr: 0.000300
+2019-12-08 18:02:35,421 Epoch  48 Step:     1570 Batch Loss:     0.708619 Ones: 0.65 Accuracy: 0.77 Tokens per Sec:    21332, Lr: 0.000300
+I1208 18:02:36.002483 139845289953024 train.py:278] Epoch  48 Step:     1580 Batch Loss:     0.466006 Ones: 0.72 Accuracy: 0.86 Tokens per Sec:    41865, Lr: 0.000300
+2019-12-08 18:02:36,002 Epoch  48 Step:     1580 Batch Loss:     0.466006 Ones: 0.72 Accuracy: 0.86 Tokens per Sec:    41865, Lr: 0.000300
+I1208 18:02:36.250670 139845289953024 train.py:376] Epoch  48: total training loss 20.37
+2019-12-08 18:02:36,250 Epoch  48: total training loss 20.37
+I1208 18:02:36.250941 139845289953024 train.py:222] EPOCH 49
+2019-12-08 18:02:36,250 EPOCH 49
+I1208 18:02:36.698494 139845289953024 train.py:278] Epoch  49 Step:     1590 Batch Loss:     0.800956 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    11755, Lr: 0.000300
+2019-12-08 18:02:36,698 Epoch  49 Step:     1590 Batch Loss:     0.800956 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    11755, Lr: 0.000300
+I1208 18:02:37.551893 139845289953024 train.py:278] Epoch  49 Step:     1600 Batch Loss:     1.048691 Ones: 0.56 Accuracy: 0.70 Tokens per Sec:    18329, Lr: 0.000300
+2019-12-08 18:02:37,551 Epoch  49 Step:     1600 Batch Loss:     1.048691 Ones: 0.56 Accuracy: 0.70 Tokens per Sec:    18329, Lr: 0.000300
+I1208 18:02:40.404467 139845289953024 train.py:361] Validation result at epoch  49, step     1600: f1_prod:   0.15, loss:   0.8242, ones:   0.7288, f1_0:   0.1908, f1_1:   0.7942,f1_prd:   0.1515, duration: 2.8520s
+2019-12-08 18:02:40,404 Validation result at epoch  49, step     1600: f1_prod:   0.15, loss:   0.8242, ones:   0.7288, f1_0:   0.1908, f1_1:   0.7942,f1_prd:   0.1515, duration: 2.8520s
+I1208 18:02:40.990627 139845289953024 train.py:278] Epoch  49 Step:     1610 Batch Loss:     0.698048 Ones: 0.69 Accuracy: 0.80 Tokens per Sec:    38394, Lr: 0.000300
+2019-12-08 18:02:40,990 Epoch  49 Step:     1610 Batch Loss:     0.698048 Ones: 0.69 Accuracy: 0.80 Tokens per Sec:    38394, Lr: 0.000300
+I1208 18:02:41.392746 139845289953024 train.py:376] Epoch  49: total training loss 20.26
+2019-12-08 18:02:41,392 Epoch  49: total training loss 20.26
+I1208 18:02:41.393028 139845289953024 train.py:222] EPOCH 50
+2019-12-08 18:02:41,393 EPOCH 50
+I1208 18:02:41.539151 139845289953024 train.py:278] Epoch  50 Step:     1620 Batch Loss:     0.412553 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:     9929, Lr: 0.000300
+2019-12-08 18:02:41,539 Epoch  50 Step:     1620 Batch Loss:     0.412553 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:     9929, Lr: 0.000300
+I1208 18:02:42.336411 139845289953024 train.py:278] Epoch  50 Step:     1630 Batch Loss:     0.517785 Ones: 0.67 Accuracy: 0.81 Tokens per Sec:    13854, Lr: 0.000300
+2019-12-08 18:02:42,336 Epoch  50 Step:     1630 Batch Loss:     0.517785 Ones: 0.67 Accuracy: 0.81 Tokens per Sec:    13854, Lr: 0.000300
+I1208 18:02:43.129646 139845289953024 train.py:278] Epoch  50 Step:     1640 Batch Loss:     0.781623 Ones: 0.71 Accuracy: 0.82 Tokens per Sec:    25785, Lr: 0.000300
+2019-12-08 18:02:43,129 Epoch  50 Step:     1640 Batch Loss:     0.781623 Ones: 0.71 Accuracy: 0.82 Tokens per Sec:    25785, Lr: 0.000300
+I1208 18:02:43.703800 139845289953024 train.py:278] Epoch  50 Step:     1650 Batch Loss:     0.357947 Ones: 0.75 Accuracy: 0.94 Tokens per Sec:    47690, Lr: 0.000300
+2019-12-08 18:02:43,703 Epoch  50 Step:     1650 Batch Loss:     0.357947 Ones: 0.75 Accuracy: 0.94 Tokens per Sec:    47690, Lr: 0.000300
+I1208 18:02:43.704225 139845289953024 train.py:376] Epoch  50: total training loss 19.78
+2019-12-08 18:02:43,704 Epoch  50: total training loss 19.78
+I1208 18:02:43.704351 139845289953024 train.py:222] EPOCH 51
+2019-12-08 18:02:43,704 EPOCH 51
+I1208 18:02:44.506241 139845289953024 train.py:278] Epoch  51 Step:     1660 Batch Loss:     0.897357 Ones: 0.55 Accuracy: 0.68 Tokens per Sec:    11613, Lr: 0.000300
+2019-12-08 18:02:44,506 Epoch  51 Step:     1660 Batch Loss:     0.897357 Ones: 0.55 Accuracy: 0.68 Tokens per Sec:    11613, Lr: 0.000300
+I1208 18:02:45.116859 139845289953024 train.py:278] Epoch  51 Step:     1670 Batch Loss:     0.292148 Ones: 0.80 Accuracy: 0.91 Tokens per Sec:    26986, Lr: 0.000300
+2019-12-08 18:02:45,116 Epoch  51 Step:     1670 Batch Loss:     0.292148 Ones: 0.80 Accuracy: 0.91 Tokens per Sec:    26986, Lr: 0.000300
+I1208 18:02:45.823997 139845289953024 train.py:278] Epoch  51 Step:     1680 Batch Loss:     0.487072 Ones: 0.66 Accuracy: 0.86 Tokens per Sec:    35019, Lr: 0.000300
+2019-12-08 18:02:45,823 Epoch  51 Step:     1680 Batch Loss:     0.487072 Ones: 0.66 Accuracy: 0.86 Tokens per Sec:    35019, Lr: 0.000300
+I1208 18:02:46.037384 139845289953024 train.py:376] Epoch  51: total training loss 19.80
+2019-12-08 18:02:46,037 Epoch  51: total training loss 19.80
+I1208 18:02:46.037678 139845289953024 train.py:222] EPOCH 52
+2019-12-08 18:02:46,037 EPOCH 52
+I1208 18:02:46.406044 139845289953024 train.py:278] Epoch  52 Step:     1690 Batch Loss:     0.473182 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    11218, Lr: 0.000300
+2019-12-08 18:02:46,406 Epoch  52 Step:     1690 Batch Loss:     0.473182 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    11218, Lr: 0.000300
+I1208 18:02:47.208964 139845289953024 train.py:278] Epoch  52 Step:     1700 Batch Loss:     0.263693 Ones: 0.75 Accuracy: 0.92 Tokens per Sec:    15643, Lr: 0.000300
+2019-12-08 18:02:47,208 Epoch  52 Step:     1700 Batch Loss:     0.263693 Ones: 0.75 Accuracy: 0.92 Tokens per Sec:    15643, Lr: 0.000300
+I1208 18:02:50.168629 139845289953024 train.py:361] Validation result at epoch  52, step     1700: f1_prod:   0.15, loss:   0.8759, ones:   0.7047, f1_0:   0.1910, f1_1:   0.7791,f1_prd:   0.1488, duration: 2.9589s
+2019-12-08 18:02:50,168 Validation result at epoch  52, step     1700: f1_prod:   0.15, loss:   0.8759, ones:   0.7047, f1_0:   0.1910, f1_1:   0.7791,f1_prd:   0.1488, duration: 2.9589s
+I1208 18:02:50.858017 139845289953024 train.py:278] Epoch  52 Step:     1710 Batch Loss:     0.437129 Ones: 0.68 Accuracy: 0.86 Tokens per Sec:    30392, Lr: 0.000300
+2019-12-08 18:02:50,858 Epoch  52 Step:     1710 Batch Loss:     0.437129 Ones: 0.68 Accuracy: 0.86 Tokens per Sec:    30392, Lr: 0.000300
+I1208 18:02:51.404809 139845289953024 train.py:376] Epoch  52: total training loss 19.57
+2019-12-08 18:02:51,404 Epoch  52: total training loss 19.57
+I1208 18:02:51.405004 139845289953024 train.py:222] EPOCH 53
+2019-12-08 18:02:51,405 EPOCH 53
+I1208 18:02:51.665969 139845289953024 train.py:278] Epoch  53 Step:     1720 Batch Loss:     0.330046 Ones: 0.75 Accuracy: 0.94 Tokens per Sec:    11048, Lr: 0.000300
+2019-12-08 18:02:51,665 Epoch  53 Step:     1720 Batch Loss:     0.330046 Ones: 0.75 Accuracy: 0.94 Tokens per Sec:    11048, Lr: 0.000300
+I1208 18:02:52.397377 139845289953024 train.py:278] Epoch  53 Step:     1730 Batch Loss:     0.890083 Ones: 0.65 Accuracy: 0.78 Tokens per Sec:    16238, Lr: 0.000300
+2019-12-08 18:02:52,397 Epoch  53 Step:     1730 Batch Loss:     0.890083 Ones: 0.65 Accuracy: 0.78 Tokens per Sec:    16238, Lr: 0.000300
+I1208 18:02:53.157257 139845289953024 train.py:278] Epoch  53 Step:     1740 Batch Loss:     0.582923 Ones: 0.70 Accuracy: 0.83 Tokens per Sec:    27058, Lr: 0.000300
+2019-12-08 18:02:53,157 Epoch  53 Step:     1740 Batch Loss:     0.582923 Ones: 0.70 Accuracy: 0.83 Tokens per Sec:    27058, Lr: 0.000300
+I1208 18:02:53.770452 139845289953024 train.py:376] Epoch  53: total training loss 19.08
+2019-12-08 18:02:53,770 Epoch  53: total training loss 19.08
+I1208 18:02:53.770661 139845289953024 train.py:222] EPOCH 54
+2019-12-08 18:02:53,770 EPOCH 54
+I1208 18:02:53.821046 139845289953024 train.py:278] Epoch  54 Step:     1750 Batch Loss:     0.483272 Ones: 0.71 Accuracy: 0.83 Tokens per Sec:     8899, Lr: 0.000300
+2019-12-08 18:02:53,821 Epoch  54 Step:     1750 Batch Loss:     0.483272 Ones: 0.71 Accuracy: 0.83 Tokens per Sec:     8899, Lr: 0.000300
+I1208 18:02:54.654976 139845289953024 train.py:278] Epoch  54 Step:     1760 Batch Loss:     0.999274 Ones: 0.47 Accuracy: 0.70 Tokens per Sec:    11607, Lr: 0.000300
+2019-12-08 18:02:54,654 Epoch  54 Step:     1760 Batch Loss:     0.999274 Ones: 0.47 Accuracy: 0.70 Tokens per Sec:    11607, Lr: 0.000300
+I1208 18:02:55.249715 139845289953024 train.py:278] Epoch  54 Step:     1770 Batch Loss:     0.356427 Ones: 0.72 Accuracy: 0.91 Tokens per Sec:    27525, Lr: 0.000300
+2019-12-08 18:02:55,249 Epoch  54 Step:     1770 Batch Loss:     0.356427 Ones: 0.72 Accuracy: 0.91 Tokens per Sec:    27525, Lr: 0.000300
+I1208 18:02:56.086578 139845289953024 train.py:278] Epoch  54 Step:     1780 Batch Loss:     0.562625 Ones: 0.74 Accuracy: 0.86 Tokens per Sec:    31647, Lr: 0.000300
+2019-12-08 18:02:56,086 Epoch  54 Step:     1780 Batch Loss:     0.562625 Ones: 0.74 Accuracy: 0.86 Tokens per Sec:    31647, Lr: 0.000300
+I1208 18:02:56.172302 139845289953024 train.py:376] Epoch  54: total training loss 19.76
+2019-12-08 18:02:56,172 Epoch  54: total training loss 19.76
+I1208 18:02:56.172537 139845289953024 train.py:222] EPOCH 55
+2019-12-08 18:02:56,172 EPOCH 55
+I1208 18:02:56.782391 139845289953024 train.py:278] Epoch  55 Step:     1790 Batch Loss:     0.819718 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    11346, Lr: 0.000300
+2019-12-08 18:02:56,782 Epoch  55 Step:     1790 Batch Loss:     0.819718 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    11346, Lr: 0.000300
+I1208 18:02:57.496986 139845289953024 train.py:278] Epoch  55 Step:     1800 Batch Loss:     0.575202 Ones: 0.65 Accuracy: 0.80 Tokens per Sec:    21304, Lr: 0.000300
+2019-12-08 18:02:57,496 Epoch  55 Step:     1800 Batch Loss:     0.575202 Ones: 0.65 Accuracy: 0.80 Tokens per Sec:    21304, Lr: 0.000300
+I1208 18:03:00.502194 139845289953024 train.py:361] Validation result at epoch  55, step     1800: f1_prod:   0.14, loss:   0.8579, ones:   0.7244, f1_0:   0.1828, f1_1:   0.7871,f1_prd:   0.1439, duration: 3.0045s
+2019-12-08 18:03:00,502 Validation result at epoch  55, step     1800: f1_prod:   0.14, loss:   0.8579, ones:   0.7244, f1_0:   0.1828, f1_1:   0.7871,f1_prd:   0.1439, duration: 3.0045s
+I1208 18:03:01.284250 139845289953024 train.py:278] Epoch  55 Step:     1810 Batch Loss:     0.501111 Ones: 0.69 Accuracy: 0.82 Tokens per Sec:    31109, Lr: 0.000300
+2019-12-08 18:03:01,284 Epoch  55 Step:     1810 Batch Loss:     0.501111 Ones: 0.69 Accuracy: 0.82 Tokens per Sec:    31109, Lr: 0.000300
+I1208 18:03:01.555214 139845289953024 train.py:376] Epoch  55: total training loss 18.71
+2019-12-08 18:03:01,555 Epoch  55: total training loss 18.71
+I1208 18:03:01.555490 139845289953024 train.py:222] EPOCH 56
+2019-12-08 18:03:01,555 EPOCH 56
+I1208 18:03:01.984604 139845289953024 train.py:278] Epoch  56 Step:     1820 Batch Loss:     0.647550 Ones: 0.67 Accuracy: 0.79 Tokens per Sec:    11659, Lr: 0.000300
+2019-12-08 18:03:01,984 Epoch  56 Step:     1820 Batch Loss:     0.647550 Ones: 0.67 Accuracy: 0.79 Tokens per Sec:    11659, Lr: 0.000300
+I1208 18:03:02.716432 139845289953024 train.py:278] Epoch  56 Step:     1830 Batch Loss:     1.012639 Ones: 0.56 Accuracy: 0.70 Tokens per Sec:    18330, Lr: 0.000300
+2019-12-08 18:03:02,716 Epoch  56 Step:     1830 Batch Loss:     1.012639 Ones: 0.56 Accuracy: 0.70 Tokens per Sec:    18330, Lr: 0.000300
+I1208 18:03:03.475784 139845289953024 train.py:278] Epoch  56 Step:     1840 Batch Loss:     0.344829 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    28883, Lr: 0.000300
+2019-12-08 18:03:03,475 Epoch  56 Step:     1840 Batch Loss:     0.344829 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    28883, Lr: 0.000300
+I1208 18:03:04.006157 139845289953024 train.py:376] Epoch  56: total training loss 19.15
+2019-12-08 18:03:04,006 Epoch  56: total training loss 19.15
+I1208 18:03:04.006932 139845289953024 train.py:222] EPOCH 57
+2019-12-08 18:03:04,006 EPOCH 57
+I1208 18:03:04.123528 139845289953024 train.py:278] Epoch  57 Step:     1850 Batch Loss:     0.429201 Ones: 0.74 Accuracy: 0.85 Tokens per Sec:    10478, Lr: 0.000300
+2019-12-08 18:03:04,123 Epoch  57 Step:     1850 Batch Loss:     0.429201 Ones: 0.74 Accuracy: 0.85 Tokens per Sec:    10478, Lr: 0.000300
+I1208 18:03:04.868911 139845289953024 train.py:278] Epoch  57 Step:     1860 Batch Loss:     0.978151 Ones: 0.56 Accuracy: 0.71 Tokens per Sec:    13318, Lr: 0.000300
+2019-12-08 18:03:04,868 Epoch  57 Step:     1860 Batch Loss:     0.978151 Ones: 0.56 Accuracy: 0.71 Tokens per Sec:    13318, Lr: 0.000300
+I1208 18:03:05.664974 139845289953024 train.py:278] Epoch  57 Step:     1870 Batch Loss:     0.574397 Ones: 0.65 Accuracy: 0.80 Tokens per Sec:    24211, Lr: 0.000300
+2019-12-08 18:03:05,664 Epoch  57 Step:     1870 Batch Loss:     0.574397 Ones: 0.65 Accuracy: 0.80 Tokens per Sec:    24211, Lr: 0.000300
+I1208 18:03:06.378710 139845289953024 train.py:278] Epoch  57 Step:     1880 Batch Loss:     1.016096 Ones: 0.48 Accuracy: 0.73 Tokens per Sec:    38090, Lr: 0.000300
+2019-12-08 18:03:06,378 Epoch  57 Step:     1880 Batch Loss:     1.016096 Ones: 0.48 Accuracy: 0.73 Tokens per Sec:    38090, Lr: 0.000300
+I1208 18:03:06.413992 139845289953024 train.py:376] Epoch  57: total training loss 18.70
+2019-12-08 18:03:06,413 Epoch  57: total training loss 18.70
+I1208 18:03:06.414264 139845289953024 train.py:222] EPOCH 58
+2019-12-08 18:03:06,414 EPOCH 58
+I1208 18:03:07.271622 139845289953024 train.py:278] Epoch  58 Step:     1890 Batch Loss:     0.575587 Ones: 0.70 Accuracy: 0.85 Tokens per Sec:    11314, Lr: 0.000300
+2019-12-08 18:03:07,271 Epoch  58 Step:     1890 Batch Loss:     0.575587 Ones: 0.70 Accuracy: 0.85 Tokens per Sec:    11314, Lr: 0.000300
+I1208 18:03:07.952480 139845289953024 train.py:278] Epoch  58 Step:     1900 Batch Loss:     0.315920 Ones: 0.75 Accuracy: 0.89 Tokens per Sec:    25643, Lr: 0.000300
+2019-12-08 18:03:07,952 Epoch  58 Step:     1900 Batch Loss:     0.315920 Ones: 0.75 Accuracy: 0.89 Tokens per Sec:    25643, Lr: 0.000300
+I1208 18:03:10.991014 139845289953024 train.py:361] Validation result at epoch  58, step     1900: f1_prod:   0.14, loss:   0.8246, ones:   0.7557, f1_0:   0.1788, f1_1:   0.8071,f1_prd:   0.1443, duration: 3.0376s
+2019-12-08 18:03:10,991 Validation result at epoch  58, step     1900: f1_prod:   0.14, loss:   0.8246, ones:   0.7557, f1_0:   0.1788, f1_1:   0.8071,f1_prd:   0.1443, duration: 3.0376s
+I1208 18:03:11.650961 139845289953024 train.py:278] Epoch  58 Step:     1910 Batch Loss:     0.427888 Ones: 0.71 Accuracy: 0.88 Tokens per Sec:    37798, Lr: 0.000300
+2019-12-08 18:03:11,650 Epoch  58 Step:     1910 Batch Loss:     0.427888 Ones: 0.71 Accuracy: 0.88 Tokens per Sec:    37798, Lr: 0.000300
+I1208 18:03:11.877648 139845289953024 train.py:376] Epoch  58: total training loss 18.08
+2019-12-08 18:03:11,877 Epoch  58: total training loss 18.08
+I1208 18:03:11.877926 139845289953024 train.py:222] EPOCH 59
+2019-12-08 18:03:11,877 EPOCH 59
+I1208 18:03:12.410157 139845289953024 train.py:278] Epoch  59 Step:     1920 Batch Loss:     0.629020 Ones: 0.71 Accuracy: 0.81 Tokens per Sec:    10950, Lr: 0.000300
+2019-12-08 18:03:12,410 Epoch  59 Step:     1920 Batch Loss:     0.629020 Ones: 0.71 Accuracy: 0.81 Tokens per Sec:    10950, Lr: 0.000300
+I1208 18:03:13.148540 139845289953024 train.py:278] Epoch  59 Step:     1930 Batch Loss:     0.802041 Ones: 0.65 Accuracy: 0.78 Tokens per Sec:    19109, Lr: 0.000300
+2019-12-08 18:03:13,148 Epoch  59 Step:     1930 Batch Loss:     0.802041 Ones: 0.65 Accuracy: 0.78 Tokens per Sec:    19109, Lr: 0.000300
+I1208 18:03:13.838728 139845289953024 train.py:278] Epoch  59 Step:     1940 Batch Loss:     0.345233 Ones: 0.73 Accuracy: 0.87 Tokens per Sec:    31718, Lr: 0.000300
+2019-12-08 18:03:13,838 Epoch  59 Step:     1940 Batch Loss:     0.345233 Ones: 0.73 Accuracy: 0.87 Tokens per Sec:    31718, Lr: 0.000300
+I1208 18:03:14.319476 139845289953024 train.py:376] Epoch  59: total training loss 18.55
+2019-12-08 18:03:14,319 Epoch  59: total training loss 18.55
+I1208 18:03:14.319654 139845289953024 train.py:222] EPOCH 60
+2019-12-08 18:03:14,319 EPOCH 60
+I1208 18:03:14.582862 139845289953024 train.py:278] Epoch  60 Step:     1950 Batch Loss:     0.773619 Ones: 0.58 Accuracy: 0.76 Tokens per Sec:    11189, Lr: 0.000300
+2019-12-08 18:03:14,582 Epoch  60 Step:     1950 Batch Loss:     0.773619 Ones: 0.58 Accuracy: 0.76 Tokens per Sec:    11189, Lr: 0.000300
+I1208 18:03:15.409828 139845289953024 train.py:278] Epoch  60 Step:     1960 Batch Loss:     0.571632 Ones: 0.70 Accuracy: 0.83 Tokens per Sec:    14985, Lr: 0.000300
+2019-12-08 18:03:15,409 Epoch  60 Step:     1960 Batch Loss:     0.571632 Ones: 0.70 Accuracy: 0.83 Tokens per Sec:    14985, Lr: 0.000300
+I1208 18:03:16.055893 139845289953024 train.py:278] Epoch  60 Step:     1970 Batch Loss:     0.582589 Ones: 0.62 Accuracy: 0.77 Tokens per Sec:    30291, Lr: 0.000300
+2019-12-08 18:03:16,055 Epoch  60 Step:     1970 Batch Loss:     0.582589 Ones: 0.62 Accuracy: 0.77 Tokens per Sec:    30291, Lr: 0.000300
+I1208 18:03:16.785163 139845289953024 train.py:278] Epoch  60 Step:     1980 Batch Loss:     0.582072 Ones: 0.66 Accuracy: 0.78 Tokens per Sec:    37523, Lr: 0.000300
+2019-12-08 18:03:16,785 Epoch  60 Step:     1980 Batch Loss:     0.582072 Ones: 0.66 Accuracy: 0.78 Tokens per Sec:    37523, Lr: 0.000300
+I1208 18:03:16.785770 139845289953024 train.py:376] Epoch  60: total training loss 18.66
+2019-12-08 18:03:16,785 Epoch  60: total training loss 18.66
+I1208 18:03:16.785988 139845289953024 train.py:222] EPOCH 61
+2019-12-08 18:03:16,785 EPOCH 61
+I1208 18:03:17.593552 139845289953024 train.py:278] Epoch  61 Step:     1990 Batch Loss:     0.238097 Ones: 0.83 Accuracy: 0.95 Tokens per Sec:    10863, Lr: 0.000300
+2019-12-08 18:03:17,593 Epoch  61 Step:     1990 Batch Loss:     0.238097 Ones: 0.83 Accuracy: 0.95 Tokens per Sec:    10863, Lr: 0.000300
+I1208 18:03:18.395261 139845289953024 train.py:278] Epoch  61 Step:     2000 Batch Loss:     0.666440 Ones: 0.79 Accuracy: 0.89 Tokens per Sec:    22000, Lr: 0.000300
+2019-12-08 18:03:18,395 Epoch  61 Step:     2000 Batch Loss:     0.666440 Ones: 0.79 Accuracy: 0.89 Tokens per Sec:    22000, Lr: 0.000300
+I1208 18:03:21.469483 139845289953024 train.py:361] Validation result at epoch  61, step     2000: f1_prod:   0.14, loss:   0.7393, ones:   0.8154, f1_0:   0.1689, f1_1:   0.8431,f1_prd:   0.1424, duration: 3.0736s
+2019-12-08 18:03:21,469 Validation result at epoch  61, step     2000: f1_prod:   0.14, loss:   0.7393, ones:   0.8154, f1_0:   0.1689, f1_1:   0.8431,f1_prd:   0.1424, duration: 3.0736s
+I1208 18:03:22.127203 139845289953024 train.py:278] Epoch  61 Step:     2010 Batch Loss:     0.827910 Ones: 0.69 Accuracy: 0.81 Tokens per Sec:    38066, Lr: 0.000300
+2019-12-08 18:03:22,127 Epoch  61 Step:     2010 Batch Loss:     0.827910 Ones: 0.69 Accuracy: 0.81 Tokens per Sec:    38066, Lr: 0.000300
+I1208 18:03:22.322420 139845289953024 train.py:376] Epoch  61: total training loss 18.40
+2019-12-08 18:03:22,322 Epoch  61: total training loss 18.40
+I1208 18:03:22.322711 139845289953024 train.py:222] EPOCH 62
+2019-12-08 18:03:22,322 EPOCH 62
+I1208 18:03:22.805479 139845289953024 train.py:278] Epoch  62 Step:     2020 Batch Loss:     0.210982 Ones: 0.88 Accuracy: 0.94 Tokens per Sec:    10318, Lr: 0.000300
+2019-12-08 18:03:22,805 Epoch  62 Step:     2020 Batch Loss:     0.210982 Ones: 0.88 Accuracy: 0.94 Tokens per Sec:    10318, Lr: 0.000300
+I1208 18:03:23.702284 139845289953024 train.py:278] Epoch  62 Step:     2030 Batch Loss:     0.320072 Ones: 0.75 Accuracy: 0.87 Tokens per Sec:    15471, Lr: 0.000300
+2019-12-08 18:03:23,702 Epoch  62 Step:     2030 Batch Loss:     0.320072 Ones: 0.75 Accuracy: 0.87 Tokens per Sec:    15471, Lr: 0.000300
+I1208 18:03:24.523004 139845289953024 train.py:278] Epoch  62 Step:     2040 Batch Loss:     0.802987 Ones: 0.62 Accuracy: 0.74 Tokens per Sec:    27925, Lr: 0.000300
+2019-12-08 18:03:24,523 Epoch  62 Step:     2040 Batch Loss:     0.802987 Ones: 0.62 Accuracy: 0.74 Tokens per Sec:    27925, Lr: 0.000300
+I1208 18:03:24.923336 139845289953024 train.py:376] Epoch  62: total training loss 18.26
+2019-12-08 18:03:24,923 Epoch  62: total training loss 18.26
+I1208 18:03:24.923882 139845289953024 train.py:222] EPOCH 63
+2019-12-08 18:03:24,923 EPOCH 63
+I1208 18:03:25.257908 139845289953024 train.py:278] Epoch  63 Step:     2050 Batch Loss:     0.399185 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    11886, Lr: 0.000300
+2019-12-08 18:03:25,257 Epoch  63 Step:     2050 Batch Loss:     0.399185 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    11886, Lr: 0.000300
+I1208 18:03:25.875973 139845289953024 train.py:278] Epoch  63 Step:     2060 Batch Loss:     0.411498 Ones: 0.62 Accuracy: 0.82 Tokens per Sec:    17329, Lr: 0.000300
+2019-12-08 18:03:25,875 Epoch  63 Step:     2060 Batch Loss:     0.411498 Ones: 0.62 Accuracy: 0.82 Tokens per Sec:    17329, Lr: 0.000300
+I1208 18:03:26.634889 139845289953024 train.py:278] Epoch  63 Step:     2070 Batch Loss:     0.501890 Ones: 0.73 Accuracy: 0.86 Tokens per Sec:    25379, Lr: 0.000300
+2019-12-08 18:03:26,634 Epoch  63 Step:     2070 Batch Loss:     0.501890 Ones: 0.73 Accuracy: 0.86 Tokens per Sec:    25379, Lr: 0.000300
+I1208 18:03:27.374922 139845289953024 train.py:376] Epoch  63: total training loss 18.09
+2019-12-08 18:03:27,374 Epoch  63: total training loss 18.09
+I1208 18:03:27.375180 139845289953024 train.py:222] EPOCH 64
+2019-12-08 18:03:27,375 EPOCH 64
+I1208 18:03:27.442696 139845289953024 train.py:278] Epoch  64 Step:     2080 Batch Loss:     0.377683 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    10487, Lr: 0.000300
+2019-12-08 18:03:27,442 Epoch  64 Step:     2080 Batch Loss:     0.377683 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    10487, Lr: 0.000300
+I1208 18:03:28.126367 139845289953024 train.py:278] Epoch  64 Step:     2090 Batch Loss:     0.198719 Ones: 0.78 Accuracy: 0.96 Tokens per Sec:    11897, Lr: 0.000300
+2019-12-08 18:03:28,126 Epoch  64 Step:     2090 Batch Loss:     0.198719 Ones: 0.78 Accuracy: 0.96 Tokens per Sec:    11897, Lr: 0.000300
+I1208 18:03:29.063541 139845289953024 train.py:278] Epoch  64 Step:     2100 Batch Loss:     0.535048 Ones: 0.62 Accuracy: 0.80 Tokens per Sec:    19802, Lr: 0.000300
+2019-12-08 18:03:29,063 Epoch  64 Step:     2100 Batch Loss:     0.535048 Ones: 0.62 Accuracy: 0.80 Tokens per Sec:    19802, Lr: 0.000300
+I1208 18:03:32.166207 139845289953024 train.py:361] Validation result at epoch  64, step     2100: f1_prod:   0.15, loss:   0.9078, ones:   0.7090, f1_0:   0.1944, f1_1:   0.7812,f1_prd:   0.1519, duration: 3.1019s
+2019-12-08 18:03:32,166 Validation result at epoch  64, step     2100: f1_prod:   0.15, loss:   0.9078, ones:   0.7090, f1_0:   0.1944, f1_1:   0.7812,f1_prd:   0.1519, duration: 3.1019s
+I1208 18:03:32.826435 139845289953024 train.py:278] Epoch  64 Step:     2110 Batch Loss:     0.334544 Ones: 0.76 Accuracy: 0.88 Tokens per Sec:    39371, Lr: 0.000300
+2019-12-08 18:03:32,826 Epoch  64 Step:     2110 Batch Loss:     0.334544 Ones: 0.76 Accuracy: 0.88 Tokens per Sec:    39371, Lr: 0.000300
+I1208 18:03:32.945259 139845289953024 train.py:376] Epoch  64: total training loss 18.40
+2019-12-08 18:03:32,945 Epoch  64: total training loss 18.40
+I1208 18:03:32.945476 139845289953024 train.py:222] EPOCH 65
+2019-12-08 18:03:32,945 EPOCH 65
+I1208 18:03:33.653843 139845289953024 train.py:278] Epoch  65 Step:     2120 Batch Loss:     0.252586 Ones: 0.85 Accuracy: 0.92 Tokens per Sec:    11564, Lr: 0.000300
+2019-12-08 18:03:33,653 Epoch  65 Step:     2120 Batch Loss:     0.252586 Ones: 0.85 Accuracy: 0.92 Tokens per Sec:    11564, Lr: 0.000300
+I1208 18:03:34.274311 139845289953024 train.py:278] Epoch  65 Step:     2130 Batch Loss:     0.259169 Ones: 0.77 Accuracy: 0.95 Tokens per Sec:    24456, Lr: 0.000300
+2019-12-08 18:03:34,274 Epoch  65 Step:     2130 Batch Loss:     0.259169 Ones: 0.77 Accuracy: 0.95 Tokens per Sec:    24456, Lr: 0.000300
+I1208 18:03:35.075028 139845289953024 train.py:278] Epoch  65 Step:     2140 Batch Loss:     0.492563 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    30091, Lr: 0.000300
+2019-12-08 18:03:35,075 Epoch  65 Step:     2140 Batch Loss:     0.492563 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    30091, Lr: 0.000300
+I1208 18:03:35.379733 139845289953024 train.py:376] Epoch  65: total training loss 17.41
+2019-12-08 18:03:35,379 Epoch  65: total training loss 17.41
+I1208 18:03:35.379911 139845289953024 train.py:222] EPOCH 66
+2019-12-08 18:03:35,379 EPOCH 66
+I1208 18:03:35.708812 139845289953024 train.py:278] Epoch  66 Step:     2150 Batch Loss:     0.533259 Ones: 0.72 Accuracy: 0.86 Tokens per Sec:    11079, Lr: 0.000300
+2019-12-08 18:03:35,708 Epoch  66 Step:     2150 Batch Loss:     0.533259 Ones: 0.72 Accuracy: 0.86 Tokens per Sec:    11079, Lr: 0.000300
+I1208 18:03:36.410439 139845289953024 train.py:278] Epoch  66 Step:     2160 Batch Loss:     0.332678 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    16426, Lr: 0.000300
+2019-12-08 18:03:36,410 Epoch  66 Step:     2160 Batch Loss:     0.332678 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    16426, Lr: 0.000300
+I1208 18:03:37.219778 139845289953024 train.py:278] Epoch  66 Step:     2170 Batch Loss:     0.785577 Ones: 0.64 Accuracy: 0.78 Tokens per Sec:    25289, Lr: 0.000300
+2019-12-08 18:03:37,219 Epoch  66 Step:     2170 Batch Loss:     0.785577 Ones: 0.64 Accuracy: 0.78 Tokens per Sec:    25289, Lr: 0.000300
+I1208 18:03:37.825078 139845289953024 train.py:376] Epoch  66: total training loss 17.42
+2019-12-08 18:03:37,825 Epoch  66: total training loss 17.42
+I1208 18:03:37.825606 139845289953024 train.py:222] EPOCH 67
+2019-12-08 18:03:37,825 EPOCH 67
+I1208 18:03:37.988495 139845289953024 train.py:278] Epoch  67 Step:     2180 Batch Loss:     0.551365 Ones: 0.66 Accuracy: 0.79 Tokens per Sec:    11441, Lr: 0.000300
+2019-12-08 18:03:37,988 Epoch  67 Step:     2180 Batch Loss:     0.551365 Ones: 0.66 Accuracy: 0.79 Tokens per Sec:    11441, Lr: 0.000300
+I1208 18:03:38.688148 139845289953024 train.py:278] Epoch  67 Step:     2190 Batch Loss:     0.224017 Ones: 0.85 Accuracy: 0.95 Tokens per Sec:    13446, Lr: 0.000300
+2019-12-08 18:03:38,688 Epoch  67 Step:     2190 Batch Loss:     0.224017 Ones: 0.85 Accuracy: 0.95 Tokens per Sec:    13446, Lr: 0.000300
+I1208 18:03:39.397576 139845289953024 train.py:278] Epoch  67 Step:     2200 Batch Loss:     0.941853 Ones: 0.63 Accuracy: 0.77 Tokens per Sec:    24521, Lr: 0.000300
+2019-12-08 18:03:39,397 Epoch  67 Step:     2200 Batch Loss:     0.941853 Ones: 0.63 Accuracy: 0.77 Tokens per Sec:    24521, Lr: 0.000300
+I1208 18:03:42.497589 139845289953024 train.py:361] Validation result at epoch  67, step     2200: f1_prod:   0.15, loss:   0.8297, ones:   0.7573, f1_0:   0.1810, f1_1:   0.8121,f1_prd:   0.1470, duration: 3.0994s
+2019-12-08 18:03:42,497 Validation result at epoch  67, step     2200: f1_prod:   0.15, loss:   0.8297, ones:   0.7573, f1_0:   0.1810, f1_1:   0.8121,f1_prd:   0.1470, duration: 3.0994s
+I1208 18:03:43.294128 139845289953024 train.py:278] Epoch  67 Step:     2210 Batch Loss:     0.528827 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:    33145, Lr: 0.000300
+2019-12-08 18:03:43,294 Epoch  67 Step:     2210 Batch Loss:     0.528827 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:    33145, Lr: 0.000300
+I1208 18:03:43.375619 139845289953024 train.py:376] Epoch  67: total training loss 17.15
+2019-12-08 18:03:43,375 Epoch  67: total training loss 17.15
+I1208 18:03:43.375837 139845289953024 train.py:222] EPOCH 68
+2019-12-08 18:03:43,375 EPOCH 68
+I1208 18:03:44.215917 139845289953024 train.py:278] Epoch  68 Step:     2220 Batch Loss:     1.070291 Ones: 0.66 Accuracy: 0.78 Tokens per Sec:    11345, Lr: 0.000300
+2019-12-08 18:03:44,215 Epoch  68 Step:     2220 Batch Loss:     1.070291 Ones: 0.66 Accuracy: 0.78 Tokens per Sec:    11345, Lr: 0.000300
+I1208 18:03:44.889738 139845289953024 train.py:278] Epoch  68 Step:     2230 Batch Loss:     0.252088 Ones: 0.84 Accuracy: 0.95 Tokens per Sec:    24727, Lr: 0.000300
+2019-12-08 18:03:44,889 Epoch  68 Step:     2230 Batch Loss:     0.252088 Ones: 0.84 Accuracy: 0.95 Tokens per Sec:    24727, Lr: 0.000300
+I1208 18:03:45.530333 139845289953024 train.py:278] Epoch  68 Step:     2240 Batch Loss:     0.674354 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    36897, Lr: 0.000300
+2019-12-08 18:03:45,530 Epoch  68 Step:     2240 Batch Loss:     0.674354 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    36897, Lr: 0.000300
+I1208 18:03:45.846666 139845289953024 train.py:376] Epoch  68: total training loss 17.14
+2019-12-08 18:03:45,846 Epoch  68: total training loss 17.14
+I1208 18:03:45.846949 139845289953024 train.py:222] EPOCH 69
+2019-12-08 18:03:45,846 EPOCH 69
+I1208 18:03:46.222807 139845289953024 train.py:278] Epoch  69 Step:     2250 Batch Loss:     0.316594 Ones: 0.80 Accuracy: 0.95 Tokens per Sec:     9769, Lr: 0.000300
+2019-12-08 18:03:46,222 Epoch  69 Step:     2250 Batch Loss:     0.316594 Ones: 0.80 Accuracy: 0.95 Tokens per Sec:     9769, Lr: 0.000300
+I1208 18:03:46.939005 139845289953024 train.py:278] Epoch  69 Step:     2260 Batch Loss:     0.315228 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    16485, Lr: 0.000300
+2019-12-08 18:03:46,939 Epoch  69 Step:     2260 Batch Loss:     0.315228 Ones: 0.76 Accuracy: 0.90 Tokens per Sec:    16485, Lr: 0.000300
+I1208 18:03:47.766757 139845289953024 train.py:278] Epoch  69 Step:     2270 Batch Loss:     0.337200 Ones: 0.73 Accuracy: 0.93 Tokens per Sec:    25296, Lr: 0.000300
+2019-12-08 18:03:47,766 Epoch  69 Step:     2270 Batch Loss:     0.337200 Ones: 0.73 Accuracy: 0.93 Tokens per Sec:    25296, Lr: 0.000300
+I1208 18:03:48.350637 139845289953024 train.py:376] Epoch  69: total training loss 17.37
+2019-12-08 18:03:48,350 Epoch  69: total training loss 17.37
+I1208 18:03:48.350871 139845289953024 train.py:222] EPOCH 70
+2019-12-08 18:03:48,350 EPOCH 70
+I1208 18:03:48.568952 139845289953024 train.py:278] Epoch  70 Step:     2280 Batch Loss:     0.310069 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:    11200, Lr: 0.000300
+2019-12-08 18:03:48,568 Epoch  70 Step:     2280 Batch Loss:     0.310069 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:    11200, Lr: 0.000300
+I1208 18:03:49.271545 139845289953024 train.py:278] Epoch  70 Step:     2290 Batch Loss:     0.424421 Ones: 0.74 Accuracy: 0.86 Tokens per Sec:    14405, Lr: 0.000300
+2019-12-08 18:03:49,271 Epoch  70 Step:     2290 Batch Loss:     0.424421 Ones: 0.74 Accuracy: 0.86 Tokens per Sec:    14405, Lr: 0.000300
+I1208 18:03:49.811098 139845289953024 train.py:278] Epoch  70 Step:     2300 Batch Loss:     0.232569 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    29770, Lr: 0.000300
+2019-12-08 18:03:49,811 Epoch  70 Step:     2300 Batch Loss:     0.232569 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    29770, Lr: 0.000300
+I1208 18:03:52.960990 139845289953024 train.py:361] Validation result at epoch  70, step     2300: f1_prod:   0.14, loss:   0.8259, ones:   0.7663, f1_0:   0.1653, f1_1:   0.8179,f1_prd:   0.1352, duration: 3.1495s
+2019-12-08 18:03:52,960 Validation result at epoch  70, step     2300: f1_prod:   0.14, loss:   0.8259, ones:   0.7663, f1_0:   0.1653, f1_1:   0.8179,f1_prd:   0.1352, duration: 3.1495s
+I1208 18:03:53.965940 139845289953024 train.py:278] Epoch  70 Step:     2310 Batch Loss:     0.594266 Ones: 0.72 Accuracy: 0.83 Tokens per Sec:    27213, Lr: 0.000300
+2019-12-08 18:03:53,965 Epoch  70 Step:     2310 Batch Loss:     0.594266 Ones: 0.72 Accuracy: 0.83 Tokens per Sec:    27213, Lr: 0.000300
+I1208 18:03:53.967111 139845289953024 train.py:376] Epoch  70: total training loss 16.12
+2019-12-08 18:03:53,967 Epoch  70: total training loss 16.12
+I1208 18:03:53.967322 139845289953024 train.py:222] EPOCH 71
+2019-12-08 18:03:53,967 EPOCH 71
+I1208 18:03:54.778133 139845289953024 train.py:278] Epoch  71 Step:     2320 Batch Loss:     0.397822 Ones: 0.73 Accuracy: 0.86 Tokens per Sec:    10833, Lr: 0.000300
+2019-12-08 18:03:54,778 Epoch  71 Step:     2320 Batch Loss:     0.397822 Ones: 0.73 Accuracy: 0.86 Tokens per Sec:    10833, Lr: 0.000300
+I1208 18:03:55.347479 139845289953024 train.py:278] Epoch  71 Step:     2330 Batch Loss:     0.486914 Ones: 0.70 Accuracy: 0.86 Tokens per Sec:    26243, Lr: 0.000300
+2019-12-08 18:03:55,347 Epoch  71 Step:     2330 Batch Loss:     0.486914 Ones: 0.70 Accuracy: 0.86 Tokens per Sec:    26243, Lr: 0.000300
+I1208 18:03:56.140398 139845289953024 train.py:278] Epoch  71 Step:     2340 Batch Loss:     0.583456 Ones: 0.74 Accuracy: 0.85 Tokens per Sec:    29834, Lr: 0.000300
+2019-12-08 18:03:56,140 Epoch  71 Step:     2340 Batch Loss:     0.583456 Ones: 0.74 Accuracy: 0.85 Tokens per Sec:    29834, Lr: 0.000300
+I1208 18:03:56.476296 139845289953024 train.py:376] Epoch  71: total training loss 16.93
+2019-12-08 18:03:56,476 Epoch  71: total training loss 16.93
+I1208 18:03:56.476629 139845289953024 train.py:222] EPOCH 72
+2019-12-08 18:03:56,476 EPOCH 72
+I1208 18:03:57.098480 139845289953024 train.py:278] Epoch  72 Step:     2350 Batch Loss:     0.406183 Ones: 0.79 Accuracy: 0.91 Tokens per Sec:    11022, Lr: 0.000300
+2019-12-08 18:03:57,098 Epoch  72 Step:     2350 Batch Loss:     0.406183 Ones: 0.79 Accuracy: 0.91 Tokens per Sec:    11022, Lr: 0.000300
+I1208 18:03:57.949901 139845289953024 train.py:278] Epoch  72 Step:     2360 Batch Loss:     0.466346 Ones: 0.76 Accuracy: 0.88 Tokens per Sec:    18990, Lr: 0.000300
+2019-12-08 18:03:57,949 Epoch  72 Step:     2360 Batch Loss:     0.466346 Ones: 0.76 Accuracy: 0.88 Tokens per Sec:    18990, Lr: 0.000300
+I1208 18:03:58.594107 139845289953024 train.py:278] Epoch  72 Step:     2370 Batch Loss:     0.530628 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    35508, Lr: 0.000300
+2019-12-08 18:03:58,594 Epoch  72 Step:     2370 Batch Loss:     0.530628 Ones: 0.74 Accuracy: 0.87 Tokens per Sec:    35508, Lr: 0.000300
+I1208 18:03:59.007498 139845289953024 train.py:376] Epoch  72: total training loss 16.81
+2019-12-08 18:03:59,007 Epoch  72: total training loss 16.81
+I1208 18:03:59.007699 139845289953024 train.py:222] EPOCH 73
+2019-12-08 18:03:59,007 EPOCH 73
+I1208 18:03:59.389603 139845289953024 train.py:278] Epoch  73 Step:     2380 Batch Loss:     0.404463 Ones: 0.78 Accuracy: 0.90 Tokens per Sec:    10525, Lr: 0.000300
+2019-12-08 18:03:59,389 Epoch  73 Step:     2380 Batch Loss:     0.404463 Ones: 0.78 Accuracy: 0.90 Tokens per Sec:    10525, Lr: 0.000300
+I1208 18:04:00.033393 139845289953024 train.py:278] Epoch  73 Step:     2390 Batch Loss:     0.193492 Ones: 0.85 Accuracy: 0.96 Tokens per Sec:    17161, Lr: 0.000300
+2019-12-08 18:04:00,033 Epoch  73 Step:     2390 Batch Loss:     0.193492 Ones: 0.85 Accuracy: 0.96 Tokens per Sec:    17161, Lr: 0.000300
+I1208 18:04:00.690819 139845289953024 train.py:278] Epoch  73 Step:     2400 Batch Loss:     0.277208 Ones: 0.74 Accuracy: 0.92 Tokens per Sec:    27431, Lr: 0.000300
+2019-12-08 18:04:00,690 Epoch  73 Step:     2400 Batch Loss:     0.277208 Ones: 0.74 Accuracy: 0.92 Tokens per Sec:    27431, Lr: 0.000300
+I1208 18:04:03.882789 139845289953024 train.py:361] Validation result at epoch  73, step     2400: f1_prod:   0.14, loss:   0.8324, ones:   0.7713, f1_0:   0.1725, f1_1:   0.8205,f1_prd:   0.1415, duration: 3.1916s
+2019-12-08 18:04:03,882 Validation result at epoch  73, step     2400: f1_prod:   0.14, loss:   0.8324, ones:   0.7713, f1_0:   0.1725, f1_1:   0.8205,f1_prd:   0.1415, duration: 3.1916s
+I1208 18:04:04.695869 139845289953024 train.py:376] Epoch  73: total training loss 17.50
+2019-12-08 18:04:04,695 Epoch  73: total training loss 17.50
+I1208 18:04:04.696146 139845289953024 train.py:222] EPOCH 74
+2019-12-08 18:04:04,696 EPOCH 74
+I1208 18:04:04.825045 139845289953024 train.py:278] Epoch  74 Step:     2410 Batch Loss:     0.703413 Ones: 0.74 Accuracy: 0.84 Tokens per Sec:    10956, Lr: 0.000300
+2019-12-08 18:04:04,825 Epoch  74 Step:     2410 Batch Loss:     0.703413 Ones: 0.74 Accuracy: 0.84 Tokens per Sec:    10956, Lr: 0.000300
+I1208 18:04:05.485793 139845289953024 train.py:278] Epoch  74 Step:     2420 Batch Loss:     0.264640 Ones: 0.81 Accuracy: 0.92 Tokens per Sec:    12489, Lr: 0.000300
+2019-12-08 18:04:05,485 Epoch  74 Step:     2420 Batch Loss:     0.264640 Ones: 0.81 Accuracy: 0.92 Tokens per Sec:    12489, Lr: 0.000300
+I1208 18:04:06.274086 139845289953024 train.py:278] Epoch  74 Step:     2430 Batch Loss:     0.291374 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    21795, Lr: 0.000300
+2019-12-08 18:04:06,274 Epoch  74 Step:     2430 Batch Loss:     0.291374 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    21795, Lr: 0.000300
+I1208 18:04:07.064764 139845289953024 train.py:278] Epoch  74 Step:     2440 Batch Loss:     0.264317 Ones: 0.78 Accuracy: 0.95 Tokens per Sec:    33035, Lr: 0.000300
+2019-12-08 18:04:07,064 Epoch  74 Step:     2440 Batch Loss:     0.264317 Ones: 0.78 Accuracy: 0.95 Tokens per Sec:    33035, Lr: 0.000300
+I1208 18:04:07.184526 139845289953024 train.py:376] Epoch  74: total training loss 17.53
+2019-12-08 18:04:07,184 Epoch  74: total training loss 17.53
+I1208 18:04:07.184804 139845289953024 train.py:222] EPOCH 75
+2019-12-08 18:04:07,184 EPOCH 75
+I1208 18:04:07.832376 139845289953024 train.py:278] Epoch  75 Step:     2450 Batch Loss:     0.943604 Ones: 0.58 Accuracy: 0.73 Tokens per Sec:    10850, Lr: 0.000300
+2019-12-08 18:04:07,832 Epoch  75 Step:     2450 Batch Loss:     0.943604 Ones: 0.58 Accuracy: 0.73 Tokens per Sec:    10850, Lr: 0.000300
+I1208 18:04:08.384297 139845289953024 train.py:278] Epoch  75 Step:     2460 Batch Loss:     0.416740 Ones: 0.74 Accuracy: 0.94 Tokens per Sec:    23308, Lr: 0.000300
+2019-12-08 18:04:08,384 Epoch  75 Step:     2460 Batch Loss:     0.416740 Ones: 0.74 Accuracy: 0.94 Tokens per Sec:    23308, Lr: 0.000300
+I1208 18:04:09.329287 139845289953024 train.py:278] Epoch  75 Step:     2470 Batch Loss:     0.863304 Ones: 0.58 Accuracy: 0.82 Tokens per Sec:    24938, Lr: 0.000300
+2019-12-08 18:04:09,329 Epoch  75 Step:     2470 Batch Loss:     0.863304 Ones: 0.58 Accuracy: 0.82 Tokens per Sec:    24938, Lr: 0.000300
+I1208 18:04:09.668379 139845289953024 train.py:376] Epoch  75: total training loss 17.38
+2019-12-08 18:04:09,668 Epoch  75: total training loss 17.38
+I1208 18:04:09.668646 139845289953024 train.py:222] EPOCH 76
+2019-12-08 18:04:09,668 EPOCH 76
+I1208 18:04:10.146173 139845289953024 train.py:278] Epoch  76 Step:     2480 Batch Loss:     0.765751 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    10646, Lr: 0.000300
+2019-12-08 18:04:10,146 Epoch  76 Step:     2480 Batch Loss:     0.765751 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    10646, Lr: 0.000300
+I1208 18:04:10.839364 139845289953024 train.py:278] Epoch  76 Step:     2490 Batch Loss:     0.350792 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    18503, Lr: 0.000300
+2019-12-08 18:04:10,839 Epoch  76 Step:     2490 Batch Loss:     0.350792 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    18503, Lr: 0.000300
+I1208 18:04:11.527168 139845289953024 train.py:278] Epoch  76 Step:     2500 Batch Loss:     0.463924 Ones: 0.76 Accuracy: 0.89 Tokens per Sec:    29537, Lr: 0.000300
+2019-12-08 18:04:11,527 Epoch  76 Step:     2500 Batch Loss:     0.463924 Ones: 0.76 Accuracy: 0.89 Tokens per Sec:    29537, Lr: 0.000300
+I1208 18:04:14.679852 139845289953024 train.py:361] Validation result at epoch  76, step     2500: f1_prod:   0.15, loss:   0.8348, ones:   0.7702, f1_0:   0.1802, f1_1:   0.8211,f1_prd:   0.1480, duration: 3.1522s
+2019-12-08 18:04:14,679 Validation result at epoch  76, step     2500: f1_prod:   0.15, loss:   0.8348, ones:   0.7702, f1_0:   0.1802, f1_1:   0.8211,f1_prd:   0.1480, duration: 3.1522s
+I1208 18:04:15.317598 139845289953024 train.py:376] Epoch  76: total training loss 16.34
+2019-12-08 18:04:15,317 Epoch  76: total training loss 16.34
+I1208 18:04:15.317829 139845289953024 train.py:222] EPOCH 77
+2019-12-08 18:04:15,317 EPOCH 77
+I1208 18:04:15.470167 139845289953024 train.py:278] Epoch  77 Step:     2510 Batch Loss:     0.333890 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    11242, Lr: 0.000300
+2019-12-08 18:04:15,470 Epoch  77 Step:     2510 Batch Loss:     0.333890 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    11242, Lr: 0.000300
+I1208 18:04:16.162347 139845289953024 train.py:278] Epoch  77 Step:     2520 Batch Loss:     0.398346 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    13438, Lr: 0.000300
+2019-12-08 18:04:16,162 Epoch  77 Step:     2520 Batch Loss:     0.398346 Ones: 0.80 Accuracy: 0.93 Tokens per Sec:    13438, Lr: 0.000300
+I1208 18:04:16.864147 139845289953024 train.py:278] Epoch  77 Step:     2530 Batch Loss:     0.752295 Ones: 0.75 Accuracy: 0.87 Tokens per Sec:    24046, Lr: 0.000300
+2019-12-08 18:04:16,864 Epoch  77 Step:     2530 Batch Loss:     0.752295 Ones: 0.75 Accuracy: 0.87 Tokens per Sec:    24046, Lr: 0.000300
+I1208 18:04:17.763277 139845289953024 train.py:278] Epoch  77 Step:     2540 Batch Loss:     0.334295 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:    29796, Lr: 0.000300
+2019-12-08 18:04:17,763 Epoch  77 Step:     2540 Batch Loss:     0.334295 Ones: 0.77 Accuracy: 0.93 Tokens per Sec:    29796, Lr: 0.000300
+I1208 18:04:17.814396 139845289953024 train.py:376] Epoch  77: total training loss 16.81
+2019-12-08 18:04:17,814 Epoch  77: total training loss 16.81
+I1208 18:04:17.814648 139845289953024 train.py:222] EPOCH 78
+2019-12-08 18:04:17,814 EPOCH 78
+I1208 18:04:18.517164 139845289953024 train.py:278] Epoch  78 Step:     2550 Batch Loss:     0.333322 Ones: 0.68 Accuracy: 0.91 Tokens per Sec:    10546, Lr: 0.000300
+2019-12-08 18:04:18,517 Epoch  78 Step:     2550 Batch Loss:     0.333322 Ones: 0.68 Accuracy: 0.91 Tokens per Sec:    10546, Lr: 0.000300
+I1208 18:04:19.416947 139845289953024 train.py:278] Epoch  78 Step:     2560 Batch Loss:     0.658732 Ones: 0.72 Accuracy: 0.83 Tokens per Sec:    19712, Lr: 0.000300
+2019-12-08 18:04:19,416 Epoch  78 Step:     2560 Batch Loss:     0.658732 Ones: 0.72 Accuracy: 0.83 Tokens per Sec:    19712, Lr: 0.000300
+I1208 18:04:19.935882 139845289953024 train.py:278] Epoch  78 Step:     2570 Batch Loss:     0.377789 Ones: 0.75 Accuracy: 0.93 Tokens per Sec:    44343, Lr: 0.000300
+2019-12-08 18:04:19,935 Epoch  78 Step:     2570 Batch Loss:     0.377789 Ones: 0.75 Accuracy: 0.93 Tokens per Sec:    44343, Lr: 0.000300
+I1208 18:04:20.307164 139845289953024 train.py:376] Epoch  78: total training loss 15.53
+2019-12-08 18:04:20,307 Epoch  78: total training loss 15.53
+I1208 18:04:20.307425 139845289953024 train.py:222] EPOCH 79
+2019-12-08 18:04:20,307 EPOCH 79
+I1208 18:04:20.844449 139845289953024 train.py:278] Epoch  79 Step:     2580 Batch Loss:     0.316976 Ones: 0.81 Accuracy: 0.93 Tokens per Sec:    10592, Lr: 0.000300
+2019-12-08 18:04:20,844 Epoch  79 Step:     2580 Batch Loss:     0.316976 Ones: 0.81 Accuracy: 0.93 Tokens per Sec:    10592, Lr: 0.000300
+I1208 18:04:21.603291 139845289953024 train.py:278] Epoch  79 Step:     2590 Batch Loss:     0.202062 Ones: 0.81 Accuracy: 0.94 Tokens per Sec:    18234, Lr: 0.000300
+2019-12-08 18:04:21,603 Epoch  79 Step:     2590 Batch Loss:     0.202062 Ones: 0.81 Accuracy: 0.94 Tokens per Sec:    18234, Lr: 0.000300
+I1208 18:04:22.248853 139845289953024 train.py:278] Epoch  79 Step:     2600 Batch Loss:     0.541405 Ones: 0.64 Accuracy: 0.81 Tokens per Sec:    32947, Lr: 0.000300
+2019-12-08 18:04:22,248 Epoch  79 Step:     2600 Batch Loss:     0.541405 Ones: 0.64 Accuracy: 0.81 Tokens per Sec:    32947, Lr: 0.000300
+I1208 18:04:25.362313 139845289953024 train.py:361] Validation result at epoch  79, step     2600: f1_prod:   0.14, loss:   0.9318, ones:   0.7138, f1_0:   0.1821, f1_1:   0.7853,f1_prd:   0.1430, duration: 3.1129s
+2019-12-08 18:04:25,362 Validation result at epoch  79, step     2600: f1_prod:   0.14, loss:   0.9318, ones:   0.7138, f1_0:   0.1821, f1_1:   0.7853,f1_prd:   0.1430, duration: 3.1129s
+I1208 18:04:25.907335 139845289953024 train.py:376] Epoch  79: total training loss 15.61
+2019-12-08 18:04:25,907 Epoch  79: total training loss 15.61
+I1208 18:04:25.907625 139845289953024 train.py:222] EPOCH 80
+2019-12-08 18:04:25,907 EPOCH 80
+I1208 18:04:26.250107 139845289953024 train.py:278] Epoch  80 Step:     2610 Batch Loss:     0.298755 Ones: 0.80 Accuracy: 0.94 Tokens per Sec:    10783, Lr: 0.000300
+2019-12-08 18:04:26,250 Epoch  80 Step:     2610 Batch Loss:     0.298755 Ones: 0.80 Accuracy: 0.94 Tokens per Sec:    10783, Lr: 0.000300
+I1208 18:04:26.947607 139845289953024 train.py:278] Epoch  80 Step:     2620 Batch Loss:     0.434060 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    16179, Lr: 0.000300
+2019-12-08 18:04:26,947 Epoch  80 Step:     2620 Batch Loss:     0.434060 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    16179, Lr: 0.000300
+I1208 18:04:27.697456 139845289953024 train.py:278] Epoch  80 Step:     2630 Batch Loss:     0.387648 Ones: 0.74 Accuracy: 0.91 Tokens per Sec:    26514, Lr: 0.000300
+2019-12-08 18:04:27,697 Epoch  80 Step:     2630 Batch Loss:     0.387648 Ones: 0.74 Accuracy: 0.91 Tokens per Sec:    26514, Lr: 0.000300
+I1208 18:04:28.418195 139845289953024 train.py:278] Epoch  80 Step:     2640 Batch Loss:     0.137119 Ones: 0.90 Accuracy: 0.99 Tokens per Sec:    37996, Lr: 0.000300
+2019-12-08 18:04:28,418 Epoch  80 Step:     2640 Batch Loss:     0.137119 Ones: 0.90 Accuracy: 0.99 Tokens per Sec:    37996, Lr: 0.000300
+I1208 18:04:28.418946 139845289953024 train.py:376] Epoch  80: total training loss 15.81
+2019-12-08 18:04:28,418 Epoch  80: total training loss 15.81
+I1208 18:04:28.419078 139845289953024 train.py:222] EPOCH 81
+2019-12-08 18:04:28,419 EPOCH 81
+I1208 18:04:29.145934 139845289953024 train.py:278] Epoch  81 Step:     2650 Batch Loss:     0.455544 Ones: 0.74 Accuracy: 0.88 Tokens per Sec:    11266, Lr: 0.000300
+2019-12-08 18:04:29,145 Epoch  81 Step:     2650 Batch Loss:     0.455544 Ones: 0.74 Accuracy: 0.88 Tokens per Sec:    11266, Lr: 0.000300
+I1208 18:04:30.030904 139845289953024 train.py:278] Epoch  81 Step:     2660 Batch Loss:     0.772022 Ones: 0.65 Accuracy: 0.76 Tokens per Sec:    20376, Lr: 0.000300
+2019-12-08 18:04:30,030 Epoch  81 Step:     2660 Batch Loss:     0.772022 Ones: 0.65 Accuracy: 0.76 Tokens per Sec:    20376, Lr: 0.000300
+I1208 18:04:30.696586 139845289953024 train.py:278] Epoch  81 Step:     2670 Batch Loss:     0.621437 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    37907, Lr: 0.000300
+2019-12-08 18:04:30,696 Epoch  81 Step:     2670 Batch Loss:     0.621437 Ones: 0.71 Accuracy: 0.85 Tokens per Sec:    37907, Lr: 0.000300
+I1208 18:04:30.903792 139845289953024 train.py:376] Epoch  81: total training loss 16.60
+2019-12-08 18:04:30,903 Epoch  81: total training loss 16.60
+I1208 18:04:30.904042 139845289953024 train.py:222] EPOCH 82
+2019-12-08 18:04:30,904 EPOCH 82
+I1208 18:04:31.326793 139845289953024 train.py:278] Epoch  82 Step:     2680 Batch Loss:     0.286855 Ones: 0.82 Accuracy: 0.95 Tokens per Sec:    11042, Lr: 0.000300
+2019-12-08 18:04:31,326 Epoch  82 Step:     2680 Batch Loss:     0.286855 Ones: 0.82 Accuracy: 0.95 Tokens per Sec:    11042, Lr: 0.000300
+I1208 18:04:32.198743 139845289953024 train.py:278] Epoch  82 Step:     2690 Batch Loss:     0.375795 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    16807, Lr: 0.000300
+2019-12-08 18:04:32,198 Epoch  82 Step:     2690 Batch Loss:     0.375795 Ones: 0.82 Accuracy: 0.94 Tokens per Sec:    16807, Lr: 0.000300
+I1208 18:04:32.805085 139845289953024 train.py:278] Epoch  82 Step:     2700 Batch Loss:     0.256518 Ones: 0.73 Accuracy: 0.91 Tokens per Sec:    34672, Lr: 0.000300
+2019-12-08 18:04:32,805 Epoch  82 Step:     2700 Batch Loss:     0.256518 Ones: 0.73 Accuracy: 0.91 Tokens per Sec:    34672, Lr: 0.000300
+I1208 18:04:35.970870 139845289953024 train.py:361] Validation result at epoch  82, step     2700: f1_prod:   0.15, loss:   0.9914, ones:   0.6751, f1_0:   0.1915, f1_1:   0.7693,f1_prd:   0.1473, duration: 3.1648s
+2019-12-08 18:04:35,970 Validation result at epoch  82, step     2700: f1_prod:   0.15, loss:   0.9914, ones:   0.6751, f1_0:   0.1915, f1_1:   0.7693,f1_prd:   0.1473, duration: 3.1648s
+I1208 18:04:36.544416 139845289953024 train.py:376] Epoch  82: total training loss 15.65
+2019-12-08 18:04:36,544 Epoch  82: total training loss 15.65
+I1208 18:04:36.544681 139845289953024 train.py:222] EPOCH 83
+2019-12-08 18:04:36,544 EPOCH 83
+I1208 18:04:36.794708 139845289953024 train.py:278] Epoch  83 Step:     2710 Batch Loss:     0.205318 Ones: 0.78 Accuracy: 0.97 Tokens per Sec:    10314, Lr: 0.000300
+2019-12-08 18:04:36,794 Epoch  83 Step:     2710 Batch Loss:     0.205318 Ones: 0.78 Accuracy: 0.97 Tokens per Sec:    10314, Lr: 0.000300
+I1208 18:04:37.641300 139845289953024 train.py:278] Epoch  83 Step:     2720 Batch Loss:     0.649311 Ones: 0.71 Accuracy: 0.87 Tokens per Sec:    14577, Lr: 0.000300
+2019-12-08 18:04:37,641 Epoch  83 Step:     2720 Batch Loss:     0.649311 Ones: 0.71 Accuracy: 0.87 Tokens per Sec:    14577, Lr: 0.000300
+I1208 18:04:38.460708 139845289953024 train.py:278] Epoch  83 Step:     2730 Batch Loss:     0.199585 Ones: 0.89 Accuracy: 0.96 Tokens per Sec:    25916, Lr: 0.000300
+2019-12-08 18:04:38,460 Epoch  83 Step:     2730 Batch Loss:     0.199585 Ones: 0.89 Accuracy: 0.96 Tokens per Sec:    25916, Lr: 0.000300
+I1208 18:04:39.044904 139845289953024 train.py:376] Epoch  83: total training loss 15.17
+2019-12-08 18:04:39,044 Epoch  83: total training loss 15.17
+I1208 18:04:39.045169 139845289953024 train.py:222] EPOCH 84
+2019-12-08 18:04:39,045 EPOCH 84
+I1208 18:04:39.199530 139845289953024 train.py:278] Epoch  84 Step:     2740 Batch Loss:     0.846872 Ones: 0.63 Accuracy: 0.78 Tokens per Sec:    11050, Lr: 0.000300
+2019-12-08 18:04:39,199 Epoch  84 Step:     2740 Batch Loss:     0.846872 Ones: 0.63 Accuracy: 0.78 Tokens per Sec:    11050, Lr: 0.000300
+I1208 18:04:40.061318 139845289953024 train.py:278] Epoch  84 Step:     2750 Batch Loss:     0.713428 Ones: 0.65 Accuracy: 0.83 Tokens per Sec:    13115, Lr: 0.000300
+2019-12-08 18:04:40,061 Epoch  84 Step:     2750 Batch Loss:     0.713428 Ones: 0.65 Accuracy: 0.83 Tokens per Sec:    13115, Lr: 0.000300
+I1208 18:04:40.874680 139845289953024 train.py:278] Epoch  84 Step:     2760 Batch Loss:     0.234228 Ones: 0.79 Accuracy: 0.93 Tokens per Sec:    25286, Lr: 0.000300
+2019-12-08 18:04:40,874 Epoch  84 Step:     2760 Batch Loss:     0.234228 Ones: 0.79 Accuracy: 0.93 Tokens per Sec:    25286, Lr: 0.000300
+I1208 18:04:41.364790 139845289953024 train.py:278] Epoch  84 Step:     2770 Batch Loss:     0.394340 Ones: 0.72 Accuracy: 0.86 Tokens per Sec:    52316, Lr: 0.000300
+2019-12-08 18:04:41,364 Epoch  84 Step:     2770 Batch Loss:     0.394340 Ones: 0.72 Accuracy: 0.86 Tokens per Sec:    52316, Lr: 0.000300
+I1208 18:04:41.533866 139845289953024 train.py:376] Epoch  84: total training loss 15.24
+2019-12-08 18:04:41,533 Epoch  84: total training loss 15.24
+I1208 18:04:41.534039 139845289953024 train.py:222] EPOCH 85
+2019-12-08 18:04:41,534 EPOCH 85
+I1208 18:04:42.224333 139845289953024 train.py:278] Epoch  85 Step:     2780 Batch Loss:     0.225332 Ones: 0.79 Accuracy: 0.95 Tokens per Sec:    10502, Lr: 0.000300
+2019-12-08 18:04:42,224 Epoch  85 Step:     2780 Batch Loss:     0.225332 Ones: 0.79 Accuracy: 0.95 Tokens per Sec:    10502, Lr: 0.000300
+I1208 18:04:43.001565 139845289953024 train.py:278] Epoch  85 Step:     2790 Batch Loss:     0.871562 Ones: 0.63 Accuracy: 0.78 Tokens per Sec:    19990, Lr: 0.000300
+2019-12-08 18:04:43,001 Epoch  85 Step:     2790 Batch Loss:     0.871562 Ones: 0.63 Accuracy: 0.78 Tokens per Sec:    19990, Lr: 0.000300
+I1208 18:04:43.821079 139845289953024 train.py:278] Epoch  85 Step:     2800 Batch Loss:     0.612152 Ones: 0.78 Accuracy: 0.87 Tokens per Sec:    30131, Lr: 0.000300
+2019-12-08 18:04:43,821 Epoch  85 Step:     2800 Batch Loss:     0.612152 Ones: 0.78 Accuracy: 0.87 Tokens per Sec:    30131, Lr: 0.000300
+I1208 18:04:46.954330 139845289953024 train.py:361] Validation result at epoch  85, step     2800: f1_prod:   0.14, loss:   0.8076, ones:   0.8096, f1_0:   0.1601, f1_1:   0.8444,f1_prd:   0.1352, duration: 3.1328s
+2019-12-08 18:04:46,954 Validation result at epoch  85, step     2800: f1_prod:   0.14, loss:   0.8076, ones:   0.8096, f1_0:   0.1601, f1_1:   0.8444,f1_prd:   0.1352, duration: 3.1328s
+I1208 18:04:47.200525 139845289953024 train.py:376] Epoch  85: total training loss 14.87
+2019-12-08 18:04:47,200 Epoch  85: total training loss 14.87
+I1208 18:04:47.200724 139845289953024 train.py:222] EPOCH 86
+2019-12-08 18:04:47,200 EPOCH 86
+I1208 18:04:47.607820 139845289953024 train.py:278] Epoch  86 Step:     2810 Batch Loss:     0.463796 Ones: 0.67 Accuracy: 0.82 Tokens per Sec:    11079, Lr: 0.000300
+2019-12-08 18:04:47,607 Epoch  86 Step:     2810 Batch Loss:     0.463796 Ones: 0.67 Accuracy: 0.82 Tokens per Sec:    11079, Lr: 0.000300
+I1208 18:04:48.326720 139845289953024 train.py:278] Epoch  86 Step:     2820 Batch Loss:     0.827559 Ones: 0.55 Accuracy: 0.71 Tokens per Sec:    17005, Lr: 0.000300
+2019-12-08 18:04:48,326 Epoch  86 Step:     2820 Batch Loss:     0.827559 Ones: 0.55 Accuracy: 0.71 Tokens per Sec:    17005, Lr: 0.000300
+I1208 18:04:49.129313 139845289953024 train.py:278] Epoch  86 Step:     2830 Batch Loss:     0.407851 Ones: 0.80 Accuracy: 0.91 Tokens per Sec:    26831, Lr: 0.000300
+2019-12-08 18:04:49,129 Epoch  86 Step:     2830 Batch Loss:     0.407851 Ones: 0.80 Accuracy: 0.91 Tokens per Sec:    26831, Lr: 0.000300
+I1208 18:04:49.694551 139845289953024 train.py:376] Epoch  86: total training loss 16.26
+2019-12-08 18:04:49,694 Epoch  86: total training loss 16.26
+I1208 18:04:49.694816 139845289953024 train.py:222] EPOCH 87
+2019-12-08 18:04:49,694 EPOCH 87
+I1208 18:04:49.813664 139845289953024 train.py:278] Epoch  87 Step:     2840 Batch Loss:     0.350556 Ones: 0.78 Accuracy: 0.96 Tokens per Sec:     9975, Lr: 0.000300
+2019-12-08 18:04:49,813 Epoch  87 Step:     2840 Batch Loss:     0.350556 Ones: 0.78 Accuracy: 0.96 Tokens per Sec:     9975, Lr: 0.000300
+I1208 18:04:50.688981 139845289953024 train.py:278] Epoch  87 Step:     2850 Batch Loss:     0.272940 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:    12633, Lr: 0.000300
+2019-12-08 18:04:50,688 Epoch  87 Step:     2850 Batch Loss:     0.272940 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:    12633, Lr: 0.000300
+I1208 18:04:51.329329 139845289953024 train.py:278] Epoch  87 Step:     2860 Batch Loss:     0.658019 Ones: 0.66 Accuracy: 0.79 Tokens per Sec:    27491, Lr: 0.000300
+2019-12-08 18:04:51,329 Epoch  87 Step:     2860 Batch Loss:     0.658019 Ones: 0.66 Accuracy: 0.79 Tokens per Sec:    27491, Lr: 0.000300
+I1208 18:04:52.093454 139845289953024 train.py:278] Epoch  87 Step:     2870 Batch Loss:     0.498248 Ones: 0.71 Accuracy: 0.84 Tokens per Sec:    34306, Lr: 0.000300
+2019-12-08 18:04:52,093 Epoch  87 Step:     2870 Batch Loss:     0.498248 Ones: 0.71 Accuracy: 0.84 Tokens per Sec:    34306, Lr: 0.000300
+I1208 18:04:52.187146 139845289953024 train.py:376] Epoch  87: total training loss 15.76
+2019-12-08 18:04:52,187 Epoch  87: total training loss 15.76
+I1208 18:04:52.187322 139845289953024 train.py:222] EPOCH 88
+2019-12-08 18:04:52,187 EPOCH 88
+I1208 18:04:52.912272 139845289953024 train.py:278] Epoch  88 Step:     2880 Batch Loss:     0.452278 Ones: 0.77 Accuracy: 0.89 Tokens per Sec:    11248, Lr: 0.000300
+2019-12-08 18:04:52,912 Epoch  88 Step:     2880 Batch Loss:     0.452278 Ones: 0.77 Accuracy: 0.89 Tokens per Sec:    11248, Lr: 0.000300
+I1208 18:04:53.617877 139845289953024 train.py:278] Epoch  88 Step:     2890 Batch Loss:     0.877707 Ones: 0.61 Accuracy: 0.76 Tokens per Sec:    22577, Lr: 0.000300
+2019-12-08 18:04:53,617 Epoch  88 Step:     2890 Batch Loss:     0.877707 Ones: 0.61 Accuracy: 0.76 Tokens per Sec:    22577, Lr: 0.000300
+I1208 18:04:54.353876 139845289953024 train.py:278] Epoch  88 Step:     2900 Batch Loss:     0.818798 Ones: 0.61 Accuracy: 0.76 Tokens per Sec:    32551, Lr: 0.000300
+2019-12-08 18:04:54,353 Epoch  88 Step:     2900 Batch Loss:     0.818798 Ones: 0.61 Accuracy: 0.76 Tokens per Sec:    32551, Lr: 0.000300
+I1208 18:04:57.545506 139845289953024 train.py:361] Validation result at epoch  88, step     2900: f1_prod:   0.14, loss:   0.8291, ones:   0.7998, f1_0:   0.1638, f1_1:   0.8363,f1_prd:   0.1370, duration: 3.1909s
+2019-12-08 18:04:57,545 Validation result at epoch  88, step     2900: f1_prod:   0.14, loss:   0.8291, ones:   0.7998, f1_0:   0.1638, f1_1:   0.8363,f1_prd:   0.1370, duration: 3.1909s
+I1208 18:04:57.856449 139845289953024 train.py:376] Epoch  88: total training loss 14.85
+2019-12-08 18:04:57,856 Epoch  88: total training loss 14.85
+I1208 18:04:57.856825 139845289953024 train.py:222] EPOCH 89
+2019-12-08 18:04:57,856 EPOCH 89
+I1208 18:04:58.256080 139845289953024 train.py:278] Epoch  89 Step:     2910 Batch Loss:     0.124212 Ones: 0.81 Accuracy: 0.95 Tokens per Sec:    10160, Lr: 0.000300
+2019-12-08 18:04:58,256 Epoch  89 Step:     2910 Batch Loss:     0.124212 Ones: 0.81 Accuracy: 0.95 Tokens per Sec:    10160, Lr: 0.000300
+I1208 18:04:58.975596 139845289953024 train.py:278] Epoch  89 Step:     2920 Batch Loss:     0.720790 Ones: 0.52 Accuracy: 0.77 Tokens per Sec:    16368, Lr: 0.000300
+2019-12-08 18:04:58,975 Epoch  89 Step:     2920 Batch Loss:     0.720790 Ones: 0.52 Accuracy: 0.77 Tokens per Sec:    16368, Lr: 0.000300
+I1208 18:04:59.851816 139845289953024 train.py:278] Epoch  89 Step:     2930 Batch Loss:     0.653952 Ones: 0.69 Accuracy: 0.85 Tokens per Sec:    24471, Lr: 0.000300
+2019-12-08 18:04:59,851 Epoch  89 Step:     2930 Batch Loss:     0.653952 Ones: 0.69 Accuracy: 0.85 Tokens per Sec:    24471, Lr: 0.000300
+I1208 18:05:00.381644 139845289953024 train.py:376] Epoch  89: total training loss 14.40
+2019-12-08 18:05:00,381 Epoch  89: total training loss 14.40
+I1208 18:05:00.381965 139845289953024 train.py:222] EPOCH 90
+2019-12-08 18:05:00,381 EPOCH 90
+I1208 18:05:00.538889 139845289953024 train.py:278] Epoch  90 Step:     2940 Batch Loss:     0.466153 Ones: 0.78 Accuracy: 0.94 Tokens per Sec:     9957, Lr: 0.000300
+2019-12-08 18:05:00,538 Epoch  90 Step:     2940 Batch Loss:     0.466153 Ones: 0.78 Accuracy: 0.94 Tokens per Sec:     9957, Lr: 0.000300
+I1208 18:05:01.249192 139845289953024 train.py:278] Epoch  90 Step:     2950 Batch Loss:     0.379666 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    12846, Lr: 0.000300
+2019-12-08 18:05:01,249 Epoch  90 Step:     2950 Batch Loss:     0.379666 Ones: 0.75 Accuracy: 0.88 Tokens per Sec:    12846, Lr: 0.000300
+I1208 18:05:02.000998 139845289953024 train.py:278] Epoch  90 Step:     2960 Batch Loss:     0.603526 Ones: 0.71 Accuracy: 0.84 Tokens per Sec:    23247, Lr: 0.000300
+2019-12-08 18:05:02,000 Epoch  90 Step:     2960 Batch Loss:     0.603526 Ones: 0.71 Accuracy: 0.84 Tokens per Sec:    23247, Lr: 0.000300
+I1208 18:05:02.894259 139845289953024 train.py:278] Epoch  90 Step:     2970 Batch Loss:     0.343990 Ones: 0.78 Accuracy: 0.91 Tokens per Sec:    30634, Lr: 0.000300
+2019-12-08 18:05:02,894 Epoch  90 Step:     2970 Batch Loss:     0.343990 Ones: 0.78 Accuracy: 0.91 Tokens per Sec:    30634, Lr: 0.000300
+I1208 18:05:02.895263 139845289953024 train.py:376] Epoch  90: total training loss 15.26
+2019-12-08 18:05:02,895 Epoch  90: total training loss 15.26
+I1208 18:05:02.895492 139845289953024 train.py:222] EPOCH 91
+2019-12-08 18:05:02,895 EPOCH 91
+I1208 18:05:03.563326 139845289953024 train.py:278] Epoch  91 Step:     2980 Batch Loss:     0.472695 Ones: 0.74 Accuracy: 0.89 Tokens per Sec:    10789, Lr: 0.000300
+2019-12-08 18:05:03,563 Epoch  91 Step:     2980 Batch Loss:     0.472695 Ones: 0.74 Accuracy: 0.89 Tokens per Sec:    10789, Lr: 0.000300
+I1208 18:05:04.506425 139845289953024 train.py:278] Epoch  91 Step:     2990 Batch Loss:     0.715365 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    18683, Lr: 0.000300
+2019-12-08 18:05:04,506 Epoch  91 Step:     2990 Batch Loss:     0.715365 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    18683, Lr: 0.000300
+I1208 18:05:05.233381 139845289953024 train.py:278] Epoch  91 Step:     3000 Batch Loss:     0.282548 Ones: 0.83 Accuracy: 0.94 Tokens per Sec:    35190, Lr: 0.000300
+2019-12-08 18:05:05,233 Epoch  91 Step:     3000 Batch Loss:     0.282548 Ones: 0.83 Accuracy: 0.94 Tokens per Sec:    35190, Lr: 0.000300
+I1208 18:05:08.398517 139845289953024 train.py:361] Validation result at epoch  91, step     3000: f1_prod:   0.14, loss:   0.9066, ones:   0.7688, f1_0:   0.1747, f1_1:   0.8192,f1_prd:   0.1431, duration: 3.1645s
+2019-12-08 18:05:08,398 Validation result at epoch  91, step     3000: f1_prod:   0.14, loss:   0.9066, ones:   0.7688, f1_0:   0.1747, f1_1:   0.8192,f1_prd:   0.1431, duration: 3.1645s
+I1208 18:05:08.571290 139845289953024 train.py:376] Epoch  91: total training loss 14.62
+2019-12-08 18:05:08,571 Epoch  91: total training loss 14.62
+I1208 18:05:08.571468 139845289953024 train.py:222] EPOCH 92
+2019-12-08 18:05:08,571 EPOCH 92
+I1208 18:05:09.017843 139845289953024 train.py:278] Epoch  92 Step:     3010 Batch Loss:     0.286589 Ones: 0.76 Accuracy: 0.94 Tokens per Sec:    10892, Lr: 0.000300
+2019-12-08 18:05:09,017 Epoch  92 Step:     3010 Batch Loss:     0.286589 Ones: 0.76 Accuracy: 0.94 Tokens per Sec:    10892, Lr: 0.000300
+I1208 18:05:09.810789 139845289953024 train.py:278] Epoch  92 Step:     3020 Batch Loss:     0.314960 Ones: 0.88 Accuracy: 0.95 Tokens per Sec:    17290, Lr: 0.000300
+2019-12-08 18:05:09,810 Epoch  92 Step:     3020 Batch Loss:     0.314960 Ones: 0.88 Accuracy: 0.95 Tokens per Sec:    17290, Lr: 0.000300
+I1208 18:05:10.577228 139845289953024 train.py:278] Epoch  92 Step:     3030 Batch Loss:     0.502463 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    28683, Lr: 0.000300
+2019-12-08 18:05:10,577 Epoch  92 Step:     3030 Batch Loss:     0.502463 Ones: 0.70 Accuracy: 0.84 Tokens per Sec:    28683, Lr: 0.000300
+I1208 18:05:11.043570 139845289953024 train.py:376] Epoch  92: total training loss 14.63
+2019-12-08 18:05:11,043 Epoch  92: total training loss 14.63
+I1208 18:05:11.043941 139845289953024 train.py:222] EPOCH 93
+2019-12-08 18:05:11,043 EPOCH 93
+I1208 18:05:11.344730 139845289953024 train.py:278] Epoch  93 Step:     3040 Batch Loss:     0.389588 Ones: 0.77 Accuracy: 0.91 Tokens per Sec:    10913, Lr: 0.000300
+2019-12-08 18:05:11,344 Epoch  93 Step:     3040 Batch Loss:     0.389588 Ones: 0.77 Accuracy: 0.91 Tokens per Sec:    10913, Lr: 0.000300
+I1208 18:05:12.139094 139845289953024 train.py:278] Epoch  93 Step:     3050 Batch Loss:     0.314239 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:    15167, Lr: 0.000300
+2019-12-08 18:05:12,139 Epoch  93 Step:     3050 Batch Loss:     0.314239 Ones: 0.80 Accuracy: 0.92 Tokens per Sec:    15167, Lr: 0.000300
+I1208 18:05:12.869199 139845289953024 train.py:278] Epoch  93 Step:     3060 Batch Loss:     0.437614 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    27527, Lr: 0.000300
+2019-12-08 18:05:12,869 Epoch  93 Step:     3060 Batch Loss:     0.437614 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    27527, Lr: 0.000300
+I1208 18:05:13.534568 139845289953024 train.py:376] Epoch  93: total training loss 14.06
+2019-12-08 18:05:13,534 Epoch  93: total training loss 14.06
+I1208 18:05:13.535062 139845289953024 train.py:222] EPOCH 94
+2019-12-08 18:05:13,535 EPOCH 94
+I1208 18:05:13.616636 139845289953024 train.py:278] Epoch  94 Step:     3070 Batch Loss:     0.481386 Ones: 0.80 Accuracy: 0.90 Tokens per Sec:    10610, Lr: 0.000300
+2019-12-08 18:05:13,616 Epoch  94 Step:     3070 Batch Loss:     0.481386 Ones: 0.80 Accuracy: 0.90 Tokens per Sec:    10610, Lr: 0.000300
+I1208 18:05:14.429982 139845289953024 train.py:278] Epoch  94 Step:     3080 Batch Loss:     0.634321 Ones: 0.79 Accuracy: 0.88 Tokens per Sec:    12215, Lr: 0.000300
+2019-12-08 18:05:14,429 Epoch  94 Step:     3080 Batch Loss:     0.634321 Ones: 0.79 Accuracy: 0.88 Tokens per Sec:    12215, Lr: 0.000300
+I1208 18:05:15.302558 139845289953024 train.py:278] Epoch  94 Step:     3090 Batch Loss:     0.499325 Ones: 0.74 Accuracy: 0.86 Tokens per Sec:    22494, Lr: 0.000300
+2019-12-08 18:05:15,302 Epoch  94 Step:     3090 Batch Loss:     0.499325 Ones: 0.74 Accuracy: 0.86 Tokens per Sec:    22494, Lr: 0.000300
+I1208 18:05:15.873476 139845289953024 train.py:278] Epoch  94 Step:     3100 Batch Loss:     0.515482 Ones: 0.80 Accuracy: 0.90 Tokens per Sec:    44406, Lr: 0.000300
+2019-12-08 18:05:15,873 Epoch  94 Step:     3100 Batch Loss:     0.515482 Ones: 0.80 Accuracy: 0.90 Tokens per Sec:    44406, Lr: 0.000300
+I1208 18:05:19.081702 139845289953024 train.py:361] Validation result at epoch  94, step     3100: f1_prod:   0.13, loss:   0.8417, ones:   0.8310, f1_0:   0.1562, f1_1:   0.8527,f1_prd:   0.1332, duration: 3.2075s
+2019-12-08 18:05:19,081 Validation result at epoch  94, step     3100: f1_prod:   0.13, loss:   0.8417, ones:   0.8310, f1_0:   0.1562, f1_1:   0.8527,f1_prd:   0.1332, duration: 3.2075s
+I1208 18:05:19.265288 139845289953024 train.py:376] Epoch  94: total training loss 14.25
+2019-12-08 18:05:19,265 Epoch  94: total training loss 14.25
+I1208 18:05:19.265684 139845289953024 train.py:222] EPOCH 95
+2019-12-08 18:05:19,265 EPOCH 95
+I1208 18:05:20.006326 139845289953024 train.py:278] Epoch  95 Step:     3110 Batch Loss:     0.177146 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:    10382, Lr: 0.000300
+2019-12-08 18:05:20,006 Epoch  95 Step:     3110 Batch Loss:     0.177146 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:    10382, Lr: 0.000300
+I1208 18:05:20.665301 139845289953024 train.py:278] Epoch  95 Step:     3120 Batch Loss:     0.458505 Ones: 0.72 Accuracy: 0.85 Tokens per Sec:    22407, Lr: 0.000300
+2019-12-08 18:05:20,665 Epoch  95 Step:     3120 Batch Loss:     0.458505 Ones: 0.72 Accuracy: 0.85 Tokens per Sec:    22407, Lr: 0.000300
+I1208 18:05:21.340531 139845289953024 train.py:278] Epoch  95 Step:     3130 Batch Loss:     0.489641 Ones: 0.71 Accuracy: 0.88 Tokens per Sec:    33140, Lr: 0.000300
+2019-12-08 18:05:21,340 Epoch  95 Step:     3130 Batch Loss:     0.489641 Ones: 0.71 Accuracy: 0.88 Tokens per Sec:    33140, Lr: 0.000300
+I1208 18:05:21.793263 139845289953024 train.py:376] Epoch  95: total training loss 13.97
+2019-12-08 18:05:21,793 Epoch  95: total training loss 13.97
+I1208 18:05:21.793534 139845289953024 train.py:222] EPOCH 96
+2019-12-08 18:05:21,793 EPOCH 96
+I1208 18:05:22.269224 139845289953024 train.py:278] Epoch  96 Step:     3140 Batch Loss:     0.488725 Ones: 0.79 Accuracy: 0.88 Tokens per Sec:    11187, Lr: 0.000300
+2019-12-08 18:05:22,269 Epoch  96 Step:     3140 Batch Loss:     0.488725 Ones: 0.79 Accuracy: 0.88 Tokens per Sec:    11187, Lr: 0.000300
+I1208 18:05:22.910388 139845289953024 train.py:278] Epoch  96 Step:     3150 Batch Loss:     0.539410 Ones: 0.79 Accuracy: 0.90 Tokens per Sec:    19306, Lr: 0.000300
+2019-12-08 18:05:22,910 Epoch  96 Step:     3150 Batch Loss:     0.539410 Ones: 0.79 Accuracy: 0.90 Tokens per Sec:    19306, Lr: 0.000300
+I1208 18:05:23.622658 139845289953024 train.py:278] Epoch  96 Step:     3160 Batch Loss:     0.356757 Ones: 0.79 Accuracy: 0.91 Tokens per Sec:    28064, Lr: 0.000300
+2019-12-08 18:05:23,622 Epoch  96 Step:     3160 Batch Loss:     0.356757 Ones: 0.79 Accuracy: 0.91 Tokens per Sec:    28064, Lr: 0.000300
+I1208 18:05:24.314331 139845289953024 train.py:376] Epoch  96: total training loss 14.04
+2019-12-08 18:05:24,314 Epoch  96: total training loss 14.04
+I1208 18:05:24.314529 139845289953024 train.py:222] EPOCH 97
+2019-12-08 18:05:24,314 EPOCH 97
+I1208 18:05:24.413410 139845289953024 train.py:278] Epoch  97 Step:     3170 Batch Loss:     0.487010 Ones: 0.75 Accuracy: 0.89 Tokens per Sec:    10328, Lr: 0.000300
+2019-12-08 18:05:24,413 Epoch  97 Step:     3170 Batch Loss:     0.487010 Ones: 0.75 Accuracy: 0.89 Tokens per Sec:    10328, Lr: 0.000300
+I1208 18:05:25.113733 139845289953024 train.py:278] Epoch  97 Step:     3180 Batch Loss:     0.206200 Ones: 0.84 Accuracy: 0.96 Tokens per Sec:    12864, Lr: 0.000300
+2019-12-08 18:05:25,113 Epoch  97 Step:     3180 Batch Loss:     0.206200 Ones: 0.84 Accuracy: 0.96 Tokens per Sec:    12864, Lr: 0.000300
+I1208 18:05:25.935434 139845289953024 train.py:278] Epoch  97 Step:     3190 Batch Loss:     0.826973 Ones: 0.60 Accuracy: 0.83 Tokens per Sec:    21723, Lr: 0.000300
+2019-12-08 18:05:25,935 Epoch  97 Step:     3190 Batch Loss:     0.826973 Ones: 0.60 Accuracy: 0.83 Tokens per Sec:    21723, Lr: 0.000300
+I1208 18:05:26.669011 139845289953024 train.py:278] Epoch  97 Step:     3200 Batch Loss:     0.179694 Ones: 0.75 Accuracy: 0.97 Tokens per Sec:    35322, Lr: 0.000300
+2019-12-08 18:05:26,669 Epoch  97 Step:     3200 Batch Loss:     0.179694 Ones: 0.75 Accuracy: 0.97 Tokens per Sec:    35322, Lr: 0.000300
+I1208 18:05:29.860783 139845289953024 train.py:361] Validation result at epoch  97, step     3200: f1_prod:   0.14, loss:   0.8668, ones:   0.8095, f1_0:   0.1672, f1_1:   0.8398,f1_prd:   0.1404, duration: 3.1912s
+2019-12-08 18:05:29,860 Validation result at epoch  97, step     3200: f1_prod:   0.14, loss:   0.8668, ones:   0.8095, f1_0:   0.1672, f1_1:   0.8398,f1_prd:   0.1404, duration: 3.1912s
+I1208 18:05:30.000682 139845289953024 train.py:376] Epoch  97: total training loss 14.17
+2019-12-08 18:05:30,000 Epoch  97: total training loss 14.17
+I1208 18:05:30.000827 139845289953024 train.py:222] EPOCH 98
+2019-12-08 18:05:30,000 EPOCH 98
+I1208 18:05:30.679373 139845289953024 train.py:278] Epoch  98 Step:     3210 Batch Loss:     0.428265 Ones: 0.74 Accuracy: 0.88 Tokens per Sec:    10931, Lr: 0.000300
+2019-12-08 18:05:30,679 Epoch  98 Step:     3210 Batch Loss:     0.428265 Ones: 0.74 Accuracy: 0.88 Tokens per Sec:    10931, Lr: 0.000300
+I1208 18:05:31.470202 139845289953024 train.py:278] Epoch  98 Step:     3220 Batch Loss:     0.197829 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:    20262, Lr: 0.000300
+2019-12-08 18:05:31,470 Epoch  98 Step:     3220 Batch Loss:     0.197829 Ones: 0.86 Accuracy: 0.96 Tokens per Sec:    20262, Lr: 0.000300
+I1208 18:05:32.184413 139845289953024 train.py:278] Epoch  98 Step:     3230 Batch Loss:     0.251882 Ones: 0.84 Accuracy: 0.94 Tokens per Sec:    32944, Lr: 0.000300
+2019-12-08 18:05:32,184 Epoch  98 Step:     3230 Batch Loss:     0.251882 Ones: 0.84 Accuracy: 0.94 Tokens per Sec:    32944, Lr: 0.000300
+I1208 18:05:32.536305 139845289953024 train.py:376] Epoch  98: total training loss 14.03
+2019-12-08 18:05:32,536 Epoch  98: total training loss 14.03
+I1208 18:05:32.536586 139845289953024 train.py:222] EPOCH 99
+2019-12-08 18:05:32,536 EPOCH 99
+I1208 18:05:33.153814 139845289953024 train.py:278] Epoch  99 Step:     3240 Batch Loss:     0.473351 Ones: 0.77 Accuracy: 0.89 Tokens per Sec:    11099, Lr: 0.000300
+2019-12-08 18:05:33,153 Epoch  99 Step:     3240 Batch Loss:     0.473351 Ones: 0.77 Accuracy: 0.89 Tokens per Sec:    11099, Lr: 0.000300
+I1208 18:05:33.956417 139845289953024 train.py:278] Epoch  99 Step:     3250 Batch Loss:     0.548867 Ones: 0.70 Accuracy: 0.86 Tokens per Sec:    19725, Lr: 0.000300
+2019-12-08 18:05:33,956 Epoch  99 Step:     3250 Batch Loss:     0.548867 Ones: 0.70 Accuracy: 0.86 Tokens per Sec:    19725, Lr: 0.000300
+I1208 18:05:34.530183 139845289953024 train.py:278] Epoch  99 Step:     3260 Batch Loss:     0.112814 Ones: 0.85 Accuracy: 0.95 Tokens per Sec:    37925, Lr: 0.000300
+2019-12-08 18:05:34,530 Epoch  99 Step:     3260 Batch Loss:     0.112814 Ones: 0.85 Accuracy: 0.95 Tokens per Sec:    37925, Lr: 0.000300
+I1208 18:05:35.052721 139845289953024 train.py:376] Epoch  99: total training loss 13.98
+2019-12-08 18:05:35,052 Epoch  99: total training loss 13.98
+I1208 18:05:35.052945 139845289953024 train.py:222] EPOCH 100
+2019-12-08 18:05:35,052 EPOCH 100
+I1208 18:05:35.283352 139845289953024 train.py:278] Epoch 100 Step:     3270 Batch Loss:     0.431435 Ones: 0.79 Accuracy: 0.90 Tokens per Sec:    11106, Lr: 0.000300
+2019-12-08 18:05:35,283 Epoch 100 Step:     3270 Batch Loss:     0.431435 Ones: 0.79 Accuracy: 0.90 Tokens per Sec:    11106, Lr: 0.000300
+I1208 18:05:35.992105 139845289953024 train.py:278] Epoch 100 Step:     3280 Batch Loss:     0.412532 Ones: 0.81 Accuracy: 0.94 Tokens per Sec:    14320, Lr: 0.000300
+2019-12-08 18:05:35,992 Epoch 100 Step:     3280 Batch Loss:     0.412532 Ones: 0.81 Accuracy: 0.94 Tokens per Sec:    14320, Lr: 0.000300
+I1208 18:05:36.950290 139845289953024 train.py:278] Epoch 100 Step:     3290 Batch Loss:     0.622608 Ones: 0.77 Accuracy: 0.86 Tokens per Sec:    21764, Lr: 0.000300
+2019-12-08 18:05:36,950 Epoch 100 Step:     3290 Batch Loss:     0.622608 Ones: 0.77 Accuracy: 0.86 Tokens per Sec:    21764, Lr: 0.000300
+I1208 18:05:37.559416 139845289953024 train.py:278] Epoch 100 Step:     3300 Batch Loss:     0.628358 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    44933, Lr: 0.000300
+2019-12-08 18:05:37,559 Epoch 100 Step:     3300 Batch Loss:     0.628358 Ones: 0.65 Accuracy: 0.79 Tokens per Sec:    44933, Lr: 0.000300
+I1208 18:05:40.783131 139845289953024 train.py:361] Validation result at epoch 100, step     3300: f1_prod:   0.15, loss:   0.8953, ones:   0.7868, f1_0:   0.1762, f1_1:   0.8282,f1_prd:   0.1459, duration: 3.2231s
+2019-12-08 18:05:40,783 Validation result at epoch 100, step     3300: f1_prod:   0.15, loss:   0.8953, ones:   0.7868, f1_0:   0.1762, f1_1:   0.8282,f1_prd:   0.1459, duration: 3.2231s
+I1208 18:05:40.783694 139845289953024 train.py:376] Epoch 100: total training loss 14.06
+2019-12-08 18:05:40,783 Epoch 100: total training loss 14.06
+I1208 18:05:40.783789 139845289953024 train.py:379] Training ended after 100 epochs.
+2019-12-08 18:05:40,783 Training ended after 100 epochs.
+I1208 18:05:40.783879 139845289953024 train.py:384] Best validation result at step     1400:   0.15 eval_metric.
+2019-12-08 18:05:40,783 Best validation result at step     1400:   0.15 eval_metric.
+Namespace(config_path='./configs/humanmt_fixed_bert.yml', input_mt=None, input_src=None, mode='train', output_path=None)
+0.0003
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating
+Validating

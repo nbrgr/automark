@@ -1,0 +1,632 @@
+2019-12-08 13:54:26,221 Hello! This is AutoMark. For all your Automatic Marking needs.
+2019-12-08 13:54:26,229 Total params: 77100
+2019-12-08 13:54:26,231 Trainable parameters: ['marking_head.fc1.bias', 'marking_head.fc1.weight', 'marking_head.prediction.weight']
+2019-12-08 13:54:29,776 cfg.bert.path                      : bert-base-multilingual-cased
+2019-12-08 13:54:29,776 cfg.data.source                    : .en
+2019-12-08 13:54:29,777 cfg.data.target                    : .hyp
+2019-12-08 13:54:29,777 cfg.data.marking                   : .ann
+2019-12-08 13:54:29,777 cfg.data.raw_train                 : data/markings
+2019-12-08 13:54:29,777 cfg.data.train                     : data/markings.tok
+2019-12-08 13:54:29,777 cfg.data.raw_dev                   : data/user_mark
+2019-12-08 13:54:29,777 cfg.data.dev                       : data/user_mark.tok
+2019-12-08 13:54:29,777 cfg.model.hidden_dimension         : 100
+2019-12-08 13:54:29,777 cfg.model.activation               : relu
+2019-12-08 13:54:29,777 cfg.model.freeze_bert              : True
+2019-12-08 13:54:29,777 cfg.model.head_bias                : False
+2019-12-08 13:54:29,777 cfg.train.bert_lr                  : 0.0003
+2019-12-08 13:54:29,777 cfg.train.lr                       : 0.0003
+2019-12-08 13:54:29,778 cfg.train.optimizer                : adam
+2019-12-08 13:54:29,778 cfg.train.batch_size               : 32
+2019-12-08 13:54:29,778 cfg.train.epochs                   : 50
+2019-12-08 13:54:29,778 cfg.train.seed                     : 41
+2019-12-08 13:54:29,778 cfg.train.model_dir                : humanmt_fixed
+2019-12-08 13:54:29,778 cfg.train.shuffle                  : True
+2019-12-08 13:54:29,778 cfg.train.cuda                     : True
+2019-12-08 13:54:29,778 cfg.train.early_stopping_metric    : eval_metric
+2019-12-08 13:54:29,778 cfg.train.overwrite                : True
+2019-12-08 13:54:29,778 cfg.train.normalization            : tokens
+2019-12-08 13:54:29,778 cfg.train.bad_weight               : 10.0
+2019-12-08 13:54:29,778 cfg.train.validation_freq          : 100
+2019-12-08 13:54:29,778 cfg.train.logging_freq             : 10
+2019-12-08 13:54:29,778 cfg.train.weighting                : constant
+2019-12-08 13:54:29,779 cfg.train.eval_batch_size          : 128
+2019-12-08 13:54:29,779 cfg.train.eval_metric              : f1_prod
+2019-12-08 13:54:29,779 cfg.generate.batch_size            : 2
+2019-12-08 13:54:29,780 AutoMark(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(119547, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (marking_head): MarkingHead(
+    (fc1): Linear(in_features=768, out_features=100, bias=True)
+    (prediction): Linear(in_features=100, out_features=2, bias=False)
+  )
+)
+2019-12-08 13:54:29,781 EPOCH 1
+2019-12-08 13:54:30,709 Epoch   1 Step:       10 Batch Loss:     1.568036 Ones: 0.00 Accuracy: 0.16 Tokens per Sec:     8872, Lr: 0.000300
+2019-12-08 13:54:31,471 Epoch   1 Step:       20 Batch Loss:     1.446465 Ones: 0.00 Accuracy: 0.13 Tokens per Sec:    23605, Lr: 0.000300
+2019-12-08 13:54:32,102 Epoch   1 Step:       30 Batch Loss:     1.236924 Ones: 0.07 Accuracy: 0.18 Tokens per Sec:    40173, Lr: 0.000300
+2019-12-08 13:54:32,278 Epoch   1: total training loss 51.65
+2019-12-08 13:54:32,278 EPOCH 2
+2019-12-08 13:54:32,726 Epoch   2 Step:       40 Batch Loss:     1.537692 Ones: 0.10 Accuracy: 0.27 Tokens per Sec:    12631, Lr: 0.000300
+2019-12-08 13:54:33,489 Epoch   2 Step:       50 Batch Loss:     1.502796 Ones: 0.13 Accuracy: 0.30 Tokens per Sec:    19225, Lr: 0.000300
+2019-12-08 13:54:34,133 Epoch   2 Step:       60 Batch Loss:     1.513941 Ones: 0.32 Accuracy: 0.45 Tokens per Sec:    34860, Lr: 0.000300
+2019-12-08 13:54:34,522 Epoch   2: total training loss 47.56
+2019-12-08 13:54:34,522 EPOCH 3
+2019-12-08 13:54:34,797 Epoch   3 Step:       70 Batch Loss:     1.507160 Ones: 0.17 Accuracy: 0.34 Tokens per Sec:    11442, Lr: 0.000300
+2019-12-08 13:54:35,351 Epoch   3 Step:       80 Batch Loss:     1.649973 Ones: 0.34 Accuracy: 0.46 Tokens per Sec:    17592, Lr: 0.000300
+2019-12-08 13:54:36,151 Epoch   3 Step:       90 Batch Loss:     1.387469 Ones: 0.30 Accuracy: 0.42 Tokens per Sec:    24631, Lr: 0.000300
+2019-12-08 13:54:36,787 Epoch   3: total training loss 46.04
+2019-12-08 13:54:36,787 EPOCH 4
+2019-12-08 13:54:36,859 Epoch   4 Step:      100 Batch Loss:     1.360107 Ones: 0.29 Accuracy: 0.42 Tokens per Sec:    11349, Lr: 0.000300
+2019-12-08 13:54:39,649 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:54:39,650 Saving new checkpoint.
+2019-12-08 13:54:46,916 Validation result at epoch   4, step      100: f1_prod:   0.11, loss:   0.8774, ones:   0.3803, f1_0:   0.2159, f1_1:   0.5327,f1_prd:   0.1150, duration: 10.0567s
+2019-12-08 13:54:47,637 Epoch   4 Step:      110 Batch Loss:     1.306300 Ones: 0.36 Accuracy: 0.46 Tokens per Sec:    13327, Lr: 0.000300
+2019-12-08 13:54:48,278 Epoch   4 Step:      120 Batch Loss:     1.421669 Ones: 0.29 Accuracy: 0.44 Tokens per Sec:    26265, Lr: 0.000300
+2019-12-08 13:54:48,984 Epoch   4 Step:      130 Batch Loss:     1.470645 Ones: 0.27 Accuracy: 0.39 Tokens per Sec:    35978, Lr: 0.000300
+2019-12-08 13:54:49,158 Epoch   4: total training loss 45.35
+2019-12-08 13:54:49,158 EPOCH 5
+2019-12-08 13:54:49,681 Epoch   5 Step:      140 Batch Loss:     1.355021 Ones: 0.38 Accuracy: 0.54 Tokens per Sec:    11559, Lr: 0.000300
+2019-12-08 13:54:50,360 Epoch   5 Step:      150 Batch Loss:     1.410833 Ones: 0.44 Accuracy: 0.57 Tokens per Sec:    20859, Lr: 0.000300
+2019-12-08 13:54:51,059 Epoch   5 Step:      160 Batch Loss:     1.389643 Ones: 0.30 Accuracy: 0.44 Tokens per Sec:    32736, Lr: 0.000300
+2019-12-08 13:54:51,424 Epoch   5: total training loss 44.68
+2019-12-08 13:54:51,425 EPOCH 6
+2019-12-08 13:54:51,762 Epoch   6 Step:      170 Batch Loss:     1.304417 Ones: 0.38 Accuracy: 0.51 Tokens per Sec:    10993, Lr: 0.000300
+2019-12-08 13:54:52,386 Epoch   6 Step:      180 Batch Loss:     1.378131 Ones: 0.29 Accuracy: 0.45 Tokens per Sec:    18432, Lr: 0.000300
+2019-12-08 13:54:52,971 Epoch   6 Step:      190 Batch Loss:     1.356653 Ones: 0.38 Accuracy: 0.47 Tokens per Sec:    31938, Lr: 0.000300
+2019-12-08 13:54:53,645 Epoch   6: total training loss 44.34
+2019-12-08 13:54:53,646 EPOCH 7
+2019-12-08 13:54:53,771 Epoch   7 Step:      200 Batch Loss:     1.336700 Ones: 0.37 Accuracy: 0.49 Tokens per Sec:    11587, Lr: 0.000300
+2019-12-08 13:54:56,561 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:54:56,563 Saving new checkpoint.
+2019-12-08 13:55:03,848 Validation result at epoch   7, step      200: f1_prod:   0.12, loss:   0.8921, ones:   0.4018, f1_0:   0.2158, f1_1:   0.5460,f1_prd:   0.1178, duration: 10.0763s
+2019-12-08 13:55:04,540 Epoch   7 Step:      210 Batch Loss:     1.315268 Ones: 0.42 Accuracy: 0.52 Tokens per Sec:    13784, Lr: 0.000300
+2019-12-08 13:55:05,311 Epoch   7 Step:      220 Batch Loss:     1.384453 Ones: 0.36 Accuracy: 0.49 Tokens per Sec:    24132, Lr: 0.000300
+2019-12-08 13:55:06,025 Epoch   7 Step:      230 Batch Loss:     1.272967 Ones: 0.47 Accuracy: 0.56 Tokens per Sec:    37900, Lr: 0.000300
+2019-12-08 13:55:06,060 Epoch   7: total training loss 44.13
+2019-12-08 13:55:06,061 EPOCH 8
+2019-12-08 13:55:06,668 Epoch   8 Step:      240 Batch Loss:     1.205032 Ones: 0.43 Accuracy: 0.58 Tokens per Sec:    12018, Lr: 0.000300
+2019-12-08 13:55:07,420 Epoch   8 Step:      250 Batch Loss:     1.101638 Ones: 0.47 Accuracy: 0.50 Tokens per Sec:    21141, Lr: 0.000300
+2019-12-08 13:55:08,144 Epoch   8 Step:      260 Batch Loss:     1.288993 Ones: 0.41 Accuracy: 0.50 Tokens per Sec:    32592, Lr: 0.000300
+2019-12-08 13:55:08,444 Epoch   8: total training loss 43.43
+2019-12-08 13:55:08,444 EPOCH 9
+2019-12-08 13:55:08,851 Epoch   9 Step:      270 Batch Loss:     1.274436 Ones: 0.46 Accuracy: 0.55 Tokens per Sec:    11962, Lr: 0.000300
+2019-12-08 13:55:09,488 Epoch   9 Step:      280 Batch Loss:     1.232876 Ones: 0.38 Accuracy: 0.48 Tokens per Sec:    20566, Lr: 0.000300
+2019-12-08 13:55:10,062 Epoch   9 Step:      290 Batch Loss:     1.454875 Ones: 0.34 Accuracy: 0.50 Tokens per Sec:    34993, Lr: 0.000300
+2019-12-08 13:55:10,650 Epoch   9: total training loss 43.01
+2019-12-08 13:55:10,650 EPOCH 10
+2019-12-08 13:55:10,827 Epoch  10 Step:      300 Batch Loss:     1.179016 Ones: 0.45 Accuracy: 0.54 Tokens per Sec:    12134, Lr: 0.000300
+2019-12-08 13:55:13,614 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:55:13,615 Saving new checkpoint.
+2019-12-08 13:55:20,737 Validation result at epoch  10, step      300: f1_prod:   0.13, loss:   0.7903, ones:   0.5182, f1_0:   0.2052, f1_1:   0.6503,f1_prd:   0.1334, duration: 9.9090s
+2019-12-08 13:55:21,557 Epoch  10 Step:      310 Batch Loss:     1.431354 Ones: 0.32 Accuracy: 0.46 Tokens per Sec:    13994, Lr: 0.000300
+2019-12-08 13:55:22,294 Epoch  10 Step:      320 Batch Loss:     1.234405 Ones: 0.46 Accuracy: 0.56 Tokens per Sec:    28030, Lr: 0.000300
+2019-12-08 13:55:22,890 Epoch  10 Step:      330 Batch Loss:     1.274864 Ones: 0.42 Accuracy: 0.49 Tokens per Sec:    46010, Lr: 0.000300
+2019-12-08 13:55:22,890 Epoch  10: total training loss 42.82
+2019-12-08 13:55:22,891 EPOCH 11
+2019-12-08 13:55:23,616 Epoch  11 Step:      340 Batch Loss:     1.416844 Ones: 0.25 Accuracy: 0.41 Tokens per Sec:    12095, Lr: 0.000300
+2019-12-08 13:55:24,332 Epoch  11 Step:      350 Batch Loss:     1.678274 Ones: 0.28 Accuracy: 0.50 Tokens per Sec:    24295, Lr: 0.000300
+2019-12-08 13:55:24,926 Epoch  11 Step:      360 Batch Loss:     1.269998 Ones: 0.40 Accuracy: 0.52 Tokens per Sec:    40738, Lr: 0.000300
+2019-12-08 13:55:25,171 Epoch  11: total training loss 42.27
+2019-12-08 13:55:25,171 EPOCH 12
+2019-12-08 13:55:25,598 Epoch  12 Step:      370 Batch Loss:     1.225232 Ones: 0.48 Accuracy: 0.64 Tokens per Sec:    12526, Lr: 0.000300
+2019-12-08 13:55:26,176 Epoch  12 Step:      380 Batch Loss:     1.259562 Ones: 0.36 Accuracy: 0.48 Tokens per Sec:    21493, Lr: 0.000300
+2019-12-08 13:55:27,050 Epoch  12 Step:      390 Batch Loss:     1.227607 Ones: 0.44 Accuracy: 0.58 Tokens per Sec:    26481, Lr: 0.000300
+2019-12-08 13:55:27,389 Epoch  12: total training loss 42.08
+2019-12-08 13:55:27,389 EPOCH 13
+2019-12-08 13:55:27,701 Epoch  13 Step:      400 Batch Loss:     1.400440 Ones: 0.41 Accuracy: 0.53 Tokens per Sec:    11189, Lr: 0.000300
+2019-12-08 13:55:30,497 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:55:30,498 Saving new checkpoint.
+2019-12-08 13:55:37,660 Validation result at epoch  13, step      400: f1_prod:   0.14, loss:   0.7744, ones:   0.5408, f1_0:   0.2045, f1_1:   0.6697,f1_prd:   0.1370, duration: 9.9583s
+2019-12-08 13:55:38,469 Epoch  13 Step:      410 Batch Loss:     1.309475 Ones: 0.29 Accuracy: 0.43 Tokens per Sec:    16445, Lr: 0.000300
+2019-12-08 13:55:39,031 Epoch  13 Step:      420 Batch Loss:     1.278625 Ones: 0.50 Accuracy: 0.58 Tokens per Sec:    35663, Lr: 0.000300
+2019-12-08 13:55:39,657 Epoch  13: total training loss 41.18
+2019-12-08 13:55:39,658 EPOCH 14
+2019-12-08 13:55:39,799 Epoch  14 Step:      430 Batch Loss:     1.301570 Ones: 0.31 Accuracy: 0.47 Tokens per Sec:    12088, Lr: 0.000300
+2019-12-08 13:55:40,360 Epoch  14 Step:      440 Batch Loss:     1.094734 Ones: 0.63 Accuracy: 0.74 Tokens per Sec:    15084, Lr: 0.000300
+2019-12-08 13:55:41,105 Epoch  14 Step:      450 Batch Loss:     1.415433 Ones: 0.33 Accuracy: 0.47 Tokens per Sec:    23253, Lr: 0.000300
+2019-12-08 13:55:41,727 Epoch  14 Step:      460 Batch Loss:     1.800224 Ones: 0.36 Accuracy: 0.56 Tokens per Sec:    39920, Lr: 0.000300
+2019-12-08 13:55:41,924 Epoch  14: total training loss 41.50
+2019-12-08 13:55:41,924 EPOCH 15
+2019-12-08 13:55:42,573 Epoch  15 Step:      470 Batch Loss:     1.200392 Ones: 0.41 Accuracy: 0.53 Tokens per Sec:    12113, Lr: 0.000300
+2019-12-08 13:55:43,143 Epoch  15 Step:      480 Batch Loss:     1.251361 Ones: 0.48 Accuracy: 0.58 Tokens per Sec:    25665, Lr: 0.000300
+2019-12-08 13:55:43,906 Epoch  15 Step:      490 Batch Loss:     1.246143 Ones: 0.31 Accuracy: 0.44 Tokens per Sec:    31652, Lr: 0.000300
+2019-12-08 13:55:44,205 Epoch  15: total training loss 40.88
+2019-12-08 13:55:44,206 EPOCH 16
+2019-12-08 13:55:44,505 Epoch  16 Step:      500 Batch Loss:     1.239310 Ones: 0.53 Accuracy: 0.64 Tokens per Sec:    11226, Lr: 0.000300
+2019-12-08 13:55:47,308 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:55:47,309 Saving new checkpoint.
+2019-12-08 13:55:54,417 Validation result at epoch  16, step      500: f1_prod:   0.14, loss:   0.7088, ones:   0.6181, f1_0:   0.1928, f1_1:   0.7251,f1_prd:   0.1398, duration: 9.9113s
+2019-12-08 13:55:55,102 Epoch  16 Step:      510 Batch Loss:     1.246140 Ones: 0.44 Accuracy: 0.57 Tokens per Sec:    15839, Lr: 0.000300
+2019-12-08 13:55:55,859 Epoch  16 Step:      520 Batch Loss:     1.248777 Ones: 0.45 Accuracy: 0.54 Tokens per Sec:    26829, Lr: 0.000300
+2019-12-08 13:55:56,430 Epoch  16: total training loss 40.66
+2019-12-08 13:55:56,431 EPOCH 17
+2019-12-08 13:55:56,627 Epoch  17 Step:      530 Batch Loss:     1.415628 Ones: 0.33 Accuracy: 0.47 Tokens per Sec:    11481, Lr: 0.000300
+2019-12-08 13:55:57,202 Epoch  17 Step:      540 Batch Loss:     1.197995 Ones: 0.46 Accuracy: 0.58 Tokens per Sec:    15729, Lr: 0.000300
+2019-12-08 13:55:57,915 Epoch  17 Step:      550 Batch Loss:     0.902904 Ones: 0.46 Accuracy: 0.60 Tokens per Sec:    24961, Lr: 0.000300
+2019-12-08 13:55:58,607 Epoch  17 Step:      560 Batch Loss:     0.957889 Ones: 0.53 Accuracy: 0.59 Tokens per Sec:    37502, Lr: 0.000300
+2019-12-08 13:55:58,718 Epoch  17: total training loss 39.98
+2019-12-08 13:55:58,719 EPOCH 18
+2019-12-08 13:55:59,370 Epoch  18 Step:      570 Batch Loss:     1.195497 Ones: 0.44 Accuracy: 0.56 Tokens per Sec:    12332, Lr: 0.000300
+2019-12-08 13:56:00,052 Epoch  18 Step:      580 Batch Loss:     0.991062 Ones: 0.49 Accuracy: 0.59 Tokens per Sec:    23333, Lr: 0.000300
+2019-12-08 13:56:00,755 Epoch  18 Step:      590 Batch Loss:     0.910279 Ones: 0.51 Accuracy: 0.62 Tokens per Sec:    34298, Lr: 0.000300
+2019-12-08 13:56:01,028 Epoch  18: total training loss 39.77
+2019-12-08 13:56:01,028 EPOCH 19
+2019-12-08 13:56:01,454 Epoch  19 Step:      600 Batch Loss:     1.161012 Ones: 0.56 Accuracy: 0.69 Tokens per Sec:    12430, Lr: 0.000300
+2019-12-08 13:56:04,248 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:56:04,249 Saving new checkpoint.
+2019-12-08 13:56:11,504 Validation result at epoch  19, step      600: f1_prod:   0.14, loss:   0.7034, ones:   0.6207, f1_0:   0.1971, f1_1:   0.7286,f1_prd:   0.1436, duration: 10.0495s
+2019-12-08 13:56:12,295 Epoch  19 Step:      610 Batch Loss:     1.296114 Ones: 0.27 Accuracy: 0.43 Tokens per Sec:    18012, Lr: 0.000300
+2019-12-08 13:56:12,917 Epoch  19 Step:      620 Batch Loss:     1.203196 Ones: 0.51 Accuracy: 0.65 Tokens per Sec:    34416, Lr: 0.000300
+2019-12-08 13:56:13,422 Epoch  19: total training loss 39.15
+2019-12-08 13:56:13,423 EPOCH 20
+2019-12-08 13:56:13,561 Epoch  20 Step:      630 Batch Loss:     1.082452 Ones: 0.48 Accuracy: 0.66 Tokens per Sec:    10462, Lr: 0.000300
+2019-12-08 13:56:14,393 Epoch  20 Step:      640 Batch Loss:     1.513850 Ones: 0.27 Accuracy: 0.50 Tokens per Sec:    13252, Lr: 0.000300
+2019-12-08 13:56:15,043 Epoch  20 Step:      650 Batch Loss:     1.087060 Ones: 0.47 Accuracy: 0.57 Tokens per Sec:    29308, Lr: 0.000300
+2019-12-08 13:56:15,730 Epoch  20 Step:      660 Batch Loss:     1.060853 Ones: 0.61 Accuracy: 0.76 Tokens per Sec:    39864, Lr: 0.000300
+2019-12-08 13:56:15,730 Epoch  20: total training loss 39.00
+2019-12-08 13:56:15,731 EPOCH 21
+2019-12-08 13:56:16,440 Epoch  21 Step:      670 Batch Loss:     1.237960 Ones: 0.39 Accuracy: 0.49 Tokens per Sec:    12116, Lr: 0.000300
+2019-12-08 13:56:17,112 Epoch  21 Step:      680 Batch Loss:     1.287542 Ones: 0.45 Accuracy: 0.54 Tokens per Sec:    25512, Lr: 0.000300
+2019-12-08 13:56:17,798 Epoch  21 Step:      690 Batch Loss:     1.184014 Ones: 0.54 Accuracy: 0.62 Tokens per Sec:    37358, Lr: 0.000300
+2019-12-08 13:56:17,939 Epoch  21: total training loss 38.55
+2019-12-08 13:56:17,939 EPOCH 22
+2019-12-08 13:56:18,447 Epoch  22 Step:      700 Batch Loss:     1.240550 Ones: 0.43 Accuracy: 0.57 Tokens per Sec:    12958, Lr: 0.000300
+2019-12-08 13:56:21,256 Validation result at epoch  22, step      700: f1_prod:   0.14, loss:   0.7641, ones:   0.5701, f1_0:   0.1999, f1_1:   0.6904,f1_prd:   0.1380, duration: 2.8089s
+2019-12-08 13:56:22,036 Epoch  22 Step:      710 Batch Loss:     1.212714 Ones: 0.42 Accuracy: 0.55 Tokens per Sec:    20600, Lr: 0.000300
+2019-12-08 13:56:22,605 Epoch  22 Step:      720 Batch Loss:     1.062185 Ones: 0.47 Accuracy: 0.60 Tokens per Sec:    39823, Lr: 0.000300
+2019-12-08 13:56:23,016 Epoch  22: total training loss 37.97
+2019-12-08 13:56:23,016 EPOCH 23
+2019-12-08 13:56:23,346 Epoch  23 Step:      730 Batch Loss:     1.557004 Ones: 0.26 Accuracy: 0.51 Tokens per Sec:    11331, Lr: 0.000300
+2019-12-08 13:56:23,999 Epoch  23 Step:      740 Batch Loss:     1.241115 Ones: 0.46 Accuracy: 0.59 Tokens per Sec:    17657, Lr: 0.000300
+2019-12-08 13:56:24,692 Epoch  23 Step:      750 Batch Loss:     1.317184 Ones: 0.40 Accuracy: 0.55 Tokens per Sec:    28131, Lr: 0.000300
+2019-12-08 13:56:25,325 Epoch  23: total training loss 37.36
+2019-12-08 13:56:25,325 EPOCH 24
+2019-12-08 13:56:25,435 Epoch  24 Step:      760 Batch Loss:     1.298832 Ones: 0.48 Accuracy: 0.58 Tokens per Sec:    12167, Lr: 0.000300
+2019-12-08 13:56:26,207 Epoch  24 Step:      770 Batch Loss:     1.050286 Ones: 0.55 Accuracy: 0.63 Tokens per Sec:    12834, Lr: 0.000300
+2019-12-08 13:56:26,851 Epoch  24 Step:      780 Batch Loss:     1.339635 Ones: 0.30 Accuracy: 0.48 Tokens per Sec:    27066, Lr: 0.000300
+2019-12-08 13:56:27,466 Epoch  24 Step:      790 Batch Loss:     0.997734 Ones: 0.59 Accuracy: 0.71 Tokens per Sec:    41230, Lr: 0.000300
+2019-12-08 13:56:27,625 Epoch  24: total training loss 37.56
+2019-12-08 13:56:27,625 EPOCH 25
+2019-12-08 13:56:28,294 Epoch  25 Step:      800 Batch Loss:     1.004431 Ones: 0.52 Accuracy: 0.62 Tokens per Sec:    12160, Lr: 0.000300
+2019-12-08 13:56:31,092 Validation result at epoch  25, step      800: f1_prod:   0.14, loss:   0.8407, ones:   0.4917, f1_0:   0.2154, f1_1:   0.6340,f1_prd:   0.1366, duration: 2.7981s
+2019-12-08 13:56:31,790 Epoch  25 Step:      810 Batch Loss:     1.109408 Ones: 0.60 Accuracy: 0.73 Tokens per Sec:    23302, Lr: 0.000300
+2019-12-08 13:56:32,440 Epoch  25 Step:      820 Batch Loss:     1.088305 Ones: 0.47 Accuracy: 0.58 Tokens per Sec:    37848, Lr: 0.000300
+2019-12-08 13:56:32,684 Epoch  25: total training loss 37.17
+2019-12-08 13:56:32,685 EPOCH 26
+2019-12-08 13:56:33,087 Epoch  26 Step:      830 Batch Loss:     1.063333 Ones: 0.55 Accuracy: 0.75 Tokens per Sec:    11534, Lr: 0.000300
+2019-12-08 13:56:33,626 Epoch  26 Step:      840 Batch Loss:     1.053495 Ones: 0.49 Accuracy: 0.61 Tokens per Sec:    20574, Lr: 0.000300
+2019-12-08 13:56:34,351 Epoch  26 Step:      850 Batch Loss:     0.944276 Ones: 0.55 Accuracy: 0.67 Tokens per Sec:    27501, Lr: 0.000300
+2019-12-08 13:56:34,987 Epoch  26: total training loss 36.50
+2019-12-08 13:56:34,987 EPOCH 27
+2019-12-08 13:56:35,169 Epoch  27 Step:      860 Batch Loss:     1.043006 Ones: 0.44 Accuracy: 0.59 Tokens per Sec:    11548, Lr: 0.000300
+2019-12-08 13:56:35,923 Epoch  27 Step:      870 Batch Loss:     1.309879 Ones: 0.51 Accuracy: 0.64 Tokens per Sec:    15497, Lr: 0.000300
+2019-12-08 13:56:36,537 Epoch  27 Step:      880 Batch Loss:     0.967988 Ones: 0.53 Accuracy: 0.68 Tokens per Sec:    31085, Lr: 0.000300
+2019-12-08 13:56:37,144 Epoch  27 Step:      890 Batch Loss:     1.205220 Ones: 0.51 Accuracy: 0.63 Tokens per Sec:    44487, Lr: 0.000300
+2019-12-08 13:56:37,185 Epoch  27: total training loss 36.14
+2019-12-08 13:56:37,185 EPOCH 28
+2019-12-08 13:56:37,668 Epoch  28 Step:      900 Batch Loss:     0.854522 Ones: 0.57 Accuracy: 0.70 Tokens per Sec:    12128, Lr: 0.000300
+2019-12-08 13:56:40,475 Validation result at epoch  28, step      900: f1_prod:   0.14, loss:   0.7634, ones:   0.5907, f1_0:   0.2034, f1_1:   0.6980,f1_prd:   0.1420, duration: 2.8061s
+2019-12-08 13:56:41,261 Epoch  28 Step:      910 Batch Loss:     1.083192 Ones: 0.57 Accuracy: 0.66 Tokens per Sec:    19413, Lr: 0.000300
+2019-12-08 13:56:41,951 Epoch  28 Step:      920 Batch Loss:     1.260861 Ones: 0.36 Accuracy: 0.50 Tokens per Sec:    34302, Lr: 0.000300
+2019-12-08 13:56:42,243 Epoch  28: total training loss 35.99
+2019-12-08 13:56:42,244 EPOCH 29
+2019-12-08 13:56:42,725 Epoch  29 Step:      930 Batch Loss:     1.300855 Ones: 0.30 Accuracy: 0.46 Tokens per Sec:    12008, Lr: 0.000300
+2019-12-08 13:56:43,330 Epoch  29 Step:      940 Batch Loss:     1.144036 Ones: 0.53 Accuracy: 0.63 Tokens per Sec:    21710, Lr: 0.000300
+2019-12-08 13:56:44,115 Epoch  29 Step:      950 Batch Loss:     1.133761 Ones: 0.44 Accuracy: 0.54 Tokens per Sec:    28784, Lr: 0.000300
+2019-12-08 13:56:44,509 Epoch  29: total training loss 35.41
+2019-12-08 13:56:44,509 EPOCH 30
+2019-12-08 13:56:44,628 Epoch  30 Step:      960 Batch Loss:     0.584277 Ones: 0.68 Accuracy: 0.81 Tokens per Sec:     9991, Lr: 0.000300
+2019-12-08 13:56:45,366 Epoch  30 Step:      970 Batch Loss:     1.154765 Ones: 0.49 Accuracy: 0.60 Tokens per Sec:    14366, Lr: 0.000300
+2019-12-08 13:56:46,089 Epoch  30 Step:      980 Batch Loss:     1.302185 Ones: 0.36 Accuracy: 0.53 Tokens per Sec:    27279, Lr: 0.000300
+2019-12-08 13:56:46,714 Epoch  30 Step:      990 Batch Loss:     1.216082 Ones: 0.63 Accuracy: 0.76 Tokens per Sec:    43783, Lr: 0.000300
+2019-12-08 13:56:46,715 Epoch  30: total training loss 35.14
+2019-12-08 13:56:46,715 EPOCH 31
+2019-12-08 13:56:47,415 Epoch  31 Step:     1000 Batch Loss:     1.307485 Ones: 0.28 Accuracy: 0.44 Tokens per Sec:    12264, Lr: 0.000300
+2019-12-08 13:56:50,224 Validation result at epoch  31, step     1000: f1_prod:   0.14, loss:   0.8420, ones:   0.5015, f1_0:   0.2116, f1_1:   0.6421,f1_prd:   0.1359, duration: 2.8082s
+2019-12-08 13:56:50,878 Epoch  31 Step:     1010 Batch Loss:     0.895882 Ones: 0.64 Accuracy: 0.81 Tokens per Sec:    25410, Lr: 0.000300
+2019-12-08 13:56:51,590 Epoch  31 Step:     1020 Batch Loss:     1.269883 Ones: 0.32 Accuracy: 0.48 Tokens per Sec:    35785, Lr: 0.000300
+2019-12-08 13:56:51,747 Epoch  31: total training loss 34.93
+2019-12-08 13:56:51,747 EPOCH 32
+2019-12-08 13:56:52,160 Epoch  32 Step:     1030 Batch Loss:     0.955293 Ones: 0.61 Accuracy: 0.73 Tokens per Sec:    12068, Lr: 0.000300
+2019-12-08 13:56:52,766 Epoch  32 Step:     1040 Batch Loss:     0.965418 Ones: 0.65 Accuracy: 0.76 Tokens per Sec:    20767, Lr: 0.000300
+2019-12-08 13:56:53,416 Epoch  32 Step:     1050 Batch Loss:     0.966503 Ones: 0.54 Accuracy: 0.75 Tokens per Sec:    32296, Lr: 0.000300
+2019-12-08 13:56:53,939 Epoch  32: total training loss 34.30
+2019-12-08 13:56:53,939 EPOCH 33
+2019-12-08 13:56:54,153 Epoch  33 Step:     1060 Batch Loss:     0.994086 Ones: 0.55 Accuracy: 0.67 Tokens per Sec:    12192, Lr: 0.000300
+2019-12-08 13:56:54,876 Epoch  33 Step:     1070 Batch Loss:     0.829087 Ones: 0.57 Accuracy: 0.70 Tokens per Sec:    16180, Lr: 0.000300
+2019-12-08 13:56:55,398 Epoch  33 Step:     1080 Batch Loss:     0.596239 Ones: 0.73 Accuracy: 0.81 Tokens per Sec:    34999, Lr: 0.000300
+2019-12-08 13:56:56,133 Epoch  33: total training loss 33.41
+2019-12-08 13:56:56,133 EPOCH 34
+2019-12-08 13:56:56,221 Epoch  34 Step:     1090 Batch Loss:     1.079201 Ones: 0.47 Accuracy: 0.59 Tokens per Sec:    13232, Lr: 0.000300
+2019-12-08 13:56:56,996 Epoch  34 Step:     1100 Batch Loss:     1.057617 Ones: 0.56 Accuracy: 0.68 Tokens per Sec:    14167, Lr: 0.000300
+2019-12-08 13:56:59,832 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:56:59,832 Saving new checkpoint.
+2019-12-08 13:57:07,341 Validation result at epoch  34, step     1100: f1_prod:   0.15, loss:   0.7503, ones:   0.6109, f1_0:   0.2022, f1_1:   0.7220,f1_prd:   0.1460, duration: 10.3449s
+2019-12-08 13:57:07,857 Epoch  34 Step:     1110 Batch Loss:     0.675548 Ones: 0.72 Accuracy: 0.83 Tokens per Sec:    32494, Lr: 0.000300
+2019-12-08 13:57:08,611 Epoch  34 Step:     1120 Batch Loss:     1.056670 Ones: 0.45 Accuracy: 0.61 Tokens per Sec:    34621, Lr: 0.000300
+2019-12-08 13:57:08,716 Epoch  34: total training loss 33.30
+2019-12-08 13:57:08,716 EPOCH 35
+2019-12-08 13:57:09,085 Epoch  35 Step:     1130 Batch Loss:     0.784836 Ones: 0.65 Accuracy: 0.83 Tokens per Sec:    12368, Lr: 0.000300
+2019-12-08 13:57:09,665 Epoch  35 Step:     1140 Batch Loss:     1.092214 Ones: 0.55 Accuracy: 0.68 Tokens per Sec:    20680, Lr: 0.000300
+2019-12-08 13:57:10,494 Epoch  35 Step:     1150 Batch Loss:     1.161039 Ones: 0.51 Accuracy: 0.61 Tokens per Sec:    26843, Lr: 0.000300
+2019-12-08 13:57:10,904 Epoch  35: total training loss 33.05
+2019-12-08 13:57:10,905 EPOCH 36
+2019-12-08 13:57:11,277 Epoch  36 Step:     1160 Batch Loss:     1.039132 Ones: 0.61 Accuracy: 0.70 Tokens per Sec:    12716, Lr: 0.000300
+2019-12-08 13:57:11,840 Epoch  36 Step:     1170 Batch Loss:     0.884779 Ones: 0.57 Accuracy: 0.71 Tokens per Sec:    20478, Lr: 0.000300
+2019-12-08 13:57:12,532 Epoch  36 Step:     1180 Batch Loss:     1.078954 Ones: 0.55 Accuracy: 0.66 Tokens per Sec:    29369, Lr: 0.000300
+2019-12-08 13:57:13,090 Epoch  36: total training loss 32.68
+2019-12-08 13:57:13,091 EPOCH 37
+2019-12-08 13:57:13,257 Epoch  37 Step:     1190 Batch Loss:     1.474659 Ones: 0.34 Accuracy: 0.57 Tokens per Sec:    11826, Lr: 0.000300
+2019-12-08 13:57:14,111 Epoch  37 Step:     1200 Batch Loss:     0.981617 Ones: 0.58 Accuracy: 0.70 Tokens per Sec:    14945, Lr: 0.000300
+2019-12-08 13:57:16,937 Hooray! New best validation result [eval_metric]!
+2019-12-08 13:57:16,937 Saving new checkpoint.
+2019-12-08 13:57:24,270 Validation result at epoch  37, step     1200: f1_prod:   0.15, loss:   0.6882, ones:   0.6775, f1_0:   0.1963, f1_1:   0.7611,f1_prd:   0.1494, duration: 10.1574s
+2019-12-08 13:57:24,854 Epoch  37 Step:     1210 Batch Loss:     1.019536 Ones: 0.48 Accuracy: 0.62 Tokens per Sec:    33980, Lr: 0.000300
+2019-12-08 13:57:25,414 Epoch  37 Step:     1220 Batch Loss:     0.782345 Ones: 0.64 Accuracy: 0.77 Tokens per Sec:    48004, Lr: 0.000300
+2019-12-08 13:57:25,459 Epoch  37: total training loss 32.43
+2019-12-08 13:57:25,459 EPOCH 38
+2019-12-08 13:57:26,001 Epoch  38 Step:     1230 Batch Loss:     0.817674 Ones: 0.54 Accuracy: 0.67 Tokens per Sec:    12267, Lr: 0.000300
+2019-12-08 13:57:26,682 Epoch  38 Step:     1240 Batch Loss:     0.641581 Ones: 0.66 Accuracy: 0.79 Tokens per Sec:    22308, Lr: 0.000300
+2019-12-08 13:57:27,318 Epoch  38 Step:     1250 Batch Loss:     0.833406 Ones: 0.53 Accuracy: 0.68 Tokens per Sec:    36105, Lr: 0.000300
+2019-12-08 13:57:27,660 Epoch  38: total training loss 31.83
+2019-12-08 13:57:27,660 EPOCH 39
+2019-12-08 13:57:27,972 Epoch  39 Step:     1260 Batch Loss:     0.467687 Ones: 0.76 Accuracy: 0.89 Tokens per Sec:    11980, Lr: 0.000300
+2019-12-08 13:57:28,627 Epoch  39 Step:     1270 Batch Loss:     1.029342 Ones: 0.49 Accuracy: 0.60 Tokens per Sec:    18480, Lr: 0.000300
+2019-12-08 13:57:29,365 Epoch  39 Step:     1280 Batch Loss:     0.995904 Ones: 0.66 Accuracy: 0.77 Tokens per Sec:    28925, Lr: 0.000300
+2019-12-08 13:57:29,848 Epoch  39: total training loss 31.80
+2019-12-08 13:57:29,848 EPOCH 40
+2019-12-08 13:57:29,995 Epoch  40 Step:     1290 Batch Loss:     0.769241 Ones: 0.60 Accuracy: 0.72 Tokens per Sec:    11872, Lr: 0.000300
+2019-12-08 13:57:30,581 Epoch  40 Step:     1300 Batch Loss:     0.734004 Ones: 0.63 Accuracy: 0.76 Tokens per Sec:    15382, Lr: 0.000300
+2019-12-08 13:57:33,442 Validation result at epoch  40, step     1300: f1_prod:   0.14, loss:   0.7519, ones:   0.6117, f1_0:   0.1977, f1_1:   0.7228,f1_prd:   0.1429, duration: 2.8603s
+2019-12-08 13:57:34,197 Epoch  40 Step:     1310 Batch Loss:     0.844406 Ones: 0.63 Accuracy: 0.76 Tokens per Sec:    24347, Lr: 0.000300
+2019-12-08 13:57:34,922 Epoch  40 Step:     1320 Batch Loss:     1.182448 Ones: 0.54 Accuracy: 0.67 Tokens per Sec:    37768, Lr: 0.000300
+2019-12-08 13:57:34,922 Epoch  40: total training loss 31.01
+2019-12-08 13:57:34,922 EPOCH 41
+2019-12-08 13:57:35,787 Epoch  41 Step:     1330 Batch Loss:     0.795147 Ones: 0.57 Accuracy: 0.73 Tokens per Sec:    12250, Lr: 0.000300
+2019-12-08 13:57:36,211 Epoch  41 Step:     1340 Batch Loss:     0.838935 Ones: 0.63 Accuracy: 0.72 Tokens per Sec:    36761, Lr: 0.000300
+2019-12-08 13:57:36,853 Epoch  41 Step:     1350 Batch Loss:     0.681681 Ones: 0.61 Accuracy: 0.74 Tokens per Sec:    36737, Lr: 0.000300
+2019-12-08 13:57:37,156 Epoch  41: total training loss 31.05
+2019-12-08 13:57:37,156 EPOCH 42
+2019-12-08 13:57:37,515 Epoch  42 Step:     1360 Batch Loss:     0.662784 Ones: 0.62 Accuracy: 0.76 Tokens per Sec:    11729, Lr: 0.000300
+2019-12-08 13:57:38,426 Epoch  42 Step:     1370 Batch Loss:     0.755377 Ones: 0.65 Accuracy: 0.78 Tokens per Sec:    16654, Lr: 0.000300
+2019-12-08 13:57:38,990 Epoch  42 Step:     1380 Batch Loss:     0.817231 Ones: 0.57 Accuracy: 0.69 Tokens per Sec:    39242, Lr: 0.000300
+2019-12-08 13:57:39,400 Epoch  42: total training loss 30.72
+2019-12-08 13:57:39,400 EPOCH 43
+2019-12-08 13:57:39,705 Epoch  43 Step:     1390 Batch Loss:     0.746590 Ones: 0.62 Accuracy: 0.81 Tokens per Sec:    12053, Lr: 0.000300
+2019-12-08 13:57:40,415 Epoch  43 Step:     1400 Batch Loss:     0.986521 Ones: 0.51 Accuracy: 0.68 Tokens per Sec:    17243, Lr: 0.000300
+2019-12-08 13:57:43,351 Validation result at epoch  43, step     1400: f1_prod:   0.15, loss:   0.7696, ones:   0.6040, f1_0:   0.2047, f1_1:   0.7153,f1_prd:   0.1464, duration: 2.9352s
+2019-12-08 13:57:43,986 Epoch  43 Step:     1410 Batch Loss:     0.478406 Ones: 0.77 Accuracy: 0.90 Tokens per Sec:    31061, Lr: 0.000300
+2019-12-08 13:57:44,599 Epoch  43: total training loss 30.45
+2019-12-08 13:57:44,599 EPOCH 44
+2019-12-08 13:57:44,706 Epoch  44 Step:     1420 Batch Loss:     1.052765 Ones: 0.45 Accuracy: 0.59 Tokens per Sec:    12261, Lr: 0.000300
+2019-12-08 13:57:45,512 Epoch  44 Step:     1430 Batch Loss:     0.792836 Ones: 0.66 Accuracy: 0.78 Tokens per Sec:    13266, Lr: 0.000300
+2019-12-08 13:57:46,099 Epoch  44 Step:     1440 Batch Loss:     0.770803 Ones: 0.67 Accuracy: 0.81 Tokens per Sec:    30065, Lr: 0.000300
+2019-12-08 13:57:46,796 Epoch  44 Step:     1450 Batch Loss:     0.474232 Ones: 0.78 Accuracy: 0.89 Tokens per Sec:    37412, Lr: 0.000300
+2019-12-08 13:57:46,906 Epoch  44: total training loss 29.76
+2019-12-08 13:57:46,906 EPOCH 45
+2019-12-08 13:57:47,348 Epoch  45 Step:     1460 Batch Loss:     0.824874 Ones: 0.63 Accuracy: 0.75 Tokens per Sec:    11734, Lr: 0.000300
+2019-12-08 13:57:48,001 Epoch  45 Step:     1470 Batch Loss:     1.332273 Ones: 0.33 Accuracy: 0.57 Tokens per Sec:    20011, Lr: 0.000300
+2019-12-08 13:57:48,849 Epoch  45 Step:     1480 Batch Loss:     0.802936 Ones: 0.57 Accuracy: 0.77 Tokens per Sec:    27418, Lr: 0.000300
+2019-12-08 13:57:49,194 Epoch  45: total training loss 29.75
+2019-12-08 13:57:49,195 EPOCH 46
+2019-12-08 13:57:49,455 Epoch  46 Step:     1490 Batch Loss:     0.666252 Ones: 0.66 Accuracy: 0.80 Tokens per Sec:    11398, Lr: 0.000300
+2019-12-08 13:57:50,161 Epoch  46 Step:     1500 Batch Loss:     0.965759 Ones: 0.57 Accuracy: 0.69 Tokens per Sec:    16443, Lr: 0.000300
+2019-12-08 13:57:53,134 Validation result at epoch  46, step     1500: f1_prod:   0.15, loss:   0.7283, ones:   0.6574, f1_0:   0.1962, f1_1:   0.7467,f1_prd:   0.1465, duration: 2.9724s
+2019-12-08 13:57:53,943 Epoch  46 Step:     1510 Batch Loss:     1.129794 Ones: 0.58 Accuracy: 0.70 Tokens per Sec:    26243, Lr: 0.000300
+2019-12-08 13:57:54,461 Epoch  46: total training loss 29.58
+2019-12-08 13:57:54,461 EPOCH 47
+2019-12-08 13:57:54,611 Epoch  47 Step:     1520 Batch Loss:     0.798712 Ones: 0.61 Accuracy: 0.74 Tokens per Sec:    12325, Lr: 0.000300
+2019-12-08 13:57:55,242 Epoch  47 Step:     1530 Batch Loss:     1.006602 Ones: 0.56 Accuracy: 0.65 Tokens per Sec:    14662, Lr: 0.000300
+2019-12-08 13:57:55,943 Epoch  47 Step:     1540 Batch Loss:     1.203768 Ones: 0.44 Accuracy: 0.59 Tokens per Sec:    24559, Lr: 0.000300
+2019-12-08 13:57:56,720 Epoch  47 Step:     1550 Batch Loss:     0.757155 Ones: 0.61 Accuracy: 0.74 Tokens per Sec:    34136, Lr: 0.000300
+2019-12-08 13:57:56,787 Epoch  47: total training loss 29.10
+2019-12-08 13:57:56,787 EPOCH 48
+2019-12-08 13:57:57,442 Epoch  48 Step:     1560 Batch Loss:     0.639088 Ones: 0.70 Accuracy: 0.82 Tokens per Sec:    11656, Lr: 0.000300
+2019-12-08 13:57:58,298 Epoch  48 Step:     1570 Batch Loss:     0.911384 Ones: 0.55 Accuracy: 0.67 Tokens per Sec:    20250, Lr: 0.000300
+2019-12-08 13:57:58,886 Epoch  48 Step:     1580 Batch Loss:     0.745928 Ones: 0.63 Accuracy: 0.77 Tokens per Sec:    41376, Lr: 0.000300
+2019-12-08 13:57:59,136 Epoch  48: total training loss 28.79
+2019-12-08 13:57:59,136 EPOCH 49
+2019-12-08 13:57:59,590 Epoch  49 Step:     1590 Batch Loss:     1.005686 Ones: 0.55 Accuracy: 0.69 Tokens per Sec:    11568, Lr: 0.000300
+2019-12-08 13:58:00,465 Epoch  49 Step:     1600 Batch Loss:     1.161815 Ones: 0.42 Accuracy: 0.58 Tokens per Sec:    17868, Lr: 0.000300
+2019-12-08 13:58:03,541 Validation result at epoch  49, step     1600: f1_prod:   0.15, loss:   0.7670, ones:   0.6296, f1_0:   0.2001, f1_1:   0.7344,f1_prd:   0.1470, duration: 3.0753s
+2019-12-08 13:58:04,131 Epoch  49 Step:     1610 Batch Loss:     0.902765 Ones: 0.61 Accuracy: 0.71 Tokens per Sec:    38196, Lr: 0.000300
+2019-12-08 13:58:04,538 Epoch  49: total training loss 28.52
+2019-12-08 13:58:04,538 EPOCH 50
+2019-12-08 13:58:04,673 Epoch  50 Step:     1620 Batch Loss:     0.734096 Ones: 0.64 Accuracy: 0.77 Tokens per Sec:    10729, Lr: 0.000300
+2019-12-08 13:58:05,472 Epoch  50 Step:     1630 Batch Loss:     0.780750 Ones: 0.60 Accuracy: 0.73 Tokens per Sec:    13808, Lr: 0.000300
+2019-12-08 13:58:06,274 Epoch  50 Step:     1640 Batch Loss:     0.992359 Ones: 0.65 Accuracy: 0.76 Tokens per Sec:    25493, Lr: 0.000300
+2019-12-08 13:58:06,858 Epoch  50 Step:     1650 Batch Loss:     0.689377 Ones: 0.62 Accuracy: 0.81 Tokens per Sec:    46913, Lr: 0.000300
+2019-12-08 13:58:06,859 Epoch  50: total training loss 28.29
+2019-12-08 13:58:06,859 Training ended after  50 epochs.
+2019-12-08 13:58:06,859 Best validation result at step     1200:   0.15 eval_metric.

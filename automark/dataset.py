@@ -29,7 +29,7 @@ def identity_fun(batch):
 
 
 def batch_to(batch, loc):
-    batch.src_trg = batch.src_trg.to(loc)
+    batch.src_trg = (batch.src_trg[0].to(loc), batch.src_trg[1].to(loc))
     if hasattr(batch, "weights"):
         batch.weights = batch.weights.to(loc)
     batch.label_mask = batch.label_mask.to(loc)
