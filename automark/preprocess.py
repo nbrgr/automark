@@ -25,14 +25,46 @@ def preprocess(config_path):
     raw_dev_files = config['data']['raw_dev']
     dev_files = config['data']['dev']
 
+    raw_test_files = config['data']['raw_test']
+    test_files = config['data']['test']
+
     for input_files, output_files in [(raw_train_files, train_files),
-                                      (raw_dev_files, dev_files)]:
+                                      (raw_dev_files, dev_files),
+                                      (raw_test_files, test_files)]:
 
         tokenizer = BertTokenizer.from_pretrained(pretrained_path)
 
         source_tokenfile = open(output_files + source_postfix, 'w')
         target_tokenfile = open(output_files + target_postfix, 'w')
+        
+        if output_files == test_files:
+            with open(input_files + source_postfix) as source_file,\
+                open(input_files + target_postfix) as target_file:
+                for source_line, target_line in zip(source_file, target_file):
+                    source = source_line.strip().split(" ")
+                    target = target_line.strip().split(" ")
+
+                    src_tokens = []
+                    trg_tokens = []
+
+                    for word in source:
+                        src_tokens.extend(tokenizer.wordpiece_tokenizer.tokenize(word))
+
+                    for word in target:
+                        trg_tokens.extend(tokenizer.wordpiece_tokenizer.tokenize(word))
+                    
+                    src_tok_string = " ".join(src_tokens)
+                    trg_tok_string = " ".join(trg_tokens)
+
+                    source_tokenfile.write(src_tok_string + "\n")
+                    target_tokenfile.write(trg_tok_string + "\n")
+            source_tokenfile.close()
+            target_tokenfile.close()
+            continue
+
+        
         marking_distfile = open(output_files + marking_postfix, 'w')
+        
 
         with open(input_files + source_postfix) as source_file, \
             open(input_files + target_postfix) as target_file, \

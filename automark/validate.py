@@ -11,6 +11,8 @@ def validate_on_data(
     model=None,
     use_cuda=False,
     loss_function=None,
+    logistic=False,
+    one_point=0.5
 ):
 
     valid_iter = make_data_iter(data, batch_size, False, False)
@@ -34,8 +36,10 @@ def validate_on_data(
             batch_loss, ones, acc, predictions = model.get_loss_for_batch(
                 valid_batch, loss_function, None
             )
-
-            pred_labels = predictions.argmax(-1).view(-1).cpu().numpy()
+            if logistic:
+                pred_labels = (predictions >= one_point).view(-1).long().cpu().numpy()
+            else:
+                pred_labels = predictions.argmax(-1).view(-1).cpu().numpy()
             labels = valid_batch.weights.view(-1).cpu().numpy()
             label_mask = valid_batch.id_mask.view(-1).cpu().numpy()
             pred_labels_masked = pred_labels[label_mask == 1]

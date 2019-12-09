@@ -14,7 +14,8 @@ def generate(cfg_file, input_src, input_mt, output_path=None):
 
     # build an encoder-decoder model
     model = build_model(cfg)
-
+    if cuda:
+        model.cuda()
     # load model from checkpoint
     ckpt = load_checkpoint(
         cfg["train"]["model_dir"]+"/best.ckpt", use_cuda=cuda)
@@ -28,6 +29,7 @@ def generate(cfg_file, input_src, input_mt, output_path=None):
 
         with torch.no_grad():
             for i, input_batch in enumerate(data_iter):
+                print("Batch:", str(i))
                 if cuda:
                     input_batch = batch_to(input_batch, "cuda")
 
@@ -36,7 +38,9 @@ def generate(cfg_file, input_src, input_mt, output_path=None):
                 assert predictions.shape == label_mask.shape
 
                 for p, m in zip(predictions, label_mask):
+
                     valid_labels = [str(pi) for pi, mi in zip(p, m) if mi]
-                    ofile.write("{}\n".format(" ".join(valid_labels)))
+                    print(" ".join(valid_labels))
+                    ofile.write(" ".join(valid_labels) + "\n")
 
 

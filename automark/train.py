@@ -9,7 +9,7 @@ from torch.nn import functional as F
 from automark.mark import build_model
 from automark.dataset import make_dataset, make_data_iter, batch_to
 from automark.helpers import *
-from automark.loss import XentLoss
+from automark.loss import XentLoss, BXentLoss
 from automark.builders import build_optimizer, build_scheduler, build_gradient_clipper
 from automark.validate import validate_on_data
 
@@ -26,7 +26,8 @@ class TrainManager:
         :param config: dictionary containing the training configurations
         """
         train_config = config["train"]
-
+        self.logistic = config['model']['logistic']
+        self.one_point = config['model'].get('onepoint', 0.5)
         # files for logging and storing
         self.model_dir = make_model_dir(
             train_config["model_dir"], overwrite=train_config.get("overwrite", False)
@@ -44,7 +45,10 @@ class TrainManager:
 
         # objective
         # print("ignore index {}".format(self.pad_index))
-        self.loss = XentLoss()  # ignore_id=self.pad_index)
+        if self.logistic:
+            self.loss = BXentLoss()
+        else:
+            self.loss = XentLoss()  # ignore_id=self.pad_index)
         self.normalization = train_config.get("normalization", "tokens")
         if self.normalization not in ["batch", "tokens"]:
             raise ConfigurationError(
@@ -292,7 +296,9 @@ class TrainManager:
                         model=self.model,
                         use_cuda=self.use_cuda,
                         loss_function=self.loss,
-                    )
+                        logistic=self.logistic,
+                        one_point=self.one_point
+                        )
 
                     self.tb_writer.add_scalar(
                         "valid/valid_loss", valid_loss, self.steps

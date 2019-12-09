@@ -5,13 +5,17 @@ from transformers import BertModel, BertTokenizer
 
 
 class MarkingHead(torch.nn.Module):
-    def __init__(self, dimension, hidden_dimension, activation, bias):
+    def __init__(self, dimension, hidden_dimension, activation, bias, logistic=False):
         super(MarkingHead, self).__init__()
-
+        self.logistic = logistic
         self.fc1 = torch.nn.Linear(dimension, hidden_dimension)
+        self.sentence_fc = torch.nn.Linear(dimension,hidden_dimension)
         self.fc2 = torch.nn.Linear(hidden_dimension, hidden_dimension)
         # Output 0 = not marked, Output 1 = marked, Output 2 = ignore
-        self.prediction = torch.nn.Linear(hidden_dimension, 2, bias=bias)
+        output_dim = 2
+        if self.logistic:
+            output_dim = 1
+        self.prediction = torch.nn.Linear(hidden_dimension, output_dim, bias=bias)
 
         if activation == "relu":
             self.activation = F.relu
@@ -24,13 +28,17 @@ class MarkingHead(torch.nn.Module):
         elif activation == "selu":
             self.activation = F.selu
 
-    def forward(self, embedding):
-        x = self.activation(self.fc1(embedding))
+    def forward(self, embedding, sentence):
+        x = self.activation(self.fc1(embedding)) + self.activation(self.sentence_fc(sentence))
         x = self.activation(self.fc2(x))
         # print("Avg activation {:.2f}".format(torch.mean(x)))
         # print("Min activation {:.2f}".format(torch.min(x)))
         # print("Max activation {:.2f}".format(torch.max(x)))
-        x = F.log_softmax(self.prediction(x), dim=-1)
+        if self.logistic == True:
+            x = torch.sigmoid(self.prediction(x))
+        else:
+            x = F.log_softmax(self.prediction(x), dim=-1)
+
         # predictions = torch.argmax(x, dim=-1)
         # print("1s: {:.2f}%".format(
         #    predictions.sum().detach()/predictions.numel()*100))
@@ -46,13 +54,17 @@ class AutoMark(torch.nn.Module):
         activation="relu",
         bias=False,
         cuda=False,
+        logistic=False,
+        one_point=0.5
     ):
         super(AutoMark, self).__init__()
+        self.logistic=logistic
+        self.one_point=one_point
         self.tokenizer = BertTokenizer.from_pretrained(model)
         self.bert = BertModel.from_pretrained(model)
         self.bert_hidden_size = self.bert.config.hidden_size
         self.marking_head = MarkingHead(
-            self.bert_hidden_size, hidden_dimension, activation=activation, bias=bias
+            self.bert_hidden_size, hidden_dimension, activation=activation, bias=bias, logistic=logistic
         )
         self.pad_index = self.tokenizer.vocab.get("[PAD]")
         self.unk_index = self.tokenizer.vocab.get("[UNK]")
@@ -63,14 +75,19 @@ class AutoMark(torch.nn.Module):
 
     def forward(self, sentence, label_mask, attention_mask):
         src_trg, lens = sentence
-        embeddings = self.bert(
+        bert_output = self.bert(
             src_trg, token_type_ids=label_mask, attention_mask=attention_mask
-        )[0]
+        )
+        embeddings = bert_output[0]
+        cls = bert_output[1]
+        cls = cls.view(cls.shape[0], 1, cls.shape[1])
+        cls = cls.repeat(1, embeddings.shape[1], 1)
         # embeddings should be (Batch, Len, Emb_Dim)
         shape = embeddings.shape
         # print("shape embeddings {}".format(embeddings.shape))
         embeddings = embeddings.view(-1, self.bert_hidden_size)
-        flat_markings = self.marking_head(embeddings)
+        cls = cls.view(-1, self.bert_hidden_size)
+        flat_markings = self.marking_head(embeddings, cls)
         markings = flat_markings.view(shape[0], shape[1], -1)
         # print("shape markings {}".format(markings.shape))
         return markings
@@ -109,13 +126,16 @@ class AutoMark(torch.nn.Module):
         elif weighting == "constant":
             weights = batch.loss_weight
         elif weighting == "wrong":
-            argmax_predictions = predictions.argmax(dim=-1)
+            if self.logistic:
+                argmax_predictions = (predictions >= self.one_point).long().squeeze(dim=-1)
+            else:
+                argmax_predictions = predictions.argmax(dim=-1)
 
             wrong_predictions = argmax_predictions != batch.weights
 
             weights = torch.ones_like(batch.loss_weight)
 
-            weights = torch.where(wrong_predictions, weights * 2, weights * 0.1)
+            weights = torch.where(wrong_predictions, weights * 2, weights * 0.5)
         else: 
             weights=torch.ones_like(batch.loss_weight)
 
@@ -127,12 +147,15 @@ class AutoMark(torch.nn.Module):
 
         # proportion of ones in the predictions
         num_valid_tokens = batch.label_mask.sum().detach()
-        pred_labels = predictions.argmax(-1)
-        num_one_pred = (pred_labels.float() * batch.label_mask).sum().detach()
+        if self.logistic == True:
+            pred_labels = torch.tensor(predictions >= self.one_point).float().squeeze(dim=-1)
+        else:
+            pred_labels = predictions.argmax(-1).float()
+        num_one_pred = (pred_labels * batch.label_mask).sum().detach()
         ones = num_one_pred / num_valid_tokens
         # accuracy: ratio of correct predictions
         num_corr_pred = (
-            ((pred_labels == labels).float() * batch.label_mask).detach().sum()
+            ((pred_labels.long() == labels).float() * batch.label_mask).detach().sum()
         )
         acc = num_corr_pred / num_valid_tokens
         return batch_loss, ones, acc, predictions
@@ -151,5 +174,7 @@ def build_model(config):
         activation=config["model"]["activation"],
         freeze_bert=config["model"]["freeze_bert"],
         bias=config["model"]["head_bias"],
+        logistic=config["model"]["logistic"],
+        one_point=config["model"]["onepoint"]
     )
     return model
